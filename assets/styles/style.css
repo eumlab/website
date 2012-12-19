@@ -101,10 +101,12 @@ a {
 }
     .nav li {
         display: inline-block;
+        vertical-align: top;
     }
 
     .nav a {
         display: inline-block;
+        vertical-align: top;
         font-size: 16px;
         margin: 0 20px;
     }
@@ -131,6 +133,7 @@ a {
         .ft-nav .logo {
             text-indent: -999px;
             display: inline-block;
+            vertical-align: top;
             background: url(../images/logo.png) 0 center no-repeat;
             width: 137px;
             height: 52px;
@@ -139,6 +142,7 @@ a {
 
         .ft-nav .nav {
             display: inline-block;
+            vertical-align: top;
         }
 
     .social-medias {
