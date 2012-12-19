@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/***************************
+ * base
+ ****************************/
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+
+body {
+    background: #000;
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+    color: #b5c5ca;
+    overflow-y: scroll;
+}
+
+a {
+    color: #65a8e1;
+    text-decoration: none;
+}
+
+/***************************
+ * layout
+ ****************************/
+
+.container {
+    background: url(../images/header-bg.jpg) center 0 no-repeat;
+}
+
+.header {
+    height: 1254px;
+    min-height: 1254px;
+    padding-top: 260px;
+}
+
+.header h1,
+.header h2 {
+    display: none;
+}
+
+.nav {
+    text-align: center;
+}
+    .nav li {
+        display: inline-block;
+    }
+
+    .nav a {
+        display: inline-block;
+        font-size: 16px;
+        margin: 0 20px;
+    }
+
+    .nav a:hover,
+    .nav .active a {
+        -moz-text-shadow: 0 0 8px rgba(38,155,255,0.8);
+        -webkit-text-shadow: 0 0 8px rgba(38,155,255,0.8);
+        text-shadow: 0 0 8px rgba(38,155,255,0.8);
+        color: #caf1ff;
+    }
+
+
+.footer {
+    text-align: center;
+}
+
+    .ft-nav {
+        background-color: #001f28;
+        height: 52px;
+        line-height: 52px;
+    }
+
+        .ft-nav .logo {
+            text-indent: -999px;
+            display: inline-block;
+            background: url(../images/logo.png) 0 center no-repeat;
+            width: 137px;
+            height: 52px;
+            margin-right: 20px;
+        }
+
+        .ft-nav .nav {
+            display: inline-block;
+        }
+
+    .social-medias {
+        margin-top: 55px;
+    }
+
+        .social-medias a {
+            margin: 0 20px;
+        }
+
+    .copyright {
+        padding: 20px 0 30px 0;
+        color: #2b6172;
+        font-size: 12px;
+    }

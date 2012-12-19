@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width" />
+    <title>{% block title %}{% endblock %} - EUM</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link href="/assets/styles/style.css" rel="stylesheet" />
+    {% block style %}{% endblock %}
+
+    {% if is_ipad %}<link href="/assets/styles/ipad.css" rel="stylesheet" />{% endif %}
+
+    <!-- <script src="/assets/scripts/jquery-1.6.2.min.js"></script> -->
+    {% block script %}{% endblock %}
+</head>
+<body>
+    {% block body %}{% endblock %}
+</body>
+</html>
