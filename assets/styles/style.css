@@ -82,13 +82,25 @@ a {
  ****************************/
 
 .container {
+    min-width: 980px;
     background: url(../images/header-bg.jpg) center 0 no-repeat;
 }
 
 .header {
     height: 1254px;
     min-height: 1254px;
-    padding-top: 260px;
+    padding-top: 55px;
+    position: relative;
+    overflow: hidden;
+}
+
+.site-title {
+    background: url(../images/logo-with-slogan.png) center center no-repeat;
+    width: 373px;
+    height: 167px;
+    margin: 0 auto 40px;
+    position: relative;
+    left: 40px;
 }
 
 .header h1,
@@ -98,6 +110,8 @@ a {
 
 .nav {
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
     .nav li {
         display: inline-block;
@@ -113,12 +127,88 @@ a {
 
     .nav a:hover,
     .nav .active a {
-        -moz-text-shadow: 0 0 8px rgba(38,155,255,0.8);
-        -webkit-text-shadow: 0 0 8px rgba(38,155,255,0.8);
-        text-shadow: 0 0 8px rgba(38,155,255,0.8);
+        -moz-text-shadow: 0 0 10px rgba(38,155,255,0.8);
+        -webkit-text-shadow: 0 0 10px rgba(38,155,255,0.8);
+        text-shadow: 0 0 10px rgba(38,155,255,0.8);
         color: #caf1ff;
     }
 
+    .nav a:hover {
+        transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+    }
+
+.guitar {
+    position: absolute;
+    top: 0;
+    left: -100px;
+    background: url(../images/guitar.png) 0 0 no-repeat;
+    width: 550px;
+    height: 100%;
+    z-index: 0;
+    display: none;
+}
+
+.violin {
+    position: absolute;
+    top: 0;
+    right: -100px;
+    background: url(../images/violin.png) right 0 no-repeat;
+    width: 550px;
+    height: 100%;
+    z-index: 0;
+    display: none;
+}
+
+.app {
+    position: relative;
+}
+    .pg-ukulele .app {
+        width: 770px;
+        margin: 109px auto 0;
+    }
+
+    .app .link-app-store {
+        display: block;
+        height: 68px;
+        width: 198px;
+        overflow: hidden;
+        position: absolute;
+        z-index: 99;
+        top: 450px;
+        left: 30px;
+        text-indent: -9999px;
+        background: transparent url(../images/app-store-btn.png) 0 0 no-repeat;
+    }
+    .app .link-app-store:hover {
+        /* box-shadow: 0 0 59px rgba(255,221,172, 0.75); */
+        background-position: -298px 0;
+    }
+
+    /*
+    .app .link-app-store,
+    .app .link-app-store:hover {
+        transition: background 0.2s ease-in-out;
+        -moz-transition: background 0.2s ease-in-out;
+        -webkit-transition: background 0.2s ease-in-out;
+        -o-transition: background 0.2s ease-in-out;
+    } */
+
+.content {
+    margin: 0 auto;
+}
+
+.feature-0 {
+    background: url(../images/pro-tuner-0.jpg) center bottom no-repeat;
+    height: 600px;
+}
+
+.feature-1 {
+    background: url(../images/daw-remote-hd-1.jpg) center bottom no-repeat;
+    height: 600px;
+}
 
 .footer {
     text-align: center;
@@ -147,10 +237,57 @@ a {
 
     .social-medias {
         margin-top: 55px;
+        height: 50px;
+        overflow: hidden;
     }
 
         .social-medias a {
-            margin: 0 20px;
+            display: inline-block;
+            width: 70px;
+            height: 100%;
+            text-indent: -9999px;
+            background: url(../images/social-icons.png) 0 0 no-repeat;
+        }
+
+        .social-medias a,
+        .social-medias a:hover {
+            transition: background 0.2s ease-in-out;
+            -moz-transition: background 0.2s ease-in-out;
+            -webkit-transition: background 0.2s ease-in-out;
+            -o-transition: background 0.2s ease-in-out;
+        }
+
+        .social-medias .email {
+            background-position: 8px 0; 
+        }
+
+        .social-medias .email:hover {
+            background-position: 8px -50px;
+        }
+
+        .social-medias .facebook {
+            width: 60px;
+            background-position: -76px 0; 
+        }
+
+        .social-medias .facebook:hover {
+            background-position: -76px -50px;
+        }
+
+        .social-medias .twitter {
+            background-position: -168px 0
+        }
+
+        .social-medias .twitter:hover {
+            background-position: -168px -50px;
+        }
+
+        .social-medias .youtube {
+            background-position: -259px 0; 
+        }
+
+        .social-medias .youtube:hover {
+            background-position: -259px -50px;
         }
 
     .copyright {
