@@ -64,6 +64,22 @@ table {
     zoom: 1;
 }
 
+@font-face {
+	font-family: 'TitilliumText25L';
+	src: url('fonts/TitilliumText25L.eot');
+	src: local('☺'), url('fonts/TitilliumText25L.woff') format('woff'), url('fonts/TitilliumText25L.ttf') format('truetype'), url('fonts/TitilliumText25L.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DIN-Regular';
+	src: url('fonts/DIN-Regular.eot');
+	src: local('☺'), url('fonts/DIN-Regular.woff') format('woff'), url('fonts/DIN-Regular.ttf') format('truetype'), url('fonts/DIN-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
     background: #000;
     font-size: 12px;
@@ -87,20 +103,19 @@ a {
 }
 
 .header {
-    height: 1254px;
-    min-height: 1254px;
-    padding-top: 55px;
-    position: relative;
-    overflow: hidden;
+}
+
+.center {
+    width: 1000px;
+    margin: 0 auto;
 }
 
 .site-title {
-    background: url(../images/logo-with-slogan.png) center center no-repeat;
-    width: 373px;
-    height: 167px;
-    margin: 0 auto 40px;
-    position: relative;
-    left: 40px;
+    background: url(../images/logo-drh.png) 0 0 no-repeat;
+    width: 172px;
+    height: 72px;
+    float: left;
+    margin-left: -25px;
 }
 
 .header h1,
@@ -109,9 +124,8 @@ a {
 }
 
 .nav {
-    text-align: center;
-    position: relative;
-    z-index: 1;
+    margin-left: 120px;
+    line-height: 46px;
 }
     .nav li {
         display: inline-block;
@@ -121,23 +135,26 @@ a {
     .nav a {
         display: inline-block;
         vertical-align: top;
-        font-size: 16px;
-        margin: 0 20px;
+        font-size: 15px;
+        margin: 0 10px;
+        color: #47c2ef;
+        font-family: "TitilliumText25L", "Helvetica Neue", Helvetica, arial, sans-serif;
     }
 
     .nav a:hover,
     .nav .active a {
-        -moz-text-shadow: 0 0 10px rgba(38,155,255,0.8);
-        -webkit-text-shadow: 0 0 10px rgba(38,155,255,0.8);
-        text-shadow: 0 0 10px rgba(38,155,255,0.8);
-        color: #caf1ff;
+        -webkit-text-shadow: 0 0 70px #e88300;
+        -moz-text-shadow: 0 0 7px #e88300;
+        text-shadow: 0 0 7px #e88300;
+        color: #f9cc41;
     }
 
+    .nav a,
     .nav a:hover {
-        transition: all 0.2s ease-in-out;
-        -moz-transition: all 0.2s ease-in-out;
-        -webkit-transition: all 0.2s ease-in-out;
-        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
     }
 
 .guitar {
@@ -163,7 +180,7 @@ a {
 }
 
 .app {
-    position: relative;
+    clear: left;
 }
     .pg-ukulele .app {
         width: 770px;
@@ -171,14 +188,11 @@ a {
     }
 
     .app .link-app-store {
-        display: block;
+        display: inline-block;
         height: 68px;
         width: 198px;
         overflow: hidden;
-        position: absolute;
         z-index: 99;
-        top: 450px;
-        left: 30px;
         text-indent: -9999px;
         background: transparent url(../images/app-store-btn.png) 0 0 no-repeat;
     }
@@ -295,3 +309,16 @@ a {
         color: #2b6172;
         font-size: 12px;
     }
+
+.intro .title {
+    color: #50c5ff;
+    font-size: 42px;
+    font-family: "DIN-Regular", "Helvetica Neue", Helvetica, arial, sans-serif;
+}
+
+.intro {
+    font-size: 18px;
+    color: #aaa;
+    font-family: "Lucida Grande", "Helvetica Neue", Helvetica, arial, sans-serif;
+    line-height: 1.5;
+}

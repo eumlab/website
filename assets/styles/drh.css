@@ -1,0 +1,31 @@
+.header {
+    background: url(../images/drh-header.jpg) center 0 no-repeat;
+    height: 900px;
+}
+
+.section-0 {
+    text-align: center;
+    background: url(../images/drh-section-0-bg.jpg) 0 0 repeat-x;
+}
+
+.section-0 .center {
+    background: url(../images/drh-feature-0.jpg) center bottom no-repeat;
+    height: 700px;
+}
+
+.section-0 .intro {
+    padding: 35px 0 0 0;
+    width: 755px;
+    margin: 0 auto;
+}
+
+.section-0 .title {
+}
+
+.app {
+    margin-top: 220px;
+    text-align: center;
+}
+
+.link-app-stroe {
+}

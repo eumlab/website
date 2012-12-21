@@ -1,40 +1,60 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ member.nickname }}的工作日志{% endblock %}
+{% block title %}DAW Remote HD{% endblock %}
 
 {% block script %}
-    <script src="/assets/scripts/index.js"></script>
+<!-- <script src="/assets/scripts/index.js"></script> -->
+{% endblock %}
+
+{% block style %}
+    <link href="/assets/styles/drh.css" rel="stylesheet" />
 {% endblock %}
 
 {% block body %}
-<div class="container pg-ukulele">
+<div class="container pg-drh">
     <div class="header">
-        <div class="site-title">
-            <h1>EUM lab</h1>
-            <h2>We make music apps</h2>
+        <div class="center">
+            <div class="site-title">
+                <h1>EUM lab</h1>
+                <h2>We make music apps</h2>
+            </div>
+            <ul class="nav">
+                <li><a href="#DAW_Remote">DAW Remote</a></li>
+                <li><a href="#DAW_Remote_HD">DAW Remote HD</a></li>
+                <li><a href="#Pro_Metronome">Pro Metronome</a></li>
+                <li><a href="#insTuner">insTuner</a></li>
+                <li class="active"><a href="#Ukulele_Toolkit">Ukulele Toolkit</a></li>
+                <li><a href="#String_Tuner">String Tuner</a></li>
+                <li><a href="#Pro_Tuner">Pro Tuner</a></li>
+            </ul>
+            <div class="app">
+                <a href="#" class="link-app-store">Available on the App Store</a>
+            </div>
         </div>
-        <ul class="nav">
-            <li><a href="#DAW_Remote">DAW Remote</a></li>
-            <li><a href="#DAW_Remote_HD">DAW Remote HD</a></li>
-            <li><a href="#Pro_Metronome">Pro Metronome</a></li>
-            <li><a href="#insTuner">insTuner</a></li>
-            <li class="active"><a href="#Ukulele_Toolkit">Ukulele Toolkit</a></li>
-            <li><a href="#String_Tuner">String Tuner</a></li>
-            <li><a href="#Pro_Tuner">Pro Tuner</a></li>
-        </ul>
-        <div class="app ukulele">
-            <img src="/assets/images/app-ukulele.png" />
-            <a href="#" class="link-app-store">Available on the App Store</a>
-        </div>
-        <div class="guitar" id="guitar"></div>
-        <div class="violin" id="violin"></div>
     </div>
-    <div class="content">
+    <div class="section section-0">
+        <div class="center">
+            <div class="intro">
+                <h3 class="title">Everywhere in your Studio</h3>
+                <p class="desc">Taking full advantage of the iPad revolutionary features, DAW Remote brings you a portable control surface with full functions. Now you have full control to your DAW everywhere in your studio.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-1">
+        <div class="center">
+            <div class="intro">
+                <h3 class="title">Build your own Control Surface</h3>
+                <p class="desc">Many love customizing, and so do us! Maybe you don't like so many buttons on the screen, maybe you want some bigger buttons or timecode, or maybe you want to change the label and color on the buttons. Making an layout fit yourself most is easy and fast with DAW Remote HD.</p>
+                <p><a href="#">Play Video</a>
+            </div>
+        </div>
+    </div>
+    <div class="section">
         <div class="feature feature-0">
-        </div>
-        <div class="feature feature-1">
-        </div>
-        <div class="feature feature-2">
+            <div class="intro">
+                <h3 class="title">Mixing on your Sofa</h3>
+                <p>Traditional Control surface looks great indeed, but you are stuck there when mixing, aren't you? With DAW Remote you can relax on the sofa and mix there with your iPad!</p>
+            </div>
         </div>
     </div>
     <div class="footer">
