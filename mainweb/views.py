@@ -8,3 +8,6 @@ from django.http import HttpResponse,HttpResponseRedirect, HttpResponsePermanent
 
 def index(request):
     return render_to_response('index.html')
+
+def drh(request):
+    return render_to_response('daw-remote-hd.html')

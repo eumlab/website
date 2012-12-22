@@ -1,6 +1,61 @@
 .header {
-    background: url(../images/drh-header.jpg) center 0 no-repeat;
+    /* background: url(../images/drh-header.jpg) center 0 no-repeat; */
     height: 900px;
+}
+
+.header .bg {
+	width: 100%;
+	height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+	background-repeat: 50%;
+	background-position: 50% top;
+	position: absolute;
+    z-index: 0;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 1000ms ease-in-out;
+	-moz-transition: opacity 1000ms ease-in-out;
+	-webkit-transition: opacity 1000ms ease-in-out;
+}
+
+.app {
+    margin-top: 90px;
+    text-align: center;
+    position: relative;
+}
+
+.app .link-app-store {
+    background: url(../images/drh-app-store-link-top.png) no-repeat 0 0;
+    margin-top: 140px;
+    width: 153px;
+    height: 54px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+    .app .link-app-store:hover {
+        -moz-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+        -webkit-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+        box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+    }
+
+    .app .link-app-store,
+    .app .link-app-store:hover {
+        transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+    }
+
+
+.app .center {
+    background: url(../images/drh-app.png) center 0 no-repeat;
+    height: 756px;
 }
 
 .section-0 {
@@ -8,24 +63,241 @@
     background: url(../images/drh-section-0-bg.jpg) 0 0 repeat-x;
 }
 
-.section-0 .center {
-    background: url(../images/drh-feature-0.jpg) center bottom no-repeat;
-    height: 700px;
+    .section-0 .center {
+        background: url(../images/drh-feature-0.jpg) center bottom no-repeat;
+        height: 700px;
+    }
+
+    .section-0 .intro {
+        padding: 35px 0 0 0;
+        width: 755px;
+        margin: 0 auto;
+    }
+
+    .section-0 .title {
+    }
+
+.section-1 {
+    text-align: right;
 }
 
-.section-0 .intro {
-    padding: 35px 0 0 0;
-    width: 755px;
-    margin: 0 auto;
-}
+    .section-1 .center {
+        height: 700px;
+        position: relative;
+    }
 
-.section-0 .title {
-}
+    .section-1 .pic {
+        position: absolute;
+        top: 90px;
+        left: -80px;
+        background: url(../images/drh-feature-1.jpg) -80px bottom no-repeat;
+        width: 506px;
+        height: 611px;
+    }
 
-.app {
-    margin-top: 220px;
+    .section-1 .intro {
+        padding: 300px 0 0 480px;
+        width: 486px;
+        font-size: 16px;
+    }
+
+    .section-1 .title {
+        font-size: 36px;
+    }
+
+.section-2 {
     text-align: center;
 }
 
-.link-app-stroe {
+    .section-2 .center {
+        background: url(../images/drh-feature-2.jpg) center bottom no-repeat;
+        height: 750px;
+    }
+
+    .section-2 .intro {
+        padding: 50px 0 0 0;
+        width: 665px;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+
+    .section-2 .title {
+        font-size: 36px;
+    }
+
+.section-3 {
+    text-align: center;
 }
+
+    .section-3 .center {
+        height: 700px;
+        position: relative;
+    }
+
+    .section-3 .daw-slide-wrap {
+        position: absolute;
+        left: -380px;
+        top: 0;
+        width: 1229px;
+        height: 522px;
+        background: url(../images/drh-feature-3.jpg) left bottom no-repeat;
+    }
+
+    .section-3 .ipad-highlight {
+        position: absolute;
+        top: 81px;
+        right: 359px;
+        width: 167px;
+        height: 206px;
+        background: url(../images/ipad-highlight.png) 0 0 no-repeat;
+    }
+
+    #daw-slide {
+        position: absolute;
+        width: 388px;
+        height: 291px;
+        right: 402px;
+        top: 118px;
+    }
+        #daw-slide .wmuSlider,
+        #daw-slide .wmuSlider .wmuSliderWrapper,
+        #daw .wmuSlider article {
+            width: 388px;
+            height: 291px;
+        }
+
+    .section-3 .intro {
+        text-align: left;
+        position: absolute;
+        width: 422px;
+        font-size: 16px;
+        left: 550px;
+        top: 150px;
+    }
+
+    .section-3 .title {
+        font-size: 36px;
+    }
+
+    .section-3 .daw-nav {
+        position: relative;
+        z-index: 99;
+        margin-top: 520px;
+        height: 46px;
+        line-height: 46px;
+        position: relative;
+        display: inline-block;
+        background: url(../images/drh-feature-3-nav-bg.png) 0 0 repeat-x;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+    }
+
+    .section-3 .daw-nav a {
+        display: inline-block;
+        margin: 0 15px;
+        color: #b28e51;
+        font-size: 16px;
+    }
+
+    .section-3 .daw-nav a.selected,
+    .section-3 .daw-nav a:hover {
+        -moz-text-shadow: 0 0 9px rgba(255,148,79, 0.75);
+        -webkit-text-shadow: 0 0 9px rgba(255,148,79, 0.75);
+        text-shadow: 0 0 9px rgba(255,148,79, 0.75);
+        color: #f1cc5a;
+    }
+
+
+    .section-3 .daw-nav a,
+    .section-3 .daw-nav a:hover {
+        transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+    }
+
+.section-4 {
+    text-align: left;
+    background-color: #1b2021;
+}
+
+    .section-4 .center {
+        height: 410px;
+        position: relative;
+    }
+
+    .section-4 .pic {
+        position: absolute;
+        bottom: -30px;
+        right: -85px;
+        width: 651px;
+        height: 652px;
+        background: url(../images/drh-feature-4.png) 0 0 no-repeat;
+    }
+
+    .section-4 .intro {
+        padding: 60px 0 0 20px;
+        width: 461px;
+        font-size: 16px;
+    }
+
+    .section-4 .title {
+        font-size: 32px;
+    }
+
+.section-5 {
+    text-align: center;
+    background: url(../images/drh-sofa-bg.jpg) 0 0 repeat-x;
+}
+
+    .section-5 .center {
+        width: 1160px;
+        height: 634px;
+        background: url(../images/drh-feature-5.jpg) center bottom no-repeat;
+    }
+
+    .section-5 .intro {
+        padding-top: 60px;
+        width: 712px;
+        margin: 0 auto;
+        font-size: 16px;
+        color: #666;
+    }
+
+    .section-5 .title {
+        font-size: 36px;
+        color: #457c97;
+    }
+
+.section-6 {
+    text-align: center;
+}
+
+    .section-6 .center {
+        width: 1000px;
+        height: 614px;
+        position: relative;
+    }
+
+    .section-6 .pic {
+        position: absolute;
+        top: 130px;
+        left: -80px;
+        width: 1080px;
+        height: 480px;
+        background: url(../images/drh-feature-6.jpg) 0 0 no-repeat;
+    }
+
+    .section-6 .link-app-store {
+        position: absolute;
+        top: 340px;
+        right: 48px;
+        background: url(../images/drh-app-store-link-bottom.png) no-repeat 0 0;
+        width: 220px;
+        height: 77px;
+    }
+
+    .section-6 .link-app-store:hover {
+        background-position: -220px 0;
+    }
