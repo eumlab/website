@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}insTuner{% endblock %}
+
+{% block script %}
+    <script src="/assets/scripts/instuner.js"></script>
+{% endblock %}
+
+{% block style %}
+    <link href="/assets/styles/instuner.css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+<div class="container pg-instuner">
+    <div class="header">
+        <div class="bg"></div>
+        {% include "_topbar.html" %}
+        <div class="app">
+            <div class="center">
+                <h2 class="app-title">Pro Tuner</h2>
+                <a href="#" class="link-app-store">Available on the App Store</a>
+                <div class="pic"></div>
+            </div>
+        </div>
+        <div class="guitar" id="guitar"></div>
+        <div class="violin" id="violin"></div>
+    </div>
+    <div class="section section-0">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Fine-Tune Display designed for perfect tune</h3>
+                <p class="desc">Newly designed "Fixed Tuning Wheel" helps you to quickly find the position of your current pitch. </p>
+                <p class="desc">Moreover, With highly responsive tuning meter as well as rich tuning parameter information, it helps you to tune your instruments in±0.1 cent precise</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-1">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Instant-Tune Display<br />designed for quick tune</h3>
+                <p class="desc">In most cases, all you need is to quickly find the correct pitch and begin to play. If you don't have that much time to do perfect tune, just choose this one!</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-2">
+        <div class="center">
+            <div class="pic-l"></div>
+            <div class="pic-r"></div>
+            <div class="intro">
+                <h3 class="title">FFT Display<br /><span>helps to understand more about sound</span></h3>
+                <p class="desc">FFT(Fast Fourier Transform) helps to understand the sound of your instrument in frequency domain. With Logrithm, Linear and Note Display options, you can have different perspective of the sound.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-3">
+        <div class="center">
+            <div class="intro">
+                <h3 class="title">Spectrogram<br /><span>Helps to "see" the varies of the pitch in real-time</span></h3>
+                <p class="desc">Spectrogram is time-varying spectral representation that shows how the spectral density of a sound varies. Logrithm/Linear/Note with Median Frequency Display options are provided, which helps to analyze the audio both in Time and Frequency Domain.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-4">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Advanced Features</h3>
+                <p class="desc">Concert A Calibration, 30+ Historical Temperaments, Customizable Transpositions, Tone generator, Customizable Tone Waveform, Rich Instructions, and more.</p>
+            </div>
+            <a href="#" class="link-app-store">app store</a>
+        </div>
+    </div>
+    {% include "_footer.html" %}
+</div>
+{% endblock %}

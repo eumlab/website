@@ -165,27 +165,7 @@ a {
         -o-transition: all 0.3s ease-in-out;
     }
 
-.guitar {
-    position: absolute;
-    top: 0;
-    left: -100px;
-    background: url(../images/guitar.png) 0 0 no-repeat;
-    width: 550px;
-    height: 100%;
-    z-index: 0;
-    display: none;
-}
 
-.violin {
-    position: absolute;
-    top: 0;
-    right: -100px;
-    background: url(../images/violin.png) right 0 no-repeat;
-    width: 550px;
-    height: 100%;
-    z-index: 0;
-    display: none;
-}
 
 .app-title {
     display: none;

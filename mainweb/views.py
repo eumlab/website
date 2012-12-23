@@ -14,3 +14,9 @@ def daw_remote_hd(request):
 
 def pro_tuner(request):
     return render_to_response('pro-tuner.html')
+
+def string_tuner(request):
+    return render_to_response('string-tuner.html')
+
+def instuner(request):
+    return render_to_response('instuner.html')

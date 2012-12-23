@@ -1,0 +1,261 @@
+.header {
+    height: 880px;
+}
+
+    .header .bg {
+        width: 100%;
+        height: 880px;
+        background-repeat: repeat-x;
+        background-position: 0 top;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1000ms ease-in-out;
+        -moz-transition: opacity 1000ms ease-in-out;
+        -webkit-transition: opacity 1000ms ease-in-out;
+    }
+
+    .header .guitar {
+        position: absolute;
+        top: 0;
+        left: -100px;
+        background: url(../images/it-header-guitar.png) 0 0 no-repeat;
+        width: 414px;
+        height: 883px;
+        z-index: 0;
+        display: none;
+    }
+
+    .header .violin {
+        position: absolute;
+        top: 0;
+        right: -100px;
+        background: url(../images/it-header-violin.png) right 0 no-repeat;
+        width: 414px;
+        height: 883px;
+        z-index: 0;
+        display: none;
+    }
+
+.app {
+    text-align: center;
+    margin-top: 125px;
+}
+
+.app .link-app-store {
+    background: url(../images/drh-app-store-link-top.png) no-repeat 0 0;
+    margin: 340px 0 0 500px;
+    width: 153px;
+    height: 54px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+    .app .link-app-store:hover {
+        -moz-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+        -webkit-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+        box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+    }
+
+    .app .link-app-store,
+    .app .link-app-store:hover {
+        transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+    }
+
+
+.app .center {
+    position: relative;
+    background: url(../images/it-app.png) center 0 no-repeat;
+    height: 540px;
+}
+
+.section-0 {
+    text-align: left;
+}
+
+    .section-0 .center {
+        height: 386px;
+        position: relative;
+    }
+
+    .section-0 .pic {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: -45px;
+        width: 464px;
+        height: 386px;
+        background: url(../images/it-feature-0.jpg) 0 0 no-repeat;
+    }
+
+    .section-0 .intro {
+        padding: 95px 0 0 60px;
+        width: 472px;
+        font-size: 16px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .section-0 .title {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+.section-1 {
+    text-align: left;
+    background-color: #232323;
+    margin-top: 175px;
+}
+
+    .section-1 .center {
+        height: 295px;
+        position: relative;
+    }
+
+    .section-1 .pic {
+        position: absolute;
+        top: -87px;
+        left: 55px;
+        background: url(../images/it-feature-1.jpg) 0 0 no-repeat;
+        width: 436px;
+        height: 382px;
+    }
+
+    .section-1 .intro {
+        padding: 73px 0 0 560px;
+        width: 448px;
+        font-size: 16px;
+    }
+
+    .section-1 .title {
+        font-size: 22px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+.section-2 {
+    background: url(../images/it-feature-2-bg.jpg) 0 bottom repeat-x;
+}
+
+    .section-2 .center {
+        height: 800px;
+        position: relative;
+    }
+
+    .section-2 .pic-l {
+        position: absolute;
+        z-index: 0;
+        bottom: 34px;
+        left: -80px;
+        background: url(../images/it-feature-2-l.jpg) 0 0 no-repeat;
+        width: 710px;
+        height: 650px;
+    }
+
+    .section-2 .pic-r {
+        position: absolute;
+        z-index: 0;
+        bottom: 34px;
+        right: -128px;
+        background: url(../images/it-feature-2-r.jpg) 0 0 no-repeat;
+        width: 468px;
+        height: 650px;
+    }
+
+    .section-2 .intro {
+        text-align: center;
+        padding: 315px 0 0 350px;
+        width: 422px;
+        font-size: 16px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .section-2 .title {
+        font-size: 28px;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    .section-2 .title span {
+        font-size: 22px;
+    }
+
+.section-3 {
+    text-align: center;
+}
+
+    .section-3 .center {
+        height: 750px;
+        position: relative;
+        background: url(../images/it-feature-3.jpg) center 240px no-repeat;
+    }
+
+    .section-3 .intro {
+        padding-top: 35px;
+        width: 738px;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+
+    .section-3 .title {
+        font-size: 28px;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    .section-3 .title span {
+        font-size: 22px;
+    }
+
+.section-4 {
+    text-align: center;
+}
+
+    .section-4 .center {
+        height: 764px;
+        position: relative;
+    }
+
+    .section-4 .pic {
+        position: absolute;
+        z-index: 0;
+        bottom: 30px;
+        left: -30px;
+        width: 949px;
+        height: 505px;
+        background: url(../images/it-feature-4.jpg) 0 0 no-repeat;
+    }
+
+    .section-4 .intro {
+        padding-top: 22px;
+        margin: 0 auto;
+        width: 682px;
+        font-size: 16px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .section-4 .title {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .section-4 .link-app-store {
+        position: absolute;
+        top: 490px;
+        right: 48px;
+        background: url(../images/it-app-store-link-bottom.png) no-repeat 0 0;
+        width: 220px;
+        height: 77px;
+    }
+
+    .section-4 .link-app-store:hover {
+        background-position: -220px 0;
+    }
