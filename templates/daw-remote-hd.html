@@ -14,23 +14,7 @@
 <div class="container pg-drh">
     <div class="header">
         <div class="bg"></div>
-        <div class="topbar">
-            <div class="center">
-                <div class="site-title">
-                    <h1>EUM lab</h1>
-                    <h2>We make music apps</h2>
-                </div>
-                <ul class="nav">
-                    <li><a href="#DAW_Remote">DAW Remote</a></li>
-                    <li class="active"><a href="#DAW_Remote_HD">DAW Remote HD</a></li>
-                    <li><a href="#Pro_Metronome">Pro Metronome</a></li>
-                    <li><a href="#insTuner">insTuner</a></li>
-                    <li><a href="#Ukulele_Toolkit">Ukulele Toolkit</a></li>
-                    <li><a href="#String_Tuner">String Tuner</a></li>
-                    <li><a href="#Pro_Tuner">Pro Tuner</a></li>
-                </ul>
-            </div>
-        </div>
+        {% include "_topbar.html" %}
         <div class="app">
             <div class="center">
                 <h2 class="app-title">DAW Remote HD</h2>
@@ -111,28 +95,6 @@
             <a href="#" class="link-app-store">app store</a>
         </div>
     </div>
-    <div class="footer">
-        <div class="ft-nav">
-            <strong class="logo">EUM lab</strong>
-            <ul class="nav">
-                <li><a href="#DAW_Remote">DAW Remote</a></li>
-                <li class="active"><a href="#DAW_Remote_HD">DAW Remote HD</a></li>
-                <li><a href="#Pro_Metronome">Pro Metronome</a></li>
-                <li><a href="#insTuner">insTuner</a></li>
-                <li><a href="#Ukulele_Toolkit">Ukulele Toolkit</a></li>
-                <li><a href="#String_Tuner">String Tuner</a></li>
-                <li><a href="#Pro_Tuner">Pro Tuner</a></li>
-            </ul>
-        </div>
-        <div class="social-medias">
-            <a class="email" href="mailto:eum@ezse.com" title="Email">EUM's Email</a>
-            <a class="facebook" target="_blank" href="http://facebook.com/eumlab" title="Facebook">EUM's Facebook</a>
-            <a class="twitter" target="_blank" href="http://twitter.com/eumlab" title="Twitter">EUM's Twitter</a>
-            <a class="youtube" target="_blank" href="http://www.youtube.com/user/yxshawn" title="Youtube">EUM's Youtube</a>
-        </div>
-        <p class="copyright">
-            2013 EUM. All Rights Reserved.
-        </p>
-    </div>
+    {% include "_footer.html" %}
 </div>
 {% endblock %}

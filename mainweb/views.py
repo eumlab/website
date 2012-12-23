@@ -9,5 +9,8 @@ from django.http import HttpResponse,HttpResponseRedirect, HttpResponsePermanent
 def index(request):
     return render_to_response('index.html')
 
-def drh(request):
+def daw_remote_hd(request):
     return render_to_response('daw-remote-hd.html')
+
+def pro_tuner(request):
+    return render_to_response('pro-tuner.html')

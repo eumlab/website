@@ -23,5 +23,6 @@ urlpatterns += patterns('',
 
 urlpatterns += patterns('mainweb.views',
     (r'^$', 'index'),
-    (r'^daw-remote-hd$', 'drh'),
+    (r'^daw-remote-hd/$', 'daw_remote_hd'),
+    (r'^pro-tuner/$', 'pro_tuner'),
 )

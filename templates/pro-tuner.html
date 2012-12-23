@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block title %}Pro Tuner{% endblock %}
+
+{% block script %}
+    <script src="/assets/scripts/pro-tuner.js"></script>
+{% endblock %}
+
+{% block style %}
+    <link href="/assets/styles/pro-tuner.css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+<div class="container pg-pro-tuner">
+    <div class="header">
+        <div class="bg"></div>
+        {% include "_topbar.html" %}
+        <div class="app">
+            <div class="center">
+                <h2 class="app-title">Pro Tuner</h2>
+                <a href="#" class="link-app-store">Available on the App Store</a>
+                <div class="pic"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-0">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">What is Pro Tuner</h3>
+                <p class="desc">Pro Tuner is a well designed <em>Chromatic Tuner</em> on iPhone/iPad especially for Guitar and Bass players.</p>
+                <p class="desc">It's highly accurate  (Up to ±1/100 semitone (<em>±1 cent</em>) precise) and has <em>more than 100 build-in tuning modes</em>. Moreover, by tapping the strings, you can get <em>REAL</em> guitar reference sounds easily.</p>
+                <p class="desc">Pro Tuner supports two input methods: <em>Build-in Microphone</em> Mode and <em>Line-in Mode</em>. Guitar Clip Microphone is also supported.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-1">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">It's Accurate</h3>
+                <p class="desc">Pro Tuner use highly accurate algorithm to make sure your guitar sounds more accurate than ever(<em>±1 cent</em> precise), even by using iPhone inner-microphone.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-2">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">It's Pro</h3>
+                <p class="desc">Pro Tuner has <em>&gt;100 tuning modes</em> build inside. Each node has real guitar reference sound. Pro Tuner is light, but still PRO!</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-3">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">It's Universal</h3>
+                <p class="desc">You don't need purchase iPhone and iPad separately. Pro Tuner a is universal APP. It works on all of your iOS devices.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-4">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Support Clip Microphone</h3>
+                <p class="desc">With a clip microphone, you tuning will become more accurate.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-5">
+        <div class="center">
+            <div class="intro">
+                <h3 class="title">Features List</h3>
+                <ul class="desc">
+                    <li><em>User-friendly.</em> Extremely easy to use</li>
+                    <li><em>Universal APP.</em> Purchase once, available on all of your iPhone/iPod/iPad.</li>
+                    <li><em>Support chromatic tuning.</em> Especially optimized for acoustic/electric Guitar and Bass.</li>
+                    <li><em>Real Guitar Reference Sounds.</em> Help to do coarse tuning or practice tuning by ear.</li>
+                    <li><em>Tuning Mode.</em> &gt;100 builds inside.</li>
+                    <li><em>Input-Level indicator.</em> Make sure your input level always be right.</li>
+                </ul>
+            </div>
+            <div class="intro">
+                <h3 class="title">Build-in Tuning Modes Category</h3>
+                <p class="desc">General Tunings / Lower Tunings / Higher Tunings / Dropped Tunings / Double-dropped Tunings / Major Open Tunings / Minor Open Tunings / Cross-note Tunings / Modal Tunings / Miscellaneous Tunings / 5 String Tunings / 7 String Tunings / 8 String Tunings / Bass Tunings / Ukelele Tunings / Mandolin Family Tunings / Banjo Family Tunings / Bouzouki Tunings</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-6">
+        <div class="center">
+            <div class="pic"></div>
+            <a href="#" class="link-app-store">app store</a>
+        </div>
+    </div>
+    {% include "_footer.html" %}
+</div>
+{% endblock %}

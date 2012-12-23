@@ -83,9 +83,10 @@ table {
 body {
     background: #000;
     font-size: 12px;
-    font-family: "Lucida Grande", "Helvetica Neue", Helvetica, arial, sans-serif;
+    font-family: "Lucida Grande Regular", "Lucida Grande", "Helvetica Neue", Helvetica, arial, sans-serif;
     color: #b5c5ca;
     overflow-y: scroll;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -125,6 +126,7 @@ a {
 
 .topbar {
     position: relative;
+    z-index: 100;
     background: url(../images/nav-bg.png) 0 0 repeat-x;
     height: 46px;
 }
@@ -333,6 +335,11 @@ a {
     font-size: 18px;
     color: #aaa;
     line-height: 1.6;
+}
+
+.intro .desc em {
+    color: #eee;
+    font-weight: bold;
 }
 
 .intro .link {
