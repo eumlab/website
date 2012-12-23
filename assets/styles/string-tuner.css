@@ -1,0 +1,252 @@
+.header {
+    height: 830px;
+}
+
+.header .bg {
+	width: 100%;
+	height: 830px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	position: absolute;
+    z-index: 0;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 1000ms ease-in-out;
+	-moz-transition: opacity 1000ms ease-in-out;
+	-webkit-transition: opacity 1000ms ease-in-out;
+}
+
+.app {
+    top: -72px;
+    text-align: center;
+    position: relative;
+}
+
+.app .link-app-store {
+    background: url(../images/drh-app-store-link-top.png) no-repeat 0 0;
+    margin: 340px 0 0 500px;
+    width: 153px;
+    height: 54px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+    .app .link-app-store:hover {
+        -moz-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+        -webkit-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+        box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+    }
+
+    .app .link-app-store,
+    .app .link-app-store:hover {
+        transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+    }
+
+
+.app .center {
+    position: relative;
+}
+    .app .pic {
+        position: absolute;
+        top: 128px;
+        left: 80px;
+        background: url(../images/st-app.png) left 0 no-repeat;
+        width: 791px;
+        height: 536px;
+    }
+
+.section-0 {
+    text-align: left;
+}
+
+    .section-0 .center {
+        height: 522px;
+        position: relative;
+    }
+
+    .section-0 .pic {
+        position: absolute;
+        z-index: 0;
+        top: -50px;
+        right: -150px;
+        width: 723px;
+        height: 544px;
+        background: url(../images/st-feature-0.jpg) 0 0 no-repeat;
+    }
+
+    .section-0 .intro {
+        padding: 40px 0 0 60px;
+        width: 545px;
+        font-size: 16px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .section-0 .title {
+        font-size: 36px;
+    }
+
+    .section-0 .intro .desc {
+        margin-bottom: 10px;
+    }
+
+.section-1 {
+    text-align: left;
+}
+
+    .section-1 .center {
+        height: 492px;
+        position: relative;
+    }
+
+    .section-1 .pic {
+        position: absolute;
+        top: 0px;
+        left: 85px;
+        background: url(../images/st-feature-1.jpg) 0 0 no-repeat;
+        width: 310px;
+        height: 411px;
+    }
+
+    .section-1 .intro {
+        padding: 110px 0 0 450px;
+        width: 479px;
+        font-size: 16px;
+    }
+
+    .section-1 .title {
+        font-size: 36px;
+    }
+
+.section-2 {
+    text-align: center;
+}
+
+    .section-2 .center {
+        height: 750px;
+        position: relative;
+        background: url(../images/st-feature-2.jpg) center 240px no-repeat;
+    }
+
+    .section-2 .intro {
+        padding-top: 35px;
+        width: 648px;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+
+    .section-2 .title {
+        font-size: 44px;
+        margin-bottom: 5px;
+    }
+
+    .section-2 .title span {
+        font-size: 22px;
+    }
+
+.section-3 {
+    text-align: left;
+}
+
+    .section-3 .center {
+        height: 388px;
+        position: relative;
+    }
+
+    .section-3 .pic {
+        position: absolute;
+        top: 0px;
+        left: 45px;
+        background: url(../images/st-feature-3.jpg) 0 0 no-repeat;
+        width: 370px;
+        height: 388px;
+    }
+
+    .section-3 .intro {
+        padding: 145px 0 0 470px;
+        width: 479px;
+        font-size: 16px;
+    }
+
+    .section-3 .title {
+        font-size: 36px;
+    }
+
+.section-4 {
+    text-align: left;
+}
+
+    .section-4 .center {
+        height: 560px;
+        position: relative;
+    }
+
+    .section-4 .pic {
+        position: absolute;
+        top: 70px;
+        right: 80px;
+        background: url(../images/st-feature-4.jpg) 0 0 no-repeat;
+        width: 336px;
+        height: 490px;
+    }
+
+    .section-4 .intro {
+        padding: 240px 0 0 60px;
+        width: 468px;
+        font-size: 16px;
+    }
+
+    .section-4 .title {
+        font-size: 36px;
+    }
+
+.section-5 {
+}
+
+    .section-5 .center {
+    }
+
+    .section-5 .intro {
+        width: 808px;
+        position: relative;
+        z-index: 1;
+        padding: 50px 0 0 60px;
+        font-size: 16px;
+        line-height: 2;
+    }
+
+    .section-5 .title {
+        font-size: 28px;
+    }
+
+.section-6 {
+}
+
+    .section-6 .center {
+        height: 696px;
+        position: relative;
+    }
+
+    .section-6 .pic {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 1000px;
+        height: 606px;
+        background: url(../images/st-feature-6.jpg) 0 0 no-repeat;
+    }
+
+    .section-6 .link-app-store {
+        position: absolute;
+        top: 340px;
+        right: 48px;
+        background: url(../images/st-app-store-link-bottom.png) no-repeat 0 0;
+        width: 220px;
+        height: 77px;
+    }
+
