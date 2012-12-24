@@ -1,9 +1,9 @@
 <ul class="nav">
-    <li><a href="/daw-remote/">DAW Remote</a></li>
-    <li class="active"><a href="/daw-remote-hd/">DAW Remote HD</a></li>
-    <li><a href="/pro-metronome/">Pro Metronome</a></li>
-    <li><a href="/instuner/">insTuner</a></li>
-    <li><a href="/ukulele/">Ukulele Toolkit</a></li>
-    <li><a href="/string-tuner/">String Tuner</a></li>
-    <li><a href="/pro-tuner/">Pro Tuner</a></li>
+    <li{% if nav == 'dr' %} class="active"{% endif %}><a href="/daw-remote/">DAW Remote</a></li>
+    <li{% if nav == 'drh' %} class="active"{% endif %}><a href="/daw-remote-hd/">DAW Remote HD</a></li>
+    <li{% if nav == 'pm' %} class="active"{% endif %}><a href="/pro-metronome/">Pro Metronome</a></li>
+    <li{% if nav == 'it' %} class="active"{% endif %}><a href="/instuner/">insTuner</a></li>
+    <li{% if nav == 'ut' %} class="active"{% endif %}><a href="/ukulele/">Ukulele Toolkit</a></li>
+    <li{% if nav == 'st' %} class="active"{% endif %}><a href="/string-tuner/">String Tuner</a></li>
+    <li{% if nav == 'pt' %} class="active"{% endif %}><a href="/pro-tuner/">Pro Tuner</a></li>
 </ul>

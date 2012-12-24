@@ -229,6 +229,7 @@
 
     .section-4 .pic {
         position: absolute;
+        z-index: 0;
         bottom: -30px;
         right: -85px;
         width: 651px;
@@ -240,10 +241,30 @@
         padding: 60px 0 0 20px;
         width: 461px;
         font-size: 16px;
+        position: relative;
+        z-index: 1;
     }
 
     .section-4 .title {
         font-size: 32px;
+    }
+
+    .section-4 .bcs-video-wrap {
+        width: 853px;
+        height: 480px;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -426px;
+        display: none;
+        background-color: #ccc;
+    }
+
+    .section-4 .bcs-video-wrap .btn-close{
+        position: absolute;
+        top: -12px;
+        right: -12px;
     }
 
 .section-5 {

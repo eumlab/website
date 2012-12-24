@@ -10,13 +10,13 @@ def index(request):
     return render_to_response('index.html')
 
 def daw_remote_hd(request):
-    return render_to_response('daw-remote-hd.html')
+    return render_to_response('daw-remote-hd.html', {"nav": "drh"})
 
 def pro_tuner(request):
-    return render_to_response('pro-tuner.html')
+    return render_to_response('pro-tuner.html', {"nav": "pt"})
 
 def string_tuner(request):
-    return render_to_response('string-tuner.html')
+    return render_to_response('string-tuner.html', {"nav": "st"})
 
 def instuner(request):
-    return render_to_response('instuner.html')
+    return render_to_response('instuner.html', {"nav": "it"})

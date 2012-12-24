@@ -110,7 +110,7 @@
         left: 85px;
         background: url(../images/st-feature-1.jpg) 0 0 no-repeat;
         width: 310px;
-        height: 411px;
+        height: 417px;
     }
 
     .section-1 .intro {
@@ -206,42 +206,71 @@
     }
 
 .section-5 {
+    text-align: left;
 }
 
     .section-5 .center {
+        height: 574px;
+        position: relative;
+    }
+
+    .section-5 .pic {
+        position: absolute;
+        top: 50px;
+        left: -275px;
+        background: url(../images/st-feature-5.jpg) 0 0 no-repeat;
+        width: 1127px;
+        height: 524px;
     }
 
     .section-5 .intro {
-        width: 808px;
         position: relative;
-        z-index: 1;
-        padding: 50px 0 0 60px;
+        padding: 170px 0 0 500px;
+        width: 468px;
         font-size: 16px;
-        line-height: 2;
     }
 
     .section-5 .title {
-        font-size: 28px;
+        font-size: 36px;
     }
 
 .section-6 {
 }
 
     .section-6 .center {
+    }
+
+    .section-6 .intro {
+        width: 808px;
+        position: relative;
+        z-index: 1;
+        padding: 50px 0 0 78px;
+        font-size: 16px;
+        line-height: 2;
+    }
+
+    .section-6 .title {
+        font-size: 28px;
+    }
+
+.section-7 {
+}
+
+    .section-7 .center {
         height: 696px;
         position: relative;
     }
 
-    .section-6 .pic {
+    .section-7 .pic {
         position: absolute;
         top: 90px;
         left: 0;
         width: 1000px;
         height: 606px;
-        background: url(../images/st-feature-6.jpg) 0 0 no-repeat;
+        background: url(../images/st-feature-7.jpg) 0 0 no-repeat;
     }
 
-    .section-6 .link-app-store {
+    .section-7 .link-app-store {
         position: absolute;
         top: 340px;
         right: 48px;

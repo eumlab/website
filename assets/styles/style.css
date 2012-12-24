@@ -408,3 +408,44 @@ a {
 .wmuSliderPagination a.wmuActive {
     background-position: -10px -80px;
 }
+
+.btn-close {
+    display: block;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    line-height: 21px;
+    background-color: #555;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid #fff;
+    font-family: 'Lucida Grande', helvetica, Arial, san-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-box-shadow: 0 0 6px rgba(255,255,255,0.5);
+    -webkit-box-shadow: 0 0 6px rgba(255,255,255,0.5);
+    box-shadow: 0 0 6px rgba(255,255,255,0.5);
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.btn-close:hover {
+    text-decoration: none;
+    -moz-box-shadow: 0 0 15px rgba(255,255,255,0.9);
+    -webkit-box-shadow: 0 0 15px rgba(255,255,255,0.9);
+    box-shadow: 0 0 15px rgba(255,255,255,0.9);    
+}
+
+.btn-close,
+.btn-close:hover {
+    transition: box-shadow 500ms;
+    -moz-transition: box-shadow 500ms;
+    -webkit-transition: box-shadow 500ms;
+}

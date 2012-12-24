@@ -11,8 +11,39 @@ $(function() {
         }, 1000);
     }, this));
 
-    $(".daw-nav").on('click', 'a', selectDAW)
+    $('.daw-nav').on('click', 'a', selectDAW)
         .find('[data-type=logic]').trigger('click');
+
+    $('#btn-play-bcs-video').click(function(e) {
+        e.preventDefault();
+
+        $('#bcs-intro').animate({
+            left:'-=200',
+            opacity:0
+        }, 300);
+
+        $('#bcs-pic').animate({
+            opacity: 0,
+            right: '-=200'
+        }, 300, 'linear', function() {
+            var inner = '<iframe width="853" height="480" src="http://www.youtube.com/embed/vMRdbuX9-Ck?rel=0&autoplay=1" frameborder="0" allowfullscreen ></iframe>',
+                wrap = $("#bcs-video-wrap").append(inner);
+
+            setTimeout(function() {
+                wrap.fadeIn();
+            }, 5);
+        });
+    });
+    
+    $('#bcs-video-wrap .btn-close').click(function(e) {
+        e.preventDefault();
+
+        $('#bcs-video-wrap').fadeOut(300, function(){
+            $('iframe', this).remove();
+            $('#bcs-intro').animate({left:'0', opacity:1}, 300);
+            $('#bcs-pic').animate({opacity:1, right:'+=200'}, 300);
+        });
+    });
 });
 
 function selectDAW(e) {
