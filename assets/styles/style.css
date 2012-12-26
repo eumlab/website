@@ -311,6 +311,10 @@ a {
     font-family: "DIN-Regular", "Helvetica Neue", Helvetica, arial, sans-serif;
 }
 
+.intro .title em {
+    color: #ffbb50;
+}
+
 .intro {
     font-size: 18px;
     color: #aaa;

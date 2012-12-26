@@ -27,4 +27,5 @@ urlpatterns += patterns('mainweb.views',
     (r'^pro-tuner/$', 'pro_tuner'),
     (r'^string-tuner/$', 'string_tuner'),
     (r'^instuner/$', 'instuner'),
+    (r'^daw-remote/$', 'daw_remote'),
 )

@@ -20,3 +20,6 @@ def string_tuner(request):
 
 def instuner(request):
     return render_to_response('instuner.html', {"nav": "it"})
+
+def daw_remote(request):
+    return render_to_response('daw-remote.html', {"nav": "dr"})
