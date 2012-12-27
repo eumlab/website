@@ -23,3 +23,6 @@ def instuner(request):
 
 def daw_remote(request):
     return render_to_response('daw-remote.html', {"nav": "dr"})
+
+def pro_metronome(request):
+    return render_to_response('pro-metronome.html', {"nav": "pm"})

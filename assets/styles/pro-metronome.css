@@ -1,0 +1,336 @@
+.header {
+    height: 800px;
+}
+
+.header .bg {
+	width: 100%;
+	height: 800px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+	background-repeat: 50%;
+	background-position: 50% top;
+	position: absolute;
+    z-index: 0;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 1000ms ease-in-out;
+	-moz-transition: opacity 1000ms ease-in-out;
+	-webkit-transition: opacity 1000ms ease-in-out;
+}
+
+.app {
+    margin-top: 89px;
+    text-align: center;
+    position: relative;
+}
+
+.app .link-app-store {
+    background: url(../images/drh-app-store-link-top.png) no-repeat 0 0;
+    margin-top: 140px;
+    width: 153px;
+    height: 54px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+    .app .link-app-store:hover {
+        -moz-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+        -webkit-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+        box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+    }
+
+    .app .link-app-store,
+    .app .link-app-store:hover {
+        transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+    }
+
+.app .center {
+    background: url(../images/pm-app.png) center 0 no-repeat;
+}
+
+.section-0 {
+}
+
+    .section-0 .center {
+        height: 704px;
+        position: relative;
+    }
+
+    .section-0 .pic {
+        background: url(../images/pm-feature-0.jpg) 0 0 no-repeat;
+        position: absolute;
+        top: 80px;
+        right: -380px;
+        width: 1083px;
+        height: 624px;
+    }
+
+    .section-0 .intro {
+        padding: 155px 0 0 25px;
+        width: 541px;
+        position: relative;
+    }
+
+    .section-0 .title {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .section-0 .desc {
+        margin-bottom: 18px; 
+        font-size: 18px;
+    }
+
+.section-1 {
+}
+
+    .section-1 .center {
+        height: 700px;
+        position: relative;
+    }
+
+    .section-1 .pic {
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+        background: url(../images/pm/TAP_00.jpg) 0 0 no-repeat;
+        width: 751px;
+        height: 347px;
+    }
+
+    .section-1 .intro {
+        text-align: center;
+        padding: 20px 0 0 0;
+        /* width: 668px; */
+        font-size: 18px;
+        position: relative;
+    }
+
+    .section-1 .title {
+        font-size: 32px;
+        margin-bottom: 15px
+    }
+
+    .section-1 .title em {
+        color: #e782ab;
+    }
+
+.section-2 {
+}
+
+    .section-2 .center {
+        height: 598px;
+        position: relative;
+    }
+
+    .section-2 .pic {
+        position: absolute;
+        top: 30px;
+        left: 45px;
+        background: url(../images/pm-feature-2.jpg) 0 0 no-repeat;
+        width: 409px;
+        height: 553px;
+    }
+
+    .section-2 .intro {
+        padding: 300px 0 0 40px;
+        width: 470px;
+        font-size: 16px;
+        position: relative;
+    }
+
+    .section-2 .title {
+        font-size: 36px;
+    }
+
+.section-3 {
+}
+
+    .section-3 .center {
+        height: 653px;
+        position: relative;
+    }
+
+    .section-3 .pic {
+        position: absolute;
+        top: 120px;
+        left: 45px;
+        background: url(../images/dr-feature-3.jpg) 0 0 no-repeat;
+        width: 531px;
+        height: 533px;
+    }
+
+    .section-3 .intro {
+        padding: 250px 0 0 540px;
+        width: 422px;
+        font-size: 16px;
+        position: relative;
+    }
+
+    .section-3 .title {
+        font-size: 36px;
+    }
+
+.section-4 {
+}
+
+    .section-4 .center {
+        height: 539px;
+        position: relative;
+    }
+
+    .section-4 .pic {
+        position: absolute;
+        top: 60px;
+        right: -117px;
+        width: 813px;
+        height: 479px;
+        background: url(../images/dr-feature-4.jpg) 0 0 no-repeat;
+    }
+
+    .section-4 .intro {
+        padding: 185px 0 0 40px;
+        width: 400px;
+        font-size: 16px;
+        position: relative;
+    }
+
+    .section-4 .title {
+        font-size: 36px;
+    }
+
+.section-5 {
+    margin-top: 70px;
+    background-color: #222;
+}
+
+    .section-5 .center {
+        height: 370px;
+        position: relative;
+    }
+
+    .section-5 .pic {
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+        width: 524px;
+        height: 428px;
+        background: url(../images/dr-feature-5.jpg) 0 0 no-repeat;
+    }
+
+    .section-5 .intro {
+        position: relative;
+        padding: 105px 0 0 510px;
+        width: 452px;
+        font-size: 16px;
+    }
+
+    .section-5 .title {
+        font-size: 36px;
+    }
+
+.section-6 {
+}
+
+    .section-6 .intro {
+        width: 695px;
+        position: relative;
+        padding: 80px 0 80px 100px;
+        font-size: 16px;
+        line-height: 2;
+    }
+
+    .section-6 .title {
+        font-size: 36px;
+    }
+
+
+.section-7 {
+    text-align: center;
+    background: url(../images/dr-feature-7.jpg) 0 0 repeat-x;
+}
+
+    .section-7 .center {
+        height: 410px;
+        position: relative;
+    }
+
+    .section-7 .title {
+        font-size: 36px;
+        line-height: 120px;
+    }
+
+    .section-7 .videos {
+        display: inline-block;
+    }
+
+    .section-7 .videos div {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .section-7 .videos iframe {
+        width: 300px;
+        height: 170px;
+        /*
+        width: 720px;
+        height: 406px; */
+    }
+
+    .section-7 .videos iframe:hover {
+        transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        -o-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+    }
+
+    .section-7 .videos iframe, 
+    .section-7 .videos iframe:hover {
+        transition: all 200ms ease-in-out;
+        -moz-transition: all 200ms ease-in-out;
+        -webkit-transition: all 200ms ease-in-out;
+    }
+    */
+
+
+    .section-7 .desc {
+        font-size: 16px;
+    }
+
+.section-8 {
+}
+
+    .section-8 .center {
+        height: 599px;
+        position: relative;
+    }
+
+    .section-8 .pic {
+        position: absolute;
+        top: 80px;
+        left: 30px;
+        width: 910px;
+        height: 419px;
+        background: url(../images/dr-feature-8.jpg) 0 0 no-repeat;
+    }
+
+    .section-8 .link-app-store {
+        position: absolute;
+        top: 240px;
+        right: 40px;
+        background: url(../images/drh-app-store-link-bottom.png) no-repeat 0 0;
+        width: 220px;
+        height: 77px;
+    }
+
+    .section-8 .link-app-store:hover {
+        background-position: -220px 0;
+    }

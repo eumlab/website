@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{% block title %}Pro Metronome{% endblock %}
+
+{% block script %}
+    <script src="/assets/scripts/jquery.threesixty.js"></script>
+    <script src="/assets/scripts/pro-metronome.js"></script>
+{% endblock %}
+
+{% block style %}
+    <link href="/assets/styles/pro-metronome.css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+<div class="container pg-pro-metronome">
+    <div class="header">
+        <div class="bg"></div>
+        {% include "_topbar.html" %}
+        <div class="app">
+            <div class="center">
+                <h2 class="app-title">Pro Metronome</h2>
+                <a href="#" class="link-app-store">Available on the App Store</a>
+            </div>
+        </div>
+    </div>
+    <div class="section section-0">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">What is Pro Metronome</h3>
+                <p class="desc">The BEST and FREE Metronome App, redefines how you sync the beat with Innovative UI Design and Hard-Core Engineering inside. Used by over 1 million musicians!</p>
+                <p class="desc"><em>It's Professional.</em> 7 tones, 4+1 visual modes, Time Signature, Accents, Subdivisions, TAP, etc.</p>
+                <p class="desc"><em>It's User-Friendly.</em> You don't need to face complex settings. With elegant user interface, it's very easy to use.</p>
+                <p class="desc"><em>It's Creative.</em> Flash the beats by using LED or even "BEAM" it on the Projector or AppleTV.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-1">
+        <div class="center">
+            <div class="pic"><img id="tap-flash" width="751" height="347" src="/assets/images/pm/TAP_00.jpg" /></div>
+            <div class="intro">
+                <h3 class="title">Change the <em>Tempo</em> easily</h3>
+                <p class="desc">You can simply change the tempo by using the Dial Wheel.</p>
+                <p class="desc">Or tap the TAP button to calculate the BPM in real time.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-2">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">It is Extremely Precise</h3>
+                <p class="desc">Precise timing is important for a metronome.</p>
+                <p class="desc">Pro Metronome uses our brand new RTP (Real-Time Playback) technology to ensure its accuracy (±0.2us).</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-3">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">SEE the beats</h3>
+                <p class="desc">You may find it hard to sync your band</p>
+                <p class="desc">or orchestra when playing. </p>
+                <p class="desc">But now, everybody sees the beats.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-4">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Landscape Mode</h3>
+                <p class="desc">Turn on landscape mode to get more space for beats.</p>
+                <p class="desc">And you can still change the tempo, accents, T.S. etc in the Landscape Mode.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-5">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Advanced T.S. Settings</h3>
+                <p class="desc">You can change the Time Signature more easily.</p>
+                <p class="desc">Each beat could be set to any one of the four different accent: <em>f</em> , <em>mf</em> , <em>p</em> or <em>mute</em></p>
+                <p class="desc">With subdivisions you can practise with Triplet, Dot note, etc more easily.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-6">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Subdivisions</h3>
+                <p class="desc">Including Triplet, Dot note, and many more patterns.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-7">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Favorites List</h3>
+                <p class="desc">Save tempo, subdivision and other configs to a list. And load them whenever you want</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-8">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">AirPlay Mode</h3>
+                <p class="desc">"BEAM" the beats to a Projector or Apple TV.Cooperate with others more easily.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-9">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">It's Universal</h3>
+                <p class="desc">Pro Metronome is a universal App. Get it once and it will work on all of your iOS devices (iPhone, iPad and iPod Touch 4).</p>
+            </div>
+            <a href="#" class="link-app-store">app store</a>
+        </div>
+    </div>
+    {% include "_footer.html" %}
+</div>
+{% endblock %}
