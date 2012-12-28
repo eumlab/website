@@ -86,6 +86,7 @@ body {
     font-family: "Lucida Grande Regular", "Lucida Grande", "Helvetica Neue", Helvetica, arial, sans-serif;
     color: #b5c5ca;
     overflow-y: scroll;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -119,7 +120,14 @@ a {
     margin-left: -25px;
 }
 
-.header h1,
+.header h1 a {
+    display: block;
+    text-indent: -9999px;
+    height: 46px;
+    padding: 0 25px 0 20px;
+    width: 127px;
+}
+
 .header h2 {
     display: none;
 }
@@ -228,7 +236,7 @@ a {
     }
 
         .ft-nav .logo {
-            text-indent: -999px;
+            text-indent: -9999px;
             display: inline-block;
             vertical-align: top;
             background: url(../images/logo.png) 0 center no-repeat;
@@ -319,6 +327,7 @@ a {
     font-size: 18px;
     color: #aaa;
     line-height: 1.6;
+    position: relative;
 }
 
 .intro .desc em {
