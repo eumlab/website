@@ -66,16 +66,16 @@ table {
 
 @font-face {
 	font-family: 'TitilliumText25L';
-	src: url('fonts/TitilliumText25L.eot');
-	src: local('☺'), url('fonts/TitilliumText25L.woff') format('woff'), url('fonts/TitilliumText25L.ttf') format('truetype'), url('fonts/TitilliumText25L.svg') format('svg');
+	src: url('../fonts/TitilliumText25L.eot');
+	src: local('☺'), url('../fonts/TitilliumText25L.woff') format('woff'), url('../fonts/TitilliumText25L.ttf') format('truetype'), url('../fonts/TitilliumText25L.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'DIN-Regular';
-	src: url('fonts/DIN-Regular.eot');
-	src: local('☺'), url('fonts/DIN-Regular.woff') format('woff'), url('fonts/DIN-Regular.ttf') format('truetype'), url('fonts/DIN-Regular.svg') format('svg');
+	src: url('../fonts/DIN-Regular.eot');
+	src: local('☺'), url('../fonts/DIN-Regular.woff') format('woff'), url('../fonts/DIN-Regular.ttf') format('truetype'), url('../fonts/DIN-Regular.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
