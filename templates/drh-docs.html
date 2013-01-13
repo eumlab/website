@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block title %}Documents - DAW Remote HD{% endblock %}
+
+{% block style %}
+    <link href="/assets/styles/drh.css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+<div class="container pg-drh-docs">
+    <div class="header">
+        <div class="bg"></div>
+        {% include "_topbar.html" %}
+        <div class="doc">
+            <h2 class="title">DAW Remote HD emulates HUI and Mackie Control Protocol.</h2>
+            <p class="desc">Download DAW Remote HD User Manual: <a href="/payload/manual.ibooks">iBook</a> or <a href="/payload/manual.pdf">PDF</a></p>
+            <table>
+                <caption>Here are user manuals for DAWs</caption>
+                <thead>
+                    <tr>
+                        <th>DAW</th>
+                        <th>Protocol</th>
+                        <th>Layout</th>
+                        <th>Manual</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">
+                            <a href="/payload/layouts.zip">Download All latest layouts</a>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr id="logic">
+                        <td>Apple Logic</td>
+                        <td>Logic Control</td>
+                        <td><a href="/payload/layout-logic.zip">Download (1.0)</a></td>
+                        <td><a href="http://help.apple.com/logicpro/mac/9.1.6/en/logicpro/controlsurfacessupport/#chapter=3%26section=0" target="_blank">Online</a></td>
+                    </tr>
+
+                    <tr id="protools">
+                        <td>ProTools</td>
+                        <td>HUI</td>
+                        <td>Embedded</td>
+                        <td><a href="/payload/protools.pdf" target="_blank">PDF</a></td>
+                    </tr>
+
+                    <tr id="live">
+                        <td>Live</td>
+                        <td>Mackie Control</td>
+                        <td><a href="/payload/layout-live.zip">Download (1.0)</a></td>
+                        <td><a href="/payload/live.pdf" target="_blank">PDF</a></td>
+                    </tr>
+
+
+                    <tr id="cubase">
+                        <td>Cubase</td>
+                        <td>Mackie Control</td>
+                        <td><a href="/payload/layout-cubase.zip">Download (1.0)</a></td>
+                        <td><a href="/payload/cubase.pdf" target="_blank">PDF</a></td>
+                    </tr>
+
+                    <tr id="nuendo">
+                        <td>Nuendo</td>
+                        <td>Mackie Control</td>
+                        <td>Same as Cubase</td>
+                        <td><a href="/payload/nuendo.pdf" target="_blank">PDF</a></td>
+                    </tr>
+
+                    <tr id="flstudio">
+                        <td>FL Studio</td>
+                        <td>Mackie Control</td>
+                        <td><a href="/payload/layout-fl.zip">Download (1.0)</a></td>
+                        <td><a href="http://forum.image-line.com/viewtopic.php?t=899" target="_blank">Online</a></td>
+                    </tr>
+
+                    <tr id="reason">
+                        <td>Reason</td>
+                        <td>Mackie Control</td>
+                        <td><a href="/payload/layout-reason.zip">Download (1.0)</a></td>
+                        <td><a href="/payload/reason.pdf" target="_blank">PDF</a></td>
+                    </tr>
+
+                    <tr id="moto">
+                        <td>MOTU Digital Performer</td>
+                        <td>Mackie Control</td>
+                        <td><a href="/payload/layout-motu.zip">Download (1.0)</a></td>
+                        <td><a href="/payload/motu_dp.pdf" target="_blank">PDF</a></td>
+                    </tr>
+
+                    <tr id="audition">
+                        <td>Adobe Audition</td>
+                        <td>Mackie Control</td>
+                        <td>-</td>
+                        <td><a href="/payload/ce.pdf" target="_blank">PDF</a></td>
+                    </tr>
+
+
+                    <tr id="sonar">
+                        <td>Sonar</td>
+                        <td>Mackie Control</td>
+                        <td><a href="/payload/layout-sonar.zip">Download (1.0)</a></td>
+                        <td><a href="/payload/sonar.html" target="_blank">Online</a></td>
+                    </tr>
+
+                    <tr id="studio1">
+                        <td>Studio One</td>
+                        <td>Mackie Control</td>
+                        <td><a href="/payload/layout-s1.zip">Download (1.0)</a></td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% include "_footer.html" %}
+</div>
+{% endblock %}

@@ -320,3 +320,92 @@
     .section-6 .link-app-store:hover {
         background-position: -220px 0;
     }
+
+.pg-drh-docs .header .bg {
+    opacity: 1;
+    background-image: url(../images/drh-header.jpg);
+}
+
+.pg-drh-docs .doc {
+    padding: 40px 0 10px 0;
+    position: relative;
+    text-align: center;
+    width: 830px;
+    margin: 50px auto 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+    .doc a {
+        color: #47c2ef;
+    }
+
+    .doc .title {
+        display: block;
+        color: #e5ca6c;
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    .doc .desc {
+        font-size: 16px;
+        color: #ccc;
+        margin-bottom: 50px;
+    }
+
+    .doc table {
+        width: 100%;
+        color: #fff;
+        font-size: 15px;
+        text-align: left;
+    }
+
+        .doc caption {
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        .doc td,
+        .doc th {
+            height: 35px;
+            line-height: 35px;
+            padding: 0 10px;
+        }
+
+        .doc tbody td {
+            border-top: 1px solid #28282c;
+        }
+
+        .doc th {
+            color: #777;
+        }
+
+        .doc th:first-child {
+            padding-left: 80px;
+            width: 180px;
+        }
+
+        .doc td:first-child {
+            font-weight: bold;
+            padding-left: 80px;
+            width: 180px;
+        }
+
+        .doc th:last-child,
+        .doc td:last-child {
+            padding-right: 60px;
+        }
+
+        .doc tfoot td:first-child {
+            text-align: center;
+            padding: 20px 0 0 0;
+            font-weight: normal;
+        }
+
+.pg-drh-docs .ft-nav {
+    display: none;
+}
+
+
+.pg-drh-docs .social-medias {
+    margin-top: 0;
+}

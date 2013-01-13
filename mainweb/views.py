@@ -12,6 +12,9 @@ def index(request):
 def daw_remote_hd(request):
     return render_to_response('daw-remote-hd.html', {"nav": "drh"})
 
+def drh_docs(request):
+    return render_to_response('drh-docs.html', {"nav": "drh"})
+
 def pro_tuner(request):
     return render_to_response('pro-tuner.html', {"nav": "pt"})
 
