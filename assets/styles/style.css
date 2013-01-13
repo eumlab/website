@@ -179,14 +179,6 @@ a {
     display: none;
 }
 
-.app {
-    clear: left;
-}
-    .pg-ukulele .app {
-        width: 770px;
-        margin: 109px auto 0;
-    }
-
 .link-app-store {
     display: inline-block;
     height: 68px;

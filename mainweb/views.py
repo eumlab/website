@@ -26,3 +26,6 @@ def daw_remote(request):
 
 def pro_metronome(request):
     return render_to_response('pro-metronome.html', {"nav": "pm"})
+
+def ukulele(request):
+    return render_to_response('ukulele.html', {"nav": "ut"})
