@@ -15,6 +15,9 @@ def daw_remote_hd(request):
 def drh_docs(request):
     return render_to_response('drh-docs.html', {"nav": "drh"})
 
+def drh_videos(request):
+    return render_to_response('drh-videos.html', {"nav": "drh"})
+
 def pro_tuner(request):
     return render_to_response('pro-tuner.html', {"nav": "pt"})
 

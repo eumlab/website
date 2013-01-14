@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Documents - DAW Remote HD{% endblock %}
+
+{% block script %}
+    <script src="/assets/scripts/drh-videos.js"></script>
+{% endblock %}
+
+{% block style %}
+    <link href="/assets/styles/drh.css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+<div class="container pg-drh-videos">
+    <div class="header">
+        <div class="bg"></div>
+        {% include "_topbar.html" %}
+        <div class="videos center">
+            <iframe id="player" width="100%" height="534" src="http://www.youtube.com/embed/URfwMdpF2c4" frameborder="0" allowfullscreen=""></iframe>
+            <div class="play-list tab-nav">
+                <a class="play-item selected" href="#URfwMdpF2c4">Connect to MAC</a>
+                <a class="play-item" href="#ABsEJdWGv3c">Connect to WIN</a>
+                <a class="play-item" href="#hGXZOHuv37I">Set Logic</a>
+                <a class="play-item" href="#mgheATRPJZY">Set ProTools</a>
+                <a class="play-item" href="#9415zD0BnUs">Set Live</a>
+            </div>
+        </div>
+    </div>
+    {% include "_footer.html" %}
+</div>
+{% endblock %}

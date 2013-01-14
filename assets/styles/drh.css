@@ -1,3 +1,41 @@
+.tab-nav {
+    position: relative;
+    z-index: 99;
+    height: 46px;
+    line-height: 46px;
+    position: relative;
+    display: inline-block;
+    background: url(../images/drh-feature-3-nav-bg.png) 0 0 repeat-x;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+.tab-nav a {
+    display: inline-block;
+    margin: 0 15px;
+    color: #b28e51;
+    font-size: 16px;
+}
+
+.tab-nav a.selected,
+.tab-nav a:hover {
+    -moz-text-shadow: 0 0 9px rgba(255,148,79, 0.75);
+    -webkit-text-shadow: 0 0 9px rgba(255,148,79, 0.75);
+    text-shadow: 0 0 9px rgba(255,148,79, 0.75);
+    color: #f1cc5a;
+}
+
+
+.tab-nav a,
+.tab-nav a:hover {
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
 .header {
     height: 900px;
 }
@@ -59,12 +97,12 @@
 
 .section-0 {
     text-align: center;
-    background: url(../images/drh-section-0-bg.jpg) 0 0 repeat-x;
+    background: url(../images/drh-section-0-bg.jpg) 0 bottom repeat-x;
 }
 
     .section-0 .center {
         background: url(../images/drh-feature-0.jpg) center bottom no-repeat;
-        height: 700px;
+        height: 720px;
     }
 
     .section-0 .intro {
@@ -179,41 +217,7 @@
     }
 
     .section-3 .daw-nav {
-        position: relative;
-        z-index: 99;
         margin-top: 520px;
-        height: 46px;
-        line-height: 46px;
-        position: relative;
-        display: inline-block;
-        background: url(../images/drh-feature-3-nav-bg.png) 0 0 repeat-x;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-        border-radius: 6px;
-    }
-
-    .section-3 .daw-nav a {
-        display: inline-block;
-        margin: 0 15px;
-        color: #b28e51;
-        font-size: 16px;
-    }
-
-    .section-3 .daw-nav a.selected,
-    .section-3 .daw-nav a:hover {
-        -moz-text-shadow: 0 0 9px rgba(255,148,79, 0.75);
-        -webkit-text-shadow: 0 0 9px rgba(255,148,79, 0.75);
-        text-shadow: 0 0 9px rgba(255,148,79, 0.75);
-        color: #f1cc5a;
-    }
-
-
-    .section-3 .daw-nav a,
-    .section-3 .daw-nav a:hover {
-        transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
     }
 
 .section-4 {
@@ -321,12 +325,14 @@
         background-position: -220px 0;
     }
 
-.pg-drh-docs .header .bg {
+.pg-drh-docs .header .bg,
+.pg-drh-videos .header .bg {
     opacity: 1;
     background-image: url(../images/drh-header.jpg);
 }
 
-.pg-drh-docs .doc {
+.pg-drh-docs .doc,
+.pg-drh-videos .doc {
     padding: 40px 0 10px 0;
     position: relative;
     text-align: center;
@@ -401,11 +407,22 @@
             font-weight: normal;
         }
 
-.pg-drh-docs .ft-nav {
+.pg-drh-docs .ft-nav,
+.pg-drh-videos .ft-nav {
     display: none;
 }
 
 
-.pg-drh-docs .social-medias {
+.pg-drh-docs .social-medias,
+.pg-drh-videos .social-medias {
     margin-top: 0;
+}
+
+.pg-drh-videos .videos {
+    position: relative;
+    text-align: center;
+}
+
+.pg-drh-videos .play-list {
+    margin-top: 60px;
 }
