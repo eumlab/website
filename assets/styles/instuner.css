@@ -49,29 +49,15 @@
 }
 
 .app .link-app-store {
-    background: url(../images/drh-app-store-link-top.png) no-repeat 0 0;
-    margin: 340px 0 0 500px;
-    width: 153px;
-    height: 54px;
-    -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
+    background: url(../images/it-app-store-link-top.png) no-repeat 0 0;
+    margin: 270px 0 0 500px;
+    width: 218px;
+    height: 90px;
 }
 
     .app .link-app-store:hover {
-        -moz-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
-        -webkit-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
-        box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+        background-position: -218px 0;
     }
-
-    .app .link-app-store,
-    .app .link-app-store:hover {
-        transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-    }
-
 
 .app .center {
     position: relative;
@@ -253,8 +239,8 @@
 
     .section-4 .link-app-store {
         position: absolute;
-        top: 490px;
-        right: 48px;
+        top: 510px;
+        right: 60px;
         background: url(../images/it-app-store-link-bottom.png) no-repeat 0 0;
         width: 220px;
         height: 77px;

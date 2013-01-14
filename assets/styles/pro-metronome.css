@@ -26,7 +26,8 @@
 }
 
 .app .link-app-store {
-    background: url(../images/drh-app-store-link-top.png) no-repeat 0 0;
+    position: relative;
+    background: url(../images/pm-app-store-link-top.png) no-repeat 0 0;
     margin-top: 300px;
     margin-left: 720px;
     width: 153px;
@@ -34,20 +35,13 @@
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
+    -moz-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+    -webkit-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+    box-shadow: 0 0 24px rgba(104,199,255, 0.7);
 }
 
     .app .link-app-store:hover {
-        -moz-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
-        -webkit-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
-        box-shadow: 0 0 24px rgba(104,199,255, 0.7);
-    }
-
-    .app .link-app-store,
-    .app .link-app-store:hover {
-        transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
+        background-position: -153px 0;
     }
 
 .app .center {
@@ -377,9 +371,9 @@
 
     .section-9 .link-app-store {
         position: absolute;
-        top: 490px;
-        right: 35px;
-        background: url(../images/drh-app-store-link-bottom.png) no-repeat 0 0;
+        top: 485px;
+        right: 33px;
+        background: url(../images/dr-app-store-link-bottom.png) no-repeat 0 0;
         width: 220px;
         height: 77px;
     }

@@ -314,15 +314,15 @@
 
     .section-6 .link-app-store {
         position: absolute;
-        top: 340px;
-        right: 48px;
+        top: 330px;
+        right: 40px;
         background: url(../images/drh-app-store-link-bottom.png) no-repeat 0 0;
-        width: 220px;
-        height: 77px;
+        width: 224px;
+        height: 73px;
     }
 
     .section-6 .link-app-store:hover {
-        background-position: -220px 0;
+        background-position: -224px 0;
     }
 
 .pg-drh-docs .header .bg,

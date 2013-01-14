@@ -25,36 +25,22 @@
 }
 
 .app .link-app-store {
-    background: url(../images/drh-app-store-link-top.png) no-repeat 0 0;
-    margin: 490px 0 0 360px;
-    width: 153px;
-    height: 54px;
-    -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
+    background: url(../images/ut-app-store-link-top.png) no-repeat 0 0;
+    margin: 520px 0 0 360px;
+    width: 220px;
+    height: 81px;
 }
 
     .app .link-app-store:hover {
-        -moz-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
-        -webkit-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
-        box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+        background-position: -220px 0;
     }
-
-    .app .link-app-store,
-    .app .link-app-store:hover {
-        transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-    }
-
 
 .app .center {
     position: relative;
 }
     .app .pic {
         position: absolute;
-        top: 188px;
+        top: 230px;
         right: 50px;
         background: url(../images/ut-app.png) 0 0 no-repeat;
         width: 403px;
@@ -203,15 +189,15 @@
 
     .section-4 .link-app-store {
         position: absolute;
-        top: 340px;
-        right: 48px;
-        background: url(../images/pt-app-store-link-bottom.png) no-repeat 0 0;
-        width: 220px;
-        height: 77px;
+        top: 480px;
+        right: -10px;
+        background: url(../images/ut-app-store-link-bottom.png) no-repeat 0 0;
+        width: 250px;
+        height: 108px;
     }
 
     .section-4 .link-app-store:hover {
-        background-position: -220px 0;
+        background-position: -250px 0;
     }
 
 @media screen and (max-width: 1920px) {
