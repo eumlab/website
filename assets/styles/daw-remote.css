@@ -283,40 +283,54 @@
     }
 
     .section-7 .videos {
-        display: inline-block;
     }
 
-    .section-7 .videos div {
-        display: inline-block;
+    .section-7 .video {
+        float: left;
         margin: 0 10px;
     }
 
-    .section-7 .videos iframe {
+    .section-7 .video-wrap {
         width: 300px;
         height: 170px;
+        position: relative;
+    }
+
+    .section-7 .video-mask {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        cursor: pointer;
+    }
+
+    .section-7 .videos iframe {
+        width: 100%;
+        height: 100%;
         /*
         width: 720px;
         height: 406px; */
     }
 
-    .section-7 .videos iframe:hover {
-        transform: scale(1.02);
-        -ms-transform: scale(1.02);
-        -webkit-transform: scale(1.02);
-        -o-transform: scale(1.02);
-        -moz-transform: scale(1.02);
+    .section-7 .video-wrap:hover {
+        transform: scale(1.01);
+        -ms-transform: scale(1.01);
+        -webkit-transform: scale(1.01);
+        -o-transform: scale(1.01);
+        -moz-transform: scale(1.01);
     }
 
-    .section-7 .videos iframe, 
-    .section-7 .videos iframe:hover {
+    .section-7 .video-wrap,
+    .section-7 .video-wrap:hover {
         transition: all 200ms ease-in-out;
         -moz-transition: all 200ms ease-in-out;
         -webkit-transition: all 200ms ease-in-out;
     }
-    */
-
 
     .section-7 .desc {
+        padding: 5px 0 0 0;
         font-size: 16px;
     }
 
@@ -349,3 +363,65 @@
     .section-8 .link-app-store:hover {
         background-position: -220px 0;
     }
+
+.play-wrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.play-wrap .modal {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 250ms ease-in-out;
+    -moz-transition: opacity 250ms ease-in-out;
+    -webkit-transition: opacity 250ms ease-in-out;
+}
+
+
+.play-wrap.loading .modal {
+    opacity: 0;
+}
+
+#play-elem {
+    position: absolute;
+    cursor: pointer;
+    transition: width 250ms, height 250ms, top 250ms, left 250ms;
+    -moz-transition: width 250ms, height 250ms, top 250ms, left 250ms;
+    -webkit-transition: width 250ms, height 250ms, top 250ms, left 250ms;
+}
+
+#play-elem iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 2px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.33);
+    -webkit-box-shadow: 0 0 30px rgba(255,255,255,0.33);
+    -moz-box-shadow: 0 0 30px rgba(255,255,255,0.33);
+}
+
+#play-elem .btn-close{
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    display: none;
+}
+
+.play-wrap.loading .btn-close {
+    display: none;
+}
+
+#play-elem:hover .btn-close {
+    display: block;
+}

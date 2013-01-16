@@ -33,6 +33,43 @@ window.eum = {
         $.each( images, function( i, img ) {
             mcw.loadImage( img );
         });
+    },
+
+    supportTransition: function() {
+        var b = document.body || document.documentElement;
+        var s = b.style;
+        var p = 'transition';
+        if ( typeof s[p] == 'string' ) {
+            return true;
+        }
+
+        // Tests for vendor specific prop
+        v = ['Moz', 'Webkit', 'Khtml', 'O', 'ms'],
+        p = p.charAt(0).toUpperCase() + p.substr(1);
+        for( var i=0; i<v.length; i++ ) {
+            if ( typeof s[v[i] + p] == 'string' ) {
+                return true;
+            }
+        }
+
+        return false;
+    },
+
+    transitionEnd: function( el, callback ) {
+        if ( eum.supportTransition()) {
+            var eventName = "transitionend";
+            if ( $.browser.webkit ) {
+                eventName = "webkitTransitionEnd";
+            } else if ( $.browser.msie ) {
+                eventName = "transitionend";
+            } else if ( $.browser.opera ) {
+                eventName = "oTransitionEnd";
+            }
+
+            el.one( eventName, callback );
+        } else {
+            setTimeout( callback, 20 );
+        }
     }
 }
 
