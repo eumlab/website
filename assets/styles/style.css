@@ -173,7 +173,18 @@ a {
         -o-transition: all 0.3s ease-in-out;
     }
 
-
+    .nav .support {
+        margin-left: 20px;
+    }
+    .nav .support a {
+        color: #196396;
+    }
+    .nav .support a:hover {
+        color: #76bced;
+        text-shadow: none;
+        -webkit-text-shadow: none;
+        -moz-text-shadow: none;
+    }
 
 .app-title {
     display: none;
