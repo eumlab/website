@@ -22,7 +22,7 @@ urlpatterns += patterns('',
 )
 
 urlpatterns += patterns('mainweb.views',
-    (r'^$', 'index'),
+    (r'^$', 'home'),
     (r'^daw-remote-hd/$', 'daw_remote_hd'),
     (r'^daw-remote-hd/docs/$', 'drh_docs'),
     (r'^daw-remote-hd/videos/$', 'drh_videos'),

@@ -6,8 +6,8 @@ from django.views.decorators.http import require_http_methods
 from django.http import HttpResponse,HttpResponseRedirect, HttpResponsePermanentRedirect
 
 
-def index(request):
-    return render_to_response('index.html')
+def home(request):
+    return render_to_response('home.html')
 
 def daw_remote_hd(request):
     return render_to_response('daw-remote-hd.html', {"nav": "drh"})
