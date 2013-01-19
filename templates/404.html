@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}404 error{% endblock %}
+
+{% block style %}
+    <link href="/assets/styles/error.css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+<div class="container pg-404">
+    <div class="header">
+        <div class="site-title">
+            <h1><a href="/" title="back home">EUM lab</a></h1>
+            <h2>Unleash your music talent</h2>
+        </div>
+    </div>
+    <div class="center">
+        <div class="bg">
+        </div>
+        <div class="info">
+            <p>This album you were looking for doesn’t exist. You can go to </p>
+            <ul>
+                <li><a href="/">Home Page</a><span>2:59</span></li>
+                <li><a href="#">DAW Remote</a><span>8:14</span></li>
+                <li><a href="#">DAW Remote HD</a><span>8:26</span></li>
+                <li><a href="#">Por Metromome</a><span>8:12</span></li>
+                <li><a href="#">InsTuner</a><span>8:00</span></li>
+                <li><a href="#">Ukulele Toolkit</a><span>10:20</span></li>
+                <li><a href="#">String Tuner</a><span>8:40</span></li>
+                <li><a href="#">Pro Tuner</a><span>9:28</span></li>
+                <li><a href="#">Support</a><span>4:50</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -465,3 +465,26 @@ a {
     -moz-transition: box-shadow 500ms;
     -webkit-transition: box-shadow 500ms;
 }
+
+.pg-home .site-title,
+.pg-404 .site-title {
+    position: relative;
+    z-index: 999;
+    background-image: url(../images/home-logo.png);
+    width: 274px;
+    height: 176px;
+    margin: 0;
+}
+
+.pg-home .site-title h1,
+.pg-404 .site-title h1 {
+    padding: 45px 48px 80px 45px;
+}
+
+.pg-home .site-title h1 a,
+.pg-404 .site-title h1 a {
+    margin: 0;
+    padding: 0;
+    height: 51px;
+    width: 181px;
+}
