@@ -11,9 +11,7 @@ function setAppsPosition() {
         winWidth = win.width(),
         winHeight = win.height();
 
-    var doc = $(document),
-        scrollTop = $(document).scrollTop()
-        scrollLeft = $(document).scrollLeft();
+    var scrollHeight = document.body.scrollHeight;
 
     var apps = $('#apps'),
         appsWidth = apps.width(),
@@ -21,18 +19,19 @@ function setAppsPosition() {
 
     var top, left;
 
-    console.log('win hei' + winHeight);
-    console.log('app hei' + appsHeight);
-
-    if (winHeight <= 615 && winWidth <= 1000) {
+    if ( winWidth < 1000 && winHeight < 615) {
         top = 140;
+        left = 450;
+    } else if (winWidth > 1000 && winHeight < 615) {
+        top = (140 + appsHeight/2) * winWidth/1000 - appsHeight/2;
+        left = (450 + appsWidth/2) * winWidth/1000 - appsWidth/2;
+    } else if (winWidth < 1000 && winHeight > 615) {
+        top = (140 + appsHeight/2) * winHeight/615 - appsHeight/2;
         left = 450;
     } else {
         if ((winHeight - 615)/615 > (winWidth - 1000)/1000) {
-            console.log(1);
             ratio = winHeight/615;
         } else {
-            console.log(2);
             ratio = winWidth/1000;
         }
 

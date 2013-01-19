@@ -2,10 +2,6 @@ html, body {
     height: 100%;
 }
 
-body {
-    overflow: hidden;
-}
-
 .pg-home {
     background: #000 url(../images/home-bg@1920.jpg) center 0 no-repeat;
     height: 100%;
@@ -17,7 +13,8 @@ body {
     background-size: contain;
 }
 
-@media screen and (min-height: 1180px) or (min-width: 1920px) {
+@media screen and (min-height: 1180px),
+@media screen and (min-width: 1920px) {
     .pg-home {
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -45,12 +42,25 @@ body {
     -webkit-transform: rotate(15deg);
     -moz-transform: rotate(15deg);
     transform: rotate(15deg);
-    -webkit-box-shadow: 0 12px 32px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0 12px 32px rgba(0,0,0,0.5);
-    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+
+    -moz-transition: -moz-transform 0.25s ease-in-out;
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    -o-transition: -o-transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+}
+
+.app .icon {
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;
+    -webkit-box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+
+    -moz-transition: -moz-box-shadow 0.25s 0.1s ease-in-out;
+    -webkit-transition: -webkit-box-shadow 0.25s 0.1s ease-in-out;
+    -o-transition: -o-box-shadow 0.25s 0.1s ease-in-out;
+    transition: box-shadow 0.25s 0.1s ease-in-out;
 }
 
 .app:hover {
@@ -67,8 +77,8 @@ body {
 
 .app:hover .app-intro {
     opacity: 100;
-    width: 400px;
-    left: -380px;
+    width: 380px;
+    left: -360px;
 
     -moz-transition: all 0.25s 0.1s ease-in-out;
     -webkit-transition: all 0.25s 0.1s ease-in-out;
@@ -80,6 +90,11 @@ body {
     -webkit-box-shadow: 0 14px 80px rgba(0,0,0,0.9);
     -moz-box-shadow: 0 14px 80px rgba(0,0,0,0.9);
     box-shadow: 0 14px 80px rgba(0,0,0,0.9);
+
+    -moz-transition: -moz-box-shadow 0.25s 0.1s ease-in-out;
+    -webkit-transition: -webkit-box-shadow 0.25s 0.1s ease-in-out;
+    -o-transition: -o-box-shadow 0.25s 0.1s ease-in-out;
+    transition: box-shadow 0.25s 0.1s ease-in-out;
 }
 
 .app .icon {
@@ -105,6 +120,27 @@ body {
     -moz-border-radius: 4px;
     border-radius: 4px;
     text-align: right;
+}
+
+.app.pt .app-intro,
+.dr.app .app-intro,
+.drh.app .app-intro {
+    text-align: left;
+}
+
+.app.pt .app-intro h5,
+.dr.app .app-intro h5,
+.drh.app .app-intro h5,
+.app.pt .app-intro p,
+.dr.app .app-intro p,
+.drh.app .app-intro p {
+    margin: 0 10px 0 30px;
+}
+
+.app.pt:hover .app-intro,
+.dr.app:hover .app-intro,
+.drh.app:hover .app-intro {
+    left: 60px;
 }
 
 .app-intro h5 {
@@ -185,10 +221,65 @@ body {
 
 .footer {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 20px;
+    left: 20px;
+    text-align: left;
+}
+
+.footer .copyright {
+    padding: 10px 0 0px 8px;
 }
 
 .social-medias {
     margin: 0;
+    height: 25px;
+}
+
+    .social-medias a {
+        width: 35px;
+        background-size: 180px 50px;
+    }
+
+    .social-medias .email {
+        background-position: 4px 0; 
+    }
+
+    .social-medias .email:hover {
+        background-position: 4px -25px;
+    }
+
+    .social-medias .facebook {
+        width: 30px;
+        background-position: -38px 0; 
+    }
+
+    .social-medias .facebook:hover {
+        background-position: -38px -25px;
+    }
+
+    .social-medias .twitter {
+        background-position: -84px 0
+    }
+
+    .social-medias .twitter:hover {
+        background-position: -84px -25px;
+    }
+
+    .social-medias .youtube {
+        background-position: -130px 0; 
+    }
+
+    .social-medias .youtube:hover {
+        background-position: -130px -25px;
+    }
+
+.site-title {
+    background-image: url(../images/home-logo.png);
+    width: 274px;
+    height: 176px;
+    margin: 0;
+}
+
+.site-title h1 {
+    display: none;
 }
