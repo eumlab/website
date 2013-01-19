@@ -2,13 +2,28 @@ html, body {
     height: 100%;
 }
 
+body {
+    overflow: hidden;
+}
+
 .pg-home {
     background: #000 url(../images/home-bg@1920.jpg) center 0 no-repeat;
     height: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    min-height: 615px;
+    min-width: 1000px;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+
+@media screen and (min-height: 1180px) or (min-width: 1920px) {
+    .pg-home {
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
 }
 
 .apps {
@@ -167,14 +182,6 @@ html, body {
     background: url(../images/app-icon-pm.png) center center no-repeat;
 }
 
-@media screen and (min-width: 1920px) {
-    .pg-home {
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
-        background-size: contain;
-    }
-}
 
 .footer {
     position: absolute;
