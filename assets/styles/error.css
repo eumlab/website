@@ -37,6 +37,10 @@
     color: #1e616b;
 }
 
+.info li a:hover {
+    text-decoration: underline;
+}
+
 .info li span {
     color: #70664e;
     font-size: 12px;

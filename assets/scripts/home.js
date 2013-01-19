@@ -7,7 +7,7 @@ $(function() {
 });
 
 function setAppsPosition() {
-    var win = $(window),
+    var win = $('.container'),
         winWidth = win.width(),
         winHeight = win.height();
 

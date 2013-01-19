@@ -488,3 +488,32 @@ a {
     height: 51px;
     width: 181px;
 }
+
+.fuck-ie {
+    position: relative;
+    z-index: 9999;
+    background-color: #893733;
+    height: 60px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    line-height: 60px;
+    vertical-align: top;
+}
+
+.fuck-ie a {
+    color: #66d8d8;
+    vertical-align: top;
+}
+
+.fuck-ie a:hover {
+    text-decoration: underline;
+}
+
+.fuck-ie .face {
+    font-size: 30px;
+    position: relative;
+    top: -2px;
+    left: -15px;
+}
+

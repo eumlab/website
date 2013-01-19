@@ -14,16 +14,17 @@
     <link href="/assets/styles/style.css" rel="stylesheet" />
     {% block style %}{% endblock %}
 
-    {% comment %}
-    {% if is_ipad %}<link href="/assets/styles/ipad.css" rel="stylesheet" />{% endif %}
-    {% endcomment %}
-
     <script src="/assets/scripts/jquery-1.8.3.min.js"></script>
     <script src="/assets/scripts/jquery.wmuSlider.min.js"></script>
     <script src="/assets/scripts/eum.js"></script>
     {% block script %}{% endblock %}
 </head>
 <body>
+    <!--[if lt IE 8]>
+    <div class="fuck-ie">
+        <span class="face">:(</span>Your browser is too old. Please use <a href="http://www.google.com/chrome" target="_blank">Google Chrome</a> or <a href="http://windows.microsoft.com/zh-CN/internet-explorer/products/ie/home" target="_blank">update your IE browser</a>
+    </div>
+    <![endif]-->
     {% block body %}{% endblock %}
 </body>
 </html>
