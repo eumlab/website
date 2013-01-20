@@ -113,11 +113,15 @@ a {
 }
 
 .site-title {
-    background: url(../images/logo-drh.png) 0 0 no-repeat;
+    background: url(../images/logo-header.png) 0 -72px no-repeat;
     width: 172px;
     height: 72px;
     float: left;
     margin-left: -25px;
+}
+
+.site-title:hover {
+    background-position: 0 0;
 }
 
 .header h1 a {
@@ -242,10 +246,14 @@ a {
             text-indent: -9999px;
             display: inline-block;
             vertical-align: top;
-            background: url(../images/logo.png) 0 center no-repeat;
+            background: url(../images/logo-footer.png) 0 -52px no-repeat;
             width: 137px;
             height: 52px;
             margin-right: 20px;
+        }
+        
+        .ft-nav .logo:hover {
+            background-position: 0 0;
         }
 
         .ft-nav .nav {
@@ -470,23 +478,24 @@ a {
 .pg-404 .site-title {
     position: relative;
     z-index: 999;
-    background-image: url(../images/home-logo.png);
+    background-image: url(../images/logo-home.png);
+    background-position: 0 -176px;
     width: 274px;
     height: 176px;
     margin: 0;
 }
 
-.pg-home .site-title h1,
-.pg-404 .site-title h1 {
-    padding: 45px 48px 80px 45px;
+.pg-home .site-title:hover,
+.pg-404 .site-title:hover {
+    background-position: 0 0;
 }
 
 .pg-home .site-title h1 a,
 .pg-404 .site-title h1 a {
     margin: 0;
     padding: 0;
-    height: 51px;
-    width: 181px;
+    width: 274px;
+    height: 176px;
 }
 
 .fuck-ie {

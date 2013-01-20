@@ -31,7 +31,7 @@ window.eum = {
 
     preloadImages: function( images ) {
         $.each( images, function( i, img ) {
-            mcw.loadImage( img );
+            eum.loadImage( img );
         });
     },
 
