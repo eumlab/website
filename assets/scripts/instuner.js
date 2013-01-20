@@ -24,7 +24,7 @@ $(function() {
 function setInstruPosition() {
     var mainWidth = 980,
         screen = $(window).width(),
-        instruWidth = 420,
+        instruWidth = 414,
         instruAvaliable = (screen - 980) / 2,
         offset = instruAvaliable - instruWidth;
 

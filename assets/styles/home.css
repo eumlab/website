@@ -78,8 +78,8 @@ html, body {
 
 .app:hover .app-intro {
     opacity: 100;
-    width: 380px;
-    left: -360px;
+    width: 400px;
+    left: -380px;
 
     -moz-transition: all 0.25s 0.1s ease-in-out;
     -webkit-transition: all 0.25s 0.1s ease-in-out;

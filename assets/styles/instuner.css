@@ -2,6 +2,7 @@
     height: 980px;
     position: relative;
     background: url(../images/it-header-bg.png) 0 0 repeat-x;
+    overflow-x: hidden;
 }
 
     .header .bg {
