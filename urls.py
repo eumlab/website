@@ -26,13 +26,27 @@ urlpatterns += patterns('',
 
 urlpatterns += patterns('mainweb.views',
     (r'^$', 'home'),
+    (r'^(?i)index.html$',"redirector",{"where":"/"}),
+
     (r'^daw-remote-hd/$', 'daw_remote_hd'),
     (r'^daw-remote-hd/docs/$', 'drh_docs'),
     (r'^daw-remote-hd/videos/$', 'drh_videos'),
+    (r'^daw-remote-hd/faq/$', 'drh_faq'),
     (r'^pro-tuner/$', 'pro_tuner'),
     (r'^string-tuner/$', 'string_tuner'),
     (r'^instuner/$', 'instuner'),
     (r'^daw-remote/$', 'daw_remote'),
     (r'^pro-metronome/$', 'pro_metronome'),
     (r'^ukulele/$', 'ukulele'),
+
+    (r'^(?i)daw-remote-hd/network/$', 'drh_network'),
+    (r'^(?i)daw-remote-hd/bonjour/$', 'drh_bonjour'),
+    (r'^(?i)daw-remote-hd/rtpmidi/$', 'drh_rtpmidi'),
+
+    (r'^(?i)network/$',"redirector",{"where":"/daw-remote-hd/network/"}),
+    (r'^(?i)bonjour/$',"redirector",{"where":"/daw-remote-hd/bonjour/"}),
+    (r'^(?i)rtpmidi/$',"redirector",{"where":"/daw-remote-hd/rtpmidi/"}),
+
+    (r'^(?i)docs/(?P<hash>.+?)/$',"redirector_with_hash",{"where":"/daw-remote-hd/docs/"}),
+
 )

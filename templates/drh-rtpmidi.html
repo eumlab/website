@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}rtpMIDI - DAW Remote HD{% endblock %}
+
+{% block style %}
+    <link href="/assets/styles/drh.css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+<div class="container pg-drh-rtpmidi">
+    <div class="header">
+        <div class="bg"></div>
+        {% include "_topbar.html" %}
+        <div class="download">
+            <h2 class="title">Download rtpMIDI form:</h2>
+            <p><a href="http://www.tobias-erichsen.de/rtpMIDI.html" target="_blank">Download from rtpMIDI official website</a></p>
+            <p><a href="/payload/rtpMIDI_1_0_7_222.zip" target="_blank">Download from our website</a> (version:1.0.7.222)</p>
+            <p><a href="http://dl.dropbox.com/u/102818/payload/rtpMIDI_1_0_7_222.zip" target="_blank">Download from Dropbox</a> (version:1.0.7.222)</p>
+        </div>
+    </div>
+    {% include "_footer.html" %}
+</div>
+{% endblock %}

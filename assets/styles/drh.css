@@ -37,7 +37,7 @@
 }
 
 .header {
-    height: 900px;
+    min-height: 900px;
 }
 
 .header .bg {
@@ -60,7 +60,7 @@
 }
 
 .app {
-    margin-top: 90px;
+    margin-top: 62px;
     text-align: center;
     position: relative;
 }
@@ -326,12 +326,18 @@
     }
 
 .pg-drh-docs .header .bg,
+.pg-drh-faq .header .bg,
+.pg-drh-rtpmidi .header .bg,
+.pg-drh-bonjour .header .bg,
 .pg-drh-videos .header .bg {
     opacity: 1;
     background-image: url(../images/drh-header.jpg);
 }
 
 .pg-drh-docs .doc,
+.pg-drh-faq .faq,
+.pg-drh-rtpmidi .download,
+.pg-drh-bonjour .download,
 .pg-drh-videos .doc {
     padding: 40px 0 10px 0;
     position: relative;
@@ -341,11 +347,14 @@
     background-color: rgba(0,0,0,0.5);
 }
 
-    .doc a {
+    .doc a,
+    .faq a {
         color: #47c2ef;
     }
 
-    .doc .title {
+    .doc .title,
+    .download .title,
+    .faq .title {
         display: block;
         color: #e5ca6c;
         font-size: 26px;
@@ -421,8 +430,44 @@
 .pg-drh-videos .videos {
     position: relative;
     text-align: center;
+    margin-top: 40px;
 }
 
 .pg-drh-videos .play-list {
     margin-top: 60px;
+}
+
+.pg-drh-faq .faq {
+    width: 1000px;
+}
+
+.pg-drh-faq dl {
+    text-align: left;
+    margin: 40px;
+}
+
+.pg-drh-faq dt {
+    font-size: 18px;
+    color: #E5CA6C;
+}
+
+.pg-drh-faq dd {
+    font-size: 14px;
+    line-height: 1.6em;
+    margin: 10px 0 50px 30px;
+}
+
+.pg-drh-faq dt::first-letter {
+    font-size: 24px;
+    padding-right: 5px;
+    margin-top: -5px;
+    float: left;
+}
+
+.container .download {
+    padding: 80px 0;
+}
+.download p {
+    font-size: 16px;
+    line-height: 1.5;
 }

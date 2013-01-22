@@ -10,13 +10,26 @@ def home(request):
     return render_to_response('home.html')
 
 def daw_remote_hd(request):
-    return render_to_response('daw-remote-hd.html', {"nav": "drh"})
+    return render_to_response('daw-remote-hd.html', {"nav": "drh", "subnav": "drh"})
 
 def drh_docs(request):
-    return render_to_response('drh-docs.html', {"nav": "drh"})
+    return render_to_response('drh-docs.html', {"nav": "drh", "subnav": "drh-docs"})
 
 def drh_videos(request):
-    return render_to_response('drh-videos.html', {"nav": "drh"})
+    return render_to_response('drh-videos.html', {"nav": "drh", "subnav": "drh-videos"})
+
+def drh_faq(request):
+    return render_to_response('drh-faq.html', {"nav": "drh", "subnav": "drh-faq"})
+
+def drh_rtpmidi(request):
+    return render_to_response('drh-rtpmidi.html', {"nav": "drh", "subnav": "drh-faq"})
+
+def drh_bonjour(request):
+    return render_to_response('drh-bonjour.html', {"nav": "drh", "subnav": "drh-faq"})
+
+def drh_network(request):
+    return render_to_response('drh-network.html', {"nav": "drh", "subnav": "drh-faq"})
+
 
 def pro_tuner(request):
     return render_to_response('pro-tuner.html', {"nav": "pt"})
@@ -35,3 +48,16 @@ def pro_metronome(request):
 
 def ukulele(request):
     return render_to_response('ukulele.html', {"nav": "ut"})
+
+def redirector(request,where,isp=True):
+    if isp:
+        return HttpResponsePermanentRedirect(where)
+    else:
+        return HttpResponseRedirect(where)
+
+def redirector_with_hash(request,where,hash,isp=True):
+    if isp:
+        return HttpResponsePermanentRedirect(where+"#"+hash)
+    else:
+        return HttpResponseRedirect(where+"#"+hash)
+

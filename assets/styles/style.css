@@ -143,16 +143,18 @@ a {
     height: 46px;
 }
 
-.nav {
+.nav, .subnav {
     margin-left: 120px;
     line-height: 46px;
 }
-    .nav li {
+    .nav li,
+    .subnav li {
         display: inline-block;
         vertical-align: top;
     }
 
-    .nav a {
+    .nav a,
+    .subnav a {
         display: inline-block;
         vertical-align: top;
         font-size: 15px;
@@ -162,7 +164,9 @@ a {
     }
 
     .nav a:hover,
-    .nav .active a {
+    .nav .active a,
+    .subnav a:hover,
+    .subnav .active a {
         -webkit-text-shadow: 0 0 70px #e88300;
         -moz-text-shadow: 0 0 7px #e88300;
         text-shadow: 0 0 7px #e88300;
@@ -170,7 +174,9 @@ a {
     }
 
     .nav a,
-    .nav a:hover {
+    .nav a:hover,
+    .subnav a,
+    .subnav a:hover {
         transition: all 0.3s ease-in-out;
         -moz-transition: all 0.3s ease-in-out;
         -webkit-transition: all 0.3s ease-in-out;
@@ -188,6 +194,22 @@ a {
         text-shadow: none;
         -webkit-text-shadow: none;
         -moz-text-shadow: none;
+    }
+
+.subnav-wrap {
+    position: relative;
+    background
+    z-index: 100;
+    background: url(../images/subnav-bg.png) 0 0 repeat-x;
+    height: 28px;
+}
+
+    .subnav {
+        line-height: 28px;
+    }
+
+    .subnav a {
+        font-size: 13px;
     }
 
 .app-title {
@@ -525,4 +547,3 @@ a {
     top: -2px;
     left: -15px;
 }
-

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}FAQ - DAW Remote HD{% endblock %}
+
+{% block style %}
+    <link href="/assets/styles/drh.css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+<div class="container pg-drh-faq">
+    <div class="header">
+        <div class="bg"></div>
+        {% include "_topbar.html" %}
+        <div class="faq">
+            <h2 class="title">FAQ</h2>
+            <dl>
+                <dt class="faq-q">Q: What are the difference between DAW Remote and DAW Remote HD</dt>
+                <dd class="faq-a">DAW Remote(iPhone) is light-weighted with essential functions which is handier, which is ideal for quick transporting. DAW Remote HD(iPad) focus more on track control. It provides full functions of control surface.</dd>
+
+                <dt class="faq-q">Q:Can DAW Remote HD on my iPad work together with DAW Remote on my iPhone?</dt>
+                <dd class="faq-a">YES! you can use as many iOS devices as you wish to control your project.</dd>
+
+                <dt class="faq-q">Q: Which DAW softwares does DAW remote HD support?</dt>
+                <dd class="faq-a">DAW Remote HD is specially optimized for Apple Logic®, Ableton Live® and Protools®. However, there is also a universal mode which is compatible with most of the DAW softwares that support Mackie Control Protocol.</dd>
+
+                <dt class="faq-q">Q: Do I need any driver on my computer?</dt>
+                <dd class="faq-a">For Mac users, you don't need any drivers. <br>For Windows users, you need an rtpMIDI driver which is free and available <a href="http://www.tobias-erichsen.de/rtpMIDI.html">here</a>.</dd>
+
+                <dt class="faq-q">Q:My MAC connects to WIFI Router by ethernet, can I use DAW Remote?</dt>
+                <dd class="faq-a">YES! DAW Remote works when your computer and your iOS device on the same network, both ethernet and WLan. <br><a href="/daw-remote-hd/network/">Click here to read more possible network configurations</a>.</dd>
+
+                <dt class="faq-q">Q:I don't have WIFI network, can I use Ad Hoc to connect DAW Remote?</dt>
+                <dd class="faq-a">YES! <a href="/daw-remote-hd/network/#adhoc">Click here to read detail</a>.</dd>
+
+                <dt class="faq-q">Q: Does DAW Remote HD support Bluetooth connection?</dt>
+                <dd class="faq-a">Positive. DAW remote HD supports Bluetooth connection. But we do not recommend this because of the bandwidth reason. </dd>
+
+                <dt class="faq-q">Q: What is a control surface?</dt>
+                <dd class="faq-a">Traditionally, a control surface is some accessary hardware that helps musicians control DAW softwares more easily. DAW Remote (HD) is a simulator of those control surface on iPad and it uses the traditional control protocols which support wireless control. </dd>
+
+                <dt class="faq-q">Q: How can I know if DAW Remote HD is connected and ready to use?</dt>
+                <dd class="faq-a">When DAW Remote (HD) is ready to use, you should be able to see the MIDI signals on the display, e.g. the time code, the track names. </dd>
+
+                <dt class="faq-q">Q: Can I control more than 8 tracks?</dt>
+                <dd class="faq-a">YES! You can use "CH.《》" to change single track or "BANKS《》" to change bank (8 tracks). Certainly, if you have two or more iPads, you can control more tracks simultaneously.</dd>
+
+                <dt class="faq-q">Q: Is there any key combination in DAW Remote HD just like in the traditional control surface?</dt>
+                <dd class="faq-a"> YES! There are many powerful functions with key combination. Actually, DAW Remote HD does exactly what the corresponding control protocol says. You may find detailed instructions in the <a href="/daw-remote-hd/docs/">user manual for your DAW</a>. </dd>
+            <dl>
+        </div>
+    </div>
+    {% include "_footer.html" %}
+</div>
+{% endblock %}
