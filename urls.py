@@ -47,6 +47,21 @@ urlpatterns += patterns('mainweb.views',
     (r'^(?i)bonjour/$',"redirector",{"where":"/daw-remote-hd/bonjour/"}),
     (r'^(?i)rtpmidi/$',"redirector",{"where":"/daw-remote-hd/rtpmidi/"}),
 
-    (r'^(?i)docs/(?P<hash>.+?)/$',"redirector_with_hash",{"where":"/daw-remote-hd/docs/"}),
+    (r'^(?i)eum/string-tuner/$',"redirector",{"where":"/string-tuner/"}),
 
+    (r'^(?i)eum/daw-remote.html$',"redirector",{"where":"/daw-remote/"}),
+    (r'^(?i)daw-remote.html$',"redirector",{"where":"/daw-remote/"}),
+    (r'^(?i)/daw-remote/$',"redirector",{"where":"/daw-remote/"}),
+    (r'^(?i)/dawremote/$',"redirector",{"where":"/daw-remote/"}),
+    (r'^(?i)eum/dawremote/$',"redirector",{"where":"/daw-remote/"}),
+    (r'^(?i)daw-remote$',"redirector",{"where":"/daw-remote/"}),
+    (r'^(?i)dawremote$',"redirector",{"where":"/daw-remote/"}),
+
+    (r'^(?i)tuner.html$',"redirector",{"where":"/pro-tuner/"}),
+    (r'^(?i)metronome.html$',"redirector",{"where":"/pro-metronome/"}),
+    (r'^(?i)midi-pad.html$',"redirector",{"where":"/"}),
+
+    (r'^(?i)eum/$',"redirector",{"where":"/"}),
+    (r'^(?i)eum/metronome.html$',"redirector",{"where":"/pro-metronome/"}),
+    (r'^(?i)eum/midi-pad.html$',"redirector",{"where":"/"}),
 )
