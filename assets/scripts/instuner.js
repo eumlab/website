@@ -1,24 +1,28 @@
 (function($) {
 
+
+
 $(function() {
     setInstruPosition();
     $(window).on('resize', setInstruPosition);
 
-    setTimeout(function() {
-        var offset = parseInt($('#guitar').css('left')),
-            move = 100;
+    var ready = false;
 
-        $('#guitar').css('left', offset - move).animate({
-            left: offset,
-            opacity: "show"
-        }, 600);
-        
-        $('#violin').css('right', offset - move).animate({
-            right: offset,
-            opacity: "show"
-        }, 600);
-    }, 1000);
+    eum.loadImage('/assets/images/it-header-guitar.png', function(img) {
+        $('.header .guitar').css({
+            'background-image': 'url(' + img.src + ')'
+        });
 
+        eum.loadImage('/assets/images/it-header-violin.png', function(img) {
+            $('.header .violin').css({
+                'background-image': 'url(' + img.src + ')'
+            });
+
+            setTimeout(function() {
+                instruAnimation();
+            }, 1000);
+        });
+    });
 });
 
 function setInstruPosition() {
@@ -30,6 +34,21 @@ function setInstruPosition() {
 
     $('#guitar').css('left', offset);
     $('#violin').css('right', offset);
+}
+
+function instruAnimation() {
+    var offset = parseInt($('#guitar').css('left')),
+        move = 100;
+
+    $('#guitar').css('left', offset - move).animate({
+        left: offset,
+        opacity: "show"
+    }, 600);
+    
+    $('#violin').css('right', offset - move).animate({
+        right: offset,
+        opacity: "show"
+    }, 600);
 }
 
 })(jQuery);

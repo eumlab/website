@@ -22,26 +22,25 @@
         -webkit-transition: opacity 1000ms ease-in-out;
     }
 
-    .header .guitar {
+    .header .guitar,
+    .header .violin {
         position: absolute;
         top: 0;
-        left: -100px;
-        background: url(../images/it-header-guitar.png) 0 0 no-repeat;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-color: transparent;
         width: 414px;
         height: 883px;
         z-index: 0;
         display: none;
     }
 
+    .header .guitar {
+        left: -100px;
+    }
+
     .header .violin {
-        position: absolute;
-        top: 0;
         right: -100px;
-        background: url(../images/it-header-violin.png) right 0 no-repeat;
-        width: 414px;
-        height: 883px;
-        z-index: 0;
-        display: none;
     }
 
 .app {
