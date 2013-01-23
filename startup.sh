@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROJDIR="/home/wwwroot/eumlabcom"
+PROJDIR="/home/wwwroot/eumlab"
 PIDFILE="$PROJDIR/eumlab.pid"
 SOCKET="$PROJDIR/eumlab.sock"
 
