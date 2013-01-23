@@ -6,8 +6,6 @@ $(function() {
     setInstruPosition();
     $(window).on('resize', setInstruPosition);
 
-    var ready = false;
-
     eum.loadImage('/assets/images/it-header-guitar.png', function(img) {
         $('.header .guitar').css({
             'background-image': 'url(' + img.src + ')'
