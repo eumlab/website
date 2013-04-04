@@ -65,4 +65,6 @@ urlpatterns += patterns('mainweb.views',
     (r'^(?i)eum/$',"redirector",{"where":"/"}),
     (r'^(?i)eum/metronome.html$',"redirector",{"where":"/pro-metronome/"}),
     (r'^(?i)eum/midi-pad.html$',"redirector",{"where":"/"}),
+
+    (r'^(?i)clip-mic/$',"redirector",{"where":"http://support.eumlab.com/customer/portal/articles/930136-about-clip-sensor"}),
 )
