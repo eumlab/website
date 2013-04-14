@@ -83,8 +83,10 @@ function initModesTop() {
         var type = nextMode.data('type'),
             wrap = $("#app-animation").parent(),
             animation = wrap.parent(),
-            img = $('<img id="app-animation" src="' + modes[type][0] + '" width="500" height="500" />');
+            firstImg = modes[type][0],
+            img = $('<img id="app-animation" src="' + firstImg + '" width="500" height="500" />');
 
+        animation.css('backgroundImage', 'url(' + firstImg + ')');
         wrap.remove();
         img.appendTo(animation);
 
@@ -183,8 +185,10 @@ function initModes() {
         var type = nextMode.data('type'),
             wrap = $("#mode-animation").parent(),
             animation = wrap.parent(),
-            img = $('<img id="mode-animation" src="' + modes[type][0] + '" width="445" height="251" />');
+            firstImg = modes[type][0],
+            img = $('<img id="mode-animation" src="' + firstImg + '" width="445" height="251" />');
 
+        animation.css('backgroundImage', 'url(' + firstImg + ')');
         wrap.remove();
         img.appendTo(animation);
 

@@ -75,6 +75,7 @@
         position: absolute;
         top: -12px;
         left: 61px;
+        background: url(../images/it/modes_top/fine/PM_00.png) 0 0 no-repeat;
     }
 
     .app .it-nav {
@@ -256,7 +257,7 @@
                 position: relative;
                 left: -3px;
                 top: 47px;
-                background-color: #000;
+                background: #000 url(../images/it/modes/instant/ReflectorRecording_00000.png) 0 0 no-repeat;
             }
 
             .section-3 .slide .mask {
