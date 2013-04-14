@@ -7,6 +7,7 @@
 {% endblock %}
 
 {% block script %}
+    <script src="/assets/scripts/jquery.threesixty.js"></script>
     <script src="/assets/scripts/instuner.js"></script>
 {% endblock %}
 
@@ -22,8 +23,18 @@
         <div class="app">
             <div class="center">
                 <h2 class="app-title">insTuner</h2>
+                <a href="http://www.youtube.com/embed/C1_80SPx0jE?autoplay=1&showinfo=0&hd=1" class="btn-video" id="it-video" title="Watch a quick intro video"></a>
                 <a href="http://itunes.apple.com/app/id528923171?ls=1&mt=8" target="_blank" class="link-app-store" title="Download insTuner from APP Store">Available on the App Store</a>
-                <div class="pic"></div>
+                <div class="pic">
+                    <div class="app-animation"><img id="app-animation" src="/assets/images/it/modes_top/fine/PM_00.png" width="500" height="500" /></div>
+                </div>
+                <div class="it-nav tab-nav">
+                    <a href="javascript:;" data-type="fine">Fine-Tuning Mode</a>
+                    <a href="javascript:;" data-type="instant">Instant-Tuning Mode</a>
+                    <a href="javascript:;" data-type="strobe">Strobe Mode</a>
+                    <a href="javascript:;" data-type="fft">Spectrum (FFT) Mode</a>
+                    <a href="javascript:;" data-type="spectrograms">Spectrogram Mode</a>
+                </div>
             </div>
         </div>
         <div class="guitar" id="guitar"></div>
@@ -33,9 +44,10 @@
         <div class="center">
             <div class="pic"></div>
             <div class="intro">
-                <h3 class="title">Fine-Tune Display designed for perfect tune</h3>
-                <p class="desc">Newly designed "Fixed Tuning Wheel" helps you to quickly find the position of your current pitch. </p>
-                <p class="desc">Moreover, With highly responsive tuning meter as well as rich tuning parameter information, it helps you to tune your instruments in±0.1 cent precise</p>
+                <h3 class="title">What is insTuner?</h3>
+                <p class="desc">insTuner is a chromatic tuner that helps you to tune instruments quickly and accurately. It also features a Tone Generator just like a pitch pipe with four different wave forms.</p>
+                <p class="desc">It is suitable for tuning acoustic or electric guitar and bass, ukulele, mandolin, banjo, bouzouki, bowed strings, woodwinds, brass, piano, timpani and more.</p>
+                <p class="desc">It's <em>accurate, dynamic and easy to use.</em></p>
             </div>
         </div>
     </div>
@@ -43,26 +55,71 @@
         <div class="center">
             <div class="pic"></div>
             <div class="intro">
-                <h3 class="title">Instant-Tune Display<br />designed for quick tune</h3>
-                <p class="desc">In most cases, all you need is to quickly find the correct pitch and begin to play. If you don't have that much time to do perfect tune, just choose this one!</p>
+                <h3 class="title">Easy-to-read note wheel</h3>
+                <p class="desc">When insTuner detects a frequency, the needle will point to the corresponding chromatic note.</p>
+                <p class="desc">The number under the dial shows the octave of the note.</p>
             </div>
         </div>
     </div>
     <div class="section section-2">
         <div class="center">
-            <div class="pic-l"></div>
-            <div class="pic-r"></div>
+            <div class="pic"></div>
             <div class="intro">
-                <h3 class="title">FFT Display<br /><span>helps to understand more about sound</span></h3>
-                <p class="desc">FFT(Fast Fourier Transform) helps to understand the sound of your instrument in frequency domain. With Logrithm, Linear and Note Display options, you can have different perspective of the sound.</p>
+                <h3 class="title">Tone Generator</h3>
+                <p class="desc">Like to tune by ear? No problem: insTuner is just like your pitch pipe!</p>
+                <p class="desc">The tone generator offers four different wave forms.</p>
+                <p class="desc">Just select a octave and note, tap and go!</p>
             </div>
         </div>
     </div>
     <div class="section section-3">
         <div class="center">
             <div class="intro">
-                <h3 class="title">Spectrogram<br /><span>Helps to "see" the varies of the pitch in real-time</span></h3>
-                <p class="desc">Spectrogram is time-varying spectral representation that shows how the spectral density of a sound varies. Logrithm/Linear/Note with Median Frequency Display options are provided, which helps to analyze the audio both in Time and Frequency Domain.</p>
+                <h3 class="title">Professional Tuning Modes</h3>
+                <p class="desc">insTuner supports different tuning modes applicable to different situations, such as Instant Tuning Unit for quickening tune-and-play, Fine and Strobe Units for accurate fine tuning, and FFT and Spectrogram Units for sound analysis.</p>
+            </div>
+            <div class="slide">
+                <div class="gear">
+                    <div class="gear-img"></div>
+                </div>
+                <div class="iphone">
+                    <div class="animation">
+                        <img id="mode-animation" src="/assets/images/it/modes/fft/ReflectorRecording_00000.png" width="445" height="251" />
+                    </div>
+                    <div class="mask"></div>
+                </div>
+                <div class="modes">
+                    <a href="javascript:;" class="prev"></a>
+                    <a href="javascript:;" class="next"></a>
+                    <ul class="intro">
+                        <li data-type="instant">
+                            <h5 class="title">Instant-Tuning Mode</h5>
+                            <p class="desc">If you are on stage, or just want to quickly tune and play, select this mode.</p>
+                            <p class="desc">The bar on the right means the note is sharp, so you should flatten it to bring the note into tune.</p>
+                            <p class="desc">When the note is in tune, the display background will turn green.</p>
+                        </li>
+                        <li data-type="fine" class="fine">
+                            <h5 class="title">Fine-Tuning Mode</h5>
+                            <p class="desc">The display shows the currently detected note, and its color varies according to the accuracy of its tuning.</p>
+                            <p class="desc">The meter shows the cent deviation sharp or flat.</p>
+                        </li>
+                        <li data-type="strobe">
+                            <h5 class="title">Strobe-Tuning Mode</h5>
+                            <p class="desc">Strobe Mode uses another tuning method, which is even more accurate.</p>
+                            <p class="desc">The bars scroll to the left when the note is too flat and to the right when the note is too sharp.</p>
+                            <p class="desc">When the note is in tune, the bars remain still.</p>
+                        </li>
+                        <li data-type="fft">
+                            <h5 class="title">Spectrum (FFT) Mode</h5>
+                            <p class="desc">FFT (Fast Fourier Transform) is a useful tool to analyze the frequencies present in the sound.</p>
+                            <p class="desc">You can change the scale of the x-axis to logarithmic, linear or to display the note names.</p>
+                        </li>
+                        <li data-type="spectrograms">
+                            <h5 class="title">Spectrogram Mode</h5>
+                            <p class="desc">The spectrogram is a visual representation that shows how the spectral density of a signal varies with time. (See more information on Wikipedia.)</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -70,10 +127,21 @@
         <div class="center">
             <div class="pic"></div>
             <div class="intro">
-                <h3 class="title">Advanced Features</h3>
-                <p class="desc">Concert A Calibration, 30+ Historical Temperaments, Customizable Transpositions, Tone generator, Customizable Tone Waveform, Rich Instructions, and more.</p>
+                <h3 class="title">It's Universal</h3>
+                <p class="desc">insTuner is a universal App. Get it once and it will work on all of your iOS devices:
+iPhone, iPad and iPod Touch.</p>
             </div>
             <a href="http://itunes.apple.com/app/id528923171?ls=1&mt=8" target="_blank" class="link-app-store" title="Download insTuner from APP Store">Available on the App Store</a>
+            <a href="javascript:;" class="show-lite">Get insTuner Lite for Free</a>
+        </div>
+    </div>
+    <div class="section section-5">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <p class="desc">Lite version of insTuner contains Instant-Tuning Unit and Tone Generator.And it is <em>FREE !</em></p>
+            </div>
+            <a href="http://itunes.apple.com/app/id603425027?ls=1&mt=8" target="_blank" class="link-app-store" title="Download insTuner from APP Store">Available on the App Store</a>
         </div>
     </div>
     {% include "_footer.html" %}

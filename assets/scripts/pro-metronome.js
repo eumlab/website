@@ -11,20 +11,6 @@ $(function() {
         }, 1000);
     }, this));
 
-    $("#pm-video").click(function(e) {
-        e.preventDefault();
-
-        var popup = $('<div class="popup">\
-                        <iframe width="900" height="510" src="http://www.youtube.com/embed/u3Onh2ZDWJY?autoplay=1&amp;showinfo=0&amp;hd=1" \
-                            frameborder="0" allowfullscreen=""></iframe><span class="btn-close">&times;</span></div>');
-
-        popup.appendTo(document.body);
-    });
-
-    $('body').on('click', '.popup .btn-close', function() {
-        $(this).parent('.popup').remove();
-    });
-
     $("#app-animation").threesixty({images:[
         "/assets/images/pm/PM_00.png",
         "/assets/images/pm/PM_01.png",
