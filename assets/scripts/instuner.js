@@ -33,6 +33,12 @@ $(function() {
         eum.scrollTo(sec);
         btn.remove();
     });
+
+    // preload lite images
+    eum.preloadImages([
+        '/assets/images/it-feature-5.jpg',
+        '/assets/images/it-app-store-link-lite.png'
+    ]);
 });
 
 function initModesTop() {
