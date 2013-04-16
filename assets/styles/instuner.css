@@ -51,6 +51,7 @@
 .app .btn-video {
     top: 240px;
     left: 640px;
+    background-image: url(../images/it-video-btn.png);
 }
 
 .app .link-app-store {
@@ -245,7 +246,7 @@
         .section-3 .slide .iphone {
             width: 661px;
             height: 389px;
-            margin: -52px auto;
+            margin: -54px auto;
             position: relative;
             left: 5px;
         }
