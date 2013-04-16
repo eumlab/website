@@ -1,6 +1,9 @@
 (function($) {
 
 $(function() {
+    initModesTop();
+    initModes();
+
     setInstruPosition();
     $(window).on('resize', setInstruPosition);
 
@@ -30,9 +33,6 @@ $(function() {
         eum.scrollTo(sec);
         btn.remove();
     });
-
-    initModesTop();
-    initModes();
 });
 
 function initModesTop() {
@@ -72,8 +72,6 @@ function initModesTop() {
 
     eum.preloadImages(firstImages);
 
-    var firstMode = $('.it-nav a:first');
-
     $('.it-nav').on('click', 'a', function(e) {
         e.preventDefault();
 
@@ -100,9 +98,7 @@ function initModesTop() {
             sensibility: 1,
             autoscrollspeed:80
         });
-    });
-
-    firstMode.click();
+    }).find('a:first').click();
 }
 
 function initModes() {
