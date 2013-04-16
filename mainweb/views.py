@@ -49,6 +49,9 @@ def pro_metronome(request):
 def ukulele(request):
     return render_to_response('ukulele.html', {"nav": "ut"})
 
+def hiring(request):
+    return render_to_response('hiring.html')
+
 def redirector(request,where,isp=True):
     if isp:
         return HttpResponsePermanentRedirect(where)

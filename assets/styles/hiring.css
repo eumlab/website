@@ -1,0 +1,71 @@
+.site-title {
+    float: none;
+    margin: 50px auto;
+}
+
+    .site-title h1,
+    .site-title h2 {
+        display: none;
+    }
+
+    
+
+.section-0 {
+    height: 1000px;
+    background: url(../images/hiring-header.jpg) center bottom no-repeat;
+}
+
+    .section-0 .slogan {
+        margin-top: 30px;
+        height: 113px;
+        background: url(../images/hiring-slogan.png) 50% 0 no-repeat;
+    }
+
+    .section-0 .slogan p {
+        display: none;
+    }
+
+
+.section-1 {
+    height: 327px;
+    background: url(../images/hiring-dark-side.jpg) center bottom no-repeat;
+}
+
+    .section-1 .intro {
+        padding: 140px 0 0 50px;
+        width: 211px;
+    }
+
+    .section-1 .intro .title {
+        color: #fff;
+        font-size: 30px;
+    }
+
+    .section-1 .intro .desc {
+        color: #fff;
+        font-size: 10px;
+    }
+
+.section-2 {
+    position: relative;
+    z-index: 10;
+    margin-top: 135px;
+    height: 668px;
+    background: url(../images/hiring-wall-bg.png) center 0 repeat-x;
+}
+    .section-2 .intro {
+        padding-top: 260px;
+        line-height: 2;
+    }
+
+    .section-2 .desc {
+        color: #555;
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+.section-3 {
+    margin-top: -28px;
+    background: #fff;
+}
