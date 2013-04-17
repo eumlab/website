@@ -1,14 +1,29 @@
+.intro {
+    font-family: "DIN-Regular", "Helvetica Neue", Helvetica, arial, sans-serif;
+}
+
 .site-title {
     float: none;
     margin: 50px auto;
+    background: url(../images/hiring-logo.png) 0 0 no-repeat;
+    width: 216px;
+    height: 136px;
+    position: relative;
 }
+    .site-title h1 a {
+        display: block;
+        height: 34px;
+        width: 119px;
+        text-indent: -9999px;
+        overflow: hidden;
+        position: absolute;
+        top: 51px;
+        left: 51px;
+    }
 
-    .site-title h1,
     .site-title h2 {
         display: none;
     }
-
-    
 
 .section-0 {
     height: 1000px;
@@ -24,6 +39,42 @@
     .section-0 .slogan p {
         display: none;
     }
+
+    .section-0 .job-offer {
+        text-align: center;
+        color: #bbb;
+        font-size: 14px;
+        margin-top: 535px;
+    }
+
+    .section-0 .job-offer span {
+        margin: 20px;
+    }
+
+    .section-0 .link-jobs-wrap {
+        width: 418px;
+        height: 115px;
+        padding-top: 22px;
+        background: url(../images/hiring-jobs-btn.png) center 0 no-repeat;
+        margin: 50px auto 0;
+    }
+
+    .section-0 .link-jobs-wrap.hover {
+        background-position: center -137px;
+    }
+
+    .section-0 .link-jobs-wrap.active {
+        background-position: center -274px;
+    }
+
+        .section-0 .link-jobs {
+            text-indent: -99999px;
+            overflow: hidden;
+            display: block;
+            margin: 0 auto;
+            width: 312px;
+            height: 65px;
+        }
 
 
 .section-1 {
@@ -53,9 +104,17 @@
     height: 668px;
     background: url(../images/hiring-wall-bg.png) center 0 repeat-x;
 }
+    .section-2 .center {
+        height: 668px;
+        background: url(../images/hiring-wall.png) center 129px no-repeat;
+    }
+
     .section-2 .intro {
-        padding-top: 260px;
-        line-height: 2;
+        padding-top: 400px;
+    }
+
+    .section-2 .title {
+        display: none;
     }
 
     .section-2 .desc {
@@ -65,7 +124,190 @@
         font-weight: bold;
     }
 
+    .section-2 .desc:nth-child(2n+1) {
+        margin-bottom: 8px;
+    }
+
 .section-3 {
+    height: 443px;
     margin-top: -28px;
-    background: #fff;
+    background: url(../images/hiring-tatoo.jpg) center bottom no-repeat;
+    -moz-text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+    -webkit-text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+}
+
+    .section-3 .intro {
+        padding-top: 80px;
+        text-align: center;
+    }
+
+    .section-3 .intro .title {
+        color: #fff;
+        margin-bottom: 10px;
+        font-size: 44px;
+    }
+
+    .section-3 .intro .desc {
+        color: #fff;
+        font-size: 20px;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    .section-3 blockquote {
+        line-height: 1.5;
+        margin: 50px 70px;
+        float: left;
+        color: #fff;
+        font-size: 15px;
+        font-style: italic;
+        width: 240px;
+        position: relative;
+    }
+
+    .section-3 blockquote:nth-child(2n) {
+        margin: 50px 30px;
+    }
+
+    .section-3 blockquote:before,
+    .section-3 blockquote:after {
+        font-size: 50px;
+        font-family: "Lucida Sans", "DIN-Regular", "Helvetica Neue", Helvetica, arial, sans-serif;
+        position: absolute;
+        top: -12px;
+    }
+
+    .section-3 blockquote:before {
+        content: "“";
+        left: -32px;
+    }
+
+    .section-3 blockquote:after{
+        content: "”";
+        right: -20px;
+    }
+
+.section-4 {
+    height: 1133px;
+    background: url(../images/hiring-keyboard.jpg) center top repeat-x;
+}
+
+    .section-4 .center {
+        position: relative;
+    }
+
+    .section-4 .intro {
+        padding-top: 25px;
+        text-align: center;
+    }
+
+    .section-4 .title {
+        color: #fff;
+        font-size: 32px;
+    }
+
+    .section-4 .desc {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .section-4 .skills {
+        writing-mode:tb-rl;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+
+        /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+        -webkit-transform-origin: 0% 0%;
+        -moz-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+        -o-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+
+        /* Should be unset in IE9+ I think. */
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+        font-size: 14px;
+        line-height: 100px;
+        display: block;
+        position: absolute;
+        top: 320px;
+        left: 862px;
+        white-space: nowrap;
+    }
+
+    .section-4 .skills li:nth-child(3) {
+        margin-bottom: 90px;
+    }
+
+    .section-4 .skills .good {
+        color: #287351;
+    }
+
+.section-5 {
+    margin-top: -611px;
+    height: 611px;
+    background: url(../images/hiring-strings.png) center 70px repeat-x;
+}
+
+    .section-5 .center {
+        background: url(../images/hiring-staff.png) center 26px no-repeat;
+    }
+
+    .section-5 .intro {
+        padding-top: 200px;
+        width: 520px;
+        margin: 0 auto;
+    }
+
+    .section-5 .title {
+        color: #287351;
+        font-size: 44px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .section-5 .desc {
+        font-size: 16px;
+        color: #666;
+
+        margin-bottom: 10px;
+    }
+
+    .section-5 .btn-apply-wrap {
+        width: 325px;
+        height: 87px;
+        padding-top: 4px;
+        background: url(../images/hiring-apply-btn.png) 0 100% no-repeat;
+        margin: 50px auto 0;
+    }
+
+    .section-5 .btn-apply-wrap.hover {
+        background-position: -325px 100%;
+    }
+
+    .section-5 .btn-apply-wrap.active {
+        background-position: -650px 100%;
+    }
+
+        .section-5 .btn-apply {
+            text-indent: -99999px;
+            overflow: hidden;
+            display: block;
+            margin: 0 auto;
+            width: 312px;
+            height: 65px;
+        }
+
+@media screen and (min-width: 1200px) {
+    .section-3 {
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-repeat: 50%;
+    }
 }
