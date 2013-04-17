@@ -39,6 +39,7 @@ urlpatterns += patterns('mainweb.views',
     (r'^pro-metronome/$', 'pro_metronome'),
     (r'^ukulele/$', 'ukulele'),
     (r'^hiring/$', 'hiring'),
+    (r'^hiring-cn/$', 'hiring_cn'),
 
     #(r'^(?i)daw-remote-hd/network/$', 'drh_network'),
     (r'^(?i)daw-remote-hd/network/$',"redirector",{"where":"http://support.eumlab.com/customer/portal/articles/958423-network-config"}),

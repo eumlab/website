@@ -83,8 +83,7 @@
 }
 
     .section-1 .intro {
-        padding: 140px 0 0 50px;
-        width: 211px;
+        padding: 120px 0 0 50px;
     }
 
     .section-1 .intro .title {
@@ -94,7 +93,8 @@
 
     .section-1 .intro .desc {
         color: #fff;
-        font-size: 10px;
+        font-size: 12px;
+        margin-bottom: 5px;
     }
 
 .section-2 {

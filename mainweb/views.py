@@ -52,6 +52,10 @@ def ukulele(request):
 def hiring(request):
     return render_to_response('hiring.html')
 
+def hiring_cn(request):
+    return render_to_response('hiring-cn.html')
+
+
 def redirector(request,where,isp=True):
     if isp:
         return HttpResponsePermanentRedirect(where)
