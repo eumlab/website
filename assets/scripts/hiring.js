@@ -21,8 +21,13 @@ $(function() {
     });
 
     $('div.staff').click(function(e) {
-        var staff = $(this),
-            keyMap = staff.data('key-map').split(','),
+        var staff = $(this);
+
+        if (staff.hasClass('selected')) {
+            return
+        }
+
+        var keyMap = staff.data('key-map').split(','),
             introOrder = staff.data('intro');
             selector = [];
 
