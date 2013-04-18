@@ -1,5 +1,6 @@
-.intro {
-    font-family: "DIN-Regular", "Helvetica Neue", Helvetica, arial, sans-serif;
+.intro,
+.intro .title {
+    font-family: "DIN-Regular", "Lucida Grande Regular", "Lucida Grande", "Helvetica Neue", Helvetica, arial, sans-serif;
 }
 
 .site-title {
@@ -243,7 +244,7 @@
         margin-bottom: 90px;
     }
 
-    .section-4 .skills .good {
+    .section-4 .skills .active {
         color: #287351;
     }
 
@@ -255,17 +256,68 @@
 
     .section-5 .center {
         background: url(../images/hiring-staff.png) center 26px no-repeat;
+        position: relative;
     }
+
+    .section-5 .staff {
+        height: 128px;
+        position: absolute;
+        z-index: 999;
+        cursor: pointer;
+        top: 26px;
+        opacity: 0;
+        background-image: url(../images/hiring-staff-active.png);
+        background-repeat: no-repeat;
+    }
+
+        .section-5 .staff,
+        .section-5 .staff:hover {
+            -moz-transition: opacity 0.2s ease-in-out;
+            -webkit-transition: opacity 0.2s ease-in-out;
+            -o-transition: opacity 0.2s ease-in-out;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .section-5 .staff:hover,
+        .section-5 .staff.selected {
+            opacity: 1;
+        }
+
+        .section-5 .staff-0 {
+            width: 116px;
+            left: 228px;
+        }
+
+        .section-5 .staff-1 {
+            width: 115px;
+            background-position: -116px bottom;
+            left: 456px;
+        }
+
+        .section-5 .staff-2 {
+            background-position: -231px bottom;
+            width: 195px;
+            left: 688px;
+        }
 
     .section-5 .intro {
         padding-top: 200px;
         width: 520px;
+        height: 220px;
         margin: 0 auto;
+        overflow: hidden;
     }
+
+        .section-5 .intro-inner {
+            display: none;
+        }
+        .section-5 .intro-inner.selected {
+            display: block;
+        }
 
     .section-5 .title {
         color: #287351;
-        font-size: 44px;
+        font-size: 40px;
         text-align: center;
         margin-bottom: 10px;
     }
@@ -273,7 +325,6 @@
     .section-5 .desc {
         font-size: 16px;
         color: #666;
-
         margin-bottom: 10px;
     }
 
