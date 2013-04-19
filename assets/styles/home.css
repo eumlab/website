@@ -287,13 +287,14 @@ html, body {
     }
 
     .social-medias .join {
-        width: 52px;
-        background-size: 52px 50px;
+        width: 70px;
+        background-size: 70px 60px;
         top: -1px;
         left: 10px;
+        background: url(../images/join-us-icon-home.png) 0 0 no-repeat;
     }
 
     .social-medias .join:hover {
-        background-position: 0 -25px;
+        background-position: 0 -30px;
     }
 
