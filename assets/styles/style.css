@@ -305,7 +305,6 @@ a {
     .social-medias {
         margin-top: 55px;
         height: 50px;
-        overflow: hidden;
     }
 
         .social-medias a {
@@ -355,6 +354,19 @@ a {
 
         .social-medias .youtube:hover {
             background-position: -259px -50px;
+        }
+
+        .social-medias .join {
+            position: relative;
+            top: -3px;
+            left: 15px;
+            background: url(../images/join-us-icon.png) 0 0 no-repeat;
+            width: 105px;
+        }
+
+        .social-medias .join:hover {
+            background-position: 0 -50px;
+            width: 105px;
         }
 
     .copyright {
