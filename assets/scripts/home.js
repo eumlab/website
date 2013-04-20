@@ -17,31 +17,25 @@ function setAppsPosition() {
         appsWidth = apps.width(),
         appsHeight = apps.height();
 
-    var top, left;
+    var top, right;
 
-    if ( winWidth < 1000 && winHeight < 615) {
+    if ( winWidth <= 1000 &&  winHeight <= 615 ) {
         top = 140;
-        left = 450;
-    } else if (winWidth > 1000 && winHeight < 615) {
+        right = 260;
+    } else if ( winWidth >= 1000 && winHeight <= 615 ) {
         top = (140 + appsHeight/2) * winWidth/1000 - appsHeight/2;
-        left = (450 + appsWidth/2) * winWidth/1000 - appsWidth/2;
-    } else if (winWidth < 1000 && winHeight > 615) {
+        right = (260 + appsWidth/2) * winWidth/1000 - appsWidth/2;
+    } else if ( winWidth <= 1000 && winHeight >= 615 ) {
         top = (140 + appsHeight/2) * winHeight/615 - appsHeight/2;
-        left = 450;
+        right = 220;
     } else {
-        if ((winHeight - 615)/615 > (winWidth - 1000)/1000) {
-            ratio = winHeight/615;
-        } else {
-            ratio = winWidth/1000;
-        }
-
-        top = (140 + appsHeight/2) * ratio - appsHeight/2;
-        left = (450 + appsWidth/2) * ratio - appsWidth/2;
+        top = (140 + appsHeight/2) * winHeight/615 - appsHeight/2;
+        right = (260 + appsWidth/2) * winWidth/1000 - appsWidth/2;
     }
 
     apps.css({
         top: top,
-        left: left
+        right: right
     });
 }
 

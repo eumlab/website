@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    overflow: auto;
 }
 
 .pg-home {
@@ -8,6 +9,7 @@ html, body {
     min-height: 615px;
     min-width: 1000px;
     position: relative;
+    overflow: hidden;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
