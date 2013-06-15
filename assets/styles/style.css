@@ -65,6 +65,14 @@ table {
 }
 
 @font-face {
+	font-family: 'entypo';
+	src: url('../fonts/entypo.eot');
+	src: local('☺'), url('../fonts/entypo.woff') format('woff'), url('../fonts/entypo.ttf') format('truetype'), url('../fonts/entypo.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'TitilliumText25L';
 	src: url('../fonts/TitilliumText25L.eot');
 	src: local('☺'), url('../fonts/TitilliumText25L.woff') format('woff'), url('../fonts/TitilliumText25L.ttf') format('truetype'), url('../fonts/TitilliumText25L.svg') format('svg');
@@ -147,13 +155,13 @@ a {
     margin-left: 120px;
     line-height: 46px;
 }
-    .nav li,
+    .nav > li,
     .subnav li {
         display: inline-block;
         vertical-align: top;
     }
 
-    .nav a,
+    .nav > li > a,
     .subnav a {
         display: inline-block;
         vertical-align: top;
@@ -163,8 +171,14 @@ a {
         font-family: "TitilliumText25L", "Helvetica Neue", Helvetica, arial, sans-serif;
     }
 
+    .nav em {
+        font-family: "entypo";
+        font-size: 24px;
+    }
+
     .nav a:hover,
-    .nav .active a,
+    .nav > .active > a,
+    .nav .menu .active > a,
     .subnav a:hover,
     .subnav .active a {
         -webkit-text-shadow: 0 0 70px #e88300;
@@ -194,6 +208,53 @@ a {
         text-shadow: none;
         -webkit-text-shadow: none;
         -moz-text-shadow: none;
+    }
+
+    .nav > li {
+        position: relative;
+    }
+
+    .nav .menu {
+        display: none;
+        position: absolute;
+        top: 46px;
+        left: 50%;
+        width: 180px;
+        margin-left: -90px;
+        padding-top: 10px;
+        line-height: 36px;
+    }
+
+    .nav li:hover .menu,
+    .nav .menu:hover {
+        display: block;
+    }
+
+    .nav ul {
+        padding: 10px 0;
+        background-color: rgba(0,0,0,0.6);
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+    }
+
+    .nav ul:before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 100;
+        top: 0px;
+        left: 85px;
+        border: 10px solid rgba(0,0,0,0);
+        border-bottom: 10px solid rgba(0,0,0,0.6);
+        border-top: 0;
+        background-color: transparent;
+    }
+
+    .nav ul a {
+        display: block;
+        font-size: 14px;
+        text-align: center;
     }
 
 .subnav-wrap {

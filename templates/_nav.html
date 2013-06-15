@@ -1,11 +1,30 @@
 <ul class="nav">
     <!-- <li><a href="/">Home</a></li> -->
-    <li{% if nav == 'dr' %} class="active"{% endif %}><a href="/daw-remote/">DAW Remote</a></li>
-    <li{% if nav == 'drh' %} class="active"{% endif %}><a href="/daw-remote-hd/">DAW Remote HD</a></li>
-    <li{% if nav == 'pm' %} class="active"{% endif %}><a href="/pro-metronome/">Pro Metronome</a></li>
-    <li{% if nav == 'it' %} class="active"{% endif %}><a href="/instuner/">insTuner</a></li>
-    <li{% if nav == 'ut' %} class="active"{% endif %}><a href="/ukulele/">Ukulele Toolkit</a></li>
-    <li{% if nav == 'st' %} class="active"{% endif %}><a href="/string-tuner/">String Tuner</a></li>
-    <li{% if nav == 'pt' %} class="active"{% endif %}><a href="/pro-tuner/">Pro Tuner</a></li>
+    <li{% if nav == 'pm' %} class="active"{% endif %}><a href="/pro-metronome/"><em>&#9733;</em> Pro Metronome</a></li>
+    <li{% if nav == 'it' %} class="active"{% endif %}><a href="/instuner/"><em>&#9733;</em> insTuner</a></li>
+    <li{% if nav == 'ut' %} class="active"{% endif %}><a href="/ukulele/"><em>&#9733;</em> Ukulele Toolkit</a></li>
+    <li{% if nav == 'ct' %} class="active"{% endif %}><a href="/chordtunes/">Chordtunes</a></li>
+    <li{% if nav == 'dr' or nav == 'drh' %} class="active"{% endif %}>
+        <a href="javascript:;"><em>&#9871;</em> DAW Remote</a>
+        <div class="menu">
+            <ul>
+                <li{% if nav == 'drh' %} class="active"{% endif %}>
+                    <a href="/daw-remote-hd/">DAW Remote HD (iPad)</a>
+                </li>
+                <li{% if nav == 'dr' %} class="active"{% endif %}>
+                    <a href="/daw-remote/">DAW Remote (iPhone)</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li{% if nav == 'st' or nav == 'pt' %} class="active"{% endif %}>
+        <a href="javascript:;"><em>&#9871;</em> More</a>
+        <div class="menu">
+            <ul>
+                <li{% if nav == 'st' %} class="active"{% endif %}><a href="/string-tuner/">String Tuner</a></li>
+                <li{% if nav == 'pt' %} class="active"{% endif %}><a href="/pro-tuner/">Pro Tuner</a></li>
+            </ul>
+        </div>
+    </li>
     <li class="support"><a href="http://support.eumlab.com/">Support</a></li>
 </ul>
