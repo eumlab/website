@@ -170,9 +170,18 @@ html, body {
     margin: 0 30px 0 10px;
 }
 
+.ct {
+    top: 130px;
+    left: 20px;
+}
+
+.ct .icon {
+    background: url(../images/app-icon-ct.png) center center no-repeat;
+}
+
 .it {
-    top: 0px;
-    left: 40px;
+    top: -20px;
+    left: 10px;
 }
 
 .it .icon {
@@ -180,8 +189,8 @@ html, body {
 }
 
 .pt {
-    top: 0px;
-    left: 180px;
+    top: -20px;
+    left: 160px;
 }
 
 .pt .icon {
@@ -190,7 +199,7 @@ html, body {
 
 .dr {
     top: 90px;
-    left: 290px;
+    left: 300px;
 }
 
 .dr .icon {
@@ -198,8 +207,8 @@ html, body {
 }
 
 .drh {
-    top: 220px;
-    left: 230px;
+    top: 260px;
+    left: 200px;
 }
 
 .drh .icon {
@@ -207,8 +216,8 @@ html, body {
 }
 
 .st {
-    top: 250px;
-    left: 70px;
+    top: 280px;
+    left: 50px;
 }
 
 .st .icon {
@@ -216,8 +225,8 @@ html, body {
 }
 
 .ut {
-    top: 120px;
-    left: -30px;
+    top: 140px;
+    left: -120px;
 }
 
 .ut .icon {
@@ -225,8 +234,8 @@ html, body {
 }
 
 .pm {
-    top: 125px;
-    left: 125px;
+    top: 120px;
+    left: 155px;
 }
 
 .pm .icon {
