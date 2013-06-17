@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %}Chordtunes{% endblock %}
+
+{% block meta %}
+    <meta name="apple-itunes-app" content="app-id=643809129">
+{% endblock %}
+
+{% block script %}
+    <script src="/assets/scripts/chordtunes.js"></script>
+{% endblock %}
+
+{% block style %}
+    <link href="/assets/styles/chordtunes.css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+<div class="container pg-chordtunes">
+    <div class="header">
+        <div class="bg"></div>
+        {% include "_topbar.html" %}
+        <div class="app">
+            <div class="center">
+                <div class="pic">
+                </div>
+                <h2 class="app-title">Chordtunes</h2>
+                <a href="http://itunes.apple.com/app/id643809129?ls=1&mt=8" target="_blank" class="link-app-store" title="Download Pro Metronome from APP Store">Available on the App Store</a>
+            </div>
+        </div>
+    </div>
+    <div class="section section-0">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">What is Chordtunes</h3>
+                <p class="desc">Chordtunes is an iPad app for creating chord sheets for guitar, ukulele, and mandolin. You can think of Chordtunes as a text editor for creating chord sheets. Entering chords and lyrics is as easy as typing.</p>
+                <p class="desc">Chordtunes can be used at music lessons, <br />capture chords from a tune a friend shares, <br />create personal compositions, <br />create your own custom chord book, <br />and share chord sheets with other users.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-1">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Custom Keyboard for Chord Entry</h3>
+                <p class="desc">A custom keyboard provides a convenient way to select and enter the chords.</p>
+                <p class="desc">Lyrics can be included, with three output formats available.</p>
+                <p class="desc">Chordtunes provides over 1,700 chords!</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-2">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Create Once, Display for Any Instrument</h3>
+                <p class="desc">There is no need to worry about which instrument to select.</p>
+                <p class="desc">A chord sheet will display for any of the instruments the app supports, <br />automatically converting the chord sheet to the instrument tuning.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-3">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Transpose</h3>
+                <p class="desc">With Chordtunes, you can transpose your chord sheets to any key.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-4">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Share Your Chord Sheets with Others</h3>
+                <p class="desc">Three PDF formats for preview, print and share.</p>
+                <p class="desc">Save or import to/from Dropbox, Box, and more.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-5">
+        <div class="center">
+            <div class="pic"></div>
+            <a href="http://itunes.apple.com/app/id643809129?ls=1&mt=8" target="_blank" class="link-app-store" title="Download Pro Metronome from APP Store">Available on the App Store</a>
+        </div>
+    </div>
+    {% include "_footer.html" %}
+</div>
+{% endblock %}

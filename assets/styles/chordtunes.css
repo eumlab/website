@@ -1,0 +1,212 @@
+.container {
+    overflow-x: hidden;
+}
+
+.header {
+    height: 800px;
+}
+
+.header .bg {
+    width: 100%;
+    height: 800px;
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1000ms ease-in-out;
+    -moz-transition: opacity 1000ms ease-in-out;
+    -webkit-transition: opacity 1000ms ease-in-out;
+}
+
+.app {
+    margin-top: 20px;
+}
+
+.app .link-app-store {
+    position: absolute;
+    background: url(../images/ct-app-store-link.png) no-repeat 0 0;
+    top: 400px;
+    left: 750px;
+    width: 197px;
+    height: 69px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    /* -moz-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+    -webkit-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+    box-shadow: 0 0 24px rgba(104,199,255, 0.7);*/
+}
+
+    .app .link-app-store:hover {
+        background-position: -197px 0;
+    }
+
+.app .center {
+    position: relative;
+}
+    .app .pic {
+        width: 1408px;
+        height: 635px;
+        background: url(../images/ct-app.png) 0 0 no-repeat;
+        position: absolute;
+        top: 0;
+        left: -60px;
+    }
+
+.section .intro {
+    position: relative;
+}
+
+.section .title {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.section .desc {
+    font-size: 16px;
+}
+
+.section-0 {
+}
+
+    .section-0 .center {
+        height: 690px;
+        position: relative;
+    }
+
+    .section-0 .pic {
+        background: url(../images/ct-what-is.png) 0 0 no-repeat;
+        position: absolute;
+        top: 70px;
+        right: -35px;
+        width: 417px;
+        height: 620px;
+    }
+
+    .section-0 .intro {
+        padding: 335px 0 0 20px;
+        width: 483px;
+        text-align: right;
+    }
+
+    .section-0 .desc {
+        margin-bottom: 18px; 
+    }
+
+.section-1 {
+    text-align: center;
+    margin-top: 140px;
+}
+
+    .section-1 .center {
+        height: 560px;
+        position: relative;
+    }
+
+    .section-1 .pic {
+        position: absolute;
+        top: 220px;
+        left: 50%;
+        background: url(../images/ct-keyboard.png) center 0 no-repeat;
+        width: 1502px;
+        height: 412px;
+        margin-left: -751px;
+    }
+
+.section-2 {
+    text-align: center;
+    margin-top: 160px;
+}
+
+    .section-2 .center {
+        height: 835px;
+        position: relative;
+    }
+
+    .section-2 .pic {
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        background: url(../images/ct-table.png) 0 0 no-repeat;
+        width: 990px;
+        height: 635px;
+        margin-left: -495px;
+    }
+
+.section-3 {
+    text-align: center;
+    margin-top: 140px;
+}
+
+    .section-3 .center {
+        height: 584px;
+        position: relative;
+    }
+
+    .section-3 .pic {
+        position: absolute;
+        top: 120px;
+        left: 50%;
+        background: url(../images/ct-paper-transpose.png) 0 0 no-repeat;
+        width: 1168px;
+        height: 464px;
+        margin-left: -584px;
+    }
+
+.section-4 {
+    text-align: center;
+    margin-top: 140px;
+}
+
+    .section-4 .center {
+        height: 535px;
+        position: relative;
+    }
+
+    .section-4 .pic {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        margin-left: -476.5px;
+        width: 953px;
+        height: 385px;
+        background: url(../images/ct-pdf.png) 0 0 no-repeat;
+    }
+
+.section-5 {
+    margin-top: 220px;
+}
+
+    .section-5 .center {
+        height: 623px;
+        position: relative;
+    }
+
+    .section-5 .pic {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        width: 958px;
+        height: 493px;
+        background: url(../images/ct-app-bottom.png) 0 0 no-repeat;
+    }
+
+    .section-5 .link-app-store {
+        position: absolute;
+        top: 310px;
+        right: 8px;
+        background: url(../images/ct-app-store-link.png) no-repeat 0 0;
+        width: 197px;
+        height: 69px;
+    }
+
+    .section-5 .link-app-store:hover {
+        background-position: -197px 0;
+    }

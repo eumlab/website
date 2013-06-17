@@ -30,6 +30,8 @@ def drh_bonjour(request):
 def drh_network(request):
     return render_to_response('drh-network.html', {"nav": "drh", "subnav": "drh-faq"})
 
+def chordtunes(request):
+    return render_to_response('chordtunes.html', {"nav": "ct"})
 
 def pro_tuner(request):
     return render_to_response('pro-tuner.html', {"nav": "pt"})
