@@ -1,84 +1,100 @@
 html, body {
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .pg-home {
-    background: #000 url(../images/home-bg@1920.jpg) center 0 no-repeat;
+    background: #000 url(../images/home-bg@1920.jpg) center -30px no-repeat;
     height: 100%;
-    min-height: 615px;
     min-width: 1000px;
+    min-height: 620px;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
     background-size: contain;
 }
 
-@media screen and (min-height: 1180px),
-@media screen and (min-width: 1920px) {
-    .pg-home {
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
+
+.ipad {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -318px;
+    margin-left: -500px;
+    background: url(../images/home-ipad.png) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* height: 898px;
+    width: 1253px; */
+    width: 1000px;
+    height: 676px;
+}
+
+.ipad .iphone {
+    position: absolute;
+    top: 30px;
+    right: -280px;
+    background: url(../images/home-iphone5back.png) 0 0 no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* width: 323px;
+    height: 761px; */
+    width: 258px;
+    height: 607px;
 }
 
 .apps {
     position: absolute;
-    top: 220px;
-    right: 220px;
-    width: 300px;
-    height: 300px;
+    top: 275px;
+    left: 185px;
+    width: 600px;
+    height: 230px;
 }
 
 .app {
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    width: 80px;
-    height: 80px;
+    float: left;
+    height: 60px;
+    width: 60px;
     display: block;
-    -o-transform: rotate(15deg);
-    -webkit-transform: rotate(15deg);
-    -moz-transform: rotate(15deg);
-    transform: rotate(15deg);
+    position: relative;
+    padding: 0 30px 45px 30px;
 }
 
-    .app:hover {
-        -o-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-
-    .app,
-    .app:hover {
-        -moz-transition: -moz-transform 0.25s ease-in-out;
-        -webkit-transition: -webkit-transform 0.25s ease-in-out;
-        -o-transition: -o-transform 0.25s ease-in-out;
-        transition: transform 0.25s ease-in-out;
-    }
+.app .icon-name {
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    height: 45px;
+    line-height: 35px;
+    width: 120px;
+    margin-left: -30px;
+    -webkit-text-shadow: 2px 8px 20px rgba(0,0,0,0.7);
+    -moz-text-shadow: 2px 8px 20px rgba(0,0,0,0.7);
+    text-shadow: 2px 8px 20px rgba(0,0,0,0.7);
+}
 
 .app .icon {
     height: 100%;
     width: 100%;
     position: relative;
     z-index: 0;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
     -webkit-box-shadow: 2px 8px 20px rgba(0,0,0,0.7);
     -moz-box-shadow: 2px 8px 20px rgba(0,0,0,0.7);
     box-shadow: 2px 8px 20px rgba(0,0,0,0.7);
 }
-
     .app:hover .icon {
-        -webkit-box-shadow: 0 15px 55px rgba(0,0,0,0.8);
-        -moz-box-shadow: 0 15px 55px rgba(0,0,0,0.8);
-        box-shadow: 0 15px 55px rgba(0,0,0,0.8);
+        -webkit-box-shadow: 2px 15px 30px rgba(0,0,0,0.8);
+        -moz-box-shadow: 2px 15px 30px rgba(0,0,0,0.8);
+        box-shadow: 2px 15px 30px rgba(0,0,0,0.8);
     }
 
     .app .icon,
@@ -92,7 +108,7 @@ html, body {
 .app:hover .app-intro {
     opacity: 100;
     width: 400px;
-    left: -380px;
+    left: -360px;
 
     -moz-transition: all 0.25s 0.1s ease-in-out;
     -webkit-transition: all 0.25s 0.1s ease-in-out;
@@ -100,28 +116,27 @@ html, body {
     transition: all 0.25s 0.1s ease-in-out;
 }
 
-
 .app-intro {
     width: 0;
-    height: 46px;
+    height: 40px;
     overflow: hidden;
     opacity: 0;
     position: absolute;
     z-index: 0;
     padding: 10px 0;
     left: 0;
-    top: 6px;
+    top: 2px;
     font-family: "DIN-Regular", "Helvetica Neue", Helvetica, arial, sans-serif;
     text-align: right;
-    background-color: rgba(0,0,0,0.65);
+    background-color: rgba(0,0,0,1);
     /* IE9 SVG, needs conditional override of 'filter' to 'none' */
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC42NSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
-    background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+    background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-8 */
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -129,119 +144,88 @@ html, body {
 }
 
 .app.pt .app-intro,
-.dr.app .app-intro,
-.drh.app .app-intro {
+.ct.app .app-intro {
     text-align: left;
     /* IE9 SVG, needs conditional override of 'filter' to 'none' */
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
-    background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+    background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-8 */
 }
 
 .app.pt .app-intro h5,
-.dr.app .app-intro h5,
-.drh.app .app-intro h5,
+.app.ct .app-intro h5 {
+    margin: 0 10px 4px 20px;
+}
+
 .app.pt .app-intro p,
-.dr.app .app-intro p,
-.drh.app .app-intro p {
-    margin: 0 10px 0 30px;
+.app.ct .app-intro p {
+    margin: 0 10px 0 20px;
 }
 
 .app.pt:hover .app-intro,
-.dr.app:hover .app-intro,
-.drh.app:hover .app-intro {
-    left: 60px;
+.ct.app:hover .app-intro {
+    left: 80px;
 }
 
 .app-intro h5 {
     color: #54ceea;
-    font-size: 30px;
-    margin: 0 30px 0 10px;
+    font-size: 22px;
+    margin: 0 20px 4px 10px;
 }
 
 .app-intro p {
-    color: #777;
-    font-size: 16px;
-    margin: 0 30px 0 10px;
-}
-
-.ct {
-    top: 130px;
-    left: 20px;
+    color: #aaa;
+    font-size: 14px;
+    margin: 0 20px 0 10px;
 }
 
 .ct .icon {
     background: url(../images/app-icon-ct.png) center center no-repeat;
 }
 
-.it {
-    top: -20px;
-    left: 10px;
-}
-
 .it .icon {
     background: url(../images/app-icon-it.png) center center no-repeat;
-}
-
-.pt {
-    top: -20px;
-    left: 160px;
 }
 
 .pt .icon {
     background: url(../images/app-icon-pt.png) center center no-repeat;
 }
 
-.dr {
-    top: 90px;
-    left: 300px;
-}
-
 .dr .icon {
     background: url(../images/app-icon-dr.png) center center no-repeat;
-}
-
-.drh {
-    top: 260px;
-    left: 200px;
 }
 
 .drh .icon {
     background: url(../images/app-icon-drh.png) center center no-repeat;
 }
 
-.st {
-    top: 280px;
-    left: 50px;
-}
-
 .st .icon {
     background: url(../images/app-icon-st.png) center center no-repeat;
-}
-
-.ut {
-    top: 140px;
-    left: -120px;
 }
 
 .ut .icon {
     background: url(../images/app-icon-ut.png) center center no-repeat;
 }
 
-.pm {
-    top: 120px;
-    left: 155px;
-}
-
 .pm .icon {
     background: url(../images/app-icon-pm.png) center center no-repeat;
 }
 
+.iuke .icon {
+    background: url(../images/app-icon-iuke.png) center center no-repeat;
+}
+
+.app .icon {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 .footer {
     position: absolute;
@@ -309,3 +293,69 @@ html, body {
         background-position: 0 -30px;
     }
 
+@media screen and (max-width: 1440px) {
+    .ipad {
+        margin-top: -277px;
+        margin-left: -440px;
+        width: 880px;
+        height: 595px;
+    }
+
+    .ipad .iphone {
+        top: 26px;
+        right: -205px;
+        width: 227px;
+        height: 534px;
+    }
+
+    .apps {
+        top: 242px;
+        left: 152px;
+        width: 566px;
+        height: 202px;
+    }
+
+    .app {
+        height: 53px;
+        width: 53px;
+        padding: 0 30px 40px 30px;
+    }
+
+    .app .icon-name {
+        font-size: 13px;
+        height: 40px;
+        line-height: 31px;
+        width: 113px;
+        margin-left: -30px;
+    }
+
+    .app .icon {
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+    }
+
+    .app:hover .app-intro {
+        width: 380px;
+        left: -340px;
+    }
+
+    .app-intro {
+        height: 38px;
+        padding: 6px 0;
+        left: 0;
+        top: 2px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    .app.pt:hover .app-intro,
+    .ct.app:hover .app-intro {
+        left: 70px;
+    }
+
+    .app-intro h5 {
+        font-size: 16px;
+    }
+}
