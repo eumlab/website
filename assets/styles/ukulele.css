@@ -59,10 +59,10 @@
         position: absolute;
         z-index: 0;
         top: 100px;
-        right: -150px;
-        width: 711px;
-        height: 569px;
-        background: url(../images/ut-feature-0.jpg) 0 0 no-repeat;
+        right: -160px;
+        width: 741px;
+        height: 591px;
+        background: url(../images/ut-feature-0.jpg) 0 100% no-repeat;
     }
 
     .section-0 .intro {
@@ -90,7 +90,17 @@
     .section-1 .center {
         height: 790px;
         position: relative;
+
+    }
+
+    .section-1 .pic {
+        position: absolute;
+        top: 238px;
+        left: 50%;
+        margin-left: -590px;
         background: url(../images/ut-feature-1.jpg) 50% 100% no-repeat;
+        width: 1179px;
+        height: 552px;
     }
 
     .section-1 .intro {
@@ -140,7 +150,7 @@
 }
 
     .section-3 .center {
-        height: 664px;
+        height: 764px;
         position: relative;
     }
 
@@ -149,8 +159,8 @@
         top: 150px;
         left: 25px;
         background: url(../images/ut-feature-3.jpg) 0 0 no-repeat;
-        width: 440px;
-        height: 514px;
+        width: 480px;
+        height: 574px;
     }
 
     .section-3 .intro {
@@ -185,6 +195,16 @@
         width: 890px;
         height: 586px;
         background: url(../images/ut-feature-4.png) 0 0 no-repeat;
+    }
+
+    .section-4 .app-name {
+        font-size: 18px;
+        color: #d3f3f6;
+        font-family: "DIN-Regular", "Helvetica Neue", Helvetica, arial, sans-serif;
+        font-weight: bold;
+        position: absolute;
+        top: 425px;
+        right: 56px;
     }
 
     .section-4 .link-app-store {
