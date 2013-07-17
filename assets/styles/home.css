@@ -36,7 +36,7 @@ html, body {
 
 .ipad .iphone {
     position: absolute;
-    top: 30px;
+    top: 86px;
     right: -280px;
     background: url(../images/home-iphone5back.png) 0 0 no-repeat;
     -webkit-background-size: cover;
@@ -302,7 +302,7 @@ html, body {
     }
 
     .ipad .iphone {
-        top: 26px;
+        top: 76px;
         right: -205px;
         width: 227px;
         height: 534px;
