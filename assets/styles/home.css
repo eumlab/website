@@ -228,7 +228,7 @@ html, body {
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     left: 20px;
     text-align: left;
@@ -357,5 +357,83 @@ html, body {
 
     .app-intro h5 {
         font-size: 16px;
+    }
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) {
+    html, body, .container {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .ipad {
+        margin-top: -189px;
+        margin-left: -300px;
+        width: 600px;
+        height: 406px;
+    }
+
+    .ipad .iphone {
+        top: 52px;
+        right: -240px;
+        width: 155px;
+        height: 364px;
+    }
+
+    .apps {
+        top: 165px;
+        left: 104px;
+        width: 386px;
+        height: 138px;
+    }
+
+    .app {
+        height: 36px;
+        width: 36px;
+        padding: 0 20px 40px 20px;
+    }
+
+    .app .icon-name {
+        font-size: 8px;
+        height: 40px;
+        line-height: 31px;
+        width: 76px;
+        margin-left: -20px;
+    }
+
+    .app .icon {
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    .app:hover .app-intro {
+        width: 260px;
+        left: -236px;
+    }
+
+    .app-intro {
+        height: 24px;
+        padding: 6px 0;
+        left: 0;
+        top: 0px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    .app.pt:hover .app-intro,
+    .ct.app:hover .app-intro {
+        left: 50px;
+    }
+
+    .app-intro h5 {
+        font-size: 12px;
+    }
+
+    .app-intro p {
+        font-size: 8px;
     }
 }

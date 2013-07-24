@@ -109,10 +109,8 @@ a {
 
 .container {
     min-width: 1000px;
+    overflow: hidden;
     /* background: url(../images/header-bg.jpg) center 0 no-repeat; */
-}
-
-.header {
 }
 
 .center {

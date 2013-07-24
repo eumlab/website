@@ -3,7 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width" />
+    
+    {% if request.user_agent.is_mobile or request.user_agent.is_tablet %}
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="user-scalable=1;">
+    {% endif %}
+
     {% block meta %}{% endblock %}
 
     <title>{% block title %}{% endblock %} - EUM</title>
@@ -25,6 +31,28 @@
     <script src="/assets/scripts/jquery-1.8.3.min.js"></script>
     <script src="/assets/scripts/jquery.wmuSlider.min.js"></script>
     <script src="/assets/scripts/eum.js"></script>
+
+    {% if request.user_agent.is_mobile or request.user_agent.is_tablet %}
+    <script>
+        $(window).on('load orientationchange', function() {
+            // home page height is not enough
+            if ($('.pg-home').length) {
+                var container = $('html, body, .container');
+
+                if (window.innerWidth > window.innerHeight) {
+                    container.height($(window).height() + 124);
+                } else {
+                    container.height($(window).height());
+                }
+            }
+
+            setTimeout(function() {
+                window.scrollTo(0, 1);
+            }, 0);
+        });
+    </script>
+    {% endif %}
+
     {% block script %}{% endblock %}
 </head>
 <body>
