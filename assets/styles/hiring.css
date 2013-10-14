@@ -312,12 +312,12 @@
 
 .section-5 {
     margin-top: -611px;
-    height: 611px;
-    background: url(../images/hiring-strings.png) center 70px repeat-x;
+    /*height: 611px;
+    background: url(../images/hiring-strings.png) center 70px repeat-x;*/
 }
 
     .section-5 .center {
-        background: url(../images/hiring-staff.png) center 26px no-repeat;
+        /*background: url(../images/hiring-staff.png) center 26px no-repeat;*/
         position: relative;
     }
 
@@ -328,8 +328,8 @@
         cursor: pointer;
         top: 26px;
         opacity: 0;
-        background-image: url(../images/hiring-staff-active.png);
-        background-repeat: no-repeat;
+        /*background-image: url(../images/hiring-staff-active.png);
+        background-repeat: no-repeat;*/
     }
 
         .section-5 .staff,
@@ -427,4 +427,13 @@
 
 .social-medias{
     display: none !important;
+}
+
+#app-users{
+    font-weight: bold;
+}
+
+.poz-section{
+    background: url(../images/hiring-strings.png) center 70px repeat-x;
+    height: 200px;
 }

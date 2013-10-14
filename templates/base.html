@@ -28,32 +28,7 @@
     <![endif]-->
 
 
-    <script src="/assets/scripts/jquery-1.8.3.min.js"></script>
-    <script src="/assets/scripts/jquery.wmuSlider.min.js"></script>
-    <script src="/assets/scripts/eum.js"></script>
 
-    {% if request.user_agent.is_mobile or request.user_agent.is_tablet %}
-    <script>
-        $(window).on('load orientationchange', function() {
-            // home page height is not enough
-            if ($('.pg-home').length) {
-                var container = $('html, body, .container');
-
-                if (window.innerWidth > window.innerHeight) {
-                    container.height($(window).height() + 124);
-                } else {
-                    container.height($(window).height());
-                }
-            }
-
-            setTimeout(function() {
-                window.scrollTo(0, 1);
-            }, 0);
-        });
-    </script>
-    {% endif %}
-
-    {% block script %}{% endblock %}
 </head>
 <body>
     <!--[if lt IE 8]>
@@ -63,6 +38,33 @@
     <![endif]-->
     {% block body %}{% endblock %}
 
+
+    <script src="/assets/scripts/jquery-1.8.3.min.js"></script>
+    <script src="/assets/scripts/jquery.wmuSlider.min.js"></script>
+    <script src="/assets/scripts/eum.js"></script>
+
+    {% if request.user_agent.is_mobile or request.user_agent.is_tablet %}
+        <script>
+            $(window).on('load orientationchange', function() {
+                // home page height is not enough
+                if ($('.pg-home').length) {
+                    var container = $('html, body, .container');
+
+                    if (window.innerWidth > window.innerHeight) {
+                        container.height($(window).height() + 124);
+                    } else {
+                        container.height($(window).height());
+                    }
+                }
+
+                setTimeout(function() {
+                    window.scrollTo(0, 1);
+                }, 0);
+            });
+        </script>
+    {% endif %}
+
+    {% block script %}{% endblock %}
     <!--<script src="assets/jquery.flexslider-min.js" type="text/javascript"></script>-->
     <script type="text/javascript">
 
