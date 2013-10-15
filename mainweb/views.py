@@ -5,6 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 from django.http import HttpResponse,HttpResponseRedirect, HttpResponsePermanentRedirect
 
+from httplib import *
 
 def home(request):
     return render(request, 'home.html')
@@ -52,10 +53,16 @@ def ukulele(request):
     return render(request, 'ukulele.html', {"nav": "ut"})
 
 def hiring(request):
+
     return render(request, 'hiring.html')
 
 def hiring_cn(request):
-    return render(request, 'hiring-cn.html')
+    conn = HTTPConnection("ezse.com")
+    conn.request("GET","/appdownloads")
+    r1 = conn.getresponse()
+    if r1.status == 200:
+        rsp = r1.read()
+    return render(request, 'hiring-cn.html',{"downloads":rsp})
 
 
 def redirector(request,where,isp=True):
