@@ -1,25 +1,28 @@
 {% extends 'base.html' %}
 
-{% block title %}Ukulele Toolkit{% endblock %}
+{% block title %}Guitar Toolkit{% endblock %}
 
 {% block meta %}
-    <meta name="apple-itunes-app" content="app-id=581273909">
+    <meta name="apple-itunes-app" content="app-id=723205500">
 {% endblock %}
 
+
 {% block style %}
-    <link href="/assets/styles/ukulele.css" rel="stylesheet" />
+    <link href="/assets/styles/guitar-toolkit.css" rel="stylesheet" />
 {% endblock %}
 
 {% block body %}
-<div class="container pg-ukulele">
+<div class="container pg-guitar">
     <div class="header">
         <div class="bg"></div>
         {% include "_topbar.html" %}
         <div class="app">
             <div class="center">
-                <h2 class="app-title">Ukulele Toolkit</h2>
-                <a href="http://itunes.apple.com/app/id581273909?ls=1&mt=8" target="_blank" class="link-app-store" title="Download Ukulele Toolkit from APP Store">Available on the App Store</a>
+                <h2 class="app-title">Guitar Toolkit</h2>
+                <a href="http://itunes.apple.com/app/id723205500?ls=1&mt=8" target="_blank" class="link-app-store" title="Download Guitar Toolkit from APP Store">Available on the App Store</a>
+                <div class="mainpic"></div>
                 <div class="pic"></div>
+
             </div>
         </div>
     </div>
@@ -27,14 +30,14 @@
         <div class="center">
             <div class="pic"></div>
             <div class="intro">
-                <h3 class="title">What is Ukulele Toolkit</h3>
-                <p class="desc">It is a collection of essential ukulele tools for ukulele players. It contains three daily used tools:</p>
+                <h3 class="title">What is Guitar Toolkit</h3>
+                <p class="desc"><br/>This is a collection of essential tools for aspiring guitar players. It consists of three tools you will use daily:</p>
                 <ol class="desc">
-                    <li><em>1.Extremely accurate tuner.</em></li>
-                    <li><em>2.Precision metronome with strumming patterns.</em></li>
-                    <li><em>3.Interactive Chord Sheets with real ukulele sounds.</em></li>
+                    <li><em>1. An extremely accurate tuner</em></li>
+                    <li><em>2. A precision metronome, along with strumming patterns</em></li>
+                    <li><em>3. Interactive chord tabs with audio examples</em></li>
                 </ol>
-                <p class="desc">It supports three ukulele tuning modes: Tenor, Soprano and Baritone. With Ukulele Toolkit, you can have a mobile tool of ukulele in your pocket, no matter where you are.</p>
+                <p class="desc">With Guitar Toolkit, your favorite guitar tool is in your pocked, no matter where you are.</p>
             </div>
         </div>
     </div>
@@ -43,7 +46,9 @@
             <div class="pic"></div>
             <div class="intro">
                 <h3 class="title">Extremely Accurate Tuner</h3>
-                <p class="desc">The chromatic tuner has a quick tune bar and an accurate meter bar. With beautiful tuning color bar, you can find your current tune just in seconds. Meters can also helps to show the current pitch in more accurate way. It also includes real ukulele string sound with which you can use to tune by ear. What's more, it is highly accurate (up to ±1/1000 semitone (±0.1 cent) precise). Baritone，sprono and tenor are supported.</p>
+                <p class="desc">Guitar Toolkit features a chromatic tuner which helps you get your guitar in tune in mere seconds. Colored tuning bars quickly guide you to a great tuning.
+<br/>An extra meter makes you an expert who can go from great to perfect tuning. Audio samples of strings in tune allow you to tune by ear, great for developing your musical hearing.
+<br/>Most importantly, it is highly accurate (up to ±1/1000 of a semitone, i.e. ±0.1 cent precise). </p>
             </div>
         </div>
     </div>
@@ -52,9 +57,10 @@
             <div class="pic"></div>
             <div class="intro">
                 <h3 class="title">Precision Metronome</h3>
-                <p class="desc">The metronome benefits from EUM's RTP ( Real-time Playback) technology, it is extremely precise(±20μs).</p>
-                <p class="desc">Pendulum mode is just like your old traditional metronome, you can follow the beat easily, even in silent mode. With the help of the dial wheel, changing tempo is really simple.</p>
-                <p class="desc">It supports flexible Time Signature changing mode, with which you can set any T.S. you like. 8 built-in tones are also supported. With built-in 13 Strumming patterns, you can practice strumming more easily.</p>
+                <p class="desc">The metronome benefits from EUM's RTP (Real-Time Playback) technology. It is extremely precise (±20μs).</p>
+                <p class="desc">The metronome’s so-called „pendulum mode“ is just like your old traditional metronome.
+You can follow the beat easily, even in silent mode. With the help of the dial wheel, changing tempo is really simple.</p>
+                <p class="desc">Changing time signatures is only two taps away. Set it to the time signature you need. Up to 8 built-in metronome tones guide your rhythm and the 13 built-in strumming patterns will teach you how to play along easily.</p>
             </div>
         </div>
     </div>
@@ -62,18 +68,18 @@
         <div class="center">
             <div class="pic"></div>
             <div class="intro">
-                <h3 class="title">Interactive Chord Sheets</h3>
-                <p class="desc">The Chord Sheets contains <em>over 800 chords</em>, almost every chords you might need, including Major, Minor, 6, 7, Minor 7, Major 7, Major 9, sus 4, etc.</p>
-                <p class="desc">You can not only see the chord sheets, but also hear what they sounds like as well. It is quite useful for beginners to learn chords and advanced users to get inspiration. The chords can be sorted by both note and key signature.</p>
-                <p class="desc">In key signature mode, you don't need to switch notes to get expected chords. All related chords will be displayed in one page.</p>
+                <h3 class="title">Interactive Guitar Tabs</h3>
+                <p class="desc">The chord tabs contain <em>288 chords</em>, more chords than you will probably ever need, including Major, Minor, 6, 7, Minor 7, Major 7, Major 9, sus 4, etc.</p>
+                <p class="desc">Not only can you see the tabs, you can also hear what they sound like. This is quite useful for beginners who learn chords but also for advanced users who are looking for inspiration. The chords can be sorted by both note and key signature.</p>
+                <p class="desc">In key signature mode, you don't need to switch notes to show the expected chords. All related chords will be displayed on one page.</p>
             </div>
         </div>
     </div>
     <div class="section section-4">
         <div class="center">
             <div class="pic"></div>
-            <span class="app-name">Ukulele Toolkit</span>
-            <a href="http://itunes.apple.com/app/id581273909?ls=1&mt=8" target="_blank" class="link-app-store" title="Download Ukulele Toolkit from APP Store">Available on the App Store</a>
+            <span class="app-name "></span>
+            <a href="http://itunes.apple.com/app/id723205500?ls=1&mt=8" target="_blank" class="link-app-store" title="Download Guitar Toolkit from APP Store">Available on the App Store</a>
         </div>
     </div>
     {% include "_footer.html" %}

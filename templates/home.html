@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
-{% block title %}Unleash your music talent!{% endblock %}
+{% block title %}Music Apps{% endblock %}
+{% block wholetitle %}EUM - We design music apps{% endblock %}
 
 {% block script %}
 <!-- <script src="/assets/scripts/home.js"></script> -->
@@ -36,6 +37,14 @@
                 </div>
                 <div class="icon"></div>
                 <p class="icon-name">insTuner</p>
+            </a>
+            <a href="/guitar-toolkit/" class="app gt">
+                <div class="app-intro gradient">
+                    <h5>Guitar Toolkit</h5>
+                    <p>chords,tuner,metronome essential guitar tools</p>
+                </div>
+                <div class="icon"></div>
+                <p class="icon-name">Guitar Toolkit</p>
             </a>
             <a href="/ukulele/" class="ut app">
                 <div class="app-intro">
@@ -101,3 +110,5 @@
     </div>
 </div>
 {% endblock %}
+
+{% block feedbackscript %}{% endblock %}

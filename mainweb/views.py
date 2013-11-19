@@ -49,6 +49,11 @@ def daw_remote(request):
 def pro_metronome(request):
     return render(request, 'pro-metronome.html', {"nav": "pm"})
 
+
+
+def guitar_toolkit(request):
+    return render(request, 'guitartoolkit.html', {"nav": "gt"})
+
 def ukulele(request):
     return render(request, 'ukulele.html', {"nav": "ut"})
 

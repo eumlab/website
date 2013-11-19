@@ -196,6 +196,10 @@ html, body {
     background: url(../images/app-icon-pt.png) center center no-repeat;
 }
 
+.gt .icon {
+    background: url(../images/app-icon-gt.png) center center no-repeat;
+}
+
 .dr .icon {
     background: url(../images/app-icon-dr.png) center center no-repeat;
 }

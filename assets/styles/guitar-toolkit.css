@@ -1,12 +1,13 @@
 .header {
     height: 1200px;
+    background: transparent repeat-x url(../images/guitar-toolkit-top-bg-unload.jpg);
 }
 
 .header .bg {
     width: 100%;
     height: 1200px;
     background-position: 40% bottom;
-    background-image: url(../images/ut-header@2500.jpg);
+    background-image: url(../images/gt-header@2500.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -25,10 +26,13 @@
 }
 
 .app .link-app-store {
-    background: url(../images/ut-app-store-link-top.png) no-repeat 0 0;
-    margin: 520px 0 0 360px;
+    background: url(../images/dr-app-store-link-bottom.png) no-repeat 0 0;
+    /*margin: 520px 0 0 360px;*/
     width: 220px;
     height: 81px;
+    position: absolute;
+    right: 140px;
+    top: 540px;
 }
 
     .app .link-app-store:hover {
@@ -38,11 +42,19 @@
 .app .center {
     position: relative;
 }
+    .app .mainpic {
+        position: absolute;
+        top: 400px;
+        left: 0;
+        background: url(../images/guitar-toolkit-top-devices.png) 0 0 no-repeat;
+        width: 1119px;
+        height: 523px;
+    }
     .app .pic {
         position: absolute;
-        top: 230px;
+        top: 400px;
         right: 50px;
-        background: url(../images/ut-app.png) 0 0 no-repeat;
+        background: url(../images/guitar-toolkit-title.png) 0 0 no-repeat;
         width: 403px;
         height: 274px;
     }
@@ -62,7 +74,7 @@
         right: -160px;
         width: 741px;
         height: 591px;
-        background: url(../images/ut-feature-0.jpg) 0 100% no-repeat;
+        background: url(../images/gt-feature-0.jpg) 0 100% no-repeat;
     }
 
     .section-0 .intro {
@@ -98,7 +110,7 @@
         top: 238px;
         left: 50%;
         margin-left: -590px;
-        background: url(../images/ut-feature-1.jpg) 50% 100% no-repeat;
+        background: url(../images/gt-feature-1.jpg) 50% 100% no-repeat;
         width: 1179px;
         height: 552px;
     }
@@ -126,7 +138,7 @@
         position: absolute;
         top: 60px;
         right: 40px;
-        background: url(../images/ut-feature-2.jpg) 0 0 no-repeat;
+        background: url(../images/gt-feature-2.jpg) 0 0 no-repeat;
         width: 420px;
         height: 414px;
     }
@@ -158,7 +170,7 @@
         position: absolute;
         top: 150px;
         left: 25px;
-        background: url(../images/ut-feature-3.jpg) 0 0 no-repeat;
+        background: url(../images/gt-feature-3.jpg) 0 0 no-repeat;
         width: 480px;
         height: 574px;
     }
@@ -179,8 +191,8 @@
     }
 
 .section-4 {
-    height: 900px;
-    background: url(../images/ut-feature-4-bg.jpg) 0 bottom repeat-x;
+    height: 884px;
+    background: url(../images/gt-feature-4-bg.jpg) 0 bottom repeat-x;
     border-bottom: 1px solid #000;
 }
 
@@ -191,10 +203,10 @@
     .section-4 .pic {
         position: absolute;
         top: 120px;
-        left: 50px;
-        width: 890px;
-        height: 586px;
-        background: url(../images/ut-feature-4.png) 0 0 no-repeat;
+        left: -260px;
+        width: 1260px;
+        height: 796px;
+        background: url(../images/gt-feature-4.png) 0 0 no-repeat;
     }
 
     .section-4 .app-name {
@@ -209,15 +221,15 @@
 
     .section-4 .link-app-store {
         position: absolute;
-        top: 480px;
-        right: -10px;
-        background: url(../images/ut-app-store-link-bottom.png) no-repeat 0 0;
-        width: 250px;
+        top: 500px;
+        right: 11px;
+        background: url(../images/dr-app-store-link-bottom.png) no-repeat 0 0;
+        width: 220px;
         height: 108px;
     }
 
     .section-4 .link-app-store:hover {
-        background-position: -250px 0;
+        background-position: -220px 0;
     }
 
 @media screen and (max-width: 1920px) {
@@ -228,6 +240,14 @@
     .header .bg {
         height: 922px;
         background-position: center bottom;
-        background-image: url(../images/ut-header@1920.jpg);
+        background-image: url(../images/gt-header@1920.jpg);
     }
+    .app .link-app-store {
+        top: 400px;
+    }
+    .app .mainpic,
+    .app .pic{
+        top: 250px;
+    }
+
 }
