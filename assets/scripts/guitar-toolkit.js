@@ -53,7 +53,7 @@ $(function() {
 
 
     $(window).on("scroll",function(e){
-        var top  = document.body.scrollTop;
+        var top  = $(window).scrollTop();
         //console.log(top);
         if(top > 550 && top < 1200){
             playffw();
