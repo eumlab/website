@@ -55,11 +55,12 @@
         top: 400px;
         right: 50px;
         background: url(../images/guitar-toolkit-title.png) 0 0 no-repeat;
-        width: 403px;
+        width: 433px;
         height: 274px;
     }
 
 .section-0 {
+    margin-top: -100px;
 }
 
     .section-0 .center {
@@ -68,20 +69,21 @@
     }
 
     .section-0 .pic {
-        position: absolute;
+        position: relative;
         z-index: 0;
-        top: 100px;
-        right: -160px;
-        width: 741px;
-        height: 591px;
-        background: url(../images/gt-feature-0.jpg) 0 100% no-repeat;
+        width: 672px;
+        height: 736px;
+        left: -190px;
+        background: url(../images/GTV2/GTV2_00.jpg) 0 100% no-repeat;
     }
 
     .section-0 .intro {
         padding: 205px 0 0 60px;
         width: 487px;
         font-size: 16px;
-        position: relative;
+        position: absolute;
+        top: 0;
+        right: 0;
         z-index: 1;
     }
 
@@ -96,7 +98,7 @@
 
 .section-1 {
     text-align: center;
-    margin-top: -80px;
+    margin-top: -10px;
 }
 
     .section-1 .center {
@@ -190,17 +192,120 @@
         margin-bottom: 15px;
     }
 
+
 .section-4 {
+    text-align: center;
+    margin-top: 80px;
+}
+
+    .section-4 .center {
+        height: 820px;
+        position: relative;
+
+    }
+
+    .section-4 .pic {
+        position: absolute;
+        top: 238px;
+        left: 50%;
+        margin-left: -590px;
+        background: url(../images/gt-feature-chords.jpg) 50% 100% no-repeat;
+        width: 1180px;
+        height: 630px;
+    }
+
+    .section-4 .intro {
+        margin: 0 auto;
+        width: 767px;
+        font-size: 16px;
+    }
+
+    .section-4 .title {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+     .section-4 .desc {
+        margin-bottom: 15px;
+    }
+
+.section-5 {
+    margin-top: 30px;
+}
+
+    .section-5 .center {
+        height: 474px;
+        position: relative;
+    }
+
+    .section-5 .pic {
+        position: absolute;
+        top: 60px;
+        right: 40px;
+        background: url(../images/gt-feature-revsearch.jpg) 0 0 no-repeat;
+        width: 420px;
+        height: 414px;
+    }
+
+    .section-5 .intro {
+        padding: 250px 0 0 40px;
+        width: 441px;
+        font-size: 16px;
+    }
+
+    .section-5 .title {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .section-5 .desc {
+        margin-bottom: 15px;
+    }
+
+.section-6 {
+}
+
+    .section-6 .center {
+        height: 764px;
+        position: relative;
+    }
+
+    .section-6 .pic {
+        position: absolute;
+        top: 150px;
+        left: 25px;
+        background: url(../images/gt-feature-chord-progression.jpg) 0 0 no-repeat;
+        width: 480px;
+        height: 574px;
+    }
+
+    .section-6 .intro {
+        padding: 400px 0 0 520px;
+        width: 447px;
+        font-size: 16px;
+    }
+
+    .section-6 .title {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .section-6 .desc {
+        margin-bottom: 15px;
+    }
+
+
+
+.section-7 {
     height: 884px;
     background: url(../images/gt-feature-4-bg.jpg) 0 bottom repeat-x;
     border-bottom: 1px solid #000;
 }
 
-    .section-4 .center {
+    .section-7 .center {
         position: relative;
     }
 
-    .section-4 .pic {
+    .section-7 .pic {
         position: absolute;
         top: 120px;
         left: -260px;
@@ -209,7 +314,7 @@
         background: url(../images/gt-feature-4.png) 0 0 no-repeat;
     }
 
-    .section-4 .app-name {
+    .section-7 .app-name {
         font-size: 18px;
         color: #d3f3f6;
         font-family: "DIN-Regular", "Helvetica Neue", Helvetica, arial, sans-serif;
@@ -219,7 +324,7 @@
         right: 56px;
     }
 
-    .section-4 .link-app-store {
+    .section-7 .link-app-store {
         position: absolute;
         top: 500px;
         right: 11px;
@@ -228,7 +333,7 @@
         height: 108px;
     }
 
-    .section-4 .link-app-store:hover {
+    .section-7 .link-app-store:hover {
         background-position: -220px 0;
     }
 

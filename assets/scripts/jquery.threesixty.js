@@ -8,7 +8,7 @@
  * *
  * Date: Tue Aug 9
  */
-
+//jQuery.threesixty = {loop:true,direction:1};
 jQuery.fn.threesixty = function(options){
 	options = options || {};
 	options.images = options.images || [];
@@ -18,6 +18,7 @@ jQuery.fn.threesixty = function(options){
 	options.direction = options.direction || "forward";
 	options.sensibility = options.sensibility || options.cycle * 0.35;
 	options.autoscrollspeed = options.autoscrollspeed || 500;
+    options.autostart = options.autostart || "1";
 
 
 	if (options.direction == "backward")
@@ -166,8 +167,43 @@ jQuery.fn.threesixty = function(options){
 		
 		if (options.method == "auto") {
 			var speed = options.autoscrollspeed;
+            if(options.loop == undefined){options.loop = true};
+            var loop = options.loop;
 			var newIndex=0;
-			window.setInterval(function() { pic.attr("src", imgArr[++newIndex % imgArr.length])} , speed);
+            pic.data("direction",options.direction);
+            if(options.autostart == "1")pic.data("autostart","1");
+
+            window.setInterval(function() {
+                if(pic.data("autostart") != "1")return;
+                pic.attr("src", imgArr[newIndex % imgArr.length])
+                //console.log(me);
+                newIndex += (pic.data("direction") == "forward" ? 1:-1);
+                //console.log(self);
+                if(!loop){
+                    if(pic.data("direction") == "forward"){
+                        //fw
+                        newIndex = Math.min(newIndex,imgArr.length-1)
+                    }else{
+                        newIndex = Math.max(0,newIndex)
+                    }
+                }
+            } , speed);
+
+            pic.data("goFirstFrame",function(){
+                pic.attr("src", imgArr[0]);
+            });
+            pic.data("goLastFrame",function(){
+                pic.attr("src", imgArr[imgArr.length-1]);
+            });
+            pic.data("playFFW",function(){
+                pic.data("direction","forward");
+                pic.data("autostart","1");
+            });
+            pic.data("playREV",function(){
+                pic.data("direction","rev");
+                pic.data("autostart","1");
+            });
+
 		}
 	});			
 };

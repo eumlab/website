@@ -42,7 +42,7 @@ $(function() {
         "/assets/images/pm/PM_27.png",
         "/assets/images/pm/PM_28.png",
         "/assets/images/pm/PM_29.png"
-    ], method:'auto', direction:'forward', sensibility: 1,autoscrollspeed:80});
+    ], method:'auto', direction:'forward', sensibility: 1,autoscrollspeed:80,loop:true});
 
     $("#flasher-animation").threesixty({images:[
         "/assets/images/pm/FLASH_00.png",
