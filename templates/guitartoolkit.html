@@ -11,6 +11,10 @@
     <link href="/assets/styles/guitar-toolkit.css" rel="stylesheet" />
 {% endblock %}
 
+{% block script %}
+    <script src="/assets/scripts/jquery.threesixty.js"></script>
+    <script src="/assets/scripts/guitar-toolkit.js"></script>
+{% endblock %}
 {% block body %}
 <div class="container pg-guitar">
     <div class="header">
@@ -28,16 +32,20 @@
     </div>
     <div class="section section-0">
         <div class="center">
-            <div class="pic"></div>
+            <div class="pic"><img id="app-animation" width="672" height="736" src="/assets/images/GTV2/GTV2_00.jpg" /></div>
             <div class="intro">
                 <h3 class="title">What is Guitar Toolkit</h3>
-                <p class="desc"><br/>This is a collection of essential tools for aspiring guitar players. It consists of three tools you will use daily:</p>
+                <p class="desc"><br/>Guitar Toolkit is a collection of inspiring tools for aspiring guitar players. It helps your daily practice in following ways:</p>
                 <ol class="desc">
-                    <li><em>1. An extremely accurate tuner</em></li>
-                    <li><em>2. A precision metronome, along with strumming patterns</em></li>
-                    <li><em>3. Interactive chord tabs with audio examples</em></li>
+                    <li><em>1. A pro-level tuner keeps your guitar always in tune.</em></li>
+                    <li><em>2. A powerful metronome holds your rhythm. </em></li>
+                    <li><em>3. 108 musical scales.</em></li>
+                    <li><em>4. Interactive chord diagrams with sound sample.</em></li>
+                    <li><em>5. Backward chord search tells you the name of chord.</em></li>
+                    <li><em>6. Learn chord combinations and progressions.</em></li>
+
                 </ol>
-                <p class="desc">With Guitar Toolkit, your favorite guitar tool is in your pocked, no matter where you are.</p>
+                <p class="desc">With EUM Guitar Toolkit, your favourite guitar tools are always in your pocket.</p>
             </div>
         </div>
     </div>
@@ -46,9 +54,9 @@
             <div class="pic"></div>
             <div class="intro">
                 <h3 class="title">Extremely Accurate Tuner</h3>
-                <p class="desc">Guitar Toolkit features a chromatic tuner which helps you get your guitar in tune in mere seconds. Colored tuning bars quickly guide you to a great tuning.
+                <p class="desc">Guitar Toolkit features a chromatic tuner which helps you get your guitar in tune in mere seconds. Colored tuning bars guide you to a great tuning quickly and clearly.
 <br/>An extra meter makes you an expert who can go from great to perfect tuning. Audio samples of strings in tune allow you to tune by ear, great for developing your musical hearing.
-<br/>Most importantly, it is highly accurate (up to ±1/1000 of a semitone, i.e. ±0.1 cent precise). </p>
+<br/>Most importantly, it is highly accurate (up to ±1/1000 of a semitone, i.e. <em>±0.1 cent</em>  precise). </p>
             </div>
         </div>
     </div>
@@ -57,10 +65,9 @@
             <div class="pic"></div>
             <div class="intro">
                 <h3 class="title">Precision Metronome</h3>
-                <p class="desc">The metronome benefits from EUM's RTP (Real-Time Playback) technology. It is extremely precise (±20μs).</p>
-                <p class="desc">The metronome’s so-called „pendulum mode“ is just like your old traditional metronome.
-You can follow the beat easily, even in silent mode. With the help of the dial wheel, changing tempo is really simple.</p>
-                <p class="desc">Changing time signatures is only two taps away. Set it to the time signature you need. Up to 8 built-in metronome tones guide your rhythm and the 13 built-in strumming patterns will teach you how to play along easily.</p>
+                <p class="desc">The metronome benefits from EUM's RTP (Real-Time Playback) technology. <em>It is extremely precise</em> (±20μs).</p>
+                <p class="desc">You can follow the beat easily, even in silent mode. With the help of the dial wheel, changing tempo is really simple.</p>
+                <p class="desc">Changing time signatures is only two taps away. Set it to the time signature you need. Up to 9 built-in metronome tones guide your rhythm and the 12 built-in strumming patterns will teach you how to play along easily.</p>
             </div>
         </div>
     </div>
@@ -68,14 +75,45 @@ You can follow the beat easily, even in silent mode. With the help of the dial w
         <div class="center">
             <div class="pic"></div>
             <div class="intro">
-                <h3 class="title">Interactive Guitar Tabs</h3>
-                <p class="desc">The chord tabs contain <em>288 chords</em>, more chords than you will probably ever need, including Major, Minor, 6, 7, Minor 7, Major 7, Major 9, sus 4, etc.</p>
-                <p class="desc">Not only can you see the tabs, you can also hear what they sound like. This is quite useful for beginners who learn chords but also for advanced users who are looking for inspiration. The chords can be sorted by both note and key signature.</p>
-                <p class="desc">In key signature mode, you don't need to switch notes to show the expected chords. All related chords will be displayed on one page.</p>
+                <h3 class="title">Musical Scales</h3>
+                <p class="desc">Scales are important for a guitarist, it is the spirits of different music styles and will lead you towards a roadmap of improvised solo and melody composition. </p>
+                <p class="desc">We provide <em>108</em> different scales, including the most popular ones such as Blues and Jazz as well as the exotic international styles like Japanese or Arabian. <br/><br/>To complete mastery of the guitar, <br/>this is absolutely a must have! </p>
             </div>
         </div>
     </div>
-    <div class="section section-4">
+
+        <div class="section section-4">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Interactive Guitar Tabs</h3>
+                <p class="desc">The chord tabs contain <em>thousands of chords</em>, more chords than you will probably ever need, including Major, Minor, 6, 7, Minor 7, Major 7, Major 9, sus 4, etc.</p>
+                <p class="desc">Not only can you see the tabs, you can also hear what they sound like. This is quite useful for beginners who learn chords but also for advanced users who are looking for inspiration. </p>
+                <p class="desc">You can look up a chord quickly by notes if you know its name (Gmaj7, for example). But in fact several chords are closely related to each other. Therefore beside note names, you are also able to see the most commonly related chords by the key signatures on the same page. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-5">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Chords Backward Search</h3>
+                <p class="desc">What if you discover an interesting chord when you are playing spontaneously? Simply tap the frets, the App will tell you which chord it is. It's a fantastic feature for digging new chords. </p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-6">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Chord Progressions</h3>
+                <p class="desc">Chord progressions help you combine chords to real songs. Did you know that many popular songs share same combination of chords? Once you discover the secret of chord progressions, you will be able to play thousands of songs and become a guitar master. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-7">
         <div class="center">
             <div class="pic"></div>
             <span class="app-name "></span>

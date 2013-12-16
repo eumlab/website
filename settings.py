@@ -1,7 +1,7 @@
 # Django settings for eumlab project.
 import os
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -109,7 +109,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
 )
 
-ROOT_URLCONF = 'eumlab.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
     os.path.join(ROOT_PATH, 'templates').replace('\\', '/'),
@@ -130,7 +130,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'eumlab.mainweb',
+    'mainweb',
 )
 
 # A sample logging configuration. The only tangible logging
