@@ -40,6 +40,7 @@ urlpatterns += patterns('mainweb.views',
     (r'^pro-metronome/$', 'pro_metronome'),
     (r'^ukulele/$', 'ukulele'),
     (r'^guitar-toolkit/$', 'guitar_toolkit'),
+    (r'^drum-tuner/$', 'drum_tuner'),
     #(r'^hiring/$', 'hiring'),
     (r'^hiring/$', 'hiring_cn'),
 

@@ -10,6 +10,10 @@ from httplib import *
 def home(request):
     return render(request, 'home.html')
 
+
+def drum_tuner(request):
+    return render(request, 'drum-tuner.html', {"nav": "drh", "subnav": "drh"})
+
 def daw_remote_hd(request):
     return render(request, 'daw-remote-hd.html', {"nav": "drh", "subnav": "drh"})
 
