@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Drum Tuner{% endblock %}
+
+{% block meta %}
+    <meta name="apple-itunes-app" content="app-id=834487922">
+{% endblock %}
+
+
+{% block style %}
+    <link href="/assets/styles/drum-tuner.css" rel="stylesheet" />
+{% endblock %}
+
+{% block script %}
+    <script src="/assets/scripts/jquery.threesixty.js"></script>
+    <script src="/assets/scripts/guitar-toolkit.js"></script>
+{% endblock %}
+{% block body %}
+<div class="container pg-drumtuner">
+    <div class="commingsoon"><p>Coming Soon...</p></div>
+    {% include "_footer.html" %}
+</div>
+{% endblock %}
