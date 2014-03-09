@@ -1,0 +1,455 @@
+.header {
+    height: 980px;
+    position: relative;
+    background: url(../images/it-header-bg.png) 0 0 repeat-x;
+    overflow-x: hidden;
+}
+
+    .header .bg {
+        width: 1600px;
+        height: 100%;
+        background-image: url(../images/it-header.jpg);
+        background-repeat: no-repeat;
+        background-position: 0 bottom;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 50%;
+        margin-left: -800px;
+        opacity: 1;
+        transition: opacity 1000ms ease-in-out;
+        -moz-transition: opacity 1000ms ease-in-out;
+        -webkit-transition: opacity 1000ms ease-in-out;
+    }
+
+    .header .guitar,
+    .header .violin {
+        position: absolute;
+        top: 0;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        width: 414px;
+        height: 883px;
+        z-index: 0;
+        display: none;
+    }
+
+    .header .guitar {
+        left: -100px;
+    }
+
+    .header .violin {
+        right: -100px;
+    }
+
+.app {
+    text-align: center;
+    margin-top: 170px;
+}
+
+.app .btn-video {
+    top: 240px;
+    left: 640px;
+    background-image: url(../images/it-video-btn.png);
+}
+
+.app .link-app-store {
+    background: url(../images/it-app-store-link-top.png) no-repeat 0 0;
+    margin: 240px 0 0 680px;
+    width: 146px;
+    height: 51px;
+}
+
+    .app .link-app-store:hover {
+        background-position: -146px 0;
+    }
+
+.app .center {
+    position: relative;
+    background: url(../images/it-app.png) 620px 90px no-repeat;
+    height: 540px;
+}
+    .app .pic {
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        top: -12px;
+        left: 61px;
+        background: url(../images/it/modes_top/fine/PM_00.png) 0 0 no-repeat;
+    }
+
+    .app .it-nav {
+        margin: 200px auto 0;
+        -moz-box-shadow: 0 8px 12px rgba(0,0,0,0.9);
+        -webkit-box-shadow: 0 8px 12px rgba(0,0,0,0.9);
+        box-shadow: 0 8px 12px rgba(0,0,0,0.9);
+    }
+
+.section-0 {
+    text-align: left;
+}
+
+    .section-0 .center {
+        height: 433px;
+        position: relative;
+    }
+
+    .section-0 .pic {
+        position: absolute;
+        z-index: 0;
+        top: -100px;
+        right: -45px;
+        width: 494px;
+        height: 533px;
+        background: url(../images/it-feature-0.jpg) 0 0 no-repeat;
+    }
+
+    .section-0 .intro {
+        padding: 48px 0 0 55px;
+        width: 491px;
+        font-size: 16px;
+        position: relative;
+        text-align: right;
+        z-index: 1;
+        -moz-hyphens:auto;
+        -ms-hyphens:auto;
+        -webkit-hyphens:auto;
+        hyphens:auto;
+        word-wrap:break-word;
+    }
+
+    .section-0 .title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .section-0 .desc {
+        margin-bottom: 10px;
+    }
+
+.section-1 {
+    margin-top: 100px;
+    height: 172px;
+    background: #212b2d url(../images/it-feature-1.jpg) center 0 no-repeat;
+}
+
+    .section-1 .center {
+        height: 172px;
+        position: relative;
+    }
+
+    .section-1 .pic {
+        position: absolute;
+        bottom: 0;
+        left: 6px;
+        background: url(../images/it-feature-1.png) 0 0 no-repeat;
+        width: 573px;
+        height: 206px;
+    }
+
+    .section-1 .intro {
+        padding: 20px 0 0 540px;
+        width: 448px;
+        font-size: 16px;
+    }
+
+    .section-1 .title {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .section-1 .desc {
+        margin-bottom: 10px;
+    }
+
+.section-2 {
+}
+
+    .section-2 .center {
+        height: 609px;
+        position: relative;
+    }
+
+    .section-2 .pic {
+        position: absolute;
+        z-index: 0;
+        top: 200px;
+        right: -158px;
+        background: url(../images/it-feature-2.jpg) 0 0 no-repeat;
+        width: 896px;
+        height: 409px;
+    }
+
+    .section-2 .intro {
+        padding: 250px 0 0 40px;
+        width: 329px;
+        font-size: 16px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .section-2 .title {
+        font-size: 28px;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    .section-2 .desc {
+        margin-bottom: 10px;
+    }
+
+.section-3 {
+    margin-top: 110px;
+    text-align: center;
+}
+
+    .section-3 .center {
+        height: 842px;
+        position: relative;
+    }
+
+    .section-3 .intro {
+        padding-top: 40px;
+        width: 708px;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+
+    .section-3 .title {
+        font-size: 28px;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    .section-3 .slide {
+        margin-top: 40px;
+    }
+
+        .section-3 .slide .gear {
+            width: 423px;
+            height: 100px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+            .section-3 .slide .gear-img {
+                background: url(../images/it-feature-3-gear.png) center 0 no-repeat;
+                width: 423px;
+                height: 423px;
+                -moz-transition: -moz-transform 1500ms;
+                -webkit-transition: -webkit-transform 1500ms;
+                transition: transform 1500ms;
+            }
+
+        .section-3 .slide .iphone {
+            width: 661px;
+            height: 389px;
+            margin: -54px auto;
+            position: relative;
+            left: 5px;
+        }
+
+            .section-3 .slide .animation {
+                margin: 0 auto;
+                width: 445px;
+                height: 251px;
+                position: relative;
+                left: -3px;
+                top: 47px;
+                background: #000 url(../images/it/modes/instant/ReflectorRecording_00000.png) 0 0 no-repeat;
+            }
+
+            .section-3 .slide .mask {
+                background: url(../images/it-feature-3-mask.png) center 0 no-repeat;
+                width: 661px;
+                height: 389px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+        .section-3 .slide .modes {
+
+        }
+            .section-3 .slide .intro {
+                width: 595px;
+                padding-top: 25px;
+            }
+                .section-3 .slide li {
+                    display: none;
+                }
+
+                .section-3 .slide li.fine {
+                    padding: 0 60px;
+                }
+
+                .section-3 .slide li.selected {
+                    display: block;
+                }
+
+                .section-3 .slide .title {
+                    font-size: 22px;
+                    margin-bottom: 10px;
+                    color: #7fd743;
+                    -moz-text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+                    -webkit-text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+                    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+                }
+
+                .section-3 .slide .desc {
+                    font-size: 12px;
+                    color: #a4aa99;
+                    -moz-text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+                    -webkit-text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+                    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+                }
+
+            .section-3 .slide .prev,
+            .section-3 .slide .next {
+                float: left;
+                width: 52px;
+                height: 52px;
+                background: url(../images/it-feature-3-slide-nav.png) 0 center no-repeat;
+                margin: 40px 0 0 120px;
+                -moz-border-radius: 50%;
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+                -moz-box-shadow: 0 8px 12px rgba(0,0,0,0.6);
+                -webkit-box-shadow: 0 8px 12px rgba(0,0,0,0.6);
+                box-shadow: 0 8px 12px rgba(0,0,0,0.6);
+                -moz-transition: -moz-box-shadow 200ms ease-in-out;
+                -webkit-transition: -webkit-box-shadow 200ms ease-in-out;
+                transition: box-shadow 200ms ease-in-out;
+            }
+
+            .section-3 .slide .prev:hover,
+            .section-3 .slide .next:hover {
+                -moz-box-shadow: 0 8px 22px rgba(0,0,0,0.9);
+                -webkit-box-shadow: 0 8px 22px rgba(0,0,0,0.9);
+                box-shadow: 0 8px 22px rgba(0,0,0,0.9);
+                -moz-transition: -moz-box-shadow 200ms ease-in-out;
+                -webkit-transition: -webkit-box-shadow 200ms ease-in-out;
+                transition: box-shadow 200ms ease-in-out;
+            }
+
+            .section-3 .slide .next {
+                float: right;
+                background-position: right center;
+                margin: 40px 120px 0 0;
+            }
+
+.section-4 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+    .section-4 .center {
+        height: 764px;
+        position: relative;
+    }
+
+    .section-4 .pic {
+        position: absolute;
+        z-index: 0;
+        bottom: 30px;
+        left: -20px;
+        width: 949px;
+        height: 505px;
+        background: url(../images/it-feature-4.jpg) 0 0 no-repeat;
+    }
+
+    .section-4 .intro {
+        padding-top: 22px;
+        margin: 0 auto;
+        width: 555px;
+        font-size: 16px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .section-4 .title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .section-4 .link-app-store {
+        position: absolute;
+        top: 490px;
+        right: 90px;
+        background: url(../images/it-app-store-link-bottom.png) no-repeat 0 0;
+        width: 220px;
+        height: 77px;
+    }
+
+    .section-4 .link-app-store:hover {
+        background-position: -220px 0;
+    }
+
+    .section-4 .show-lite {
+        font-size: 14px;
+        color: #95dcff;
+        font-family: "DIN-Regular", "Helvetica Neue", Helvetica, arial, sans-serif;
+        position: absolute;
+        top: 590px;
+        right: 117px;
+    }
+
+    .section-4 .show-lite:hover {
+        text-decoration: underline;
+    }
+
+.section-5 {
+    display: none;
+    margin-top: 100px;
+    text-align: center;
+}
+
+    .section-5 .center {
+        height: 605px;
+        position: relative;
+    }
+
+    .section-5 .pic {
+        position: absolute;
+        z-index: 0;
+        bottom: 100px;
+        left: 64px;
+        width: 949px;
+        height: 505px;
+        background: url(../images/it-feature-5.jpg) 0 0 no-repeat;
+    }
+
+    .section-5 .intro {
+        width: 336px;
+        font-size: 14px;
+        position: absolute;
+        right: 40px;
+        top: 180px;
+    }
+
+    .section-5 .link-app-store {
+        position: absolute;
+        top: 290px;
+        right: 90px;
+        background: url(../images/it-app-store-link-lite.png) no-repeat 0 0;
+        width: 220px;
+        height: 77px;
+    }
+
+    .section-5 .link-app-store:hover {
+        background-position: -220px 0;
+    }
+
+
+@media screen and (min-width: 1800px) {
+    .section-3 {
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-repeat: 50%;
+    }
+}
+
+
