@@ -39,10 +39,12 @@ urlpatterns += patterns('mainweb.views',
     (r'^chordtunes/$', 'chordtunes'),
     (r'^pro-metronome/$', 'pro_metronome'),
     (r'^ukulele/$', 'ukulele'),
-    (r'^guitar-toolkit/$', 'guitar_toolkit'),
+    (r'^guitar-master/$', 'guitar_toolkit'),
     (r'^drum-tuner/$', 'drum_tuner'),
     #(r'^hiring/$', 'hiring'),
     (r'^hiring/$', 'hiring_cn'),
+
+    (r'^guitar-toolkit/$', 'redirector',{"where":"/guitar-master/"}),
 
     #(r'^(?i)daw-remote-hd/network/$', 'drh_network'),
     (r'^(?i)daw-remote-hd/network/$',"redirector",{"where":"http://support.eumlab.com/customer/portal/articles/958423-network-config"}),
