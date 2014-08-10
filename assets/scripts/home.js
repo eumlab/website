@@ -1,6 +1,6 @@
 (function($) {
 
-    /*
+
 $(function() {
     $(window).on('resize', setAppsPosition);
 
@@ -39,6 +39,6 @@ function setAppsPosition() {
         right: right
     });
 }
-*/
+
 
 })(jQuery);

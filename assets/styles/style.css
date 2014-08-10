@@ -262,7 +262,6 @@ a {
 
 .subnav-wrap {
     position: relative;
-    background
     z-index: 100;
     background: url(../images/subnav-bg.png) 0 0 repeat-x;
     height: 28px;
