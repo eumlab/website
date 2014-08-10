@@ -14,9 +14,25 @@
 
     <title>{% block wholetitle %}{% block title %}{% endblock %} - EUM {% endblock %}</title>
 
-    <link rel="index" title="EUM - Music APP on iPhone iPad" href="http://eumlab.com/">
+    <link rel="index" title="EUMLab - Music APP on iPhone iPad" href="http://eumlab.com/">
     <link rel="canonical" href="http://eumlab.com/">
-    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-touch-icon-152x152.png">
+    <meta name="apple-mobile-web-app-title" content="EUMLab">
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png?v=2" sizes="16x16">
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png">
+    <meta name="application-name" content="EUMLab">
     <link href="/assets/styles/style.css" rel="stylesheet" />
     {% block style %}{% endblock %}
     <!--[if gte IE 9]>
@@ -39,10 +55,10 @@
     {% block body %}{% endblock %}
 
 
-    <script src="/assets/scripts/jquery-1.8.3.min.js"></script>
-    <script src="/assets/scripts/jquery.wmuSlider.min.js"></script>
+    <script src="/assets/scripts/jquery-1.11.1.min.js"></script>
     <script src="/assets/scripts/eum.js"></script>
-
+    <script type="text/javascript" src="//use.typekit.net/agm3gqh.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
     {% if request.user_agent.is_mobile or request.user_agent.is_tablet %}
         <script>

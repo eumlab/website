@@ -1,9 +1,188 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}Music Apps{% endblock %}
+{% block wholetitle %}EUMLab, where the best music Apps come.{% endblock %}
+
+{% block meta %}
+
+
+{% endblock %}
+
+{% block script %}
+<script src="/assets/scripts/jquery.easings.min.js"></script>
+<script src="/assets/scripts/jquery.fullPage.min.js"></script>
+<script src="/assets/scripts/home2.js"></script>
+{% endblock %}
+
+{% block style %}
+    <link href="/assets/styles/jquery.fullPage.css" rel="stylesheet" />
+    <link href="/assets/styles/home2.css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+
+    <div id="menu-apps-container" class="basic-ani-onlyalpha not-shown" style="visibility: hidden">
+    <div id="menu-apps" class="basic-ani">
+      {% for item in products %}
+      <h2>{{ item.title }}</h2>
+      <ul>
+          {% for appitem in item.items %}
+              <li class="basic-ani"><a href="{{ appitem.href }}"><img src="/assets/images/icons/120/{{ appitem.icon }}" height="72" width="72"><h3>{{ appitem.name }}</h3></a></li>
+          {% endfor %}
+      </ul>
+      {% endfor %}
+
+    </div>
+    </div>
+  <div id="idx-header" class="basic-ani">
+    <div id="idx-header-container">
+        <a href="javaScript:void(0);"><div id="menu-logo" class="menu-logo"><img src="/assets/images/main/eumlogo-dark.png" height="48" width="40"/><h1><em>EUM</em>Lab</h1></div></a>
+        <ul id="menu-items-container">
+            <li id="menu-item-support"><a href="javaScript:void(0);"><h2>Support</h2></a></li>
+            <li id="menu-item-jobs"><a href="javaScript:void(0);"><h2>Jobs</h2></a></li>
+            <li id="menu-item-team"><a href="javaScript:void(0);"><h2>Team</h2></a></li>
+            <li id="menu-item-press"><a href="javaScript:void(0);"><h2>Press</h2></a></li>
+            <li id="menu-item-products"><a href="javaScript:void(0);"><h2>Products </h2><sub></sub></a></li>
+
+        </ul>
+    </div><!-- End Header -->
+
+
+
+  </div>
+  <div id="fullpage" class="main">
+    <div id="sec-intro" data-anchor="intro"class="main-section-intro section" >
+                <div id="main-iphone" class="basic-ani"> </div>
+        <div id="main-ipad" class="basic-ani"></div>
+        <div id="main-imac"></div>
+        <div id="main-over-layer"> </div>
+        <div id="main-container">
+            <div class="clearfix"></div>
+            <div id="main-logo-container">
+                <img class="main-logo" src="/assets/images/main/logo-main.png" />
+                <img class="main-logo-hl logo-ani" src="/assets/images/main/logo-main-hl.png" />
+            </div>
+            <h1 class="main-slogan">Here Is <em>EUMLab</em>,<br/>
+            Where <em>the Best Music Apps</em> Are Been Created.</h1>
+            <div id="main-icon-container">
+                {% for appitem in appList %}
+                    <div class="icon-item"><a href="{{ appitem.href }}"><img class="icon120" height="120" width="120" src="/assets/images/icons/120/{{ appitem.icon }}"/><br><h2 class="icon-title">{{ appitem.name }}</h2></a></div>
+                {% endfor %}
+            </div>
+        </div>
+    </div><!-- End Main -->
+
+
+    <div id="sec-uke"  data-anchor="ukulele" class="main-section-uke section">
+        <div class="uke-oc-bg"></div>
+        <div class="uke-oc">
+            <h1 class="uke-slogan">Apps for <em>Ukulele</em></h1>
+            <div id="ukeapp-icons-container">
+                <ul>
+                    {% for appitem in ukeApps %}
+                        <li class="basic-ani {% if appitem.mid == 'ut' %}active{% endif %}"><a data="{{ appitem.mid }}" href="javascript:void(0);"><img src="/assets/images/icons/120/{{ appitem.icon }}" height="96" width="96"><h3>{{ appitem.name }}</h3></a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="uke-app-sc-container">
+            {% for appitem in ukeApps reversed %}
+                <div id="uke-app-sc-id-{{ appitem.mid }}" class="uke-app-sc-item basic-ani {% if appitem.mid == 'ut' %}active{% endif %}">
+                <div class="uke-app-sc-right">
+                    <h2>{{ appitem.name }}</h2>
+                    <h3>{{ appitem.desc }}</h3>
+                    <a href="{{ appitem.href }}"><img class="icon-learn-more" src="/assets/images/main/learn-more.png" height="37" width="195" /></a>
+                    <a href="http://itunes.apple.com/app/id{{ appitem.id }}?ls=1&mt=8&at=11lt4f&ct=eumlabwebindex" target="_blank"><img class="icon-app-store" src="/assets/images/main/app-store.png" height="99" width="293" /></a>
+                </div>
+                <img id="img-uke-app-sc-{{ appitem.mid }}" class="uke-app-sc" src="/assets/images/main/{{ appitem.mid }}-sc.png" />
+                </div>
+            {% endfor %}
+        </div>
+    </div><!-- End Apps -->
+
+
+    <div id="sec-figure"  data-anchor="figure" class="main-section-figure section">
+        <div class="figure-ghand">
+
+        </div>
+        <div class="figure-text-container">
+               <h2>Over <em>4,300,000</em> People <br/>Are Inspired by Our Apps</h2>
+               <h3>And they <em >♥</em> it, just like they said... </h3>
+            <div class="figure-reviews">
+
+                <p id="quo-content">I've been using this app for as long as I can remember. It's an amazing app
+and definitely the best Metronome app I've found so far!!</p>
+                <div class="figure-left-quo">“</div>
+                <div class="figure-right-quo">”</div>
+            </div>
+
+
+        </div>
+
+    </div><!-- End Figure -->
+    <div id="sec-press" data-anchor="press" class="main-section-press section">
+        <div class="press-container">
+            <div class="press-slogan"><h2>Behind the Screen, <br/><em>Backed by the Best Team</em></h2></div>
+            <div class="press-team press-team-berlin"><img src="/assets/images/main/icon-berlin.png" height="201" width="201"/><h3><em>Berlin</em>, Germany</h3></div>
+            <div class="press-and"><p class="top">In</p> <p class="bottom">&amp;</p></div>
+            <div class="press-team press-team-hangzhou"><img src="/assets/images/main/icon-hangzhou.png" height="201" width="201"/><h3><em>Hangzhou</em>, China</h3></div>
+            <div class="press-hiring"><a href="/hiring/"><h3>And we are still hiring!</h3></a></div>
+
+            <div class="press-footer">
+                <ul>
+                    <!--Team      Press      Jobs      Imprint      Contact      Support-->
+                    <li><a href="/team/">Team</a></li>
+                    <li><a href="/press/">Press</a></li>
+                    <li><a href="/jobs/">Jobs</a></li>
+                    <li><a href="/imprint/">Imprint</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="http://support.eumlab.com">Support</a></li>
+                </ul>
+                <div class="social basic-ani">
+                    <ul class="spicesocialwidget">
+                      <li class="facebook">
+                        <a rel="nofollow" href="https://www.facebook.com/eumlab" target="_blank" title="facebook">
+                        </a>
+                      </li>
+
+                      <li class="twitter">
+                        <a rel="nofollow" href="http://twitter.com/eumlab" target="_blank" title="twitter"></a>
+                      </li>
+
+                      <li class="vimeo">
+                        <a rel="nofollow" href="http://www.vimeo.com/eumlab" target="_blank" title="vimeo"></a>
+                      </li>
+
+                      <li class="youtube">
+                        <a rel="nofollow" href="http://www.youtube.com/eumlab" target="_blank" title="youtube"></a>
+                      </li>
+                    </ul>
+
+
+
+
+                </div>
+                <div class="copyright">
+                    <p>Designed by EUMLab - Xanin Technology GmbH in Berlin with Love. <br/>All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div><!-- End Press -->
+  </div>
+
+<div id="pre-loader" style="position: fixed;height: 100%;width: 100%;top:0;left:0;bottom: 0;right: 0;z-index: 999;text-align: center;background: #000 no-repeat center url('/assets/images/main/logo-main-hl.png');">
+    <p style="font-size: 24px;color: #00ffff; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;position: absolute;top:50%;left: 0;right: 0;padding-top: 90px;">Loading</p>
+</div>
+<!--<div id="loader" class="pageload-overlay" data-opening="M20,15 50,30 50,30 30,30 Z;M0,0 80,0 50,30 20,45 Z;M0,0 80,0 60,45 0,60 Z;M0,0 80,0 80,60 0,60 Z" data-closing="M0,0 80,0 60,45 0,60 Z;M0,0 80,0 50,30 20,45 Z;M20,15 50,30 50,30 30,30 Z;M30,30 50,30 50,30 30,30 Z">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
+        <path d="M30,30 50,30 50,30 30,30 Z"/>
+    </svg>
+</div> /pageload-overlay -->
+
+{% endblock %}
+
+{% block feedbackscript %}{% endblock %}
