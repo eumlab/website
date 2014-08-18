@@ -61,7 +61,7 @@ function createFullPage(){
             introcss = "insec-"+pages[nextIndex-1];
             $("body").addClass(introcss);
 
-            hideMenuContainer();
+            window.eum.hideMenuContainer();
 
         },
         afterLoad: function(anchorLink, index){
@@ -185,30 +185,12 @@ function resizeForPress(){
 
 }
 
-function showMenuContainer() {
-    var m = $("#menu-apps-container");
-    if(m.hasClass("not-shown")){
-        $("#menu-apps-container").css({"visibility":"visible"});
-        m.removeClass("not-shown");
-        $("#menu-item-products sub").html("");
-    }
-}
-function hideMenuContainer() {
-    var m = $("#menu-apps-container");
-    if(!m.hasClass("not-shown")){
-        m.addClass("not-shown");
-        $("#menu-item-products sub").html("");
-    }
-    setTimeout(function(){
-        $("#menu-apps-container").css({"visibility":"hidden"});
-    },300);
-}
 
 function checkScreenSize(){
      var win =  $(window),
         winWidth = win.width(),
         winHeight = win.height();
-    console.info(winHeight);
+    //console.info(winHeight);
     if (winHeight < 700){
 
         if(top.fullpageCreated){
@@ -341,25 +323,7 @@ function setAppsPosition() {
 
         setAppsPosition();
 
-        $("#menu-logo").click(function(){
-            $.fn.fullpage.moveTo("intro");
-        });
 
-        $("#menu-item-products").click(function(){
-            var m = $("#menu-apps-container");
-            if(m.hasClass("not-shown")){
-                showMenuContainer();
-            }else{
-                hideMenuContainer();
-            }
-        });
-        $("#menu-apps-container").click(function(me){
-            var m = $("#menu-apps-container");
-            if($(me.target).attr('id') != "menu-apps-container"){
-                return;
-            }
-            hideMenuContainer();
-        });
 
         //Uke Apps Click
         $("#ukeapp-icons-container li a").click(function(me){

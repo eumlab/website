@@ -21,35 +21,8 @@
 
 {% block body %}
 
-    <div id="menu-apps-container" class="basic-ani-onlyalpha not-shown" style="visibility: hidden">
-    <div id="menu-apps" class="basic-ani">
-      {% for item in products %}
-      <h2>{{ item.title }}</h2>
-      <ul>
-          {% for appitem in item.items %}
-              <li class="basic-ani"><a href="{{ appitem.href }}"><img src="/assets/images/icons/120/{{ appitem.icon }}" height="72" width="72"><h3>{{ appitem.name }}</h3></a></li>
-          {% endfor %}
-      </ul>
-      {% endfor %}
+    {% include "_nav2.html" %}
 
-    </div>
-    </div>
-  <div id="idx-header" class="basic-ani">
-    <div id="idx-header-container">
-        <a href="javaScript:void(0);"><div id="menu-logo" class="menu-logo"><img src="/assets/images/main/eumlogo-dark.png" height="48" width="40"/><h1><em>EUM</em>Lab</h1></div></a>
-        <ul id="menu-items-container">
-            <li id="menu-item-support"><a href="javaScript:void(0);"><h2>Support</h2></a></li>
-            <li id="menu-item-jobs"><a href="javaScript:void(0);"><h2>Jobs</h2></a></li>
-            <li id="menu-item-team"><a href="javaScript:void(0);"><h2>Team</h2></a></li>
-            <li id="menu-item-press"><a href="javaScript:void(0);"><h2>Press</h2></a></li>
-            <li id="menu-item-products"><a href="javaScript:void(0);"><h2>Products </h2><sub></sub></a></li>
-
-        </ul>
-    </div><!-- End Header -->
-
-
-
-  </div>
   <div id="fullpage" class="main">
     <div id="sec-intro" data-anchor="intro"class="main-section-intro section" >
                 <div id="main-iphone" class="basic-ani"> </div>
@@ -132,7 +105,6 @@ and definitely the best Metronome app I've found so far!!</p>
             <div class="press-footer">
                 <ul>
                     <!--Team      Press      Jobs      Imprint      Contact      Support-->
-                    <li><a href="/team/">Team</a></li>
                     <li><a href="/press/">Press</a></li>
                     <li><a href="/jobs/">Jobs</a></li>
                     <li><a href="/imprint/">Imprint</a></li>
@@ -159,9 +131,6 @@ and definitely the best Metronome app I've found so far!!</p>
                       </li>
                     </ul>
 
-
-
-
                 </div>
                 <div class="copyright">
                     <p>Designed by EUMLab - Xanin Technology GmbH in Berlin with Love. <br/>All Rights Reserved.</p>
@@ -177,11 +146,6 @@ and definitely the best Metronome app I've found so far!!</p>
 <div id="pre-loader" style="position: fixed;height: 100%;width: 100%;top:0;left:0;bottom: 0;right: 0;z-index: 999;text-align: center;background: #000 no-repeat center url('/assets/images/main/logo-main-hl.png');">
     <p style="font-size: 24px;color: #00ffff; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;position: absolute;top:50%;left: 0;right: 0;padding-top: 90px;">Loading</p>
 </div>
-<!--<div id="loader" class="pageload-overlay" data-opening="M20,15 50,30 50,30 30,30 Z;M0,0 80,0 50,30 20,45 Z;M0,0 80,0 60,45 0,60 Z;M0,0 80,0 80,60 0,60 Z" data-closing="M0,0 80,0 60,45 0,60 Z;M0,0 80,0 50,30 20,45 Z;M20,15 50,30 50,30 30,30 Z;M30,30 50,30 50,30 30,30 Z">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
-        <path d="M30,30 50,30 50,30 30,30 Z"/>
-    </svg>
-</div> /pageload-overlay -->
 
 {% endblock %}
 

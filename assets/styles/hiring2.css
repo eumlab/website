@@ -1,0 +1,148 @@
+body{
+    background: rgb(246, 246, 246) repeat  url('/assets/images/main/n2.png');
+    font-weight: 300;
+    min-width: 980px;
+    min-height: 500px;
+    color: #1b1b1b;
+    font-family: "proxima-nova" "helveticaneue-light", "Helvetica Neue", Helvetica, "Hiragino Sans GB" , arial, sans-serif;
+}
+html{
+	min-width: 980px;
+}
+
+.hiring-header{
+    padding-top: 30px;
+    width: 100%;
+    height: 430px;
+    /*background-color: rgba(0,0,0,0.04);*/
+    text-align: center;
+}
+
+.hiring-section-container{
+    clear: both;
+    margin: 0 auto;
+    width: 960px;
+    position: relative;
+    text-align: center;
+    text-align: center;
+    padding-top: 50px;
+}
+.hiring-section-container div.section{
+    
+}
+.hiring-section-container h2{
+    color: #333;
+    font-size: 30px;
+    font-weight: 200;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.hiring-section-container h2 em{
+    font-weight: 400;
+}
+
+.slogan-container{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+
+}
+.slogan-container h1{
+    padding-top: 30px;
+    font-size: 50px;
+    font-weight: 200;
+    color: #1b1b1b;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+}
+.slogan-container h1 em{
+    font-weight: 500;
+}
+
+/* @group Position */
+
+.position{
+	width: 100%;
+	padding-bottom: 50px;
+}
+
+.position h3{
+	font-size: 30px;
+}
+.position p.desc{
+	padding: 10px;
+	line-height: 130%;
+	font-size: 20px;
+}
+.position ul{
+	width: 48%;
+	display: block;
+	text-align: left;
+	list-style: disc;
+}
+.position ul::before{
+	content: "";
+	width: 100%;
+	display: block;
+	font-size: 23px;
+	padding: 10px 0;
+	font-weight: 400;
+}
+.position ul.what-you-do::before{
+	content: "What you'll do";
+}
+.position ul.what-you-do{
+	float: right;
+}
+.position ul.what-we-want::before{
+	content: "What we want";
+}
+.position ul.what-we-want{
+	float: left;
+}
+.position ul li{
+	font-size: 18px;
+	line-height: 130%;
+	padding-bottom: 10px;
+	margin-left: 20px;
+}
+.position a.apply{
+	display: block;
+	clear: both;
+	height: 40px;
+	padding-top: 14px;
+	width: 200px;
+	background-color: #007eff;
+	border: none;
+	-webkit-border-radius: 27px;
+	border-radius: 27px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 300;
+	color: #fff;
+	margin: 50px auto;
+	font-family:  "proxima-nova", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+	-webkit-font-smoothing: antialiased;
+}
+.position a.apply:hover{
+	background-color: #51a2f4;
+}
+.position .divbreaker{
+	width: 70%;
+}
+
+.section.hangzhou{
+	padding-top: 80px;
+}
+.section.hangzhou::before{
+	content: url("/assets/images/main/icon-hangzhou.png");
+	display: block;
+	margin-bottom: 30px;
+}
+.section.berlin::before{
+content: url("/assets/images/main/icon-berlin.png");
+display: block;
+margin-bottom: 30px;
+}
+
+/* @end */
+

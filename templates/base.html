@@ -12,7 +12,7 @@
 
     {% block meta %}{% endblock %}
 
-    <title>{% block wholetitle %}{% block title %}{% endblock %} - EUM {% endblock %}</title>
+    <title>{% block wholetitle %}{% block title %}{% endblock %} - EUMLab {% endblock %}</title>
 
     <link rel="index" title="EUMLab - Music APP on iPhone iPad" href="http://eumlab.com/">
     <link rel="canonical" href="http://eumlab.com/">
@@ -46,14 +46,13 @@
 
 
 </head>
-<body>
+<body class="{% block bodystyle %}{% endblock %}">
     <!--[if lt IE 8]>
     <div class="fuck-ie">
         <span class="face">:(</span>Your browser is too old. Please use <a href="http://www.google.com/chrome" target="_blank">Google Chrome</a> or <a href="http://windows.microsoft.com/zh-CN/internet-explorer/products/ie/home" target="_blank">update your IE browser</a>
     </div>
     <![endif]-->
     {% block body %}{% endblock %}
-
 
     <script src="/assets/scripts/jquery-1.11.1.min.js"></script>
     <script src="/assets/scripts/eum.js"></script>

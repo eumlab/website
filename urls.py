@@ -38,11 +38,18 @@ urlpatterns += patterns('mainweb.views',
     (r'^daw-remote/$', 'daw_remote'),
     (r'^chordtunes/$', 'chordtunes'),
     (r'^pro-metronome/$', 'pro_metronome'),
-    (r'^ukulele/$', 'ukulele'),
+    (r'^ukulele-toolkit/$', 'ukulele'),
+
+    (r'^ukulele/$',"redirector",{"where":"/ukulele-toolkit/"}),
+
     (r'^guitar-master/$', 'guitar_toolkit'),
     (r'^drum-tuner/$', 'drum_tuner'),
     #(r'^hiring/$', 'hiring'),
     (r'^hiring/$', 'hiring_cn'),
+
+    (r'^press/$', 'press'),
+    (r'^imprint/$', 'imprint'),
+    (r'^contact/$', 'contact'),
 
     (r'^guitar-toolkit/$', 'redirector',{"where":"/guitar-master/"}),
 

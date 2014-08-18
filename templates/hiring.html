@@ -1,184 +1,249 @@
 {% extends 'base.html' %}
 
-{% block title %}Hiring{% endblock %}
+{% block title %}Jobs - We are hiring!{% endblock %}
+
+{% block meta %}
+
+
+{% endblock %}
 
 {% block script %}
-    <script src="/assets/scripts/hiring.js"></script>
+<script src="/assets/scripts/hiring2.js"></script>
 {% endblock %}
 
 {% block style %}
-    <link href="/assets/styles/hiring.css" rel="stylesheet" />
+    <link href="/assets/styles/hiring2.css" rel="stylesheet" />
 {% endblock %}
 
 {% block body %}
-<div class="container pg-hiring">
-    <div class="section section-0">
-        <div class="center">
-            <div class="site-title">
-                <h1><a href="/" title="back home">EUM lab</a></h1>
-                <h2>Unleash your music talent</h2>
-            </div>
-            <div class="slogan">
-                <p>It's time to rock together!</p>
-                <p>To help people unleash their music talent!</p>
-            </div>
-            <div class="job-offer">
-                <p class="jobs-name"><span>iOS Developer</span><span>UX/UI Designer</span></p>
-                <div class="link-jobs-wrap">
-                    <a href="javascript:;" class="link-jobs">see our current job offers</a>
-                </div>
-            </div>
-        </div>
+
+    {% include "_nav2.html" with addstyle='fixontop' %}
+
+    <div class="hiring-header">
+    <img src="/assets/images/hiring/hiring-stuff.png" />
+    <div class="slogan-container">
+        <h1><em>We Need You</em><br/>Together to make it sounds lush.</h1>
     </div>
-    <div class="section section-1">
-        <div class="center">
-            <div class="pic"></div>
-            <div class="intro">
-                <h3 class="title">About EUM Lab</h3>
-                <p class="desc">EUM Lab makes the best music tools for musicians and learners. <br />
-                We love music! We play music instruments too. <br />
-                We hold it in firm conviction <br />that we excel in what we are devoted to.</p>
-            </div>
-        </div>
     </div>
-    <div class="section section-2">
-        <div class="center">
-            <div class="intro">
-                <h3 class="title">Break the Wall</h3>
-                <p class="desc">What kills your inspiration?</p>
-                <p class="desc">Your job is not what you love?</p>
-                <p class="desc">Bureaucracy and hierarchism?</p>
-                <p class="desc">Boring meaningless repeating tasks?</p>
-                <p class="desc">You don't need to be stuck in one place to let your inspiration run out.</p>
-                <p class="desc">We are everywhere, Germany, USA and China. And you can do it too.</p>
+    <div class="divbreaker"></div>
+
+    <div class="hiring-section-container">
+        <div class="section berlin clearfix">
+            <h2><em>Berlin</em>, Germany</h2>
+            <div class="position">
+                <h3>Marketing Director</h3>
+                <p class="desc">A marketing director has many roles. You may start your day being creative and developing a new marketing plan, transition to creating a budget with the accounting team, negotiate costs with suppliers in the afternoon, and finish your day with a business development team meeting. Each role requires a slightly different skill set in order to work with designers, lawyers, accountants, and business managers.</p>
+                <ul class="what-you-do">
+                    <li>Designing and implementing the marketing plan</li>
+                    <li>Planning and administering the marketing budget</li>
+                    <li>Take in charge of social media channel</li>
+                    <li>Negotiate with media agencies</li>
+                    <li>Contact with music education institutions</li>
+                </ul>
+                <ul class="what-we-want ">
+                    <li>An avid user of Wunderlist and other productivity apps who knows just how much fun it is to check off a to-do</li>
+                    <li>4+ years of experience in managing SEO initiatives, preferably for a company that indexes user generated content</li>
+                    <li>Detailed understanding of the latest ASO techniques, and passionate following of ongoing changes to ASO</li>
+                    <li>Strong communication/collaboration skills with a proven ability to work with both technical and business teams</li>
+                    <li>An analytical mind who is able to evaluate user activity across all digital mediums</li>
+                </ul>
+                <a class="apply clearfix">Apply</a>
+                <div class="divbreaker"></div>
             </div>
+
+            <div class="position">
+                <h3>UI Designer</h3>
+                <p class="desc">A marketing director has many roles. You may start your day being creative and developing a new marketing plan, transition to creating a budget with the accounting team, negotiate costs with suppliers in the afternoon, and finish your day with a business development team meeting. Each role requires a slightly different skill set in order to work with designers, lawyers, accountants, and business managers.</p>
+                <ul class="what-you-do">
+                    <li>Designing and implementing the marketing plan</li>
+                    <li>Planning and administering the marketing budget</li>
+                    <li>Take in charge of social media channel</li>
+                    <li>Negotiate with media agencies</li>
+                    <li>Contact with music education institutions</li>
+                </ul>
+                <ul class="what-we-want ">
+                    <li>An avid user of Wunderlist and other productivity apps who knows just how much fun it is to check off a to-do</li>
+                    <li>4+ years of experience in managing SEO initiatives, preferably for a company that indexes user generated content</li>
+                    <li>Detailed understanding of the latest ASO techniques, and passionate following of ongoing changes to ASO</li>
+                    <li>Strong communication/collaboration skills with a proven ability to work with both technical and business teams</li>
+                    <li>An analytical mind who is able to evaluate user activity across all digital mediums</li>
+                </ul>
+                <a class="apply clearfix">Apply</a>
+                <div class="divbreaker"></div>
+            </div>
+
+            <div class="position">
+                <h3>Press Release Director</h3>
+                <p class="desc">A marketing director has many roles. You may start your day being creative and developing a new marketing plan, transition to creating a budget with the accounting team, negotiate costs with suppliers in the afternoon, and finish your day with a business development team meeting. Each role requires a slightly different skill set in order to work with designers, lawyers, accountants, and business managers.</p>
+                <ul class="what-you-do">
+                    <li>Designing and implementing the marketing plan</li>
+                    <li>Planning and administering the marketing budget</li>
+                    <li>Take in charge of social media channel</li>
+                    <li>Negotiate with media agencies</li>
+                    <li>Contact with music education institutions</li>
+                </ul>
+                <ul class="what-we-want ">
+                    <li>An avid user of Wunderlist and other productivity apps who knows just how much fun it is to check off a to-do</li>
+                    <li>4+ years of experience in managing SEO initiatives, preferably for a company that indexes user generated content</li>
+                    <li>Detailed understanding of the latest ASO techniques, and passionate following of ongoing changes to ASO</li>
+                    <li>Strong communication/collaboration skills with a proven ability to work with both technical and business teams</li>
+                    <li>An analytical mind who is able to evaluate user activity across all digital mediums</li>
+                </ul>
+                <a class="apply clearfix">Apply</a>
+            </div>
+
         </div>
-    </div>
-    <div class="section section-3">
-        <div class="center">
-            <div class="intro">
-                <h3 class="title">Unleash people's music Talent!</h3>
-                <p class="desc">That is what we do.</p>
-                <p class="desc">See what our users are saying</p>
+
+
+        <div class="divbreaker"></div>
+
+
+        <div class="section hangzhou">
+            <h2><em>Hangzhou</em>, China</h2>
+
+            <div class="position">
+                <h3>iOS Developer</h3>
+                <p class="desc">A marketing director has many roles. You may start your day being creative and developing a new marketing plan, transition to creating a budget with the accounting team, negotiate costs with suppliers in the afternoon, and finish your day with a business development team meeting. Each role requires a slightly different skill set in order to work with designers, lawyers, accountants, and business managers.</p>
+                <ul class="what-you-do">
+                    <li>Designing and implementing the marketing plan</li>
+                    <li>Planning and administering the marketing budget</li>
+                    <li>Take in charge of social media channel</li>
+                    <li>Negotiate with media agencies</li>
+                    <li>Contact with music education institutions</li>
+                </ul>
+                <ul class="what-we-want ">
+                    <li>An avid user of Wunderlist and other productivity apps who knows just how much fun it is to check off a to-do</li>
+                    <li>4+ years of experience in managing SEO initiatives, preferably for a company that indexes user generated content</li>
+                    <li>Detailed understanding of the latest ASO techniques, and passionate following of ongoing changes to ASO</li>
+                    <li>Strong communication/collaboration skills with a proven ability to work with both technical and business teams</li>
+                    <li>An analytical mind who is able to evaluate user activity across all digital mediums</li>
+                </ul>
+                <a class="apply clearfix">Apply</a>
+                <div class="divbreaker"></div>
             </div>
-            <blockquote>
-                I'm now that king of tempo I am a master at guitar and I use this app 4 hours a day every day I play guitar 7 hours a day and this is what is making me better!
-            </blockquote>
-            <blockquote>
-                As a user of tuners for the past 30 years, this is the best, fastest, most accurate and most enjoyable to use so far!
-            </blockquote>
-            <blockquote>
-                A perfect App that is too easy to get up and running, and is the perfect addition to any studio! Awesome performance, and it also looks beautiful. Hardware like this might cost over $150!
-            </blockquote>
+
+
+            <div class="position">
+                <h3>Android Developer</h3>
+                <p class="desc">A marketing director has many roles. You may start your day being creative and developing a new marketing plan, transition to creating a budget with the accounting team, negotiate costs with suppliers in the afternoon, and finish your day with a business development team meeting. Each role requires a slightly different skill set in order to work with designers, lawyers, accountants, and business managers.</p>
+                <ul class="what-you-do">
+                    <li>Designing and implementing the marketing plan</li>
+                    <li>Planning and administering the marketing budget</li>
+                    <li>Take in charge of social media channel</li>
+                    <li>Negotiate with media agencies</li>
+                    <li>Contact with music education institutions</li>
+                </ul>
+                <ul class="what-we-want ">
+                    <li>An avid user of Wunderlist and other productivity apps who knows just how much fun it is to check off a to-do</li>
+                    <li>4+ years of experience in managing SEO initiatives, preferably for a company that indexes user generated content</li>
+                    <li>Detailed understanding of the latest ASO techniques, and passionate following of ongoing changes to ASO</li>
+                    <li>Strong communication/collaboration skills with a proven ability to work with both technical and business teams</li>
+                    <li>An analytical mind who is able to evaluate user activity across all digital mediums</li>
+                </ul>
+                <a class="apply clearfix">Apply</a>
+                <div class="divbreaker"></div>
+            </div>
+
+
+            <div class="position">
+                <h3>Greater China Marketing Director</h3>
+                <p class="desc">A marketing director has many roles. You may start your day being creative and developing a new marketing plan, transition to creating a budget with the accounting team, negotiate costs with suppliers in the afternoon, and finish your day with a business development team meeting. Each role requires a slightly different skill set in order to work with designers, lawyers, accountants, and business managers.</p>
+                <ul class="what-you-do">
+                    <li>Designing and implementing the marketing plan</li>
+                    <li>Planning and administering the marketing budget</li>
+                    <li>Take in charge of social media channel</li>
+                    <li>Negotiate with media agencies</li>
+                    <li>Contact with music education institutions</li>
+                </ul>
+                <ul class="what-we-want ">
+                    <li>An avid user of Wunderlist and other productivity apps who knows just how much fun it is to check off a to-do</li>
+                    <li>4+ years of experience in managing SEO initiatives, preferably for a company that indexes user generated content</li>
+                    <li>Detailed understanding of the latest ASO techniques, and passionate following of ongoing changes to ASO</li>
+                    <li>Strong communication/collaboration skills with a proven ability to work with both technical and business teams</li>
+                    <li>An analytical mind who is able to evaluate user activity across all digital mediums</li>
+                </ul>
+                <a class="apply clearfix">Apply</a>
+            </div>
 
         </div>
-    </div>
-    <div class="section section-4">
-        <div class="center">
-            <div class="intro">
-                <h3 class="title">Become an EUMer</h3>
-                <p class="desc">and make the best music Apps together!</p>
+
+
+
+
+        <!--Chinese Test-->
+            <div class="section hangzhou">
+            <h2><em>杭州</em>, 中国</h2>
+
+            <div class="position">
+                <h3>iOS 工程师</h3>
+                <p class="desc">A marketing director has many roles. You may start your day being creative and developing a new marketing plan, transition to creating a budget with the accounting team, negotiate costs with suppliers in the afternoon, and finish your day with a business development team meeting. Each role requires a slightly different skill set in order to work with designers, lawyers, accountants, and business managers.</p>
+                <ul class="what-you-do">
+                    <li>Designing and implementing the marketing plan</li>
+                    <li>Planning and administering the marketing budget</li>
+                    <li>Take in charge of social media channel</li>
+                    <li>Negotiate with media agencies</li>
+                    <li>Contact with music education institutions</li>
+                </ul>
+                <ul class="what-we-want ">
+                    <li>An avid user of Wunderlist and other productivity apps who knows just how much fun it is to check off a to-do</li>
+                    <li>4+ years of experience in managing SEO initiatives, preferably for a company that indexes user generated content</li>
+                    <li>Detailed understanding of the latest ASO techniques, and passionate following of ongoing changes to ASO</li>
+                    <li>Strong communication/collaboration skills with a proven ability to work with both technical and business teams</li>
+                    <li>An analytical mind who is able to evaluate user activity across all digital mediums</li>
+                </ul>
+                <a class="apply clearfix">Apply</a>
+                <div class="divbreaker"></div>
             </div>
-            <!--<ul class="skills">
-                <li data-key="b">Skilled in 3D &amp; AE</li>
-                <li data-key="a">Skilled in graphic design</li>
-                <li class="active" data-key="g">Skilled in Objective-C</li>
-                <li class="active" data-key="e">A elegant UI & UX pursuer</li>
-                <li class="active" data-key="d">Have experience with DSP</li>
-                <li class="active" data-key="c">Familiar with music terms</li>
-            </ul>-->
+
+
+            <div class="position">
+                <h3>Android Developer</h3>
+                <p class="desc">A marketing director has many roles. You may start your day being creative and developing a new marketing plan, transition to creating a budget with the accounting team, negotiate costs with suppliers in the afternoon, and finish your day with a business development team meeting. Each role requires a slightly different skill set in order to work with designers, lawyers, accountants, and business managers.</p>
+                <ul class="what-you-do">
+                    <li>Designing and implementing the marketing plan</li>
+                    <li>Planning and administering the marketing budget</li>
+                    <li>Take in charge of social media channel</li>
+                    <li>Negotiate with media agencies</li>
+                    <li>Contact with music education institutions</li>
+                </ul>
+                <ul class="what-we-want ">
+                    <li>An avid user of Wunderlist and other productivity apps who knows just how much fun it is to check off a to-do</li>
+                    <li>4+ years of experience in managing SEO initiatives, preferably for a company that indexes user generated content</li>
+                    <li>Detailed understanding of the latest ASO techniques, and passionate following of ongoing changes to ASO</li>
+                    <li>Strong communication/collaboration skills with a proven ability to work with both technical and business teams</li>
+                    <li>An analytical mind who is able to evaluate user activity across all digital mediums</li>
+                </ul>
+                <a class="apply clearfix">Apply</a>
+                <div class="divbreaker"></div>
+            </div>
+
+
+            <div class="position">
+                <h3>Greater China Marketing Director</h3>
+                <p class="desc">A marketing director has many roles. You may start your day being creative and developing a new marketing plan, transition to creating a budget with the accounting team, negotiate costs with suppliers in the afternoon, and finish your day with a business development team meeting. Each role requires a slightly different skill set in order to work with designers, lawyers, accountants, and business managers.</p>
+                <ul class="what-you-do">
+                    <li>Designing and implementing the marketing plan</li>
+                    <li>Planning and administering the marketing budget</li>
+                    <li>Take in charge of social media channel</li>
+                    <li>Negotiate with media agencies</li>
+                    <li>Contact with music education institutions</li>
+                </ul>
+                <ul class="what-we-want ">
+                    <li>An avid user of Wunderlist and other productivity apps who knows just how much fun it is to check off a to-do</li>
+                    <li>4+ years of experience in managing SEO initiatives, preferably for a company that indexes user generated content</li>
+                    <li>Detailed understanding of the latest ASO techniques, and passionate following of ongoing changes to ASO</li>
+                    <li>Strong communication/collaboration skills with a proven ability to work with both technical and business teams</li>
+                    <li>An analytical mind who is able to evaluate user activity across all digital mediums</li>
+                </ul>
+                <a class="apply clearfix">Apply</a>
+            </div>
+
         </div>
+
     </div>
 
-    <div class="section section-5 section-5-eng">
-        <div class="center">
-            <!--<div class="staff-0 staff selected" data-key-map="c,d,e,g" data-intro="0" title="C Major&nbsp;&nbsp;&nbsp;&nbsp;C add9"></div>
-            <div class="staff-1 staff" data-key-map="c,e,a,b" data-intro="1" title="A minor"></div>
-            <div class="staff-2 staff" data-key-map="c,d,e,g,a,b" data-intro="2" title="Am add11 Am7 11 Am7 9 11"></div>-->
-            <div class="intro">
-                <div class="intro-inner selected">
-                    <h3 class="title">iOS Developer</h3>
-                    <h4 class="subtitle">We love native Apps and latest technologies.<br/>
-                                         We are looking for whoever is really focused on <br/>kick-ass user experience and beautiful code!</h4>
-
-                    <div class="intro-looking-for">
-                        <h3 class="title">What we are looking for</h3>
-                        <ul>
-                            <li>Passionate about music playing and making.</li>
-                            <li>Capable of finding efficient and accurate solutions.</li>
-                            <li>Self-motivated while cooperative.</li>
-                            <li>Skilled in Objective-C.</li>
-                            <li>Pursuing an elegant UI and UX.</li>
-                            <li>Familiar with music terms.</li>
-                            <li>Familiar with GIT .</li>
-
-                            <br/>Preferably you are:
-                            <li>Equipped with sound processing/ DSP background</li>
-                            <li>know-how of more than one music instrument.</li>
-                        </ul>
-                    </div>
-
-
-
-                    <ul class="intro-what-to-do">
-                        <h3 class="title">What you will do</h3>
-                        <ul>
-                            <li>Build exciting new features for our iPhone/iPad apps.</li>
-                            <li>Participate in new apps development.</li>
-                            <li>Respond to related customer feedback and testing.</li>
-                            <li>Quickly fix bugs and solve problems.</li>
-                            <li>Fast prototyping.</li>
-                        </ul>
-                    </ul>
-                </div>
-
-            </div>
-            <br/><br/><br/><br/><br/>
-            <div class="intro">
-                <div class="intro-inner selected">
-                    <h3 class="title">UI/UX Designer</h3>
-                    <h4 class="subtitle">We love simple and elegant designs.<br/>
-                        We are looking for whoever has capable of translating <br/>complex functionality in simple and beautiful interfaces.</h4>
-
-                    <div class="intro-looking-for">
-                        <h3 class="title">What we are looking for</h3>
-                        <ul>
-                            <li>Passionate about music playing and making.</li>
-                            <li>Capable of finding efficient and accurate solutions.</li>
-                            <li>Self-motivated while cooperative.</li>
-                            <li>Skilled in mockup.</li>
-                            <li>Skilled in Photoshop.</li>
-                            <li>Familiar with simple 3D modeling.</li>
-                            <li>Familiar with HTML/CSS.</li>
-
-                            <br/>Preferably you are:
-                            <li>Know-how of more than one music instrument.</li>
-                            <li>Familiar with After Effect</li>
-                            <li>Capable of implementing UI using Objective-C</li>
-                        </ul>
-                    </div>
-
-
-
-                    <ul class="intro-what-to-do">
-                        <h3 class="title">What you will do</h3>
-                        <ul>
-                            <li>Design UI for our iPhone/iPad apps.</li>
-                            <li>Improve UX for our iPhone/iPad apps.</li>
-                            <li>Participate in our web design.</li>
-                            <li>Fast mockup.</li>
-                        </ul>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="btn-apply-wrap">
-                <a href="mailto:eum+hiring@eumlab.com" class="btn-apply" >apply now</a>
-            </div>
-            <br/><br/><br/><br/><br/>
-        </div>
-    </div>
-
-    {% include "_footer.html" %}
-</div>
+    <div class="divbreaker bottom-divbreaker"></div>
+    {% include "_footer2.html" %}
 {% endblock %}
+
+{% block feedbackscript %}{% endblock %}

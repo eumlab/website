@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}Press{% endblock %}
+
+{% block meta %}
+
+
+{% endblock %}
+
+{% block script %}
+<script src="/assets/scripts/press.js"></script>
+{% endblock %}
+
+{% block style %}
+    <link href="/assets/styles/press.css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+
+    {% include "_nav2.html" with addstyle="fixontop" %}
+
+    <div class="press-header">
+    <img src="/assets/images/press/staytuned.png" height="290" width="230" />
+    <div class="slogan-container">
+        <h1><em>Stay Tuned</em><br/>for news from the EUMLab</h1>
+    </div>
+    </div>
+    <div class="divbreaker"></div>
+
+    <div class="press-section-container">
+        <div class="subscript section left">
+            <h2>Join to Our Press List</h2>
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+            <form action="//eumlab.us8.list-manage.com/subscribe/post?u=190fc0a799a3c527dd4a07a70&amp;id=45b2147a69" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+            <div class="mc-field-group">
+                <input type="email" value="" name="EMAIL" class="textbox required email" placeholder="E-Mail" id="mce-EMAIL">
+            </div>
+            <div class="mc-field-group">
+                <input type="text" value="" name="NAME" class="textbox required" placeholder="Name" id="mce-NAME">
+            </div>
+            <div class="mc-field-group">
+                <input type="text" value="" name="COMPANY" class="textbox required" placeholder="Company" id="mce-COMPANY">
+            </div>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_190fc0a799a3c527dd4a07a70_45b2147a69" tabindex="-1" value=""></div>
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+        <div class="download section right">
+            <h2>Get Company Press Kit</h2>
+            <img src="/assets/images/press/company-press-download.png" height="205" width="163" />
+            <a  href="https://www.dropbox.com/sh/f9xt3gyra3mtxgu/AACd977CjXwMQP_85QgTkl4Oa" target="_blank" class="press-download">Download</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+
+    <div class="press-section-container presskits">
+        <h2><em>Press Kits</em></h2>
+        <p>We prepared a full range of <em>screenshots</em>, <em>icons</em>, <em>lifestyle photos</em> and <em>review guides</em> for you.</p>
+        <ul>
+            {% for appitem in pressApps %}
+                <li><a class="presskits-item-download basic-ani" target="_blank" href="{{ appitem.pl }}"><h3>{{ appitem.name }}</h3></a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!--
+    <div class="press-section-container">
+        <h2><em>Media Covers</em></h2>
+    <ul class="cbp_tmtimeline">
+            <li>
+                <time class="cbp_tmtime" datetime="2014-04-05"><span> </span> <span>4/11/13</span></time>
+                <div class="cbp_tmicon cbp_tmicon-phone"></div>
+                <div class="cbp_tmlabel">
+                    <h2>Title</h2>
+                    <p>Content</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    -->
+    <div class="divbreaker bottom-divbreaker"></div>
+    {% include "_footer2.html" %}
+{% endblock %}
+
+{% block feedbackscript %}{% endblock %}

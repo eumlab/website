@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}Imprint{% endblock %}
+
+{% block meta %}
+
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}
+
+{% block style %}
+    <link href="/assets/styles/imprint.css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+
+    {% include "_nav2.html" with addstyle='fixontop' %}
+
+    <div class="imprint-header">
+    <img src="/assets/images/imprint/imprint.png" />
+    <div class="slogan-container">
+        <h1><em>Imprint</em></h1>
+    </div>
+    </div>
+
+    <div class="imprint-section-container">
+    <h2><em>EUMLab</em><br/>Xanin Technology GmbH</h2>
+    <p>Gardeschuetzenweg 61-63,<br/>
+12203 Berlin,</br>
+Germany</p>
+
+    <h2>Management Board</h2>
+    <p>Yixiang, XIAO <br/>
+    Ming, ZHONG<br/>
+    Yuan, ZHOU</p>
+
+
+    <h2>Registered Office</h2>
+    <p>Berlin, Amtsgericht Charlottenburg, HRB 157088 B</p>
+
+    <h2>VAT Identification Number</h2>
+    <p>DE294739219</p>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:team+imprint@eumlab.com">team+imprint@eumlab.com</a></p>
+
+    </div>
+
+    <div class="divbreaker bottom-divbreaker"></div>
+    {% include "_footer2.html" %}
+{% endblock %}
+
+{% block feedbackscript %}{% endblock %}
