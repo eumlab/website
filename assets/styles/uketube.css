@@ -2,6 +2,13 @@ html{
     min-width: 980px;
     min-height: 750px;
 }
+body{
+    background: transparent no-repeat center url('/assets/images/uketube/bg.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 .uketube-container{
     height: 100%;
     width: 100%;
@@ -67,4 +74,17 @@ div.v2-footer .social ul.spicesocialwidget{
 
 .right a:hover{
     opacity: 1;
+}
+
+.vjs-error-display,
+.vjs-control-bar,
+.vjs-big-play-button,
+.vjs-loading-spinner,
+.vjs-text-track-display,
+.vjs-poster{
+    display: none !important;
+}
+
+#big-video-vid_html5_api{
+    display: none;
 }

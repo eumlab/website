@@ -11,6 +11,10 @@ $(function() {
         { type: "video/ogg",  src: "/assets/videos/uketubebgvideo.ogv" }
     ],{ambient:true,doLoop:true});
 
+    BV.getPlayer().on("canplaythrough",function(){
+         $("#big-video-vid_html5_api").css({"display":"inherit"});
+    })
+
     // a*878 + b = 50%
     // a*1414 + b = 85%
     var a = (78 - 55) / ( 1414 - 878 ),

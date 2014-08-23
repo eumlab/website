@@ -882,6 +882,7 @@ ul#menu-items-container li:hover sub{
     position: fixed;
     z-index: 499;
     opacity: 1;
+    cursor: url("/assets/images/close.png") 14 14, default;
 }
 #menu-apps-container.not-shown{
     opacity: 0;
@@ -909,6 +910,7 @@ ul#menu-items-container li:hover sub{
     text-align: center;
 
     font-weight: 200;
+    cursor:default;
 }
 
 #menu-apps h2{
