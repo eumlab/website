@@ -28,6 +28,22 @@ urlpatterns += patterns('mainweb.views',
     (r'^$', 'home'),
     (r'^(?i)index.html$',"redirector",{"where":"/"}),
 
+#General Page
+    (r'^hiring/$', 'loadtemplateGeneral', {'template':'hiring.html'}),
+    (r'^press/$', 'loadtemplateGeneral', {'template':'press.html'}),
+    (r'^imprint/$', 'loadtemplateGeneral', {'template':'imprint.html'}),
+    (r'^contact/$', 'loadtemplateGeneral', {'template':'contact.html'}),
+    (r'^smtm/$', 'showMeTheMoney', {'template':'showmethemoney.html'}),
+
+#Apps:
+    (r'^iuke/$', 'loadtemplate', {'template':'iuke.html','aid':'iuke'}),
+    (r'^drum-loops/$',  'loadtemplate', {'template':'drumloops.html','aid':'dl'}),
+    (r'^piano-chords/$', 'loadtemplate', {'template':'pianochords.html','aid':'pc'}),
+    (r'^pro-metronome/$', 'loadtemplate', {'template':'pro-metronome.html','aid':'pm'}),
+    (r'^uketube/$', 'loadtemplate', {'template':'uketube.html','aid':'uketube'}),
+
+
+
     (r'^daw-remote-hd/$', 'daw_remote_hd'),
     (r'^daw-remote-hd/docs/$', 'drh_docs'),
     (r'^daw-remote-hd/videos/$', 'drh_videos'),
@@ -37,7 +53,6 @@ urlpatterns += patterns('mainweb.views',
     (r'^instuner/$', 'instuner'),
     (r'^daw-remote/$', 'daw_remote'),
     (r'^chordtunes/$', 'chordtunes'),
-    (r'^pro-metronome/$', 'pro_metronome'),
     (r'^ukulele-toolkit/$', 'ukulele'),
 
     (r'^ukulele/$',"redirector",{"where":"/ukulele-toolkit/"}),
@@ -45,10 +60,7 @@ urlpatterns += patterns('mainweb.views',
     (r'^guitar-master/$', 'guitar_toolkit'),
     (r'^drum-tuner/$', 'drum_tuner'),
     #(r'^hiring/$', 'hiring'),
-    (r'^hiring/$', 'hiring_cn'),
 
-    (r'^press/$', 'press'),
-    (r'^imprint/$', 'imprint'),
     (r'^contact/$', 'contact'),
 
     (r'^guitar-toolkit/$', 'redirector',{"where":"/guitar-master/"}),

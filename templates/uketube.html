@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}UkeTube{% endblock %}
+
+
+{% block script %}
+    <script src="/assets/scripts/video.js"></script>
+    <script src="/assets/scripts/bigvideo.js"></script>
+    <script src="/assets/scripts/uketube.js"></script>
+{% endblock %}
+0
+{% block style %}
+    <link href="/assets/styles/bigvideo.css" rel="stylesheet" />
+    <link href="/assets/styles/uketube.css" rel="stylesheet" />
+{% endblock %}
+
+{% block bodystyle %}darktheme {% endblock %}
+{% block body %}
+{% include "_nav2.html" with addstyle='glow' %}
+
+    <div class="uketube-container">
+        <div class="iphone">
+
+        </div>
+
+        <div class="right">
+            <h1 id="appname">UkeTube</h1>
+            <h2>Learn ukulele from community<br/>
+            Covers, Tutorials, Tips, Skills and more...</h2>
+            <a href="{{ me.storeurl }}"><img src="/assets/images/uketube/app-store@2x.png" height="63" width="186"></a>
+
+        </div>
+    </div>
+
+
+{# include "_footer2.html" #}
+{% endblock %}

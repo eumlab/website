@@ -15,7 +15,9 @@
     <script src="/assets/scripts/jquery.threesixty.js"></script>
     <script src="/assets/scripts/guitar-toolkit.js"></script>
 {% endblock %}
+{% block bodystyle %}darktheme {% endblock %}
 {% block body %}
+{% include "_nav2.html" %}
 <div class="container pg-drumtuner">
 <div class="section section-3">
         <div class="center">
@@ -25,6 +27,6 @@
             </div>
         </div>
     </div>
-    {% include "_footer.html" %}
-</div>
+    </div>
+    {% include "_footer2.html" %}
 {% endblock %}

@@ -15,7 +15,7 @@ from django.template.response import TemplateResponse
 def decorator(view):
     def wrapper(request, *args, **kwargs):
         r = view(request, *args, **kwargs)
-        r.context_data = {'products': appsMenu}
+        r.context_data = {'products': appsMenu,'apps':applist}
         return r.render()
     return wrapper
 
@@ -112,13 +112,23 @@ def guitar_toolkit(request):
 def ukulele(request):
     return render_with_pars(request, 'ukulele.html', {"nav": "ut"})
 
-def hiring(request):
-    return render_with_pars(request, 'hiring.html',{})
 
 
-def imprint(request):
-    return render_with_pars(request, 'imprint.html',{})
 
+def loadtemplate(request, template,aid):
+    if aid == None:
+        me = {}
+    else:
+        me = applist[aid]
+    return render_with_pars(request, template,{"me":me})
+
+
+def loadtemplateGeneral(request, template):
+    return render_with_pars(request, template,{})
+
+
+def showMeTheMoney(request,template):
+    return render_with_pars(request, template,{"appitems":applist.values()})
 
 def hiring_cn(request):
     conn = HTTPConnection("ezse.com")
@@ -148,24 +158,24 @@ def redirector_with_hash(request,where,hash,isp=True):
 
 #For Press
 applist = {
-    "pm":{"mid":"pm","name":"Pro Metronome", "id":"477960671", "iphone":True, "iPad": True, "icon":"prometronome.png", "href":"/pro-metronome/","desc":""},
-    "instuner":{"mid":"instuner","name":"insTuner", "id":"528923171", "iphone":True, "iPad": True, "icon":"instuner.png", "href":"/instuner/","desc":""},
-    "gm":{"mid":"gm","name":"Guitar Master", "id":"723205500", "iphone":True, "iPad": True, "icon":"guitarmaster.png", "href":"/guitar-master/","desc":""},
-    "ut":{"mid":"ut","name":"Ukulele Toolkit", "id":"581273909", "iphone":True, "iPad": False, "icon":"ukuleletoolkit.png", "href":"/ukulele-toolkit/","desc":"Everything a Uker Needs"},
-    "uke101":{"mid":"uke101","name":"Uke 101", "id":"887173705", "iphone":True, "iPad": True, "icon":"uke101.png", "href":"/uke101/","desc":"Learn to Play Ukulele from Lessons, Games& Songs"},
-    "ukechords":{"mid":"ukechords","name":"Uke Chords", "id":"899874539", "iphone":True, "iPad": True, "icon":"ukechords.png", "href":"/uke-chords/","desc":"Uke Chords with Real Fingering Positions"},
-    "iuke":{"mid":"iuke","name":"iUke", "id":"591760977", "iphone":True, "iPad": True, "icon":"iuke.png", "href":"/iuke/","desc":"Ukulele Interactive Songbook"},
-    "chordtunes":{"mid":"chordtunes","name":"Chordtunes", "id":"643809129", "iphone":False, "iPad": True, "icon":"chordtunes.png", "href":"/chordtunes/","desc":"Create, Read and Share Ukulele Sheets"},
-    "bt":{"mid":"bt","name":"Bass Toolkit", "id":"893031248", "iphone":True, "iPad": True, "icon":"basstoolkit.png", "href":"/bass-toolkit/","desc":""},
-    "st":{"mid":"st","name":"String Tuner", "id":"501971515", "iphone":True, "iPad": True, "icon":"stringtuner.png", "href":"/string-tuner/","desc":""},
-    "pt":{"mid":"pt","name":"Pro Tuner", "id":"483114184", "iphone":True, "iPad": True, "icon":"protuner.png", "href":"/pro-tuner/","desc":""},
-    "daw":{"mid":"daw","name":"DAW Remote", "id":"435417441", "iphone":True, "iPad": False, "icon":"dawremote.png", "href":"/daw-remote/","desc":""},
-    "dawhd":{"mid":"dawhd","name":"DAW Remote HD", "id":"501974930", "iphone":False, "iPad": True, "icon":"dawremotehd.png", "href":"/daw-remote-hd/","desc":""},
+    "pm":{"mid":"pm","name":"Pro Metronome", "id":"477960671", "iphone":True, "iPad": True, "icon":"prometronome.png", "href":"/pro-metronome/","desc":"","aurl":"eumpm"},
+    "instuner":{"mid":"instuner","name":"insTuner", "id":"528923171", "iphone":True, "iPad": True, "icon":"instuner.png", "href":"/instuner/","desc":"","aurl":""},
+    "gm":{"mid":"gm","name":"Guitar Master", "id":"723205500", "iphone":True, "iPad": True, "icon":"guitarmaster.png", "href":"/guitar-master/","desc":"","aurl":""},
+    "ut":{"mid":"ut","name":"Ukulele Toolkit", "id":"581273909", "iphone":True, "iPad": False, "icon":"ukuleletoolkit.png", "href":"/ukulele-toolkit/","desc":"Everything a Uker Needs","aurl":""},
+    "uke101":{"mid":"uke101","name":"Uke101", "id":"887173705", "iphone":True, "iPad": True, "icon":"uke101.png", "href":"/uke101/","desc":"Learn to Play Ukulele from Lessons, Games& Songs","aurl":""},
+    "ukechords":{"mid":"ukechords","name":"UkeChords", "id":"899874539", "iphone":True, "iPad": True, "icon":"ukechords.png", "href":"/uke-chords/","desc":"Uke Chords with Real Fingering Positions","aurl":""},
+    "iuke":{"mid":"iuke","name":"iUke", "id":"591760977", "iphone":True, "iPad": True, "icon":"iuke.png", "href":"/iuke/","desc":"Ukulele Interactive Songbook","aurl":""},
+    "chordtunes":{"mid":"chordtunes","name":"Chordtunes", "id":"643809129", "iphone":False, "iPad": True, "icon":"chordtunes.png", "href":"/chordtunes/","desc":"Create, Read and Share Ukulele Sheets","aurl":""},
+    "bt":{"mid":"bt","name":"Bass Toolkit", "id":"893031248", "iphone":True, "iPad": True, "icon":"basstoolkit.png", "href":"/bass-toolkit/","desc":"","aurl":""},
+    "st":{"mid":"st","name":"String Tuner", "id":"501971515", "iphone":True, "iPad": True, "icon":"stringtuner.png", "href":"/string-tuner/","desc":"","aurl":""},
+    "pt":{"mid":"pt","name":"Pro Tuner", "id":"483114184", "iphone":True, "iPad": True, "icon":"protuner.png", "href":"/pro-tuner/","desc":"","aurl":""},
+    "daw":{"mid":"daw","name":"DAW Remote", "id":"435417441", "iphone":True, "iPad": False, "icon":"dawremote.png", "href":"/daw-remote/","desc":"","aurl":""},
+    "dawhd":{"mid":"dawhd","name":"DAW Remote HD", "id":"501974930", "iphone":False, "iPad": True, "icon":"dawremotehd.png", "href":"/daw-remote-hd/","desc":"","aurl":""},
 
-    "ukehero":{"mid":"ukehero","name":"Uke Hero", "id":"-", "iphone":True, "iPad": True, "icon":"ukehero.png", "href":"/-/","desc":"Play Your iPhone Like a Real Ukulele"},
-    "uketube":{"mid":"uketube","name":"Uke Tube", "id":"-", "iphone":True, "iPad": True, "icon":"dawremotehd.png", "href":"/-/","desc":""},
-    "dl":{"mid":"dl","name":"Drum Loops", "id":"-", "iphone":True, "iPad": True, "icon":"drumloops.png", "href":"/-/","desc":""},
-    "pc":{"mid":"pc","name":"Piano Chords", "id":"-", "iphone":True, "iPad": True, "icon":"pianochords.png", "href":"/-/","desc":""},
+    "ukehero":{"mid":"ukehero","name":"UkeHero", "id":"-", "iphone":True, "iPad": True, "icon":"ukehero.png", "href":"/-/","desc":"Play Your iPhone Like a Real Ukulele","aurl":""},
+    "uketube":{"mid":"uketube","name":"UkeTube", "id":"-", "iphone":True, "iPad": True, "icon":"dawremotehd.png", "href":"/uketube/","desc":"Learn from community","aurl":""},
+    "dl":{"mid":"dl","name":"Drum Loops", "id":"-", "iphone":True, "iPad": True, "icon":"drumloops.png", "href":"/drum-loops/","desc":"Beats, Rhythms and Grooves","aurl":""},
+    "pc":{"mid":"pc","name":"Piano Handbook", "id":"-", "iphone":True, "iPad": True, "icon":"pianochords.png", "href":"/piano-handbook/","desc":"","aurl":""},
 }
 
 indexApps = [
@@ -220,3 +230,6 @@ applist["ukechords"],
 applist["chordtunes"],
 ]
 
+for appkey in applist.keys():
+    item = applist[appkey]
+    item["storeurl"] = "http://itunes.apple.com/app/id" + item["id"] + "?ls=1&mt=8&at=11lt4f&ct=eumwebsite"

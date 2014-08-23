@@ -10,7 +10,9 @@
     <link href="/assets/styles/hiring.css" rel="stylesheet" />
 {% endblock %}
 
+{% block bodystyle %}darktheme {% endblock %}
 {% block body %}
+{% include "_nav2.html" %}
 <div class="container pg-hiring">
     <div class="section section-0">
         <div class="center">
@@ -261,6 +263,6 @@
             <br/><br/><br/><br/><br/>
         </div>
     </div>
-    {% include "_footer.html" %}
-</div>
+    </div>
+    {% include "_footer2.html" %}
 {% endblock %}

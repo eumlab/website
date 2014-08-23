@@ -1,0 +1,70 @@
+html{
+    min-width: 980px;
+    min-height: 750px;
+}
+.uketube-container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: repeat  url('/assets/images/main/n3.png');
+    overflow: hidden;
+}
+
+div.v2-footer{
+    position: fixed;
+    left: 50%;
+    bottom: 10px;
+    width: 50%;
+    max-width: 480px;
+}
+div.v2-footer .social ul.spicesocialwidget{
+    width: 100%;
+}
+
+.iphone{
+    position: absolute;
+    left: 50%;
+    top:64px;
+    background: transparent no-repeat url('/assets/images/uketube/iphone@2x.png');
+    height: 1728px;
+    width: 896px;
+    background-size: 50%;
+    margin-left: -450px;
+}
+
+.right{
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    height: 100%;
+    width: 50%;
+}
+
+.right h1,
+.right h2{
+    font-weight: 200;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+.right h1{
+    font-size: 60px;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    padding-top: 45%;
+}
+.right h2{
+    text-shadow: 0 0 1px rgba(0,0,0,0.5);
+    padding-top: 15px;
+}
+
+.right a{
+    opacity: 0.8;
+    padding-top: 60px;
+    height: 63px;
+    display: inline-block;
+}
+
+.right a:hover{
+    opacity: 1;
+}

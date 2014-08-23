@@ -6,11 +6,13 @@
     <link href="/assets/styles/drh.css" rel="stylesheet" />
 {% endblock %}
 
+{% block bodystyle %}darktheme {% endblock %}
 {% block body %}
+{% include "_nav2.html" %}
 <div class="container pg-drh-faq">
     <div class="header">
         <div class="bg"></div>
-        {% include "_topbar.html" %}
+
         <div class="faq">
             <h2 class="title">FAQ</h2>
             <dl>
@@ -49,6 +51,6 @@
             <dl>
         </div>
     </div>
-    {% include "_footer.html" %}
-</div>
+    </div>
+    {% include "_footer2.html" %}
 {% endblock %}

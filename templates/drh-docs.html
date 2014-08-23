@@ -6,11 +6,13 @@
     <link href="/assets/styles/drh.css" rel="stylesheet" />
 {% endblock %}
 
+{% block bodystyle %}darktheme {% endblock %}
 {% block body %}
+{% include "_nav2.html" %}
 <div class="container pg-drh-docs">
     <div class="header">
         <div class="bg"></div>
-        {% include "_topbar.html" %}
+
         <div class="doc">
             <h2 class="title">DAW Remote HD emulates HUI and Mackie Control Protocol.</h2>
             <p class="desc">Download DAW Remote HD User Manual: <a href="/payload/manual.ibooks">iBook</a> or <a href="/payload/manual.pdf">PDF</a></p>
@@ -114,6 +116,6 @@
             </table>
         </div>
     </div>
-    {% include "_footer.html" %}
-</div>
+    </div>
+    {% include "_footer2.html" %}
 {% endblock %}

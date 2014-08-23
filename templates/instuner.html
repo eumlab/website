@@ -18,11 +18,13 @@
     <link href="/assets/styles/instuner.css" rel="stylesheet" />
 {% endblock %}
 
+{% block bodystyle %}darktheme {% endblock %}
 {% block body %}
+{% include "_nav2.html" %}
 <div class="container pg-instuner">
     <div class="header">
         <div class="bg"></div>
-        {% include "_topbar.html" %}
+
         <div class="app">
             <div class="center">
                 <h2 class="app-title">insTuner</h2>
@@ -147,6 +149,6 @@ iPhone, iPad and iPod Touch.</p>
             <a href="http://itunes.apple.com/app/id603425027?ls=1&mt=8" target="_blank" class="link-app-store" title="Download insTuner from APP Store">Available on the App Store</a>
         </div>
     </div>
-    {% include "_footer.html" %}
-</div>
+    </div>
+    {% include "_footer2.html" %}
 {% endblock %}

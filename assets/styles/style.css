@@ -853,6 +853,27 @@ ul#menu-items-container li:hover sub{
 }
 
 
+/* Glowing Theme */
+#idx-header.glow{
+     box-shadow: none;
+	 webkit-box-shadow:none;
+	 background: transparent;
+	 padding-top: 30px;
+}
+#idx-header.glow .menu-logo h1,
+#idx-header.glow #idx-header-container,
+#idx-header.glow ul#menu-items-container li h2,
+#idx-header.glow ul#menu-items-container li#menu-item-products sub{
+    color: #fff;
+    text-shadow: none;
+}
+
+#idx-header.glow .menu-logo:hover h1,
+#idx-header.glow ul#menu-items-container li:hover h2,
+#idx-header.glow ul#menu-items-container li:hover sub{
+    color: #36fffc !important;
+}
+
 /* Menu Apps */
 #menu-apps-container{
     background-color: rgba(0,0,0,0.4);

@@ -17,11 +17,13 @@
     <link href="/assets/styles/drh.css" rel="stylesheet" />
 {% endblock %}
 
+{% block bodystyle %}darktheme {% endblock %}
 {% block body %}
+{% include "_nav2.html" %}
 <div class="container pg-drh">
     <div class="header">
         <div class="bg"></div>
-        {% include "_topbar.html" %}
+
         <div class="app">
             <div class="center">
                 <h2 class="app-title">DAW Remote HD</h2>
@@ -104,6 +106,6 @@
             <a href="http://itunes.apple.com/app/id501974930?ls=1&mt=8" target="_blank" class="link-app-store" title="Download DAW Remote HD from APP Store">Available on the App Store</a>
         </div>
     </div>
-    {% include "_footer.html" %}
-</div>
+    </div>
+    {% include "_footer2.html" %}
 {% endblock %}
