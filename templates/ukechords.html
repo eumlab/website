@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}UkeChords{% endblock %}
+
+
+{% block script %}
+    <script src="/assets/scripts/ukechords.js"></script>
+{% endblock %}
+0
+{% block style %}
+    <link href="/assets/styles/ukechords.css" rel="stylesheet" />
+{% endblock %}
+
+{% block bodystyle %}darktheme {% endblock %}
+{% block body %}
+{% include "_nav2.html" with addstyle='glow' %}
+
+    <div class="ukechords-container">
+        <div class="iphone">
+            <div class="cd-product-wrapper">
+                <div id="showpic2" class="cd-single-point">
+                    <a class="cd-img-replace" href="javascript:void(0);"></a>
+                </div>
+
+                <div id="back" class="cd-single-point">
+                    <a class="cd-img-replace" href="javascript:void(0);"></a>
+                </div>
+
+
+
+                <div id="cc" class="cd-single-point pall">
+                    <a class="cd-img-replace" fdata="uc_c"  href="javascript:void(0);"></a>
+                </div>
+
+                <div id="cg" class="cd-single-point pall">
+                    <a class="cd-img-replace" fdata="uc_g"  href="javascript:void(0);"></a>
+                </div>
+
+                <div id="cf"  class="cd-single-point pall">
+                    <a class="cd-img-replace" fdata="uc_f" href="javascript:void(0);"></a>
+                </div>
+
+                <div id="cam" class="cd-single-point pall">
+                    <a class="cd-img-replace" fdata="uc_am" href="javascript:void(0);"></a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="right">
+            <h1 id="appname">UkeChords</h1>
+            <h2>Learn to play ukulele chords<br/>
+from real fingering images</h2>
+            <a href="{{ me.storeurl }}" target="_blank"><img src="/assets/images/uketube/app-store@2x.png" height="63" width="186"></a>
+
+        </div>
+    </div>
+
+
+{# include "_footer2.html" #}
+{% endblock %}

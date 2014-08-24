@@ -34,6 +34,13 @@ window.eum = {
             eum.loadImage( img );
         });
     },
+    preload:function (arrayOfImages) {
+        $(arrayOfImages).each(function(){
+            $('<img/>')[0].src = this;
+            // Alternatively you could use:
+            // (new Image()).src = this;
+        });
+    },
 
     supportTransition: function() {
         var b = document.body || document.documentElement;

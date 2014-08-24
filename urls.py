@@ -41,6 +41,7 @@ urlpatterns += patterns('mainweb.views',
     (r'^piano-chords/$', 'loadtemplate', {'template':'pianochords.html','aid':'pc'}),
     (r'^pro-metronome/$', 'loadtemplate', {'template':'pro-metronome.html','aid':'pm'}),
     (r'^uketube/$', 'loadtemplate', {'template':'uketube.html','aid':'uketube'}),
+    (r'^ukechords/$', 'loadtemplate', {'template':'ukechords.html','aid':'ukechords'}),
 
 
 

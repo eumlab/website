@@ -6,7 +6,9 @@ $(function() {
     var BV = new $.BigVideo({useFlashForFirefox:false});
 	BV.init();
     BV.show([
-        { type: "video/mp4",  src: "/assets/videos/iukebgvideo.mp4" }
+        { type: "video/mp4",  src: "/assets/videos/iukebgvideo.mp4" },
+        { type: "video/mp4",  src: "/assets/videos/iukebgvideo.webm" },
+        { type: "video/mp4",  src: "/assets/videos/iukebgvideo.ogv" }
     ],{ambient:true,doLoop:true});
 
     BV.getPlayer().on("canplaythrough",function(){

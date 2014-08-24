@@ -1,6 +1,7 @@
 html{
     min-width: 980px;
     min-height: 750px;
+    height: 100%;
 }
 body{
     background: transparent no-repeat center url('/assets/images/uketube/bg.jpg');
@@ -8,6 +9,7 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 100%;
 }
 .uketube-container{
     height: 100%;
