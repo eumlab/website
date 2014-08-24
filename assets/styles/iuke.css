@@ -1,0 +1,90 @@
+html{
+    min-width: 980px;
+    min-height: 889px;
+}
+body{
+    background: transparent no-repeat center url('/assets/images/iuke/bg.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.iuke-container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: repeat  url('/assets/images/main/n3.png');
+    overflow: hidden;
+}
+
+div.v2-footer{
+    position: fixed;
+    left: 50%;
+    bottom: 10px;
+    width: 50%;
+    max-width: 480px;
+}
+div.v2-footer .social ul.spicesocialwidget{
+    width: 100%;
+}
+
+.iphone{
+    position: absolute;
+    background: transparent no-repeat url('/assets/images/iuke/iphone-iuke.png');
+    height: 100%;
+    width: 2012px;
+    left: 0;
+    right: 0;
+    background-size: 50%;
+    bottom: 0;
+    background-position: bottom;
+}
+
+.top {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.top h1,
+.top h2{
+    font-weight: 200;
+    color: #FFFFFF;
+    font-size: 30px;
+    padding-top: 90px;
+}
+
+.top h1{
+    font-size: 60px;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.top h2{
+    text-shadow: 0 0 1px rgba(0,0,0,0.5);
+    padding-top: 15px;
+}
+
+.top a{
+    opacity: 0.8;
+    padding-top: 20px;
+    height: 63px;
+    display: inline-block;
+}
+
+.top a:hover{
+    opacity: 1;
+}
+
+.vjs-error-display,
+.vjs-control-bar,
+.vjs-big-play-button,
+.vjs-loading-spinner,
+.vjs-text-track-display,
+.vjs-poster{
+    display: none !important;
+}
+
+#big-video-vid_html5_api{
+    display: none;
+}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}iUke{% endblock %}
+
+
+{% block script %}
+    <script src="/assets/scripts/video.js"></script>
+    <script src="/assets/scripts/bigvideo.js"></script>
+    <script src="/assets/scripts/iuke.js"></script>
+{% endblock %}
+0
+{% block style %}
+    <link href="/assets/styles/bigvideo.css" rel="stylesheet" />
+    <link href="/assets/styles/iuke.css" rel="stylesheet" />
+{% endblock %}
+
+{% block bodystyle %}darktheme {% endblock %}
+{% block body %}
+{% include "_nav2.html" with addstyle='glow' %}
+
+    <div class="iuke-container">
+        <div class="iphone">
+
+        </div>
+
+        <div class="top">
+            <h1 id="appname">iUke</h1>
+            <h2>Learn, Play and Sing Ukulele Songs.</h2>
+            <a href="{{ me.storeurl }}"><img src="/assets/images/uketube/app-store@2x.png" height="63" width="186"></a>
+
+        </div>
+    </div>
+
+
+{# include "_footer2.html" #}
+{% endblock %}
