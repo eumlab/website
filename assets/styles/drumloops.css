@@ -121,7 +121,18 @@ div.v2-footer{
     font-weight: 200;
     font-size: 48px;
     line-height: 150%;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
 }
+
+.section.dark-background{
+     color: #FFF;
+}
+.section.dark-background h1,
+.section.dark-background h2,
+.section.dark-background h3{
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
 .section em{
     font-weight: 400;
 }
@@ -137,5 +148,59 @@ div.v2-footer{
 
 
 .loops-style{
-    padding: 100px 0;
+    padding: 100px 0 200px;
+}
+
+.supported-techs{
+    padding: 50px;
+}
+
+/* Section Change Tempo */
+.change-tempo{
+    height: 900px;
+    background: transparent no-repeat url("/assets/images/drumloops/drumloops-style-bg.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.change-tempo .slogan{
+    padding-top: 100px;
+}
+.change-tempo-ipad{
+    content: " ";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent no-repeat center url("/assets/images/drumloops/changetempo.png");
+    background-position: 50% 50px;
+}
+
+.soundcloud{
+    padding: 50px 100px 50px;
+    max-width: 900px;
+}
+
+
+.demo-tracks.slogan{
+    padding-top: 70px;
+}
+
+.download.section{
+    padding-bottom: 50px;
+}
+.download.section .slogan{
+    padding-top: 100px;
+    padding-bottom: 25px;
+}
+.download.section img{
+    padding-bottom: 15px;
+}
+.download.section a:hover{
+    opacity: 0.8;
 }

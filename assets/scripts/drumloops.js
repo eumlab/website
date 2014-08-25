@@ -26,6 +26,7 @@ $(function() {
         winHeight = win.height(),
         iphone = $(".iphone"),
         appname = $("#appname");
+
         if (winHeight < 750)
             winHeight = 750;// min Height.
         var y = a*winHeight + b;
@@ -36,8 +37,36 @@ $(function() {
 
         var titleTop = winHeight - (winHeight/1.6);
         appname.css({"padding-top":titleTop.toString()+"px"});
+
+
+
     }
 
     $(window).on('resize', resizeMe);
     resizeMe();
+
+
+    function onScroll(e) {
+        var newScroll =  $(window).scrollTop();
+        var jogdial = $(".change-tempo-ipad");
+        //Jog Dial
+        var orgPoz = jogdial.offset().top;
+        var offset = orgPoz - newScroll;
+
+        offset = offset/8.0;//Power
+
+
+        var bgPozY = top.jogPozOrg;
+        bgPozY = parseFloat(bgPozY);
+        bgPozY = bgPozY + offset;
+        jogdial.css({"background-position-y":bgPozY+"px"});
+
+        lastScroll = newScroll;
+    }
+
+    //Scroll
+    top.jogPozOrg = $(".change-tempo-ipad").css("background-position-y").replace("px","");
+    var lastScroll = $(window).scrollTop();
+    $(window).scroll(onScroll);
+    onScroll(null);
 });
