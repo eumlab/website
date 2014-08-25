@@ -42,7 +42,7 @@ urlpatterns += patterns('mainweb.views',
     (r'^pro-metronome/$', 'loadtemplate', {'template':'pro-metronome.html','aid':'pm'}),
     (r'^uketube/$', 'loadtemplate', {'template':'uketube.html','aid':'uketube'}),
     (r'^ukechords/$', 'loadtemplate', {'template':'ukechords.html','aid':'ukechords'}),
-
+    (r'^drum-loops/$', 'loadtemplate', {'template':'drum-loops.html','aid':'dl'}),
 
 
     (r'^daw-remote-hd/$', 'daw_remote_hd'),

@@ -186,14 +186,15 @@ applist["gm"],
 applist["bt"],
 applist["dl"],
 applist["st"],
-applist["pc"],
+applist["dawhd"],
 applist["ut"],
 applist["iuke"],
 applist["ukehero"],
 applist["uke101"],
 applist["ukechords"],
+applist["uketube"],
 applist["chordtunes"],
-applist["dawhd"],
+
 ]
 
 pressApps =[

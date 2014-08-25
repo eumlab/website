@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Drum Loops{% endblock %}
+
+
+{% block script %}
+    <script src="/assets/scripts/video.js"></script>
+    <script src="/assets/scripts/bigvideo.js"></script>
+    <script src="/assets/scripts/drumloops.js"></script>
+{% endblock %}
+0
+{% block style %}
+    <link href="/assets/styles/bigvideo.css" rel="stylesheet" />
+    <link href="/assets/styles/drumloops.css" rel="stylesheet" />
+{% endblock %}
+
+{% block bodystyle %} {% endblock %}
+{% block body %}
+<div class="firstpage-container">
+{% include "_nav2.html" with addstyle='glow' %}
+
+
+    <div class="drumloops-container">
+        <div class="iphone">
+
+        </div>
+
+        <div class="right">
+            <h1 id="appname">Drum Loops</h1>
+            <h2></h2>
+            <a href="{{ me.storeurl }}" target="_blank"><img src="/assets/images/uketube/app-store@2x.png" height="63" width="186"></a>
+
+        </div>
+    </div>
+</div>
+
+<div class="page-container">
+<div class="section ">
+    <h1 class="slogan"><em>Drum Loops</em> Helps You <br/> Get <em>Improved</em> and <em>Inspired</em>!</h1>
+    <h2 class="slogan-desc">With hundreds of beat patterns in 9 music styles,<br/> You can play along with it, or try a style you never played before. </h2>
+    <img class="loops-style" src="/assets/images/drumloops/styles.png" height="356" width="1082" />
+</div>
+
+    <div class="divbreaker bottom-divbreaker"></div>
+
+    {% include "_footer2.html" %}
+    <div class="clearfix"></div>
+</div>
+
+
+{% endblock %}
