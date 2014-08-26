@@ -204,3 +204,31 @@ div.v2-footer{
 .download.section a:hover{
     opacity: 0.8;
 }
+
+
+.appstore-icon::before{
+    content: "a";
+    text-indent: 0 !important;
+    font-size: 70px;
+    font-family: "EUMWeb";
+    color: #fff;
+    display: block;
+    margin-bottom: 100px;
+}
+.appstore-icon{
+    line-height: 200%;
+    display: block;
+    overflow: hidden;
+}
+
+.appstore-icon-bottom::after{
+    content: "A";
+    text-indent: 0 !important;
+    font-size: 90px;
+    font-family: "EUMWeb";
+    color: #1b1b1b;
+    margin-bottom: 100px;
+}
+.appstore-icon-bottom::after:hover{
+    opacity: 0.8;
+}

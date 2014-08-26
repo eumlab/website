@@ -308,3 +308,19 @@ div.v2-footer .social ul.spicesocialwidget{
 .cd-single-point{
     display: none;
 }
+
+
+.appstore-icon::before{
+    content: "a";
+    text-indent: 0 !important;
+    font-size: 70px;
+    font-family: "EUMWeb";
+    color: #fff;
+    display: block;
+    margin-bottom: 100px;
+}
+.appstore-icon{
+    line-height: 200%;
+    display: block;
+    overflow: hidden;
+}

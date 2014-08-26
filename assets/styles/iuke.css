@@ -91,3 +91,20 @@ div.v2-footer .social ul.spicesocialwidget{
 #big-video-vid_html5_api{
     display: none;
 }
+
+
+
+.appstore-icon::before{
+    content: "a";
+    text-indent: 0 !important;
+    font-size: 65px;
+    font-family: "EUMWeb";
+    color: #fff;
+    display: block;
+    margin-bottom: 100px;
+}
+.appstore-icon{
+    line-height: 200%;
+    display: block;
+    overflow: hidden;
+}

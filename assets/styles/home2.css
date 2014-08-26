@@ -352,14 +352,6 @@ img.uke-app-sc{
     text-align: right;
 }
 
-img.icon-app-store{
-    position: absolute;
-    right: 0;
-    bottom: 90px;
-}
-img.icon-learn-more{
-    padding-top: 20px;
-}
 
 .uke-app-sc-right h2{
     padding-top: 94px;
@@ -727,3 +719,33 @@ html.tiny div#sec-intro.section{
 
 
 
+/* App Store Icons */
+
+.learn-more::before{
+    height: 37px;
+    width: 200px;
+    content: "C";
+    color: #2a65c3;
+    font-family: "EUMWeb";
+    font-size: 48px;
+}
+.learn-more:hover{
+    opacity: 0.8;
+}
+
+.appstore-icon-uke{
+    position: absolute;
+    right: 0;
+    bottom: 90px;
+    opacity: 0.8;
+}
+.appstore-icon-uke::before{
+    content: "A";
+    text-indent: 0 !important;
+    font-size: 90px;
+    font-family: "EUMWeb";
+    color: #1b1b1b;
+}
+.appstore-icon-uke:hover{
+    opacity: 1;
+}

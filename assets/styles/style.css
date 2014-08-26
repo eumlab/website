@@ -79,6 +79,15 @@ table {
 	font-style: normal;
 }
 
+@font-face {
+    font-family: 'EUMWeb';
+    src: url('../fonts/eumweb-regular.eot');
+    src: url('../fonts/eumweb-regular.eot') format('embedded-opentype'),
+         url('../fonts/eumweb-regular.woff') format('woff'),
+         url('../fonts/eumweb-regular.ttf') format('truetype'),
+         url('../fonts/eumweb-regular.svg#EUMWebRegular') format('svg');
+}
+
 /*
 @font-face {
 	font-family: 'TitilliumText25L';
@@ -801,10 +810,19 @@ body.insec-intro #idx-header{
     margin-top: -5px;
     display: inline-block;
 }
+.menu-logo h1::before{
+    content: "B";
+    font-family: "EUMWeb";
+
+    font-size: 60px;
+    display: inline-block;
+    margin-top: -21px;
+    vertical-align: middle;
+    padding-right: 5px;
+}
 .menu-logo h1{
     position: relative;
     left: 10px;
-    top: -16px;
     font-size: 24px;
     font-weight: 300;
     color: #333;
