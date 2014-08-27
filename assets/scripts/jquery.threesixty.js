@@ -30,8 +30,8 @@ jQuery.fn.threesixty = function(options){
 
 	$(function() {
 		var cache = [];
-		var parent = $("<div>");
-		parent.css({height:pic.height(), width:pic.width(), overflow:"hidden", position:"relative",visibility:"hidden"});
+		var parent = $("<div class='ani-container'>");
+		parent.css({height:pic.height(), width:pic.width(), position:"relative",visibility:"hidden"});
 		pic.wrap(parent).css({position:"relative",top:0,left:0});
 		parent = pic.parent();
 		//Binding the progress bar
@@ -176,6 +176,9 @@ jQuery.fn.threesixty = function(options){
             window.setInterval(function() {
                 if(pic.data("autostart") != "1")return;
                 pic.attr("src", imgArr[newIndex % imgArr.length])
+                if(options.onPlay != undefined){
+                    options.onPlay(newIndex % imgArr.length);
+                }
                 //console.log(me);
                 newIndex += (pic.data("direction") == "forward" ? 1:-1);
                 //console.log(self);

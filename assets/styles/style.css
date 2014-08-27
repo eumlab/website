@@ -823,6 +823,7 @@ body.insec-intro #idx-header{
 .menu-logo h1{
     position: relative;
     left: 10px;
+    top:3px;
     font-size: 24px;
     font-weight: 300;
     color: #333;

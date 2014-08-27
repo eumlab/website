@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+
+{% block title %}Pro Metronome{% endblock %}
+
+
+{% block script %}
+    <script src="/assets/scripts/video.js"></script>
+    <script src="/assets/scripts/bigvideo.js"></script>
+    <script src="/assets/scripts/jquery.threesixty.js"></script>
+    <script src="/assets/scripts/pro-metronome2.js"></script>
+{% endblock %}
+0
+{% block style %}
+    <link href="/assets/styles/bigvideo.css" rel="stylesheet" />
+    <link href="/assets/styles/pro-metronome2.css" rel="stylesheet" />
+{% endblock %}
+
+{% block bodystyle %} {% endblock %}
+{% block body %}
+<div class="firstpage-container">
+{% include "_nav2.html" with addstyle='glow' %}
+
+
+    <div class="pm-container">
+        <div class="iphone">
+            <img class="screen-ani" />
+        </div>
+
+        <div class="right">
+            <h1 id="appname">Pro Metronome</h1>
+            <h2>The Best Metronome App Ever</h2>
+            <a href="{{ me.storeurl }}" target="_blank" class="appstore-icon" title="Download Pro Metronome">Download Pro Metronome on the App Store</a>
+
+        </div>
+    </div>
+</div>
+
+<div class="page-container">
+<div class="section ">
+    <h1 class="slogan"><em>Pro Metronome</em> Helps Over <em>3 Million</em> People <br/>In Their <em>Daily Training</em> and <em>Stage Performance</em></h1>
+    <h2 class="slogan-desc">It redefines how you sync the beat with Innovative UI Design and Hard-Core Engineering inside.</h2>
+    <img class="daily-training" src="/assets/images/pm2/daily-training.png" height="791" width="1530" />
+</div>
+
+
+<div class="section both-way dark-background">
+    <div class="both-way-iphone"></div>
+    <h1 class="slogan">It's Simple to Use <br/> But Features are not Simple</h1>
+    <div class="two-row-container">
+        <div class="left-row">
+            <h2 class="slogan-desc">It can be just like a traditional metronome<br/> Pick it up, select a tempo, tap and play.</h2>
+            <img src="/assets/images/pm2/iphone-simple.png" height="851" width="407" />
+        </div>
+        <div class="right-row">
+            <h2 class="slogan-desc">It also can be a powerful Rhythm Coach<br/>
+                Time Signature, Sub-Divisions and Polyrhythm.</h2>
+            <img src="/assets/images/pm2/iphone-poly.png" height="851" width="407" />
+        </div>
+    </div>
+</div>
+
+
+<div class="section">
+    <h1 class="slogan">It's Extremely Precise</h1>
+    <h2 class="slogan-desc">Precise timing is important for a metronome.
+    <br/>Pro Metronome uses our brand new RTP (Real-Time Playback) <br/>
+    technology to ensure its accuracy (±20µs).</h2>
+    <img class="supported-techs" src="/assets/images/pm2/precise-iphone.png" height="301" width="1063"/>
+</div>
+
+    <div class="section sync-beat dark-background">
+    <h1 class="slogan">Sync the Beat in Any Possible Way</h1>
+    <div class="three-rows-container">
+        <div class="left-row ">
+            <h2 class="slogan-desc">Vibration</h2>
+            <img class="sync-ani" id="sync-vib" src="/assets/images/pm2/PMH@24fps/PMH_00.png" height="114" width="254">
+            <div class="sync-vib"></div>
+        </div>
+        <div class="center-row">
+            <h2 class="slogan-desc">Beats</h2>
+            <img class="sync-ani" id="sync-beat" src="/assets/images/pm2/PMH@24fps/PMH_00.png" height="114" width="254">
+        </div>
+        <div class="right-row">
+            <h2 class="slogan-desc">Flash</h2>
+            <div class="flash-light"></div>
+        </div>
+    </div>
+    <div class="overlayer"></div>
+</div>
+
+
+<div class="section trainer">
+    <h1 class="slogan">Introducing <em>Rhythm Trainer</em><br/>Tune the Metronome in Your Head!</h1>
+    <h2 class="slogan-desc">We don't want to let you stuck on a metronome forever<br /> Therefore we designed the Rhythm Trainer to train your brain.</h2>
+    <div class="trainer-block-container">
+        <div class="note-container">
+            <img src="/assets/images/pm2/trainer-notes-1.png" height="102" width="304" />
+        </div>
+        <div class="beats-container">
+            <div id="trainer-beat-1" class="beat"></div>
+            <div id="trainer-beat-2"  class="beat"></div>
+            <div id="trainer-beat-3"  class="beat"></div>
+            <div id="trainer-beat-4"  class="beat"></div>
+        </div>
+        <div class="wave-container">
+
+        </div>
+        <div id="trainer-wave" class="wave-hl-container"></div>
+    </div>
+    <p>For example, you can set mute one bar after playing one bar. <br/>During the mute bar, you should keep counting beats in your brain. <br/>When sound come back, you can check if your counting is synced.<br/>
+    You can also increase the difficulty by setting more mute bars.<br/> </p>
+    <a id="show-trainer-video" class="link-video" href="javascript:void(0);" title="See how rhythm trainer works">See how it works</a>
+
+</div>
+
+
+
+<div class="section poly dark-background">
+    <div class="poly-row-container">
+        <div class="left-row poly-closeup">
+
+        </div>
+        <div class="right-row">
+            <h1 class="slogan"><em>Polyrhythm</em><br/>For Drummers</h1>
+            <h2 class="slogan-desc">Practice your drumming skills with <br/>two rhythms played simultaneously.<br/>
+            You need 3-over-4? 4-over-5? <br/>Whatever you want, just simply tap a button. </h2>
+            <a id="show-poly-video" class="link-video" href="javascript:void(0);" title="See how polyrhythm works">See how it works</a>
+        </div>
+    </div>
+
+    <img class="supported-techs" src="/assets/images/drumloops/techs.png" height="167" width="656"/>
+</div>
+
+
+
+<div class="section playlist">
+    <h1 class="slogan"><em>Create</em> and <em>Share</em> <em>Playlists</em></h1>
+    <h2 class="slogan-desc">Save Tempo and other settings to a preset.<br/>
+    Put them into a playlist, you can recall them anytime.<br/>
+    Or share with your band wirelessly.</h2>
+    <img src="/assets/images/pm2/share.png" height="560" width="785" />
+</div>
+<div class="divbreaker" style="margin-top: -3px"></div>
+
+
+<div class="section supported-techs">
+    <h1 class="slogan"><em>AirPlay</em>, <em>Bluetooth</em> and <em>AudioBus</em> Supported</h1>
+    <img class="" src="/assets/images/drumloops/techs.png" height="167" width="656"/>
+    <em></em>
+</div>
+
+<div class="divbreaker"></div>
+
+
+
+<div class="section download">
+    <h1 class="slogan">Pro Metronome</h1>
+    <a class="basic-ani-onlyalpha appstore-icon-bottom" href="{{ me.storeurl }}" target="_blank"><img src="/assets/images/icons/512/prometronome.png" height="256" width="256" />
+    <br />
+    </a>
+
+
+
+</div>
+
+
+    <div class="divbreaker bottom-divbreaker"></div>
+
+    {% include "_footer2.html" %}
+    <div class="clearfix"></div>
+</div>
+
+<div id="popup-wrap">
+    <div class="video-popup">
+        <h2 id="video-title" class="video-title">How the Polyrhythm Works</h2>
+        <div id="video-container">
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
