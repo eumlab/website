@@ -7,8 +7,8 @@ $(function() {
 	BV.init();
     BV.show([
         { type: "video/mp4",  src: "/assets/videos/pmbgvideo.mp4" },
-        { type: "video/mp4",  src: "/assets/videos/iukebgvideo.webm" },
-        { type: "video/mp4",  src: "/assets/videos/iukebgvideo.ogv" }
+        { type: "video/mp4",  src: "/assets/videos/pmbgvideo.webm" },
+        { type: "video/mp4",  src: "/assets/videos/pmbgvideo.ogv" }
     ],{ambient:true,doLoop:true});
 
     BV.getPlayer().on("canplaythrough",function(){
