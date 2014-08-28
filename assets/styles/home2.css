@@ -454,6 +454,20 @@ img#img-uke-app-sc-chordtunes.uke-app-sc{
             padding-right: 10px;
         }
 
+
+/*Uke Apps Fix*/
+#uke-app-sc-id-chordtunes h3{
+    padding-left: 50px;
+}
+#uke-app-sc-id-ukehero h3{
+    padding-left: 150px;
+}
+#uke-app-sc-id-iuke h3{
+    padding-left: 160px;
+}
+#uke-app-sc-id-uketube h3{
+    padding-left: 60px;
+}
 /*****   Section Figure ************/
 .main-section-figure{
     background-color: #a8c0d5;
