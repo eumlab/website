@@ -385,6 +385,9 @@ img#img-uke-app-sc-chordtunes.uke-app-sc{
     top:8%;
     left: -72%;
 }
+img#img-uke-app-sc-uketube.uke-app-sc{
+    left: -50%;
+}
 
 
         /* Small Screen*/
@@ -410,6 +413,9 @@ img#img-uke-app-sc-chordtunes.uke-app-sc{
         #sec-uke.sms .uke-slogan{
             margin-top: -30px;
 
+        }
+        #sec-uke.sms img#img-uke-app-sc-uketube.uke-app-sc{
+            margin-left: 190px;
         }
 
 
@@ -452,6 +458,9 @@ img#img-uke-app-sc-chordtunes.uke-app-sc{
         #sec-uke.tms .uke-app-sc-right h3{
             font-size: 32px;
             padding-right: 10px;
+        }
+        #sec-uke.tms img#img-uke-app-sc-uketube.uke-app-sc{
+            margin-left: 220px;
         }
 
 
