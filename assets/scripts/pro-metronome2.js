@@ -46,6 +46,9 @@ $(function() {
         "margin-top":(365 * scale) + "px",
         "height":(256 *scale )+ "px",
         "width":(570 * scale)+"px"});
+
+        //$(".firstpage-container").css({"height": $(window).height() + "px"});
+        //console.info("do?");
     }
 
     $(window).on('resize', resizeMe);

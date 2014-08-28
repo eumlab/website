@@ -1,8 +1,6 @@
 html{
     min-width: 980px;
-    min-height: 889px;
     height: 100%;
-
 }
 body{
     background: transparent no-repeat center url('/assets/images/pm2/bg.jpg');
