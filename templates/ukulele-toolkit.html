@@ -1,9 +1,205 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}Ukulele Toolkit{% endblock %}
+
+
+{% block script %}
+    <script src="/assets/scripts/video.js"></script>
+    <script src="/assets/scripts/bigvideo.js"></script>
+    <script src="/assets/scripts/jquery.threesixty.js"></script>
+    <script src="/assets/scripts/ukulele-toolkit.js"></script>
+{% endblock %}
+0
+{% block style %}
+    <link href="/assets/styles/bigvideo.css" rel="stylesheet" />
+    <link href="/assets/styles/ukulele-toolkit.css" rel="stylesheet" />
+{% endblock %}
+
+{% block bodystyle %} {% endblock %}
+{% block body %}
+<div class="firstpage-container">
+{% include "_nav2.html" with addstyle='glow' %}
+
+
+    <div class="ut-container">
+        <div class="iphone">
+        </div>
+
+        <div class="right">
+            <h1 id="appname">{{ me.name }}</h1>
+            <h2>Everything A Uke Player Needs<br/>
+            Tuner, Metronome, Scales, Chords and more</h2>
+            <a href="{{ me.storeurl }}" target="_blank" class="appstore-icon" title="Download {{ me.name }}">Download {{ me.name }} on the App Store</a>
+
+        </div>
+    </div>
+</div>
+
+<div class="page-container">
+<div class="section ">
+    <h1 class="slogan"><em>{{ me.name }}</em> Helps You<br/> In Your Uke <em>Learning</em> and <em>Daily Training</em>.</h1>
+    <h2 class="slogan-desc">Tune your ukulele, practice scales, find chords, play with a metronome. </h2>
+    <div class="tools-4-iphones"></div>
+</div>
+
+
+<div class="section both-way dark-background">
+    <div class="both-way-iphone"></div>
+
+    <div class="two-row-container">
+        <div id="tuner-ani-container" class="left-row">
+            <div id="tuner-ani">
+                <video autoplay loop preload width="640" height="472" poster="/assets/images/ut/tuner-poster.jpg" >
+                     <source src="/assets/videos/ukulele-toolkit-tuner.mp4" type='video/mp4' />
+                     <source src="/assets/videos/ukulele-toolkit-tuner.webm" type='video/webm' />
+                     <source src="/assets/videos/ukulele-toolkit-tuner.ogv" type='video/ogg' />
+                </video>
+            </div>
+        </div>
+        <div class="right-row">
+            <h1 class="slogan"><em>Pro-Level Tuner</em></h1>
+            <h2 class="slogan-desc">With intuitive tuning color bars, <br/>
+you can find your current tune just in seconds.<br/>
+It is highly accurate (up to ±0.1 cent precise). <br/>
+It also includes real ukulele string sound <br/>
+with which you can use to tune by ear.<br/> </h2>
+            <a id="show-tuner-video" class="link-video" href="javascript:void(0);" title="See how tuner works">See how it works</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="section metronome">
+    <h1 class="slogan">The Extremely Precise <em>Metronome</em><br/> With <em>Strumming Patterns</em> and <em>Drum Loops</em></h1>
+    <h2 class="slogan-desc">The metronome benefits from our RTP technology, it is extremely precise (±20µs).<br/>
+        It supports flexible Time Signature changing mode and 14 built-in tones.<br/>
+        With built-in 13 Strumming patterns and 116 drum loops, you can practice more easily.
+        <br/>
+
+    </h2>
+    <a id="show-metronome-video" class="link-video" href="javascript:void(0);" title="See how tuner works">Lean More</a>
+    <img class="metronome-iphone" src="/assets/images/ut/ut-metronome.png" height="556" width="993"/>
+</div>
+
+<div class="section scale">
+    <div class="two-row-container">
+        <div  class="left-row">
+
+        </div>
+        <div class="right-row">
+            <h1 class="slogan"><em>108</em>Musical Scales</h1>
+            <h2 class="slogan-desc">Scale is the spirits of different music styles.<br/>
+            You can find Blues, Jazz, Japanese, Arabian and more scales in Ukulele Toolkit </h2>
+        </div>
+    </div>
+
+</div>
+
+
+
+    <div class="section chords dark-background">
+    <h1 class="slogan">Find and Learn Chords</h1>
+    <h2 class="slogan-desc">You can find chords by notes.<br/> Each note contains 25 type of chords with hundreds of fingering positions.</h2>
+    <div class="chord-chards"></div>
+    <p>Supported chord types: Major, Minor, 7th, Minor 7th, Major 7th, 5th, 6th, Minor 6th, 9th, <br/>Minor 9, 6/9, 7♭5, 7♯5, Minor 7♭5, 7♭9, 7♯9, Dim 7th, Aug, 7th Sus, Sus 2, Sus 4, Add 9th, Minor add 9th, 11th, Minor 11</p>
+    <div class="overlayer"></div>
+</div>
+
+
+<div class="section transposer">
+    <h1 class="slogan">Introducing <em>5th Circle</em>  With <em>Chord Transposer</em> <br/>A Better Way to Find Chords</h1>
+    <h2 class="slogan-desc">Most of songs are written based on music theory. <br/> If you play a song in C Major, most of time you only need C, G, Am and F chord.<br/>
+    With Ukulele Toolkit, all chords you may use can be present into one screen. <br/>
+    Moreover, you can use it to transpose chords from one key to another.</h2>
+
+    <div class="two-row-container">
+        <div class="left-row">
+            <h2 class="slogan-desc" id="chords-5th-ks"></h2>
+            <div class="chords-5th-container">
+                <div id="chords-5th">
+
+                </div>
+                <div id="chords-5th-cover">
+
+                </div>
+            </div>
+        </div>
+        <div class="right-row">
+                <div id="chords-5th-iphone" class="basic-ani" >
+                    <!--<img src="/assets/images/ut/transpose-a.jpg" height="450" width="400" class="basic-ani" />-->
+                </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="section poly dark-background">
+    <div class="poly-row-container">
+        <div class="left-row progression-closeup">
+
+        </div>
+        <div class="right-row">
+            <h1 class="slogan"><em>Chord Progressions</em></h1>
+            <h2 class="slogan-desc">Do you know magic four chords?<br/>
+            Yes! That's right! C, G, Am,F! <br/>Most of songs are using one chord progression.<br/>
+            Once you can play a chord progression, <br/>
+            You can use it to play thousands of songs. <br/> <br/>
+            In Ukulele Toolkit, you can hear and learn those patterns,<br/>
+            Moreover, you can transpose those progressions to any key.</h2>
+            <a id="show-progressions-video" class="link-video" href="javascript:void(0);" title="See how polyrhythm works">See how it works</a>
+        </div>
+    </div>
+
+    <img class="supported-techs" src="/assets/images/drumloops/techs.png" height="167" width="656"/>
+</div>
+
+
+
+<div class="section playlist">
+    <h1 class="slogan">All Features Are Available For<br/>
+        <em>Tenor</em>, <em>Soprano</em> and <em>Baritone</em> Ukulele</h1>
+    <h2 class="slogan-desc">You can tune your ukulele to C Tuning, D Tuning or Baritone Tuning. <br/>
+    Tuner, Scales, Chords and everything will be changed for the tuning you selected.</h2>
+    <img class="" src="/assets/images/ut/ukes.png" height="786" width="976"/>
+</div>
+
+
+<div class="section supported-techs">
+    <h1 class="slogan"><em>AirPlay</em>, <em>Bluetooth</em> and <em>AudioBus</em> Supported</h1>
+    <img class="" src="/assets/images/drumloops/techs.png" height="167" width="656"/>
+    <em></em>
+</div>
+
+<div class="divbreaker"></div>
+
+
+
+<div class="section download">
+    <h1 class="slogan">Ukulele Toolkit</h1>
+    <a class="basic-ani-onlyalpha appstore-icon-bottom" href="{{ me.storeurl }}" target="_blank"><img src="/assets/images/icons/512/ukuleletoolkit.png" height="256" width="256" />
+    <br />
+    </a>
+
+
+
+</div>
+
+
+    <div class="divbreaker bottom-divbreaker"></div>
+
+    {% include "_footer2.html" %}
+    <div class="clearfix"></div>
+</div>
+
+<div id="popup-wrap">
+    <div class="video-popup">
+        <h2 id="video-title" class="video-title">How the Polyrhythm Works</h2>
+        <div id="video-container">
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

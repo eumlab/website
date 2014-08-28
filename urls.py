@@ -43,6 +43,7 @@ urlpatterns += patterns('mainweb.views',
     (r'^uketube/$', 'loadtemplate', {'template':'uketube.html','aid':'uketube'}),
     (r'^ukechords/$', 'loadtemplate', {'template':'ukechords.html','aid':'ukechords'}),
     (r'^drum-loops/$', 'loadtemplate', {'template':'drum-loops.html','aid':'dl'}),
+    (r'^ukulele-toolkit/$', 'loadtemplate', {'template':'ukulele-toolkit.html','aid':'ut'}),
 
 
     (r'^daw-remote-hd/$', 'daw_remote_hd'),
@@ -54,7 +55,7 @@ urlpatterns += patterns('mainweb.views',
     (r'^instuner/$', 'instuner'),
     (r'^daw-remote/$', 'daw_remote'),
     (r'^chordtunes/$', 'chordtunes'),
-    (r'^ukulele-toolkit/$', 'ukulele'),
+    #(r'^ukulele-toolkit/$', 'ukulele'),
 
     (r'^ukulele/$',"redirector",{"where":"/ukulele-toolkit/"}),
 
