@@ -1,0 +1,19 @@
+<script type="application/javascript">
+top.reviewIdx = 0;
+top.reviews = [
+    {% for review in me.reviews %}
+        "{{ review }}" {% if forloop.last %}{% else %},{% endif %}
+    {% endfor %}
+];
+</script>
+<div class="app-reviews-container">
+    <h1>Check Out What People Are Saying</h1>
+    <div class="app-reviews">
+            <p id="review-content">{{ me.reviews.first }}</p>
+            <div class="review-left-quo">“</div>
+            <div class="review-right-quo">”</div>
+    </div>
+    <div class="review-change-progressbar-bg">
+        <div id="review-change-progressbar"></div>
+    </div>
+</div>

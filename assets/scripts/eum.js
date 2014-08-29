@@ -169,22 +169,6 @@ window.eum = {
 }
 
 $(function() {
-    $(".btn-video").click(function(e) {
-        e.preventDefault();
-
-        var btn = $(e.currentTarget),
-            link = btn.attr('href'),
-            popup = $('<div class="popup">\
-                        <iframe width="900" height="510" src="' + link + '" \
-                            frameborder="0" allowfullscreen=""></iframe><span class="btn-close">&times;</span></div>');
-
-        popup.appendTo(document.body);
-    });
-
-    $('body').on('click', '.popup .btn-close', function() {
-        $(this).parent('.popup').remove();
-    });
-
 
     $("#menu-logo").click(function(){
         if($.fn.fullpage == undefined){
@@ -212,6 +196,31 @@ $(function() {
         window.eum.hideMenuContainer();
     });
 
+    function changeReviews(){
+        var wpm = 200.0;//Words per Min
+        var dpm = 60.0 * 1000.0 /wpm; //Delay in ms
+        var idx = top.reviewIdx;
+        if(idx >= top.reviews.length)
+            idx=0;
+        var content = top.reviews[idx];
+        var contentWords = content.split(' ').length;
+        $("#review-content").fadeOut(300,function(){
+            $("#review-content").html(content);
+            $("#review-change-progressbar").css({width:"0%"});
+            $("#review-content").fadeIn(300,function(){
+                var delay = contentWords * dpm;
+                //console.info("Words",contentWords," Delay:", delay);
+                $("#review-change-progressbar").animate({width:"100%"},delay,"linear",function(){
+                    changeReviews();
+                });
+            });
+        });
+        top.reviewIdx = idx+1;
+    }
+    if(top.reviews != undefined){
+        changeReviews();
+
+    }
 
 });
 

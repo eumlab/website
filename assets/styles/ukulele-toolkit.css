@@ -707,3 +707,11 @@ div.v2-footer{
     background: transparent no-repeat top center url('/assets/images/ut/transpose-c2.jpg');
 
 }
+
+/* Reviews */
+.section.review{
+    padding-top: 50px;
+}
+.section.review h1{
+    font-size: 30px;
+}

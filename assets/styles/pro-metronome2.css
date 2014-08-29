@@ -631,3 +631,11 @@ div.v2-footer{
     width: 70%;
     height: 100%;
 }
+
+/* Reviews */
+.section.review{
+    padding-top: 50px;
+}
+.section.review h1{
+    font-size: 30px;
+}
