@@ -639,3 +639,41 @@ div.v2-footer{
 .section.review h1{
     font-size: 30px;
 }
+
+
+/* Feature List */
+.feature-container{
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 20px;
+}
+
+.feature-row{
+    margin-left: 10px;
+    width: 320px; /* 320x3 = 960px */
+    display: inline-block;
+}
+.feature-item h2{
+    font-size: 24px;
+    font-weight: 200;
+}
+.feature-item p{
+    font-size: 18px;
+    line-height: 130%;
+    font-weight: 100;
+    padding: 5px;
+}
+.feature-icon::before{
+    content: " ";
+    font-family: "entypo";
+    font-size: 37px;
+    color: #1f94ff;
+    padding-right: 5px;
+}
+
+/* Icons */
+.pm-feature-airplay::before{
+    content: "";
+}
