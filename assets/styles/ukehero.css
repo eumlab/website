@@ -1,0 +1,113 @@
+body {
+    background: #fff;
+}
+
+.ukehero-container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: url('/assets/images/ukehero/highlight-bg.png') no-repeat center center;
+    background-size: cover;
+}
+
+.iphone{
+    position: absolute;
+    left: 0;
+    top: 124px;
+    background: transparent no-repeat url('/assets/images/ukehero/highlight-ip.png') 0 0;
+    height: 1484px;
+    width: 1432px;
+    background-size: 50%;
+}
+
+.right{
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    height: 100%;
+    width: 50%;
+    margin-left: 120px;
+}
+
+.right h1,
+.right h2{
+    font-weight: 200;
+    color: #4d696d;
+    font-size: 32px;
+}
+
+.right h1{
+    font-size: 62px;
+    font-weight: 600;
+    padding-top: 45%;
+}
+.right h2{
+    text-shadow: 0 0 1px rgba(0,0,0,0.5);
+    padding-top: 15px;
+}
+
+.right a {
+    opacity: 0.8;
+    padding-top: 40px;
+    height: 63px;
+    display: inline-block;
+}
+
+.right a:hover{
+    opacity: 1;
+}
+
+.firstpage-container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.page-container{
+    width: 100%;
+    font-weight: 300;
+    min-width: 980px;
+    min-height: 200px;
+    color: #1b1b1b;
+    font-family: "proxima-nova" "helveticaneue-light", "Helvetica Neue", Helvetica, "Hiragino Sans GB" , arial, sans-serif;
+}
+
+.appstore-icon::before{
+    content: "a";
+    text-indent: 0 !important;
+    font-size: 70px;
+    font-family: "EUMWeb";
+    color: #29383e;
+    display: block;
+    margin-bottom: 100px;
+}
+.appstore-icon{
+    line-height: 200%;
+    display: block;
+    overflow: hidden;
+}
+
+.appstore-icon-bottom {
+    position: absolute;
+    left: 50%;
+    top: 140px;
+    margin-left: -380px;
+}
+
+.appstore-icon-bottom::after{
+    content: "A";
+    text-indent: 0 !important;
+    font-size: 70px;
+    font-family: "EUMWeb";
+    color: #1b1b1b;
+    margin-bottom: 100px;
+}
+
+.appstore-icon-bottom img {
+    margin-bottom: 20px;
+}
+
+.appstore-icon-bottom::after:hover{
+    opacity: 0.8;
+}

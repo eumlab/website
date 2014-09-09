@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}UkeHero{% endblock %}
+
+{% block script %}
+    <script src="/assets/scripts/ukehero.js"></script>
+{% endblock %}
+0
+{% block style %}
+    <link href="/assets/styles/ukehero.css" rel="stylesheet" />
+{% endblock %}
+
+{% block bodystyle %} {% endblock %}
+
+{% block body %}
+<div class="firstpage-container">
+    {% include "_nav2.html" %}
+
+    <div class="ukehero-container">
+        <div class="iphone"></div>
+
+        <div class="right">
+            <h1 id="appname">UkeHero</h1>
+            <h2>Play Your iPhone<br/>Like A Real Ukulele</h2>
+            <a href="{{ me.storeurl }}" target="_blank" class="appstore-icon">Download on the App Store</a>
+        </div>
+    </div>
+</div>
+
+<div class="page-container">
+<!--
+    <div class="section ">
+        <h1 class="slogan"><em>Drum Loops</em>: An All-Purpose <em>Learning Tool</em><br/>That Gives You Practice Loops For Any Occasion.</h1>
+        <h2 class="slogan-desc">
+    Improve your technique with 100s of beat patterns in 9 music styles – <br/>
+    Play along with familiar styles pick one you've never tried before.</h2>
+        <img class="loops-style" src="/assets/images/drumloops/styles.png" height="356" width="1082" />
+    </div>
+
+
+    <div class="section change-tempo dark-background">
+        <div class="change-tempo-ipad"></div>
+        <h1 class="slogan">Change Tempo<br/><em>Without Losing Quality</em></h1>
+        <h2 class="slogan-desc">The easy-to-use jog wheel<br/>lets you choose the tempo that's right for you.</h2>
+    </div>
+
+    <div class="section">
+        <h1 class="slogan demo-tracks">Listen Up!</h1>
+        <h2 class="slogan-desc">Check out some of the options available in Drum Loops<br/>
+    on our SoundCloud page. Recorded directly from the app!</h2>
+    <iframe class="soundcloud" width="100%" height="540" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/48310123&amp;color=448dd7&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>
+    </div>
+
+    <div class="section">
+        <h1 class="slogan"><em>AirPlay</em>, <em>Bluetooth</em> and <em>AudioBus</em> Supported</h1>
+        <img class="supported-techs" src="/assets/images/drumloops/techs.png" height="167" width="656"/>
+    </div>
+
+    <div class="divbreaker"></div>
+
+
+
+
+    <div class="section download">
+        <h1 class="slogan">Drum Loops</h1>
+        <a class="basic-ani-onlyalpha appstore-icon-bottom" href="{{ me.storeurl }}" target="_blank"><img src="/assets/images/icons/512/drumloops.png" height="256" width="256" />
+        <br />
+        </a>
+
+
+    </div>
+
+
+    <div class="divbreaker bottom-divbreaker"></div>
+
+    {% include "_footer2.html" %}
+    <div class="clearfix"></div>
+    -->
+</div>
+
+{% endblock %}
