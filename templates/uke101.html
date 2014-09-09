@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block title %}Uke 101{% endblock %}
+
+
+{% block script %}
+    <script src="/assets/scripts/uke101.js"></script>
+{% endblock %}
+
+{% block style %}
+    <link href="/assets/styles/uke101.css" rel="stylesheet" />
+{% endblock %}
+
+{% block bodystyle %}{% endblock %}
+
+{% block body %}
+<div class="firstpage-container">
+    {% include "_nav2.html" with addstyle='glow' %}
+
+    <div class="uke101-container">
+        <div class="iphone"></div>
+
+        <div class="right">
+            <h1 id="appname">Uke 101</h1>
+            <h2>Learn To Play Ukulele <br/>With Lessons, Games & Songs</h2>
+            <a href="{{ me.storeurl }}" target="_blank" class="appstore-icon" >Download Uke 101 on the App Store</a>
+        </div>
+    </div>
+</div>
+
+<div class="page-container">
+    <div class="section learn-play">
+        <h1 class="slogan">
+            Learn to play<br /><em>Could Be Easier</em>
+        </h1>
+        <h2 class="slogan-desc">
+            From 29 lessons with lots of sound samples, pictures, videos, and visual notation.<br/>You will find it easier than ever to learn different ukulele techniques,<br/>
+            from reading tabs, tuning to advanced chord progressions and scales.<br/>
+            <a href="#">See all lessons</a>
+        </h2>
+        <div class="tree">
+            <div class="lesson-0 scale"></div>
+            <div class="lesson-1"></div>
+            <div class="lesson-2"></div>
+            <div class="lesson-3"></div>
+            <div class="lesson-4"></div>
+            <div class="lesson-5"></div>
+            <div class="lesson-6"></div>
+            <div class="lesson-7"></div>
+            <div class="lesson-8"></div>
+            <div class="lesson-13"></div>
+            <div class="lesson-30"></div>
+            <div class="lesson-34"></div>
+        </div>
+    </div>
+
+    <div class="section two-perspective">
+        <h1 class="slogan">One Chord, <em>Two Perspectives</em></h1>
+        <h2 class="slogan-desc">
+            Instead of showing chord fingering only in 3rd person perspective like others,<br/>
+            In Uke101, you can find how to press a chord from the first person perspective.<br/>
+            Just like holding a ukulele in you hand.
+        </h2>
+        <div id="two-perspective-left" class="two-perspective-ani"></div>
+        <div id="two-perspective-right" class="two-perspective-ani"></div>
+    </div>
+
+    <div class="section interactive-content dark-background">
+        <h1 class="slogan"><em>Interactive Content</em></h1>
+        <h2 class="slogan-desc">Every boring thing in the book, can be interesting in the Uke101</h2>
+        <ul class="items">
+            <li class="item learn-from-games">
+                <h3>Learn from Games</h3>
+                <p>This is where the real fun starts. Practice the chords, different types of strumming, scales, and even the music theory.</p>
+            </li>
+            <li class="item magic-chord-trainer">
+                <h3>Magic Chord Trainer</h3>
+                <p>With magic chord trainner, you play along with chords, and Uke101 will listen in real time and tell you how you're doing.</p>
+            </li>
+            <li class="item play-and-sing-it">
+                <h3>Play and Sing it !</h3>
+                <p>Record what you’ve learned and then share it on social media. You’ll be surprised at all the songs you can play on a ukulele!!</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section download">
+        <h1 class="slogan"><em>Featuring</em></h1>
+        <ul class="features">
+            <li>From 29 lessons with lots of sound samples</li>
+            <li>One Chord, Two Perspectives</li>
+            <li>Practice the chords, different types of strumming, scales</li>
+            <li>From 29 lessons with lots of sound samples</li>
+            <li>One Chord, Two Perspectives</li>
+            <li>Practice the chords, different types of strumming, scales</li>
+        </ul>
+        <a class="basic-ani-onlyalpha appstore-icon-bottom" href="{{ me.storeurl }}" target="_blank">
+            <img src="/assets/images/icons/512/uke101.png" height="200" width="200" />
+            <br/>
+        </a>
+    </div>
+
+    <div class="divbreaker bottom-divbreaker"></div>
+
+    {% include "_footer2.html" %}
+    <div class="clearfix"></div>
+</div>
+
+{# include "_footer2.html" #}
+{% endblock %}
