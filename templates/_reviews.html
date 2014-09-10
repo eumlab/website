@@ -12,6 +12,11 @@ top.reviews = [
             <p id="review-content">{{ me.reviews.first }}</p>
             <div class="review-left-quo">“</div>
             <div class="review-right-quo">”</div>
+        <ul class="nondisplay">
+            {% for review in me.reviews %}
+                <li>{{ review }}</li>
+            {% endfor %}
+        </ul>
     </div>
     <div class="review-change-progressbar-bg">
         <div id="review-change-progressbar"></div>

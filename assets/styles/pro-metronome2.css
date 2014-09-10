@@ -647,12 +647,3 @@ div.v2-footer{
 li.feature-item p em{
     font-style: italic;
 }
-/*.pm-feature-airplay::before{
-    content: "";
-}
-.pm-feature-audiobus::before{
-    content: "";
-}
-.pm-feature-iaa::before{
-    content: "";
-}*/
