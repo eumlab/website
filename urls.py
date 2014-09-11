@@ -46,6 +46,7 @@ urlpatterns += patterns('mainweb.views',
     (r'^ukulele-toolkit/$', 'loadtemplate', {'template':'ukulele-toolkit.html','aid':'ut'}),
     (r'^uke101/$', 'loadtemplate', {'template':'uke101.html','aid':'uke101'}),
     (r'^guitar-master/$', 'loadtemplate', {'template':'guitar-master.html','aid':'gm'}),
+    (r'^bass-toolkit/$', 'loadtemplate', {'template':'bass-toolkit.html','aid':'bt'}),
 
     (r'^daw-remote-hd/$', 'daw_remote_hd'),
     (r'^daw-remote-hd/docs/$', 'drh_docs'),

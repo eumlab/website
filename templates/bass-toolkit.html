@@ -1,0 +1,251 @@
+{% extends 'base.html' %}
+
+{% block title %}Bass Toolkit{% endblock %}
+
+
+{% block script %}
+    <script src="/assets/scripts/video.js"></script>
+    <script src="/assets/scripts/bigvideo.js"></script>
+    <script src="/assets/scripts/jquery.threesixty.js"></script>
+    <script src="/assets/scripts/bass-toolkit.js"></script>
+{% endblock %}
+0
+{% block style %}
+    <link href="/assets/styles/bigvideo.css" rel="stylesheet" />
+    <link href="/assets/styles/bass-toolkit.css" rel="stylesheet" />
+{% endblock %}
+
+{% block bodystyle %} {% endblock %}
+{% block body %}
+<div class="firstpage-container">
+{% include "_nav2.html" with addstyle='glow' %}
+
+
+    <div class="ut-container">
+        <div class="iphone">
+        </div>
+
+        <div class="right">
+            <h1 id="appname">{{ me.name }}</h1>
+            <h2>Everything a bass player needs <br/> right in your pocket.</h2>
+            <a href="{{ me.storeurl }}" target="_blank" class="appstore-icon" title="Download {{ me.name }}">Download {{ me.name }} on the App Store</a>
+
+        </div>
+    </div>
+</div>
+
+<div class="page-container">
+<div class="section intro dark-background">
+    <h1 class="slogan"><em>{{ me.name }}</em> <br/>Inspiring tools for aspiring bass players.</h1>
+    <h2 class="slogan-desc">Train, tune, learn, and more – <br/>whether practicing, performing, composing or in session, <br/>{{ me.name }} helps you get the most out of your instrument.</h2>
+    <div class="tools-4-iphones"></div>
+</div>
+
+
+<div class="section both-way dark-background">
+    <div class="both-way-iphone"></div>
+
+    <div class="two-row-container">
+        <div id="tuner-ani-container" class="left-row">
+            <div id="tuner-ani">
+                <video autoplay loop preload width="640" height="472" poster="/assets/images/ut/tuner-poster.jpg" >
+                     <source src="/assets/videos/ukulele-toolkit-tuner.mp4" type='video/mp4' />
+                     <source src="/assets/videos/ukulele-toolkit-tuner.webm" type='video/webm' />
+                     <source src="/assets/videos/ukulele-toolkit-tuner.ogv" type='video/ogg' />
+                </video>
+            </div>
+        </div>
+        <div class="right-row">
+            <h1 class="slogan"><em>Pro-Level Tuning</em></h1>
+            <h2 class="slogan-desc">Fix up your tuning using {{ me.name }}'s<br/> chromatic tuner with intuitive color bars.<br/>
+Highly accurate – up to ±0.1 cent precision – <br/>the tuner includes real string sounds to help you tune by ear. Go from great to perfect tuning in seconds.<br/> </h2>
+            <a id="show-tuner-video" class="link-video" href="javascript:void(0);" title="See how tuner works">See how it works</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="section metronome">
+    <h1 class="slogan">The Extremely Precise <em>Metronome</em> And <em>Drum Loops</em></h1>
+    <h2 class="slogan-desc">The metronome uses EUMLab's RTP (Real-Time Playback) technology <br/>
+to ensure accuracy to 20 microseconds (±20µs).<br/>
+It supports flexible time signatures with 14 different tones,<br/>
+complete with 116 drum loops to make your practice easier.<br/>
+        <br/>
+
+    </h2>
+    <a id="show-metronome-video" class="link-video" href="javascript:void(0);" title="See how tuner works">Lean More</a>
+    <img class="metronome-iphone" src="/assets/images/bt/bt-metronome.png" height="556" width="993"/>
+</div>
+
+<div class="section scale">
+    <div class="two-row-container">
+        <div  class="left-row">
+
+        </div>
+        <div class="right-row">
+            <h1 class="slogan"><em>108</em> Musical Scales</h1>
+            <h2 class="slogan-desc">Scales are the soul music.<br/>
+            {{ me.name }} features 108 different ones from all over the world,
+                from Blues and Jazz, to Japanese, Middle Eastern and more.<br/>
+Use them to learn and explore new sounds and styles.</h2>
+        </div>
+    </div>
+
+</div>
+
+
+
+    <div class="section chords dark-background">
+    <h1 class="slogan">Interactive Guitar Tabs</h1>
+    <h2 class="slogan-desc">Guitar Master's tab list contains thousands of chords, probably more than you'll ever need.<br/>
+    Learn new chords and even look them up by name or by note – <br/>You'll be able to learn them by seeing and hearing them at the same time.
+</h2>
+    <div class="chord-chards"></div>
+    <p>Supported chord types: Major, Minor, 7th, Minor 7th, Major 7th, 5th, 6th, Minor 6th, 9th, <br/>Minor 9, 6/9, 7♭5, 7♯5, Minor 7♭5, 7♭9, 7♯9, Dim 7th, Aug, 7th Sus, Sus 2, Sus 4, Add 9th, Minor add 9th, 11th, Minor 11</p>
+    <div class="overlayer"></div>
+</div>
+
+
+<div class="section transposer">
+    <h1 class="slogan">Introducing the <em>5th Circle</em>  With <em>Chord Transposer</em> <br/>A Better Way To Find And Learn Chords</h1>
+    <h2 class="slogan-desc">Most songs we hear are written based on common groups of chords that change in similar ways. <br/>
+With 5th Circle, you can easily visualize common chord changes in one interactive screen. <br/>
+You can even use it to help you transpose chords into a new key.</h2>
+
+    <div class="two-row-container">
+        <div class="left-row">
+            <h2 class="slogan-desc" id="chords-5th-ks"></h2>
+            <div class="chords-5th-container">
+                <div id="chords-5th">
+
+                </div>
+                <div id="chords-5th-cover">
+
+                </div>
+            </div>
+        </div>
+        <div class="right-row">
+                <div id="chords-5th-iphone" class="basic-ani" >
+                    <!--<img src="/assets/images/ut/transpose-a.jpg" height="450" width="400" class="basic-ani" />-->
+                </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="section poly dark-background">
+    <div class="poly-row-container">
+        <div class="left-row progression-closeup">
+
+        </div>
+        <div class="right-row">
+            <h1 class="slogan"><em>Chord Progressions</em></h1>
+            <h2 class="slogan-desc">Have you heard of the "Magic Four" chords?<br/>
+            It's G, D, Em, and C, and many songs use just this one progression!
+Once you've mastered it, you can use it to play thousands of songs.  <br/> <br/>
+            You can use {{ me.name }} to hear and learn the "Magic Four" chords and then transpose them into other keys.</h2>
+            <a id="show-progressions-video" class="link-video" href="javascript:void(0);" title="See how chord progression works">See how it works</a>
+        </div>
+    </div>
+
+    <img class="supported-techs" src="/assets/images/drumloops/techs.png" height="167" width="656"/>
+</div>
+
+
+
+<div id="Features" class="section supported-techs">
+    <h2 class="slogan-desc">Other Cool Features</h2>
+
+    <ul class="feature-container">
+        <li class="feature-item">
+            <h2 class="feature-tone feature-icon">13 Tones</h2>
+            <p>Well selected metronome sound, including beat voice counting.</p>
+        </li>
+        <li class="feature-item">
+            <h2 class="feature-tap feature-icon">TAP</h2>
+            <p>TAP to calculate tapping BPM in real time.</p>
+        </li>
+        <li class="feature-item">
+            <h2 class="feature-lefthanded feature-icon">Left Handed</h2>
+            <p>All chord diagrams and scales support left-handed.</p>
+        </li>
+        <li class="feature-item">
+            <h2 class="feature-capo feature-icon">Capo</h2>
+            <p>Support transpose using a capo.</p>
+        </li>
+        <li class="feature-item">
+            <h2 class="feature-uke feature-icon">79 Tunings</h2>
+            <p>Support standard, lower, higher, dropped, double-dropped, major open and more tunings.</p>
+        </li>
+        <li class="feature-item">
+            <h2 class="feature-a4 feature-icon">Changeable A4</h2>
+            <p>Support customizable A4 reference frequency.</p>
+        </li>
+        <li class="feature-item">
+            <h2 class="feature-airplay feature-icon">AirPlay</h2>
+            <p>AirPlay allows you beem your sound to Apple TV or other AirPlay speakers.</p>
+        </li>
+        <li class="feature-item">
+            <h2 class="feature-audiobus feature-icon">AudioBus</h2>
+            <p>With AudioBus, you can use it as an input source to other music apps.</p>
+        </li>
+        <li class="feature-item">
+            <h2 class="feature-iaa feature-icon">Inter-App Audio</h2>
+            <p>Inter-App Audio allows you to route Pro Metronome sound to other music Apps, such as GarageBand.</p>
+        </li>
+    </ul>
+
+    <em></em>
+</div>
+
+<!--<div class="section playlist">
+    <h1 class="slogan">All Features Are Available For<br/>
+        <em>Tenor</em>, <em>Soprano</em> and <em>Baritone</em> Ukulele</h1>
+    <h2 class="slogan-desc">You can tune your ukulele to C Tuning, D Tuning or Baritone Tuning. <br/>
+    Tuner, Scales, Chords and everything will be changed for the tuning you selected.</h2>
+    <img class="" src="/assets/images/ut/ukes.png" height="786" width="976"/>
+</div>
+
+
+<div class="section supported-techs">
+    <h1 class="slogan"><em>AirPlay</em>, <em>Bluetooth</em> and <em>AudioBus</em> Supported</h1>
+    <img class="" src="/assets/images/drumloops/techs.png" height="167" width="656"/>
+    <em></em>
+</div>
+-->
+
+<div class="divbreaker"></div>
+
+<div class="section review">
+        {% include "_reviews.html" %}
+</div>
+
+
+<div class="section download">
+    <h1 class="slogan">{{ me.name }}</h1>
+    <a class="basic-ani-onlyalpha appstore-icon-bottom" href="{{ me.storeurl }}" target="_blank"><img src="/assets/images/icons/512/basstoolkit.png" height="256" width="256" />
+    <br />
+    </a>
+</div>
+
+
+
+    <div class="divbreaker bottom-divbreaker"></div>
+
+    {% include "_footer2.html" %}
+    <div class="clearfix"></div>
+</div>
+
+<div id="popup-wrap">
+    <div class="video-popup">
+        <h2 id="video-title" class="video-title">How the Polyrhythm Works</h2>
+        <div id="video-container">
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
