@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
 
-{% block title %}Ukulele Toolkit{% endblock %}
+{% block title %}Guitar Master{% endblock %}
 
 
 {% block script %}
     <script src="/assets/scripts/video.js"></script>
     <script src="/assets/scripts/bigvideo.js"></script>
     <script src="/assets/scripts/jquery.threesixty.js"></script>
-    <script src="/assets/scripts/ukulele-toolkit.js"></script>
+    <script src="/assets/scripts/guitar-master.js"></script>
 {% endblock %}
 0
 {% block style %}
     <link href="/assets/styles/bigvideo.css" rel="stylesheet" />
-    <link href="/assets/styles/ukulele-toolkit.css" rel="stylesheet" />
+    <link href="/assets/styles/guitar-master.css" rel="stylesheet" />
 {% endblock %}
 
 {% block bodystyle %} {% endblock %}
@@ -27,7 +27,7 @@
 
         <div class="right">
             <h1 id="appname">{{ me.name }}</h1>
-            <h2>Everything A Uke Player Needs</h2>
+            <h2>Everything a guitarist needs <br/> right in your pocket.</h2>
             <a href="{{ me.storeurl }}" target="_blank" class="appstore-icon" title="Download {{ me.name }}">Download {{ me.name }} on the App Store</a>
 
         </div>
@@ -35,9 +35,9 @@
 </div>
 
 <div class="page-container">
-<div class="section ">
-    <h1 class="slogan"><em>{{ me.name }}</em> Helps You Get The Most <br/> Out Of Your <em>Daily Practice</em> And <em>Performance</em>.</h1>
-    <h2 class="slogan-desc">Tune your ukulele, practice scales, find chords, sync with a metronome and more.</h2>
+<div class="section intro dark-background">
+    <h1 class="slogan"><em>{{ me.name }}</em> <br/>Inspiring tools for aspiring guitar players.</h1>
+    <h2 class="slogan-desc">Train, tune, learn, and more – <br/>whether practicing, performing, composing or in session, <br/>Guitar Master helps you get the most out of your instrument.</h2>
     <div class="tools-4-iphones"></div>
 </div>
 
@@ -57,11 +57,8 @@
         </div>
         <div class="right-row">
             <h1 class="slogan"><em>Pro-Level Tuning</em></h1>
-            <h2 class="slogan-desc">Fix up your tuning in just seconds <br/>
-using the intuitive color bars.<br/>
-Highly accurate – up to ±0.1 cent precision – <br/>
-the tuner includes a real ukulele string sound <br/>
-to help you tune your uke by ear.<br/> </h2>
+            <h2 class="slogan-desc">Fix up your tuning using Guitar Master's<br/> chromatic tuner with intuitive color bars.<br/>
+Highly accurate – up to ±0.1 cent precision – <br/>the tuner includes real string sounds to help you tune by ear. Go from great to perfect tuning in seconds.<br/> </h2>
             <a id="show-tuner-video" class="link-video" href="javascript:void(0);" title="See how tuner works">See how it works</a>
         </div>
     </div>
@@ -89,7 +86,7 @@ complete with 13 built-in strumming patterns and 116 drum loops to make your pra
         <div class="right-row">
             <h1 class="slogan"><em>108</em> Musical Scales</h1>
             <h2 class="slogan-desc">Scales are the soul music.<br/>
-            Ukulele Toolkit features 108 different ones from all over the world,
+            Guitar Master features 108 different ones from all over the world,
                 from Blues and Jazz, to Japanese, Middle Eastern and more.<br/>
 Use them to learn and explore new sounds and styles.</h2>
         </div>
@@ -100,9 +97,10 @@ Use them to learn and explore new sounds and styles.</h2>
 
 
     <div class="section chords dark-background">
-    <h1 class="slogan">Dozens Of Chords</h1>
-    <h2 class="slogan-desc">Learn new chords and even find them by note – <br/>
-each note includes 25 different chord types with 100s of fingering positions.</h2>
+    <h1 class="slogan">Interactive Guitar Tabs</h1>
+    <h2 class="slogan-desc">Guitar Master's tab list contains thousands of chords, probably more than you'll ever need.<br/>
+    Learn new chords and even look them up by name or by note – <br/>You'll be able to learn them by seeing and hearing them at the same time.
+</h2>
     <div class="chord-chards"></div>
     <p>Supported chord types: Major, Minor, 7th, Minor 7th, Major 7th, 5th, 6th, Minor 6th, 9th, <br/>Minor 9, 6/9, 7♭5, 7♯5, Minor 7♭5, 7♭9, 7♯9, Dim 7th, Aug, 7th Sus, Sus 2, Sus 4, Add 9th, Minor add 9th, 11th, Minor 11</p>
     <div class="overlayer"></div>
@@ -146,9 +144,9 @@ You can even use it to help you transpose chords into a new key.</h2>
         <div class="right-row">
             <h1 class="slogan"><em>Chord Progressions</em></h1>
             <h2 class="slogan-desc">Have you heard of the "Magic Four" chords?<br/>
-            It's C, G, Am, and F, and many songs use just this one progression!
+            It's G, D, Em, and C, and many songs use just this one progression!
 Once you've mastered it, you can use it to play thousands of songs.  <br/> <br/>
-            You can use Ukulele Toolkit to hear and learn the "Magic Four" chords and then transpose them into other keys.</h2>
+            You can use {{ me.name }} to hear and learn the "Magic Four" chords and then transpose them into other keys.</h2>
             <a id="show-progressions-video" class="link-video" href="javascript:void(0);" title="See how chord progression works">See how it works</a>
         </div>
     </div>
@@ -179,8 +177,8 @@ Once you've mastered it, you can use it to play thousands of songs.  <br/> <br/>
             <p>Support transpose using a capo.</p>
         </li>
         <li class="feature-item">
-            <h2 class="feature-uke feature-icon">3 Tunings</h2>
-            <p>Support tunings for Tenor(GCEA), Soprano(ADF#B) and Baritone(DGBE).</p>
+            <h2 class="feature-uke feature-icon">79 Tunings</h2>
+            <p>Support standard, lower, higher, dropped, double-dropped, major open and more tunings.</p>
         </li>
         <li class="feature-item">
             <h2 class="feature-a4 feature-icon">Changeable A4</h2>
@@ -227,8 +225,8 @@ Once you've mastered it, you can use it to play thousands of songs.  <br/> <br/>
 
 
 <div class="section download">
-    <h1 class="slogan">Ukulele Toolkit</h1>
-    <a class="basic-ani-onlyalpha appstore-icon-bottom" href="{{ me.storeurl }}" target="_blank"><img src="/assets/images/icons/512/ukuleletoolkit.png" height="256" width="256" />
+    <h1 class="slogan">{{ me.name }}</h1>
+    <a class="basic-ani-onlyalpha appstore-icon-bottom" href="{{ me.storeurl }}" target="_blank"><img src="/assets/images/icons/512/guitarmaster.png" height="256" width="256" />
     <br />
     </a>
 </div>

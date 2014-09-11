@@ -3,7 +3,7 @@ html{
     height: 100%;
 }
 body{
-    background: transparent no-repeat center url('/assets/images/ut/bg.jpg');
+    background: transparent no-repeat center url('/assets/images/gm/bg.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -71,7 +71,7 @@ div.v2-footer{
     position: absolute;
     left: 50%;
     top:64px;
-    background: transparent no-repeat url('/assets/images/ut/ut-iphone.png');
+    background: transparent no-repeat url('/assets/images/gm/gm-iphone.png');
     height: 1728px;
     width: 896px;
     background-size: 50%;
@@ -235,21 +235,27 @@ div.v2-footer{
 }
 
 
+
+.section.intro{
+    background: rgba(0,0,0,0.9) repeat  url('/assets/images/main/n2.png');
+}
 .tools-4-iphones{
     height: 700px;
-    background: transparent no-repeat top center url('/assets/images/ut/four-iphones.png');
+    background: transparent no-repeat top center url('/assets/images/gm/four-iphones.png');
     margin-left: -140px;
 }
+
 
 .supported-techs{
     padding: 50px;
 }
 
 
+
 /* Both Way */
 .both-way{
     height: 900px;
-    background: transparent no-repeat center url("/assets/images/ut/tuner-bg.jpg");
+    background: transparent no-repeat center url("/assets/images/gm/tuner-bg2.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -402,7 +408,7 @@ div.v2-footer{
     position: absolute;
     left: 0;
     top: 0;
-    background: transparent no-repeat center 0  url("/assets/images/ut/iphone-chord-progressions.png");
+    background: transparent no-repeat center 0  url("/assets/images/gm/iphone-chord-progressions.png");
 }
 .poly-row-container .right-row{
     width: 50%;
@@ -623,7 +629,7 @@ div.v2-footer{
 }
 
 .two-row-container #tuner-ani-container.left-row{
-        background: transparent no-repeat top center url('/assets/images/ut/tuner.png');
+        background: transparent no-repeat top center url('/assets/images/gm/tuner.png');
 }
 
 /* Scale */
@@ -632,7 +638,7 @@ div.v2-footer{
     background: #f9ebd5 repeat url('/assets/images/main/n2.png');
 }
 .scale .two-row-container .left-row{
-        background: transparent no-repeat bottom center url('/assets/images/ut/ut-scale.png')
+        background: transparent no-repeat bottom center url('/assets/images/gm/gm-scale.png')
 }
 .scale .slogan{
     padding-top: 150px;
@@ -644,7 +650,7 @@ div.v2-footer{
     margin-top: 20px;
     height: 259px;
     width: 100%;
-    background:  transparent repeat-x center url('/assets/images/ut/chord-cards.png');
+    background:  transparent repeat-x center url('/assets/images/gm/chord-cards.png');
 }
 .chords p{
     text-align: center;
@@ -678,7 +684,7 @@ div.v2-footer{
     left: 0;
     height: 700px;
     width: 700px;
-    background: transparent no-repeat top center url('/assets/images/ut/5th-chords.png');
+    background: transparent no-repeat top center url('/assets/images/gm/5th-chords.png');
 
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -693,7 +699,7 @@ div.v2-footer{
     left: 0;
     height: 700px;
     width: 700px;
-    background: transparent no-repeat top center url('/assets/images/ut/5th-cover.png');
+    background: transparent no-repeat top center url('/assets/images/gm/5th-cover.png');
     opacity: 0.3;
 }
 #chords-5th-iphone{
@@ -703,7 +709,7 @@ div.v2-footer{
     width: 400px;
     -webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,0.6);
     box-shadow: 0 0 8px 0 rgba(0,0,0,0.6);
-    background: transparent no-repeat top center url('/assets/images/ut/transpose-c2.jpg');
+    background: transparent no-repeat top center url('/assets/images/gm/transpose-c2.jpg');
 
 }
 

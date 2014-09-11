@@ -251,6 +251,15 @@ applist["pm"]["reviews"] = [
     "I have used several tuning applications with my iPhone and this is the best one I have ever used. It's accurate and very fast.",
     ]
 
+applist["gm"]["reviews"] = [
+    "I've been using this app for as long as I can remember. It's an amazing app and definitely the best Metronome app I've found so far!!	",
+    "Has all the features I could have wanted and plenty more besides. Works like a hot damn. Excellent value!",
+    "Having a metronome everywhere I go is extremely helpful. When I'm in the band room it's great to have, this way I don't have to carry a metronome in my case",
+    "Many great things about this app but the best by far is the ease of using the app. It's very simple to use unlike many other metronome apps",
+    "I first learn to play songs by playing to them, but if it wasn't for this app back a year ago I would have never learned the chords and theory I did with this app. This app is the only app that had such a sincerely built approach to the ukulele. Try it because you will not be disappointed.",
+    "I have used several tuning applications with my iPhone and this is the best one I have ever used. It's accurate and very fast.",
+    ]
+
 for appkey in applist.keys():
     item = applist[appkey]
     item["storeurl"] = "http://itunes.apple.com/app/id" + item["id"] + "?ls=1&mt=8&at=11lt4f&ct=eumwebsite"
