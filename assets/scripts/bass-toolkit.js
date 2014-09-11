@@ -136,14 +136,6 @@ $(function() {
     });
 
 
-    function animateChords(){
-        $(".chord-chards").animate({'background-position-x':'+=241px'},1000);
-        setTimeout(function(){
-            animateChords();
-        },5000);
-    }
-    animateChords();
-
     //♯
     var pozes = [["C Major/ A Minor",0,"c"],
                 ["G♭ Major/ E♭ Minor",180,"gb"],
@@ -169,7 +161,7 @@ $(function() {
             $("#chords-5th-iphone").css({"background-image":"url('/assets/images/ut/transpose-" + currentItem[2] + "2.jpg')"})
         },1000)
 */
-        $("#chords-5th-iphone").css({"background-image":"url('/assets/images/gm/transpose-" + currentItem[2] + "2.jpg')"})
+        $("#chords-5th-iphone").css({"background-image":"url('/assets/images/bt/transpose-" + currentItem[2] + "2.jpg')"})
         currentPoz++;
         setTimeout(function(){
             nextPoz();

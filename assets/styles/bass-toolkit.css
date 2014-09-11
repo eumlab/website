@@ -307,7 +307,7 @@ div.v2-footer{
 
 /* Basic Chords */
 .chords{
-    height: 680px;
+    height: 820px;
     background: #1b1b1b repeat url('/assets/images/main/n2.png');
     position: relative;
 }
@@ -328,7 +328,7 @@ div.v2-footer{
     right: 0;
     top: 0;
     background: transparent no-repeat top url("/assets/images/pm2/sync-cover.png");
-    background-size: 100% 680px;
+    background-size: 100% 820px;
     opacity: 0.6;
 }
 .three-rows-container{
@@ -470,78 +470,6 @@ div.v2-footer{
 
 
 
-/* Rhythm Trainer */
-.trainer{
-    height: 1060px;
-}
-.trainer .slogan{
-    padding-top: 100px;
-}
-.trainer-block-container{
-    position: relative;
-    height: 330px;
-    width: 590px;
-    margin: 0 auto;
-    background: transparent no-repeat top left url('/assets/images/pm2/trainerbg.png');
-    margin-top: 60px;
-}
-.note-container{
-    position: absolute;
-    height: 102px;
-    width: 304px;
-    top: 54px;
-    left: 169px;
-}
-.wave-container{
-    position: absolute;
-    height: 83px;
-    width: 390px;
-    left: 167px;
-    top:254px;
-    background: transparent no-repeat top left url('/assets/images/pm2/wave-dark.png');
-    opacity: 0;
-}
-.beats-container{
-    position: absolute;
-    height: 42px;
-    width: 200px;
-    top: 198px;
-    left: 166px;
-    text-align: left;
-}
-.beats-container div.beat{
-    height: 42px;
-    width: 32px;
-    background-color: #1f94ff;
-    margin-right: 8px;
-    display: inline-block;
-}
-.wave-hl-container{
-    position: absolute;
-    height: 83px;
-    width: 0;
-    left: 167px;
-    top:254px;
-    background: transparent no-repeat top left url('/assets/images/pm2/wave-light.png');
-    border-right: solid 1px #ff4200;
-}
-
-
-/* Playlist */
-.playlist .slogan{
-    padding-top: 100px;
-}
-.playlist img{
-    padding-top: 50px;
-}
-
-.supported-techs img{
-    padding: 50px;
-}
-.supported-techs .slogan{
-    padding-top: 100px;
-}
-
 
 /* Download */
 
@@ -645,20 +573,6 @@ div.v2-footer{
 }
 
 
-/* Chords Card */
-.chord-chards{
-    margin-top: 20px;
-    height: 259px;
-    width: 100%;
-    background:  transparent repeat-x center url('/assets/images/gm/chord-cards.png');
-}
-.chords p{
-    text-align: center;
-    font-size: 16px;
-    color: #888;
-    padding:10px 0;
-}
-
 
 /* 5th Circle */
 .transposer .two-row-container{
@@ -684,7 +598,7 @@ div.v2-footer{
     left: 0;
     height: 700px;
     width: 700px;
-    background: transparent no-repeat top center url('/assets/images/gm/5th-chords.png');
+    background: transparent no-repeat top center url('/assets/images/bt/5th-chords.png');
 
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -699,7 +613,7 @@ div.v2-footer{
     left: 0;
     height: 700px;
     width: 700px;
-    background: transparent no-repeat top center url('/assets/images/gm/5th-cover.png');
+    background: transparent no-repeat top center url('/assets/images/bt/5th-cover.png');
     opacity: 0.3;
 }
 #chords-5th-iphone{
@@ -709,7 +623,7 @@ div.v2-footer{
     width: 400px;
     -webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,0.6);
     box-shadow: 0 0 8px 0 rgba(0,0,0,0.6);
-    background: transparent no-repeat top center url('/assets/images/gm/transpose-c2.jpg');
+    background: transparent no-repeat top center url('/assets/images/bt/transpose-c2.jpg');
 
 }
 
