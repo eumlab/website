@@ -573,6 +573,13 @@ div.v2-footer{
 }
 
 
+.chords p{
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+    padding:10px 0;
+}
+
 
 /* 5th Circle */
 .transposer .two-row-container{
