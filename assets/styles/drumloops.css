@@ -229,3 +229,9 @@ div.v2-footer{
 .appstore-icon-bottom::after:hover{
     opacity: 0.8;
 }
+
+.section p{
+    font-size: 20px;
+    line-height: 130%;
+    padding: 50px 0;
+}

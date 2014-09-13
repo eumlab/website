@@ -67,8 +67,10 @@
         <h2><em>Press Kits</em></h2>
         <p>We prepared a full range of <em>screenshots</em>, <em>icons</em>, <em>lifestyle photos</em> and <em>review guides</em> for you.</p>
         <ul>
-            {% for appitem in pressApps %}
+            {% for appitem in apps %}
+                {% if appitem.pl %}
                 <li><a class="presskits-item-download basic-ani" target="_blank" href="{{ appitem.pl }}"><h3>{{ appitem.name }}</h3></a></li>
+                {% endif %}
             {% endfor %}
         </ul>
     </div>

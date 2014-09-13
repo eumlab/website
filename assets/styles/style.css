@@ -1138,7 +1138,7 @@ ul.spicesocialwidget li.youtube a:hover { background-position:-480px -48px}
     font-size: 30px;
 }
 .app-reviews{
-    height: 250px;
+    height: 300px;
     width: 960px;
     position: relative;
     display: table;
@@ -1157,7 +1157,7 @@ ul.spicesocialwidget li.youtube a:hover { background-position:-480px -48px}
 }
 .review-right-quo{
     right: 0;
-    top: 140px;
+    top: 190px;
 }
 .app-reviews p#review-content{
     width: 800px;
@@ -1287,4 +1287,18 @@ li.feature-item p{
 }
 .feature-icon.feature-lefthanded::before{
     content: "j";
+}
+
+
+/*  Press Kit  */
+a.get-presskit{
+    color: #1f94ff;
+    font-size: 20px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    padding: 10px;
+    margin-top: 10px;
+    display: inline-block;
+}
+a.get-presskit:hover{
+    color: #43a6ff;
 }

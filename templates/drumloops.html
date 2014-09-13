@@ -57,22 +57,40 @@ on our SoundCloud page. Recorded directly from the app!</h2>
 <iframe class="soundcloud" width="100%" height="540" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/48310123&amp;color=448dd7&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>
 </div>
 
-<div class="section">
-    <h1 class="slogan"><em>AirPlay</em>, <em>Bluetooth</em> and <em>AudioBus</em> Supported</h1>
-    <img class="supported-techs" src="/assets/images/drumloops/techs.png" height="167" width="656"/>
-</div>
 
-<div class="divbreaker"></div>
+<div id="Features" class="section supported-techs">
+    <h2 class="slogan-desc">Other Cool Features</h2>
+
+    <ul class="feature-container">
+
+        <li class="feature-item">
+            <h2 class="feature-airplay feature-icon">AirPlay</h2>
+            <p>AirPlay allows you beem your sound to Apple TV or other AirPlay speakers.</p>
+        </li>
+        <li class="feature-item">
+            <h2 class="feature-audiobus feature-icon">AudioBus</h2>
+            <p>With AudioBus, you can use it as an input source to other music apps.</p>
+        </li>
+        <li class="feature-item">
+            <h2 class="feature-iaa feature-icon">Inter-App Audio</h2>
+            <p>Inter-App Audio allows you to route Pro Metronome sound to other music Apps, such as GarageBand.</p>
+        </li>
+    </ul>
+
+</div>
 
 
 
 
 <div class="section download">
-    <h1 class="slogan">Drum Loops</h1>
+    <h1 class="slogan">{{ me.name }}</h1>
     <a class="basic-ani-onlyalpha appstore-icon-bottom" href="{{ me.storeurl }}" target="_blank"><img src="/assets/images/icons/512/drumloops.png" height="256" width="256" />
     <br />
     </a>
-
+    <p>Available for iPhone, iPad and iPod Touch<br/>
+    Requires iOS 7.0+<br/>
+    {% if me.pl %}<a class="get-presskit" target="_blank" title="Get Presskit" href="{{ me.pl }}">Get Presskit</a>{% endif %}
+    </p>
 
 </div>
 
