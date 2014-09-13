@@ -128,11 +128,11 @@ $(function() {
     });
 
     $("#show-metronome-video").on("click",function(){
-       playVideo("CMkZyGEyoHs","Metronome, Strumming and Drum Loops");
+       playVideo("uAt_1ok0ghQ","Metronome and Drum Loops");
     });
 
     $("#show-progressions-video").on("click",function(){
-       playVideo("CMkZyGEyoHs","How the Chord Progression Works");
+       playVideo("Yun9zpIRA_o","How the Chord Progression Works");
     });
 
 

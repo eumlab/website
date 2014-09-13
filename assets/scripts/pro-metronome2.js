@@ -177,11 +177,11 @@ $(function() {
     });
 
     $("#show-poly-video").on("click",function(){
-       playVideo("CMkZyGEyoHs","How the Polyrhythm Works");
+       playVideo("5Yk5nQd0HaI","How the Polyrhythm Works");
     });
 
     $("#show-trainer-video").on("click",function(){
-       playVideo("CMkZyGEyoHs","How the Rhythm Trainer Works");
+       playVideo("S4B9yihy8LU","How the Rhythm Trainer Works");
     });
 
 });
