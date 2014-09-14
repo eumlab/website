@@ -1,4 +1,10 @@
 $(function() {
-    $(".firstpage-container").css({"height": $(window).height()});
+    $(window).on('resize', resize).resize();
 });
 
+function resize(e) {
+    var win = $(window);
+    var winH = win.height();
+
+    $(".firstpage-container").css("height", winH);
+}
