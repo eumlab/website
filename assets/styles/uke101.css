@@ -131,22 +131,136 @@ body {
     margin-left: -320px;
 }
 
-.learn-play .lesson-0 {
-    background: url('/assets/images/uke101/lesson-0.png') no-repeat 0 0;
-    width: 259px;
-    height: 259px;
-    opacity: 0.2;
+.learn-play .lesson {
+    opacity: 1;
+    width: 91px;
+    height: 91px;
     position: absolute;
-    left: -112px;
-    top: 55px;
-    -webkit-transition: -webkit-transform 2s;
-    transition:transform 2s;
+    border-radius: 50%;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.25);
+
+    -ms-transition: -ms-transform 1s, opacity 500ms;
+    -webkit-transition: -webkit-transform 1s, opacity 500ms;
+    -moz-transition: -moz-transform 1s, opacity 500ms;
+    transition:transform 1s, opacity 500ms;
+
+    -ms-transition-timing-function: cubic-bezier(1, -0.1, 0.4, 1.3);
+    -webkit-transition-timing-function: cubic-bezier(1, -0.1, 0.4, 1.3);
+    -moz-transition-timing-function: cubic-bezier(1, -0.1, 0.4, 1.3);
+    transition-timing-function: cubic-bezier(1, -0.1, 0.4, 1.3);
 }
 
-.learn-play .lesson-0.scale {
-    -ms-transform: scale(0.1);
-    -webkit-transform: scale(0.1);
-    transform: scale(0.1);
+.learn-play .lesson.big {
+    width: 206px;
+    height: 206px;
+}
+
+.learn-play .lesson.scale {
+    opacity: 0.3;
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0);
+}
+
+.learn-play .lesson-0 {
+    background: url('/assets/images/uke101/lesson-0.png') no-repeat 0 0;
+    left: -90px;
+    top: 66px;
+}
+
+.learn-play .lesson-1 {
+    background: url('/assets/images/uke101/lesson-1.png') no-repeat 0 0;
+    left: 183px;
+    top: 31px;
+}
+
+.learn-play .lesson-2 {
+    background: url('/assets/images/uke101/lesson-2.png') no-repeat 0 0;
+    left: 183px;
+    top: 215px;
+}
+
+.learn-play .lesson-3 {
+    background: url('/assets/images/uke101/lesson-3.png') no-repeat 0 0;
+    left: 335px;
+    top: -32px;
+}
+
+.learn-play .lesson-4 {
+    background: url('/assets/images/uke101/lesson-4.png') no-repeat 0 0;
+    left: 336px;
+    top: 95px;
+}
+
+.learn-play .lesson-6 {
+    background: url('/assets/images/uke101/lesson-6.png') no-repeat 0 0;
+    left: 477px;
+    top: -32px;
+}
+
+.learn-play .lesson-7 {
+    background: url('/assets/images/uke101/lesson-7.png') no-repeat 0 0;
+    left: 478px;
+    top: 95px;
+}
+
+.learn-play .lesson-8 {
+    background: url('/assets/images/uke101/lesson-8.png') no-repeat 0 0;
+    left: 615px;
+    top: -32px;
+}
+
+.learn-play .lesson-13 {
+    background: url('/assets/images/uke101/lesson-13.png') no-repeat 0 0;
+    left: 616px;
+    top: 95px;
+}
+
+.learn-play .lesson-30 {
+    background: url('/assets/images/uke101/lesson-30.png') no-repeat 0 0;
+    left: 338px;
+    top: 215px;
+}
+
+.learn-play .lesson-34 {
+    background: url('/assets/images/uke101/lesson-34.png') no-repeat 0 0;
+    left: 615px;
+    top: 215px;
+}
+
+.learn-play .lesson-1,
+.learn-play .lesson-2 {
+    -ms-transition-delay: 100ms;
+    -webkit-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    transition-delay: 100ms;
+}
+
+.learn-play .lesson-3,
+.learn-play .lesson-4,
+.learn-play .lesson-30 {
+    -ms-transition-delay: 300ms;
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    transition-delay: 300ms;
+}
+
+.learn-play .lesson-6,
+.learn-play .lesson-7 {
+    -ms-transition-delay: 500ms;
+    -webkit-transition-delay: 500ms;
+    -moz-transition-delay: 500ms;
+    transition-delay: 500ms;
+}
+
+.learn-play .lesson-8,
+.learn-play .lesson-13,
+.learn-play .lesson-34 {
+    -ms-transition-delay: 700ms;
+    -webkit-transition-delay: 700ms;
+    -moz-transition-delay: 700ms;
+    transition-delay: 700ms;
 }
 
 /* section two-perspective */
