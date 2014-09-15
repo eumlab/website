@@ -883,6 +883,12 @@ ul#menu-items-container li:hover sub{
 	 background: transparent;
 	 padding-top: 30px;
 }
+#idx-header.hide{
+    top:-100px;
+}
+#idx-header.show{
+    top:0;
+}
 #idx-header.glow .menu-logo h1,
 #idx-header.glow #idx-header-container,
 #idx-header.glow ul#menu-items-container li h2,

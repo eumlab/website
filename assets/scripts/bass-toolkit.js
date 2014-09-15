@@ -57,6 +57,7 @@ $(function() {
         }else{
             tuner.css({"margin-left":"auto"});
         }
+
     }
 
     $(window).on('resize', resizeMe);
@@ -89,7 +90,6 @@ $(function() {
         offset = $(".progression-closeup").offset().top - newScroll;
         offset = offset/9.0;
         $(".progression-closeup").css({"background-position-y":(-100 + offset)+"px"});
-
     }
 
     //Scroll

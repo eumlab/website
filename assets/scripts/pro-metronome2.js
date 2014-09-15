@@ -72,8 +72,20 @@ $(function() {
         $(".poly-closeup").css({"background-position-y":(100 + offset)+"px"});
 
         lastScroll = newScroll;
-    }
 
+        /*if(newScroll > ($(window).height() - 100) &&
+           newScroll < $(window).height() ){
+            $("#idx-header").removeClass("glow").addClass("hide");
+        }else if(newScroll > $(window).height()){
+            $("#idx-header").removeClass("hide");
+        }else{
+            $("#idx-header").addClass("glow");
+        }
+        if(newScroll < 100){
+            $("#idx-header").removeClass("hide");
+        }*/
+
+    }
     //Scroll
     var lastScroll = $(window).scrollTop();
     $(window).scroll(onScroll);
