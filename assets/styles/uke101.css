@@ -1,438 +1,442 @@
+@charset "UTF-8";
 body {
-    background: #fff;
+  background: #fff;
 }
 
 /* Section */
-.section{
-    text-align: center;
+.section {
+  text-align: center;
 }
+
 .section h1,
 .section h2,
-.section h3{
-    font-weight: 200;
-    font-size: 48px;
-    line-height: 150%;
+.section h3 {
+  font-weight: 200;
+  font-size: 48px;
+  line-height: 150%;
 }
 
-.section.dark-background{
-     color: #FFF;
+.section.dark-background {
+  color: #FFF;
 }
+
 .section.dark-background h1,
 .section.dark-background h2,
-.section.dark-background h3{
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+.section.dark-background h3 {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
-.section em{
-    font-weight: 400;
+.section em {
+  font-weight: 400;
 }
 
-.slogan{
-    padding-top: 100px;
+.slogan {
+  padding-top: 100px;
 }
 
-.section  .slogan-desc{
-    padding-top: 20px;
-    font-size: 26px;
-    line-height: 150%;
+.section .slogan-desc {
+  padding-top: 20px;
+  font-size: 26px;
+  line-height: 150%;
 }
 
-.uke101-container{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    background: url('/assets/images/uke101/highlight-bg.png') repeat-x center center;
-    background-size: cover;
+.uke101-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: url("/assets/images/uke101/highlight-bg.png") repeat-x center center;
+  background-size: cover;
 }
 
-.iphone{
-    position: absolute;
-    left: 50%;
-    top: 123px;
-    background: transparent no-repeat url('/assets/images/uke101/highlight-iphone.png');
-    height: 1492px;
-    width: 906px;
-    background-size: 50%;
-    margin-left: -450px;
+.iphone {
+  position: absolute;
+  left: 50%;
+  top: 123px;
+  background: transparent no-repeat url("/assets/images/uke101/highlight-iphone.png");
+  height: 1492px;
+  width: 906px;
+  background-size: 50%;
+  margin-left: -450px;
 }
 
-.right{
-    position: absolute;
-    left: 50%;
-    top: 30px;
-    height: 100%;
-    width: 50%;
-    margin-left: 20px;
+.right {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  height: 100%;
+  width: 50%;
+  margin-left: 20px;
 }
 
 .right h1,
-.right h2{
-    font-weight: 200;
-    color: #fffaf1;
-    font-size: 32px;
+.right h2 {
+  font-weight: 200;
+  color: #fffaf1;
+  font-size: 32px;
 }
 
-.right h1{
-    font-size: 62px;
-    font-weight: 600;
-    padding-top: 45%;
-}
-.right h2{
-    text-shadow: 0 0 1px rgba(0,0,0,0.5);
-    padding-top: 15px;
+.right h1 {
+  font-size: 62px;
+  font-weight: 600;
+  padding-top: 45%;
 }
 
-.right a{
-    opacity: 0.8;
-    padding-top: 60px;
-    height: 63px;
-    display: inline-block;
+.right h2 {
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  padding-top: 15px;
 }
 
-.right a:hover{
-    opacity: 1;
+.right a {
+  opacity: 0.8;
+  padding-top: 60px;
+  height: 63px;
+  display: inline-block;
 }
 
-.firstpage-container{
-    height: 938px;
-    width: 100%;
-    position: relative;
+.right a:hover {
+  opacity: 1;
 }
 
-.page-container{
-    width: 100%;
-    font-weight: 300;
-    min-width: 980px;
-    min-height: 200px;
-    color: #1b1b1b;
-    font-family: "proxima-nova" "helveticaneue-light", "Helvetica Neue", Helvetica, "Hiragino Sans GB" , arial, sans-serif;
+.firstpage-container {
+  height: 938px;
+  width: 100%;
+  position: relative;
 }
 
-#idx-header.glow{
-    position: absolute;
+.page-container {
+  width: 100%;
+  font-weight: 300;
+  min-width: 980px;
+  min-height: 200px;
+  color: #1b1b1b;
+  font-family: "proxima-nova" "helveticaneue-light", "Helvetica Neue", Helvetica, "Hiragino Sans GB" , arial, sans-serif;
+}
+
+#idx-header.glow {
+  position: absolute;
 }
 
 /* section learn to play */
 .learn-play {
-    background: url('/assets/images/uke101/part2-bg.png') repeat-x 0 0;
-    height: 890px;
-    position: relative;
-    overflow: hidden;
+  background: url("/assets/images/uke101/part2-bg.png") repeat-x 0 0;
+  height: 890px;
+  position: relative;
+  overflow: hidden;
 }
 
 .learn-play .tree {
-    background: url('/assets/images/uke101/part-tree-bg.png') no-repeat 0 0;
-    width: 973px;
-    height: 273px;
-    position: absolute;
-    left: 50%;
-    bottom: 100px;
-    margin-left: -320px;
+  background: url("/assets/images/uke101/part-tree-bg.png") no-repeat 0 0;
+  width: 973px;
+  height: 273px;
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  margin-left: -320px;
 }
 
 .learn-play .lesson {
-    opacity: 1;
-    width: 91px;
-    height: 91px;
-    position: absolute;
-    border-radius: 50%;
-    box-shadow: 0 6px 8px rgba(0,0,0,0.25);
-
-    -ms-transition: -ms-transform 1s, opacity 500ms;
-    -webkit-transition: -webkit-transform 1s, opacity 500ms;
-    -moz-transition: -moz-transform 1s, opacity 500ms;
-    transition:transform 1s, opacity 500ms;
-
-    -ms-transition-timing-function: cubic-bezier(1, -0.1, 0.4, 1.3);
-    -webkit-transition-timing-function: cubic-bezier(1, -0.1, 0.4, 1.3);
-    -moz-transition-timing-function: cubic-bezier(1, -0.1, 0.4, 1.3);
-    transition-timing-function: cubic-bezier(1, -0.1, 0.4, 1.3);
+  opacity: 1;
+  width: 91px;
+  height: 91px;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+  -ms-transition: -ms-transform 1s, opacity 500ms;
+  -webkit-transition: -webkit-transform 1s, opacity 500ms;
+  -moz-transition: -moz-transform 1s, opacity 500ms;
+  transition: transform 1s, opacity 500ms;
+  -ms-transition-timing-function: cubic-bezier(1, -0.1, 0.4, 1.3);
+  -webkit-transition-timing-function: cubic-bezier(1, -0.1, 0.4, 1.3);
+  -moz-transition-timing-function: cubic-bezier(1, -0.1, 0.4, 1.3);
+  transition-timing-function: cubic-bezier(1, -0.1, 0.4, 1.3);
 }
 
 .learn-play .lesson.big {
-    width: 206px;
-    height: 206px;
+  width: 206px;
+  height: 206px;
 }
 
 .learn-play .lesson.scale {
-    opacity: 0.3;
-    -ms-transform: scale(0);
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    transform: scale(0);
+  opacity: 0.3;
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  transform: scale(0);
 }
 
 .learn-play .lesson-0 {
-    background: url('/assets/images/uke101/lesson-0.png') no-repeat 0 0;
-    left: -90px;
-    top: 66px;
+  background: url("/assets/images/uke101/lesson-0.png") no-repeat 0 0;
+  left: -90px;
+  top: 66px;
 }
 
 .learn-play .lesson-1 {
-    background: url('/assets/images/uke101/lesson-1.png') no-repeat 0 0;
-    left: 183px;
-    top: 31px;
+  background: url("/assets/images/uke101/lesson-1.png") no-repeat 0 0;
+  left: 183px;
+  top: 31px;
 }
 
 .learn-play .lesson-2 {
-    background: url('/assets/images/uke101/lesson-2.png') no-repeat 0 0;
-    left: 183px;
-    top: 215px;
+  background: url("/assets/images/uke101/lesson-2.png") no-repeat 0 0;
+  left: 183px;
+  top: 215px;
 }
 
 .learn-play .lesson-3 {
-    background: url('/assets/images/uke101/lesson-3.png') no-repeat 0 0;
-    left: 335px;
-    top: -32px;
+  background: url("/assets/images/uke101/lesson-3.png") no-repeat 0 0;
+  left: 335px;
+  top: -32px;
 }
 
 .learn-play .lesson-4 {
-    background: url('/assets/images/uke101/lesson-4.png') no-repeat 0 0;
-    left: 336px;
-    top: 95px;
+  background: url("/assets/images/uke101/lesson-4.png") no-repeat 0 0;
+  left: 336px;
+  top: 95px;
 }
 
 .learn-play .lesson-6 {
-    background: url('/assets/images/uke101/lesson-6.png') no-repeat 0 0;
-    left: 477px;
-    top: -32px;
+  background: url("/assets/images/uke101/lesson-6.png") no-repeat 0 0;
+  left: 477px;
+  top: -32px;
 }
 
 .learn-play .lesson-7 {
-    background: url('/assets/images/uke101/lesson-7.png') no-repeat 0 0;
-    left: 478px;
-    top: 95px;
+  background: url("/assets/images/uke101/lesson-7.png") no-repeat 0 0;
+  left: 478px;
+  top: 95px;
 }
 
 .learn-play .lesson-8 {
-    background: url('/assets/images/uke101/lesson-8.png') no-repeat 0 0;
-    left: 615px;
-    top: -32px;
+  background: url("/assets/images/uke101/lesson-8.png") no-repeat 0 0;
+  left: 615px;
+  top: -32px;
 }
 
 .learn-play .lesson-13 {
-    background: url('/assets/images/uke101/lesson-13.png') no-repeat 0 0;
-    left: 616px;
-    top: 95px;
+  background: url("/assets/images/uke101/lesson-13.png") no-repeat 0 0;
+  left: 616px;
+  top: 95px;
 }
 
 .learn-play .lesson-30 {
-    background: url('/assets/images/uke101/lesson-30.png') no-repeat 0 0;
-    left: 338px;
-    top: 215px;
+  background: url("/assets/images/uke101/lesson-30.png") no-repeat 0 0;
+  left: 338px;
+  top: 215px;
 }
 
 .learn-play .lesson-34 {
-    background: url('/assets/images/uke101/lesson-34.png') no-repeat 0 0;
-    left: 615px;
-    top: 215px;
+  background: url("/assets/images/uke101/lesson-34.png") no-repeat 0 0;
+  left: 615px;
+  top: 215px;
 }
 
 .learn-play .lesson-1,
 .learn-play .lesson-2 {
-    -ms-transition-delay: 100ms;
-    -webkit-transition-delay: 100ms;
-    -moz-transition-delay: 100ms;
-    transition-delay: 100ms;
+  -ms-transition-delay: 100ms;
+  -webkit-transition-delay: 100ms;
+  -moz-transition-delay: 100ms;
+  transition-delay: 100ms;
 }
 
 .learn-play .lesson-3,
 .learn-play .lesson-4,
 .learn-play .lesson-30 {
-    -ms-transition-delay: 300ms;
-    -webkit-transition-delay: 300ms;
-    -moz-transition-delay: 300ms;
-    transition-delay: 300ms;
+  -ms-transition-delay: 300ms;
+  -webkit-transition-delay: 300ms;
+  -moz-transition-delay: 300ms;
+  transition-delay: 300ms;
 }
 
 .learn-play .lesson-6,
 .learn-play .lesson-7 {
-    -ms-transition-delay: 500ms;
-    -webkit-transition-delay: 500ms;
-    -moz-transition-delay: 500ms;
-    transition-delay: 500ms;
+  -ms-transition-delay: 500ms;
+  -webkit-transition-delay: 500ms;
+  -moz-transition-delay: 500ms;
+  transition-delay: 500ms;
 }
 
 .learn-play .lesson-8,
 .learn-play .lesson-13,
 .learn-play .lesson-34 {
-    -ms-transition-delay: 700ms;
-    -webkit-transition-delay: 700ms;
-    -moz-transition-delay: 700ms;
-    transition-delay: 700ms;
+  -ms-transition-delay: 700ms;
+  -webkit-transition-delay: 700ms;
+  -moz-transition-delay: 700ms;
+  transition-delay: 700ms;
 }
 
 /* section two-perspective */
 .two-perspective {
-    position: relative;
-    height: 670px;
-    overflow: hidden;
+  position: relative;
+  height: 670px;
+  overflow: hidden;
 }
 
 .two-perspective .slogan {
-    padding-top: 380px;
-    position: relative;
-    z-index: 10;
+  padding-top: 380px;
+  position: relative;
+  z-index: 10;
 }
 
 .two-perspective .slogan-desc {
-    position: relative;
-    z-index: 10;
+  position: relative;
+  z-index: 10;
 }
 
 .two-perspective-ani {
-    position: absolute;
-    bottom: 0;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    z-index: 0;
-    display: none;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+  position: absolute;
+  bottom: 0;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  z-index: 0;
+  display: none;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .two-perspective-ani.show {
-    display: block;
+  display: block;
 }
 
 #two-perspective-left {
-    background: url('/assets/images/uke101/part3-l.png') no-repeat 100% 100%;
-    left: -667px;
-    width: 667px;
-    height: 564px;
+  background: url("/assets/images/uke101/part3-l.png") no-repeat 100% 100%;
+  left: -667px;
+  width: 667px;
+  height: 564px;
 }
+
 #two-perspective-right {
-    background: url('/assets/images/uke101/part3-r.png') no-repeat 100% 100%;
-    right: -549px;
-    width: 549px;
-    height: 535px;
+  background: url("/assets/images/uke101/part3-r.png") no-repeat 100% 100%;
+  right: -549px;
+  width: 549px;
+  height: 535px;
 }
 
 /* section interactive-content */
 .interactive-content {
-    background: url('/assets/images/uke101/part4-bg.png') no-repeat 0 0;
-    background-size: cover;
-    height: 808px;
-    overflow: hidden;
+  background: url("/assets/images/uke101/part4-bg.png") no-repeat 0 0;
+  background-size: cover;
+  height: 808px;
+  overflow: hidden;
 }
 
 .interactive-content .slogan-desc {
-    padding: 0;
+  padding: 0;
 }
 
 .interactive-content .items {
-    overflow: hidden;
-    font-size: 16px;
-    font-weight: 400;
-    margin: 110px auto 0;
-    width: 990px;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 110px auto 0;
+  width: 990px;
 }
 
 .interactive-content .item {
-    float: left;
-    width: 300px;
-    padding: 270px 15px 0 15px;
-    line-height: 1.5;
+  float: left;
+  width: 300px;
+  padding: 270px 15px 0 15px;
+  line-height: 1.5;
 }
 
 .interactive-content .item h3 {
-    font-weight: 500;
-    font-size: 26px;
+  font-weight: 500;
+  font-size: 26px;
 }
 
 .interactive-content .learn-from-games {
-    background: url('/assets/images/uke101/part4-pic1.png') no-repeat 50% 0;
+  background: url("/assets/images/uke101/part4-pic1.png") no-repeat 50% 0;
 }
 
 .interactive-content .magic-chord-trainer {
-    background: url('/assets/images/uke101/part4-pic2.png') no-repeat 50% 0;
+  background: url("/assets/images/uke101/part4-pic2.png") no-repeat 50% 0;
 }
 
 .interactive-content .play-and-sing-it {
-    background: url('/assets/images/uke101/part4-pic3.png') no-repeat 50% 0;
+  background: url("/assets/images/uke101/part4-pic3.png") no-repeat 50% 0;
 }
 
 /* section download */
-.download.section{
-    height: 570px;
-    position: relative;
+.download.section {
+  height: 570px;
+  position: relative;
 }
 
-.download.section .slogan{
-    color: #7496a1;
-    font-size: 40px;
-    position: absolute;
-    top: 40px;
-    left: 50%;
-    margin-left: -80px;
+.download.section .slogan {
+  color: #7496a1;
+  font-size: 40px;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin-left: -80px;
 }
 
 .download.section .features {
-    text-align: left;
-    font-size: 20px;
-    line-height: 2;
-    position: absolute;
-    top: 200px;
-    left: 50%;
-    margin-left: -80px;
+  text-align: left;
+  font-size: 20px;
+  line-height: 2;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  margin-left: -80px;
 }
 
 .download.section .features li:before {
-    content: "• ";
-    color: #e3ab9a;
-    font-size: 32px;
-    font-weight: bold;
-    line-height: 1;
+  content: "• ";
+  color: #e3ab9a;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1;
 }
 
-.download.section img{
-    padding-bottom: 15px;
+.download.section img {
+  padding-bottom: 15px;
 }
 
-.download.section a:hover{
-    opacity: 0.8;
+.download.section a:hover {
+  opacity: 0.8;
 }
 
-.appstore-icon::before{
-    content: "a";
-    text-indent: 0 !important;
-    font-size: 70px;
-    font-family: "EUMWeb";
-    color: #fff;
-    display: block;
-    margin-bottom: 100px;
+.appstore-icon::before {
+  content: "a";
+  text-indent: 0 !important;
+  font-size: 70px;
+  font-family: "EUMWeb";
+  color: #fff;
+  display: block;
+  margin-bottom: 100px;
 }
-.appstore-icon{
-    line-height: 200%;
-    display: block;
-    overflow: hidden;
+
+.appstore-icon {
+  line-height: 200%;
+  display: block;
+  overflow: hidden;
 }
 
 .appstore-icon-bottom {
-    position: absolute;
-    left: 50%;
-    top: 140px;
-    margin-left: -380px;
+  position: absolute;
+  left: 50%;
+  top: 140px;
+  margin-left: -380px;
 }
 
-.appstore-icon-bottom::after{
-    content: "A";
-    text-indent: 0 !important;
-    font-size: 70px;
-    font-family: "EUMWeb";
-    color: #1b1b1b;
-    margin-bottom: 100px;
+.appstore-icon-bottom::after {
+  content: "A";
+  text-indent: 0 !important;
+  font-size: 70px;
+  font-family: "EUMWeb";
+  color: #1b1b1b;
+  margin-bottom: 100px;
 }
 
 .appstore-icon-bottom img {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-.appstore-icon-bottom::after:hover{
-    opacity: 0.8;
+.appstore-icon-bottom::after:hover {
+  opacity: 0.8;
 }
