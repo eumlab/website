@@ -1,19 +1,29 @@
 {
   "name": "eumlab_website",
   "version": "2.0.0",
-  "description": "",
+  "author": "yxshawn",
+  "contributors": [
+    {
+      "name": "yxshawn"
+    }, {
+      "name": "tinyfive"
+    }, {
+      "name": "etmaxwellsdemon"
+    }
+  ],
+  "description": "eumlab website",
   "repository": {
     "type": "git",
-    "url": "git@github.com:/.git"
+    "url": "git@github.com:eumlab/website.git"
   },
   "license": "GPL",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/eumlab/website/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/eumlab/website",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-sass": "~0.7.3",
+    "grunt": "~0.4.5",
+    "grunt-contrib-sass": "~0.8.1",
     "grunt-contrib-watch": "~0.5.3"
   }
 }

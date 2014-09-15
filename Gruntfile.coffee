@@ -5,12 +5,16 @@ module.exports = (grunt) ->
     pkg: grunt.file.readJSON 'package.json'
 
     sass:
-      dialog:
+      dist:
         options:
           style: 'expanded'
-        files:
-          'assets/styles/uke101.css': 'assets/styles/scss/uke101.scss'
-          'assets/styles/style.css': 'assets/styles/scss/style.scss'
+        files: [{
+          expand: true
+          cwd: 'assets/styles/scss/'
+          src: ['*.scss']
+          dest: 'assets/styles/'
+          ext: '.css'
+        }]
 
     watch:
       styles:
@@ -18,8 +22,8 @@ module.exports = (grunt) ->
         tasks: ['sass']
 
   grunt.loadNpmTasks 'grunt-contrib-sass'
-  # grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-watch'
+  # grunt.loadNpmTasks 'grunt-contrib-coffee'
   # grunt.loadNpmTasks 'grunt-contrib-jasmine'
 
   grunt.registerTask 'default', ['sass', 'watch']
