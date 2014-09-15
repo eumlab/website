@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAGA,qCAAqC;EACnC,SAAS,EAAE,IAAI;;;AAGjB,qBAAqB;EACnB,SAAS,EAAE,IAAI",
+"sources": ["scss/style-ipad.scss"],
 "names": [],
 "file": "style-ipad.css"
 }

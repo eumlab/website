@@ -43,12 +43,13 @@
     <meta name="application-name" content="EUMLab">
     <link href="/assets/styles/style.css" rel="stylesheet" />
     {% block style %}{% endblock %}
-{% if flavour == 'mobile' %}
+{% if device.iphone %}
     <link href="/assets/styles/style-mobile.css" rel="stylesheet" />
 {% endif %}
-{% if flavour == 'ipad' %}
+{% if device.ipad %}
     <link href="/assets/styles/style-ipad.css" rel="stylesheet" />
 {% endif %}
+<!-- {{ flavour }} -->
     <!--[if gte IE 9]>
     <style type="text/css">
         .gradient {
