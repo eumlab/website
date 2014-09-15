@@ -113,7 +113,9 @@ $(function() {
         imagesUrl[i] = "/assets/images/pm2/PMH@24fps/PMH_" + j + ".png";
     }
     window.eum.preload(imagesUrl);
+
     $(".screen-ani").threesixty({images:imagesUrl, method:'auto', direction:'forward', sensibility: 1,autoscrollspeed:40,loop:true});
+    $(".screen-ani").css({"display":"inherit"});
     $("#sync-vib").threesixty({images:imagesUrl, method:'auto', direction:'forward', sensibility: 1,autoscrollspeed:40,loop:true});
 
     $("#sync-beat").threesixty({images:imagesUrl, method:'auto', direction:'forward', sensibility: 1,autoscrollspeed:40,loop:true,onPlay:function(idx){

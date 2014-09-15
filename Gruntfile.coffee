@@ -10,6 +10,7 @@ module.exports = (grunt) ->
           style: 'expanded'
         files:
           'assets/styles/uke101.css': 'assets/styles/scss/uke101.scss'
+          'assets/styles/style.css': 'assets/styles/scss/style.scss'
 
     watch:
       styles:
