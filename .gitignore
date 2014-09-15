@@ -6,3 +6,5 @@ pkg/*
 *.log
 *.pid
 .idea
+.sass-cache
+node_modules
