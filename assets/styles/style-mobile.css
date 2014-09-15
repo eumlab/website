@@ -1,5 +1,22 @@
 .firstpage-container div.iphone {
-  left: 80% !important;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+  left: 60%;
+}
+
+.firstpage-container div.right {
+  left: 55%;
+}
+
+.firstpage-container div.right h1 {
+  font-size: 48px;
+}
+
+.firstpage-container div.right h2 {
+  font-size: 28px;
 }
 
 .section h1, .section h2, .section h3 {
@@ -8,6 +25,14 @@
 
 .section .slogan-desc {
   font-size: 20px;
+}
+
+ul.feature-container {
+  width: 100%;
+}
+
+ul.feature-container li.feature-item {
+  width: 47%;
 }
 
 /*# sourceMappingURL=style-mobile.css.map */
