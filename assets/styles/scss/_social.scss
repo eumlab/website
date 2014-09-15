@@ -1,0 +1,72 @@
+/* @group Social */
+ul.spicesocialwidget {
+  /*float:right;*/
+  margin: 0 auto;
+  padding: 0;
+  width: 960px;
+  height: 48px;
+  text-align: center;
+  padding-top: 14px;
+}
+ul.spicesocialwidget li {
+  /*float:left;*/
+  list-style:none outside none;
+  border:none;
+  display: inline-block;
+}
+ul.spicesocialwidget li a {
+  background-color:transparent;
+  background-image:url('/assets/images/main/social.png');
+  background-repeat:no-repeat;
+  background-size:auto 144px;
+  border:0 none;
+  display:block;
+  height:47px;
+  /*overflow:hidden;*/
+  text-align:left;
+  text-decoration:none;
+  /*transition:all 0.2s ease 0s;*/
+  width:48px;
+  position: relative;
+  display: flex;
+
+      -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+}
+
+.ie7 ul.spicesocialwidget li a,
+.ie8 ul.spicesocialwidget li a {
+  background-image:url('/assets/images/main/social.png');
+}
+ul.spicesocialwidget li.facebook a { background-position:0 0; }
+ul.spicesocialwidget li.flickr a { background-position:-48px 0; }
+ul.spicesocialwidget li.dribbble a { background-position:-96px 0; }
+ul.spicesocialwidget li.googleplus a { background-position:-144px 0; }
+ul.spicesocialwidget li.linkedin a { background-position:-192px 0; }
+ul.spicesocialwidget li.pinterest a { background-position:-240px 0; }
+ul.spicesocialwidget li.rss a { background-position:-288px 0; }
+ul.spicesocialwidget li.skype a { background-position:-336px 0; }
+ul.spicesocialwidget li.twitter a { background-position:-384px 0; }
+ul.spicesocialwidget li.vimeo a { background-position:-432px 0; }
+ul.spicesocialwidget li.youtube a { background-position:-480px 0; }
+
+ul.spicesocialwidget li.facebook a:hover { background-position:0 -48px}
+ul.spicesocialwidget li.flickr a:hover { background-position:-48px -48px}
+ul.spicesocialwidget li.dribbble a:hover { background-position:-96px -48px}
+ul.spicesocialwidget li.googleplus a:hover { background-position:-144px -48px}
+ul.spicesocialwidget li.linkedin a:hover { background-position:-192px -48px}
+ul.spicesocialwidget li.pinterest a:hover { background-position:-240px -48px}
+ul.spicesocialwidget li.rss a:hover { background-position:-288px -48px}
+ul.spicesocialwidget li.skype a:hover { background-position:-336px -48px}
+ul.spicesocialwidget li.twitter a:hover { background-position:-384px -48px}
+ul.spicesocialwidget li.vimeo a:hover { background-position:-432px -48px}
+ul.spicesocialwidget li.youtube a:hover { background-position:-480px -48px}
+
+.spicesocialwidget .facebook span { background: #3b5a9b; color: #dce5ed; text-shadow: 0px 1px 0px #2f487c; }
+.spicesocialwidget .facebook span:after { border-top-color: #3b5a9b; }
+
+
+
+/* @end */

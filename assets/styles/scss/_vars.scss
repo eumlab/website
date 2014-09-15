@@ -4,3 +4,8 @@
 $link-blue:#1f94ff;
 // Highlight Hover Color
 $link-blue-light:#5cc3f6;
+
+$font-basic:"proxima-nova" "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
+
+//Enable Bourbon
+@import "bourbon/bourbon";

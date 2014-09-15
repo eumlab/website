@@ -1,7 +1,4 @@
 @import '_vars';
-
-@charset "UTF-8";
-
 @import "reset";
 
 /***************************
@@ -24,61 +21,24 @@
     zoom: 1;
 }
 
-@font-face {
-	font-family: 'entypo';
-	src: url('../fonts/entypo.eot');
-	src: local('☺'), url('../fonts/entypo.woff') format('woff'), url('../fonts/entypo.ttf') format('truetype'), url('../fonts/entypo.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
 
-@font-face {
-    font-family: 'EUMWeb';
-    src: url('../fonts/eumweb-regular.eot');
-    src: url('../fonts/eumweb-regular.eot') format('embedded-opentype'),
-         url('../fonts/eumweb-regular.woff') format('woff'),
-         url('../fonts/eumweb-regular.ttf') format('truetype'),
-         url('../fonts/eumweb-regular.svg#EUMWebRegular') format('svg');
-}
+@include font-face(entypo,"/assets/fonts/entypo");
+@include font-face(EUMWeb,"/assets/fonts/eumweb-regular");
 
-/*
-@font-face {
-	font-family: 'TitilliumText25L';
-	src: url('../fonts/TitilliumText25L.eot');
-	src: local('☺'), url('../fonts/TitilliumText25L.woff') format('woff'), url('../fonts/TitilliumText25L.ttf') format('truetype'), url('../fonts/TitilliumText25L.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
 
-@font-face {
-	font-family: 'DIN-Regular';
-	src: url('../fonts/DIN-Regular.eot');
-	src: local('☺'), url('../fonts/DIN-Regular.woff') format('woff'), url('../fonts/DIN-Regular.ttf') format('truetype'), url('../fonts/DIN-Regular.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-*/
 
 .basic-ani{
-    -webkit-transition: all 300ms ease;
-    -moz-transition: all 300ms ease;
-    -ms-transition: all 300ms ease;
-    -o-transition: all 300ms ease;
-    transition: all 300ms ease;
+  @include transform(all 300ms ease);
 }
 .basic-ani-onlyalpha{
-    -webkit-transition: opacity 300ms ease;
-    -moz-transition: opacity 300ms ease;
-    -ms-transition: opacity 300ms ease;
-    -o-transition: opacity 300ms ease;
-    transition: opacity 300ms ease;
+  @include transform(opacity 300ms ease);
 }
 
 
 body {
     background: #000;
     font-size: 12px;
-    font-family: "proxima-nova" "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
+    font-family:$font-basic;
     font-weight: normal;
     color: #b5c5ca;
     overflow-y: scroll;
@@ -1005,244 +965,11 @@ div.divbreaker::after{
 
 /* @end */
 
-/* @group Social */
-ul.spicesocialwidget {
-  /*float:right;*/
-  margin: 0 auto;
-  padding: 0;
-  width: 960px;
-  height: 48px;
-  text-align: center;
-  padding-top: 14px;
-}
-ul.spicesocialwidget li {
-  /*float:left;*/
-  list-style:none outside none;
-  border:none;
-  display: inline-block;
-}
-ul.spicesocialwidget li a {
-  background-color:transparent;
-  background-image:url('/assets/images/main/social.png');
-  background-repeat:no-repeat;
-  background-size:auto 144px;
-  border:0 none;
-  display:block;
-  height:47px;
-  /*overflow:hidden;*/
-  text-align:left;
-  text-decoration:none;
-  /*transition:all 0.2s ease 0s;*/
-  width:48px;
-  position: relative;
-  display: flex;
+@import "_social";
 
-      -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+@import "_reviews";
 
-}
-
-.ie7 ul.spicesocialwidget li a,
-.ie8 ul.spicesocialwidget li a {
-  background-image:url('/assets/images/main/social.png');
-}
-ul.spicesocialwidget li.facebook a { background-position:0 0; }
-ul.spicesocialwidget li.flickr a { background-position:-48px 0; }
-ul.spicesocialwidget li.dribbble a { background-position:-96px 0; }
-ul.spicesocialwidget li.googleplus a { background-position:-144px 0; }
-ul.spicesocialwidget li.linkedin a { background-position:-192px 0; }
-ul.spicesocialwidget li.pinterest a { background-position:-240px 0; }
-ul.spicesocialwidget li.rss a { background-position:-288px 0; }
-ul.spicesocialwidget li.skype a { background-position:-336px 0; }
-ul.spicesocialwidget li.twitter a { background-position:-384px 0; }
-ul.spicesocialwidget li.vimeo a { background-position:-432px 0; }
-ul.spicesocialwidget li.youtube a { background-position:-480px 0; }
-
-ul.spicesocialwidget li.facebook a:hover { background-position:0 -48px}
-ul.spicesocialwidget li.flickr a:hover { background-position:-48px -48px}
-ul.spicesocialwidget li.dribbble a:hover { background-position:-96px -48px}
-ul.spicesocialwidget li.googleplus a:hover { background-position:-144px -48px}
-ul.spicesocialwidget li.linkedin a:hover { background-position:-192px -48px}
-ul.spicesocialwidget li.pinterest a:hover { background-position:-240px -48px}
-ul.spicesocialwidget li.rss a:hover { background-position:-288px -48px}
-ul.spicesocialwidget li.skype a:hover { background-position:-336px -48px}
-ul.spicesocialwidget li.twitter a:hover { background-position:-384px -48px}
-ul.spicesocialwidget li.vimeo a:hover { background-position:-432px -48px}
-ul.spicesocialwidget li.youtube a:hover { background-position:-480px -48px}
-
-.spicesocialwidget .facebook span { background: #3b5a9b; color: #dce5ed; text-shadow: 0px 1px 0px #2f487c; }
-.spicesocialwidget .facebook span:after { border-top-color: #3b5a9b; }
-
-
-
-
-
-
-/* @end */
-
-/* Reviews */
-.app-reviews-container{
-    width: 960px;
-    height: 100%;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-}
-.app-reviews-container h1{
-    font-size: 30px;
-}
-.app-reviews{
-    height: 300px;
-    width: 960px;
-    position: relative;
-    display: table;
-    margin:0 auto;
-}
-.review-left-quo,
-.review-right-quo{
-    color: #ccc;
-    font-size: 220px;
-    position: absolute;
-    font-weight: 100;
-}
-.review-left-quo{
-    top: 0;
-    left: 0;
-}
-.review-right-quo{
-    right: 0;
-    top: 190px;
-}
-.app-reviews p#review-content{
-    width: 800px;
-    color: #333;
-    text-align: left;
-    padding-left: 100px;
-    display: table-cell;
-    vertical-align: middle;
-}
-#review-content{
-    font-family: "Times New Roman", Times, serif;
-    font-size: 26px;
-    font-weight: lighter;
-    font-style: italic;
-    line-height: 1.2;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
-}
-.review-change-progressbar-bg{
-    height: 1px;
-    width: 80%;
-    background-color: #ccc;
-    bottom: 50px;
-    left: 10%;
-    right: 10%;
-    position: absolute;
-}
-#review-change-progressbar{
-    content: " ";
-    width: 0%;
-    height: 1px;
-    background-color: #1f94ff;
-}
-
-
-
-/* Feature List */
-/* Feature List */
-ul.feature-container{
-    position: relative;
-    width: 980px;
-    margin: 0 auto;
-    text-align: left;
-    padding-top: 20px;
-}
-
-li.feature-item{
-    margin-left: 4px;
-    width: 320px; /* 320x3 = 960px */
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 10px;
-}
-ul.feature-container:nth-child(3n){
-    clear: both;
-}
-li.feature-item h2{
-    font-size: 24px;
-}
-li.feature-item p{
-    font-size: 18px;
-    line-height: 130%;
-    font-weight: 100;
-    padding: 5px;
-}
-.feature-icon::before{
-    content: " ";
-    font-family: "EUMWeb";
-    font-size: 60px;
-    color: #333;
-    padding-right: 7px;
-    vertical-align: -5px;
-}
-/*  Icons */
-.feature-icon.feature-airplay::before{
-    content: "2";
-}
-.feature-icon.feature-audiobus::before{
-    content: "d";
-}
-.feature-icon.feature-iaa::before{
-    content: "e";
-}
-.feature-icon.feature-ts::before{
-    content: "1";
-}
-.feature-icon.feature-tone::before{
-    content: "f";
-}
-.feature-icon.feature-accent::before{
-    content: "4";
-}
-.feature-icon.feature-tap::before{
-    content: "5";
-}
-.feature-icon.feature-timer::before{
-    content: "g";
-}
-.feature-icon.feature-background::before{
-    content: "8";
-}
-.feature-icon.feature-landscape::before{
-    content: "b";
-}
-.feature-icon.feature-uni::before{
-    content: "l";
-}
-.feature-icon.feature-visual::before{
-    content: "c";
-}
-.feature-icon.feature-adfree::before{
-    content: "9";
-}
-.feature-icon.feature-capo::before{
-    content: "h";
-}
-.feature-icon.feature-uke::before{
-    content: "k";
-}
-.feature-icon.feature-a4::before{
-    content: "i";
-}
-.feature-icon.feature-tuner::before{
-    content: "7";
-}
-.feature-icon.feature-battery::before{
-    content: "6";
-}
-.feature-icon.feature-lefthanded::before{
-    content: "j";
-}
+@import "_features";
 
 
 /*  Press Kit  */

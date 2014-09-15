@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
@@ -118,48 +117,33 @@ audio:not([controls]) {
 }
 
 @font-face {
-  font-family: 'entypo';
-  src: url("../fonts/entypo.eot");
-  src: local("☺"), url("../fonts/entypo.woff") format("woff"), url("../fonts/entypo.ttf") format("truetype"), url("../fonts/entypo.svg") format("svg");
+  font-family: entypo;
   font-weight: normal;
   font-style: normal;
+  src: url("/assets/fonts/entypo.eot");
+  src: url("/assets/fonts/entypo.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/entypo.woff") format("woff"), url("/assets/fonts/entypo.ttf") format("truetype"), url("/assets/fonts/entypo.svg#entypo") format("svg");
 }
 @font-face {
-  font-family: 'EUMWeb';
-  src: url("../fonts/eumweb-regular.eot");
-  src: url("../fonts/eumweb-regular.eot") format("embedded-opentype"), url("../fonts/eumweb-regular.woff") format("woff"), url("../fonts/eumweb-regular.ttf") format("truetype"), url("../fonts/eumweb-regular.svg#EUMWebRegular") format("svg");
+  font-family: EUMWeb;
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/eumweb-regular.eot");
+  src: url("/assets/fonts/eumweb-regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/eumweb-regular.woff") format("woff"), url("/assets/fonts/eumweb-regular.ttf") format("truetype"), url("/assets/fonts/eumweb-regular.svg#EUMWeb") format("svg");
 }
-/*
-@font-face {
-	font-family: 'TitilliumText25L';
-	src: url('../fonts/TitilliumText25L.eot');
-	src: local('☺'), url('../fonts/TitilliumText25L.woff') format('woff'), url('../fonts/TitilliumText25L.ttf') format('truetype'), url('../fonts/TitilliumText25L.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'DIN-Regular';
-	src: url('../fonts/DIN-Regular.eot');
-	src: local('☺'), url('../fonts/DIN-Regular.woff') format('woff'), url('../fonts/DIN-Regular.ttf') format('truetype'), url('../fonts/DIN-Regular.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-*/
 .basic-ani {
-  -webkit-transition: all 300ms ease;
-  -moz-transition: all 300ms ease;
-  -ms-transition: all 300ms ease;
-  -o-transition: all 300ms ease;
-  transition: all 300ms ease;
+  -webkit-transform: all 300ms ease;
+  -moz-transform: all 300ms ease;
+  -ms-transform: all 300ms ease;
+  -o-transform: all 300ms ease;
+  transform: all 300ms ease;
 }
 
 .basic-ani-onlyalpha {
-  -webkit-transition: opacity 300ms ease;
-  -moz-transition: opacity 300ms ease;
-  -ms-transition: opacity 300ms ease;
-  -o-transition: opacity 300ms ease;
-  transition: opacity 300ms ease;
+  -webkit-transform: opacity 300ms ease;
+  -moz-transform: opacity 300ms ease;
+  -ms-transform: opacity 300ms ease;
+  -o-transform: opacity 300ms ease;
+  transform: opacity 300ms ease;
 }
 
 body {
@@ -1344,7 +1328,6 @@ ul.spicesocialwidget li.youtube a:hover {
   background-color: #1f94ff;
 }
 
-/* Feature List */
 /* Feature List */
 ul.feature-container {
   position: relative;

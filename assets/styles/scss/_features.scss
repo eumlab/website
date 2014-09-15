@@ -1,0 +1,94 @@
+/* Feature List */
+ul.feature-container{
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 20px;
+}
+
+li.feature-item{
+    margin-left: 4px;
+    width: 320px; /* 320x3 = 960px */
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+}
+ul.feature-container:nth-child(3n){
+    clear: both;
+}
+li.feature-item h2{
+    font-size: 24px;
+}
+li.feature-item p{
+    font-size: 18px;
+    line-height: 130%;
+    font-weight: 100;
+    padding: 5px;
+}
+.feature-icon::before{
+    content: " ";
+    font-family: "EUMWeb";
+    font-size: 60px;
+    color: #333;
+    padding-right: 7px;
+    vertical-align: -5px;
+}
+/*  Icons */
+.feature-icon.feature-airplay::before{
+    content: "2";
+}
+.feature-icon.feature-audiobus::before{
+    content: "d";
+}
+.feature-icon.feature-iaa::before{
+    content: "e";
+}
+.feature-icon.feature-ts::before{
+    content: "1";
+}
+.feature-icon.feature-tone::before{
+    content: "f";
+}
+.feature-icon.feature-accent::before{
+    content: "4";
+}
+.feature-icon.feature-tap::before{
+    content: "5";
+}
+.feature-icon.feature-timer::before{
+    content: "g";
+}
+.feature-icon.feature-background::before{
+    content: "8";
+}
+.feature-icon.feature-landscape::before{
+    content: "b";
+}
+.feature-icon.feature-uni::before{
+    content: "l";
+}
+.feature-icon.feature-visual::before{
+    content: "c";
+}
+.feature-icon.feature-adfree::before{
+    content: "9";
+}
+.feature-icon.feature-capo::before{
+    content: "h";
+}
+.feature-icon.feature-uke::before{
+    content: "k";
+}
+.feature-icon.feature-a4::before{
+    content: "i";
+}
+.feature-icon.feature-tuner::before{
+    content: "7";
+}
+.feature-icon.feature-battery::before{
+    content: "6";
+}
+.feature-icon.feature-lefthanded::before{
+    content: "j";
+}
