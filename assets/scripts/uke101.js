@@ -1,18 +1,37 @@
 $(function() {
-    // $(".firstpage-container").css({"height": $(window).height()});
-
     eum.loadImage('/assets/images/uke101/part3-l.png');
     eum.loadImage('/assets/images/uke101/part3-r.png');
+
+    $(window)
+    .on('resize', resize).resize()
+    .scroll(function() {
+        twoPerspectiveAnim();
+        lessonAnim();
+    });
 
     // if refresh page, and the position is two perspective section
     twoPerspectiveAnim();
     lessonAnim();
-
-    $(window).scroll(function() {
-        twoPerspectiveAnim();
-        lessonAnim();
-    });
 });
+
+function resize(e) {
+    var win = $(window);
+    var winH = win.height();
+
+    $(".firstpage-container").css("height", winH);
+
+    var iphoneEl = $('.uke101-container .iphone');
+    var iphoneBottom = 108;
+    var iphoneCoverPercent = 50;
+
+    iphoneBottom = iphoneBottom * winH / 1000;
+    iphoneCoverPercent = iphoneCoverPercent * winH / 1000;
+
+    iphoneEl.css({
+        'bottom': iphoneBottom,
+        'backgroundSize': iphoneCoverPercent + '%'
+    });
+}
 
 function twoPerspectiveAnim() {
     var animEls = $('.two-perspective-ani');

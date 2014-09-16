@@ -40,68 +40,58 @@ body {
   line-height: 150%;
 }
 
+.firstpage-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
 .uke101-container {
   height: 100%;
   width: 100%;
   position: relative;
+  z-index: 9;
   overflow: hidden;
-  background: url("/assets/images/uke101/highlight-bg.png") repeat-x center center;
-  background-size: cover;
+  background: #f4f2eb url("/assets/images/uke101/highlight-bg.png") repeat-x center center;
+  background-size: auto 100%;
 }
-
-.iphone {
+.uke101-container .iphone {
   position: absolute;
   left: 50%;
-  top: 123px;
-  background: transparent no-repeat url("/assets/images/uke101/highlight-iphone.png");
+  bottom: 123px;
+  background: transparent no-repeat url("/assets/images/uke101/highlight-iphone.png") 0 bottom;
   height: 1492px;
   width: 906px;
   background-size: 50%;
   margin-left: -450px;
 }
-
-.right {
+.uke101-container .right {
   position: absolute;
   left: 50%;
-  top: 30px;
-  height: 100%;
-  width: 50%;
-  margin-left: 20px;
+  top: 50%;
+  margin-top: -100px;
 }
-
-.right h1,
-.right h2 {
+.uke101-container .right h1,
+.uke101-container .right h2 {
   font-weight: 200;
   color: #fffaf1;
   font-size: 32px;
 }
-
-.right h1 {
+.uke101-container .right h1 {
   font-size: 62px;
   font-weight: 600;
-  padding-top: 45%;
 }
-
-.right h2 {
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+.uke101-container .right h2 {
   padding-top: 15px;
 }
-
-.right a {
+.uke101-container .right a {
   opacity: 0.8;
   padding-top: 60px;
   height: 63px;
   display: inline-block;
 }
-
-.right a:hover {
+.uke101-container .right a:hover {
   opacity: 1;
-}
-
-.firstpage-container {
-  height: 938px;
-  width: 100%;
-  position: relative;
 }
 
 .page-container {

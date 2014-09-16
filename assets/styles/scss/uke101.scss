@@ -38,67 +38,65 @@ body {
     line-height: 150%;
 }
 
-.uke101-container{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    background: url('/assets/images/uke101/highlight-bg.png') repeat-x center center;
-    background-size: cover;
-}
-
-.iphone{
-    position: absolute;
-    left: 50%;
-    top: 123px;
-    background: transparent no-repeat url('/assets/images/uke101/highlight-iphone.png');
-    height: 1492px;
-    width: 906px;
-    background-size: 50%;
-    margin-left: -450px;
-}
-
-.right{
-    position: absolute;
-    left: 50%;
-    top: 30px;
-    height: 100%;
-    width: 50%;
-    margin-left: 20px;
-}
-
-.right h1,
-.right h2{
-    font-weight: 200;
-    color: #fffaf1;
-    font-size: 32px;
-}
-
-.right h1{
-    font-size: 62px;
-    font-weight: 600;
-    padding-top: 45%;
-}
-.right h2{
-    text-shadow: 0 0 1px rgba(0,0,0,0.5);
-    padding-top: 15px;
-}
-
-.right a{
-    opacity: 0.8;
-    padding-top: 60px;
-    height: 63px;
-    display: inline-block;
-}
-
-.right a:hover{
-    opacity: 1;
-}
-
 .firstpage-container{
-    height: 938px;
+    height: 100%;
     width: 100%;
     position: relative;
+}
+
+.uke101-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+  overflow: hidden;
+  background: #f4f2eb url('/assets/images/uke101/highlight-bg.png') repeat-x center center;
+  background-size: auto 100%;
+
+  .iphone {
+      position: absolute;
+      left: 50%;
+      bottom: 123px;
+      background: transparent no-repeat url('/assets/images/uke101/highlight-iphone.png') 0 bottom;
+      height: 1492px;
+      width: 906px;
+      background-size: 50%;
+      margin-left: -450px;
+  }
+
+  .right {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -100px;
+
+      h1,
+      h2 {
+        font-weight: 200;
+        color: #fffaf1;
+        font-size: 32px;
+      }
+
+      h1{
+        font-size: 62px;
+        font-weight: 600;
+      }
+
+      h2 {
+        padding-top: 15px;
+      }
+
+      a {
+        opacity: 0.8;
+        padding-top: 60px;
+        height: 63px;
+        display: inline-block;
+      }
+
+      a:hover{
+        opacity: 1;
+      }
+  }
 }
 
 .page-container{
@@ -108,6 +106,7 @@ body {
     min-height: 200px;
     color: #1b1b1b;
     font-family: "proxima-nova" "helveticaneue-light", "Helvetica Neue", Helvetica, "Hiragino Sans GB" , arial, sans-serif;
+
 }
 
 #idx-header.glow{
