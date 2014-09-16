@@ -290,23 +290,13 @@ ul.apps li::after {
 
 /*****   Section Figure ************/
 .main-section-figure {
-  background-color: #a8c0d5;
   background: no-repeat top url("/assets/images/main/app-downloads-bg.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   position: relative;
-}
-
-.figure-ghand {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: no-repeat top url("/assets/images/main/ghand.png");
-  background-size: 100%;
-  margin-left: -25px;
+  background-color: #a8c0d5;
 }
 
 .main-section-figure .hand {
