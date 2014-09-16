@@ -186,12 +186,15 @@ function resizeForPress(){
 }
 
 
+
 function checkScreenSize(){
      var win =  $(window),
         winWidth = win.width(),
         winHeight = win.height();
     //console.info(winHeight);
-    if (winHeight < 700){
+
+    if (winHeight < 700 ||
+        eum.isMobile()){
 
         if(top.fullpageCreated){
             $.fn.fullpage.destroy("all");
@@ -347,5 +350,7 @@ function setAppsPosition() {
             $("#pre-loader").hide();
         });
     },1000);
+
+    fixMobile();
 
 })(jQuery);

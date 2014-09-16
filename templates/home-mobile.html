@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block basestyle %}
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no,width=device-width" />
+{% endblock %}
+{% block title %}Music Apps{% endblock %}
+{% block wholetitle %}EUMLab, creators of the best music apps out there.{% endblock %}
+
+{% block meta %}
+
+
+{% endblock %}
+
+{% block script %}
+<script src="/assets/scripts/jquery.easings.min.js"></script>
+<script src="/assets/scripts/jquery.fullPage.min.js"></script>
+{% endblock %}
+
+{% block style %}
+    {% include '_fixCSS.html' with page='home2' %}
+{% endblock %}
+
+{% block body %}
+
+<div class="main">
+<div class="logo"></div>
+<h1 class="slogan">Presenting <em>EUMLab</em>,creators of <br/>
+the best <em>music apps</em> out there</h1>
+<ul class="apps">
+    {% for appitem in appList %}
+        <li class="icon-item"><a href="{{ appitem.href }}"><img class="icon120" height="60" width="60" src="/assets/images/icons/120/{{ appitem.icon }}"/><br><h2 class="icon-title">{{ appitem.name }}</h2><p>{{ appitem.desc }}</p></a></li>
+    {% endfor %}
+</ul>
+</div>
+
+    <div id="sec-figure"  class="main-section-figure">
+        <div class="figure-ghand">
+
+        </div>
+        <div class="figure-text-container">
+               <h2>Over <em>4,500,000</em> people <br/>are inspired by our apps.</h2>
+               <h3>And they <em >♥</em> them.<br/>Check out what they're saying... </h3>
+            <div class="figure-reviews">
+                {% include "_reviews.html" %}
+            </div>
+
+
+        </div>
+
+    </div><!-- End Figure -->
+
+{% endblock %}
+
+{% block feedbackscript %}{% endblock %}

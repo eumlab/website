@@ -69,7 +69,10 @@ $(function() {
         bgPozY = bgPozY + offset;
         twoWay.css({"margin-top":bgPozY+"px"});
 
-        $(".poly-closeup").css({"background-position-y":(100 + offset)+"px"});
+        if(!eum.isMobile()){
+            $(".poly-closeup").css({"background-position-y":(100 + offset)+"px"});
+        }
+
 
         lastScroll = newScroll;
 

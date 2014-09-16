@@ -1,0 +1,209 @@
+@import "_reset";
+@import "_vars";
+@import "reviews";
+@import "bourbon/bourbon";
+
+@include font-face(entypo,"/assets/fonts/entypo");
+@include font-face(EUMWeb,"/assets/fonts/eumweb-regular");
+
+
+body {
+    background: #000;
+    font-size: 12px;
+    font-family:$font-basic;
+    font-weight: normal;
+    color: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+
+    background-image: url('/assets/images/main/Main-lighteffect.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 130%;
+}
+
+a,
+a:hover{
+  color: #FFF;
+  text-decoration: none;
+}
+
+.logo{
+  padding-top: 30px;
+}
+.logo::before{
+  content: "B";
+  font-family: "EUMWeb";
+
+  font-size: 60px;
+  display: inline-block;
+  margin-top: -21px;
+  vertical-align: middle;
+  padding-right: 5px;
+  color: $logo-blue;
+}
+
+.slogan{
+  font-size: 20px;
+  padding: 20px 0;
+  font-weight: 200;
+}
+.slogan em{
+  font-weight: 400;
+}
+
+.main{
+  text-align: center;
+}
+
+
+ul.apps{
+  text-align: left;
+}
+ul.apps li{
+  height: 60px;
+  width: 100%;
+  display: block;
+  padding: 5px 0;
+  margin-bottom: 5px;
+  position: relative;
+  background-color: #111;
+}
+ul.apps li a{
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+ul.apps li a img{
+  position: absolute;
+  left: 10px;
+  top:0;
+}
+ul.apps li a h2{
+  padding-left: 80px;
+  padding-right: 40px;
+  font-size: 18px;
+}
+ul.apps li a p{
+  font-size: 14px;
+  padding-left: 80px;
+  font-weight: 200;
+  padding-right: 40px;
+}
+ul.apps li::after{
+  font-family: "Al Nile",$font-basic;
+  content: ">";
+  height: 100%;
+  width: 30px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top:50%;
+  font-size: 30px;
+  font-weight: 100;
+  margin-top: -15px;
+  color: #666;
+}
+
+
+
+/*****   Section Figure ************/
+.main-section-figure{
+    background-color: #a8c0d5;
+    background: no-repeat top url('/assets/images/main/app-downloads-bg.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    height: 520px;
+}
+.figure-ghand{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: no-repeat top url('/assets/images/main/ghand.png');
+    background-size: 100%;
+    margin-left: -25px;
+}
+.figure-text-container{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.figure-text-container h2{
+    padding-top: 200px;
+    font-size: 24px;
+    color: #1b1b1b;
+    font-weight: 100;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+}
+.figure-text-container h2 em{
+    font-weight: 400;
+
+}
+.figure-text-container h3{
+    padding-top: 10px;
+    color: #1b1b1b;
+    font-weight: 100;
+    font-size: 18px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+}
+.figure-text-container h3 em{
+    font-family: "entypo";
+    color: #dd4915;
+    font-size: 30px;
+    vertical-align: middle;
+}
+.figure-text-container h3 em.beat{
+    color: #cd4413;
+}
+.figure-reviews{
+    height: 200px;
+    width: 100%;
+    position: relative;
+    display: table;
+}
+
+
+//Fix Reviews
+.nondisplay{
+  display: none;
+}
+.app-reviews-container{
+  width: 100%;
+  height: 200px;
+}
+.app-reviews-container h1{
+  display: none;
+}
+.app-reviews{
+  width: 100%;
+  height: 150px;
+}
+
+.app-reviews p#review-content{
+  width: 100%;
+  padding:0 20px;
+  color: #2b5f8c;
+}
+#review-content{
+  font-size: 12px;
+}
+.review-left-quo, .review-right-quo{
+  font-size: 80px;
+  color: #2b5f8c;
+}
+.review-right-quo{
+  top:120px;
+}
+
+.review-change-progressbar-bg{
+  bottom: 63px;
+  background-color: #e0e0e0;
+}

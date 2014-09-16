@@ -41,7 +41,9 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png">
     <meta name="application-name" content="EUMLab">
+    {% block basestyle %}
     <link href="/assets/styles/style.css" rel="stylesheet" />
+    {% endblock %}
     {% block style %}{% endblock %}
 {% if device.iphone %}
     <link href="/assets/styles/style-mobile.css" rel="stylesheet" />
@@ -68,7 +70,10 @@
     </div>
     <![endif]-->
     {% block body %}{% endblock %}
-
+    <script type="application/javascript">
+        top.device = {};
+        top.device = "{{ device.classes }}";
+    </script>
     <script src="/assets/scripts/jquery-1.11.1.min.js"></script>
     <script src="/assets/scripts/eum.js"></script>
     <script type="text/javascript" src="//use.typekit.net/agm3gqh.js"></script>

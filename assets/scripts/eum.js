@@ -1,6 +1,13 @@
 (function($) {
 
 window.eum = {
+    isMobile: function(){
+        if(top.device.indexOf("iphone")>=0)
+            return true;
+        if(top.device.indexOf('iphone')>=0)
+            return true;
+        return false;
+    },
     loadImage: function( file, callback ) {
         var img = new Image();
 

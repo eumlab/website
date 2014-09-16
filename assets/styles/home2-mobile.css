@@ -1,0 +1,400 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ */
+audio:not([controls]) {
+  display: none;
+}
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+[hidden] {
+  display: none;
+}
+
+/* Reviews */
+.app-reviews-container {
+  width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.app-reviews-container h1 {
+  font-size: 30px;
+}
+
+.app-reviews {
+  height: 300px;
+  width: 960px;
+  position: relative;
+  display: table;
+  margin: 0 auto;
+}
+
+.review-left-quo,
+.review-right-quo {
+  color: #ccc;
+  font-size: 220px;
+  position: absolute;
+  font-weight: 100;
+}
+
+.review-left-quo {
+  top: 0;
+  left: 0;
+}
+
+.review-right-quo {
+  right: 0;
+  top: 190px;
+}
+
+.app-reviews p#review-content {
+  width: 800px;
+  color: #333;
+  text-align: left;
+  padding-left: 100px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#review-content {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 26px;
+  font-weight: lighter;
+  font-style: italic;
+  line-height: 1.2;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.review-change-progressbar-bg {
+  height: 1px;
+  width: 80%;
+  background-color: #ccc;
+  bottom: 50px;
+  left: 10%;
+  right: 10%;
+  position: absolute;
+}
+
+#review-change-progressbar {
+  content: " ";
+  width: 0%;
+  height: 1px;
+  background-color: #1f94ff;
+}
+
+@font-face {
+  font-family: entypo;
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/entypo.eot");
+  src: url("/assets/fonts/entypo.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/entypo.woff") format("woff"), url("/assets/fonts/entypo.ttf") format("truetype"), url("/assets/fonts/entypo.svg#entypo") format("svg");
+}
+@font-face {
+  font-family: EUMWeb;
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/eumweb-regular.eot");
+  src: url("/assets/fonts/eumweb-regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/eumweb-regular.woff") format("woff"), url("/assets/fonts/eumweb-regular.ttf") format("truetype"), url("/assets/fonts/eumweb-regular.svg#EUMWeb") format("svg");
+}
+body {
+  background: #000;
+  font-size: 12px;
+  font-family: "proxima-nova" "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: normal;
+  color: #fff;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  background-image: url("/assets/images/main/Main-lighteffect.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 130%;
+}
+
+a,
+a:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.logo {
+  padding-top: 30px;
+}
+
+.logo::before {
+  content: "B";
+  font-family: "EUMWeb";
+  font-size: 60px;
+  display: inline-block;
+  margin-top: -21px;
+  vertical-align: middle;
+  padding-right: 5px;
+  color: #54ceea;
+}
+
+.slogan {
+  font-size: 20px;
+  padding: 20px 0;
+  font-weight: 200;
+}
+
+.slogan em {
+  font-weight: 400;
+}
+
+.main {
+  text-align: center;
+}
+
+ul.apps {
+  text-align: left;
+}
+
+ul.apps li {
+  height: 60px;
+  width: 100%;
+  display: block;
+  padding: 5px 0;
+  margin-bottom: 5px;
+  position: relative;
+  background-color: #111;
+}
+
+ul.apps li a {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+ul.apps li a img {
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+
+ul.apps li a h2 {
+  padding-left: 80px;
+  padding-right: 40px;
+  font-size: 18px;
+}
+
+ul.apps li a p {
+  font-size: 14px;
+  padding-left: 80px;
+  font-weight: 200;
+  padding-right: 40px;
+}
+
+ul.apps li::after {
+  font-family: "Al Nile", "proxima-nova" "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
+  content: ">";
+  height: 100%;
+  width: 30px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  font-size: 30px;
+  font-weight: 100;
+  margin-top: -15px;
+  color: #666;
+}
+
+/*****   Section Figure ************/
+.main-section-figure {
+  background-color: #a8c0d5;
+  background: no-repeat top url("/assets/images/main/app-downloads-bg.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  height: 520px;
+}
+
+.figure-ghand {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: no-repeat top url("/assets/images/main/ghand.png");
+  background-size: 100%;
+  margin-left: -25px;
+}
+
+.figure-text-container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.figure-text-container h2 {
+  padding-top: 200px;
+  font-size: 24px;
+  color: #1b1b1b;
+  font-weight: 100;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.figure-text-container h2 em {
+  font-weight: 400;
+}
+
+.figure-text-container h3 {
+  padding-top: 10px;
+  color: #1b1b1b;
+  font-weight: 100;
+  font-size: 18px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.figure-text-container h3 em {
+  font-family: "entypo";
+  color: #dd4915;
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+.figure-text-container h3 em.beat {
+  color: #cd4413;
+}
+
+.figure-reviews {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  display: table;
+}
+
+.nondisplay {
+  display: none;
+}
+
+.app-reviews-container {
+  width: 100%;
+  height: 200px;
+}
+
+.app-reviews-container h1 {
+  display: none;
+}
+
+.app-reviews {
+  width: 100%;
+  height: 150px;
+}
+
+.app-reviews p#review-content {
+  width: 100%;
+  padding: 0 20px;
+  color: #2b5f8c;
+}
+
+#review-content {
+  font-size: 12px;
+}
+
+.review-left-quo, .review-right-quo {
+  font-size: 80px;
+  color: #2b5f8c;
+}
+
+.review-right-quo {
+  top: 120px;
+}
+
+.review-change-progressbar-bg {
+  bottom: 63px;
+  background-color: #e0e0e0;
+}
+
+/*# sourceMappingURL=home2-mobile.css.map */
