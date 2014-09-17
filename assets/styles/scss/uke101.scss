@@ -358,6 +358,7 @@ body {
 }
 
 /* section download */
+/* Shawn Modified
 .download.section{
     height: 570px;
     position: relative;
@@ -414,10 +415,8 @@ body {
 }
 
 .appstore-icon-bottom {
-    position: absolute;
-    left: 50%;
     top: 140px;
-    margin-left: -380px;
+  margin: 0 auto;
 }
 
 .appstore-icon-bottom::after{
@@ -436,3 +435,6 @@ body {
 .appstore-icon-bottom::after:hover{
     opacity: 0.8;
 }
+*/
+
+@import "download";

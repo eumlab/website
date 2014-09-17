@@ -351,36 +351,91 @@ body {
 }
 
 /* section download */
-.download.section {
-  height: 570px;
-  position: relative;
+/* Shawn Modified
+.download.section{
+    height: 570px;
+    position: relative;
 }
 
-.download.section .slogan {
-  color: #7496a1;
-  font-size: 40px;
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  margin-left: -80px;
+.download.section .slogan{
+    color: #7496a1;
+    font-size: 40px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -80px;
 }
 
 .download.section .features {
-  text-align: left;
-  font-size: 20px;
-  line-height: 2;
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  margin-left: -80px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 2;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    margin-left: -80px;
 }
 
 .download.section .features li:before {
-  content: "• ";
-  color: #e3ab9a;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 1;
+    content: "• ";
+    color: #e3ab9a;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.download.section img{
+    padding-bottom: 15px;
+}
+
+.download.section a:hover{
+    opacity: 0.8;
+}
+
+.appstore-icon::before{
+    content: "a";
+    text-indent: 0 !important;
+    font-size: 70px;
+    font-family: "EUMWeb";
+    color: #fff;
+    display: block;
+    margin-bottom: 100px;
+}
+.appstore-icon{
+    line-height: 200%;
+    display: block;
+    overflow: hidden;
+}
+
+.appstore-icon-bottom {
+    top: 140px;
+  margin: 0 auto;
+}
+
+.appstore-icon-bottom::after{
+    content: "A";
+    text-indent: 0 !important;
+    font-size: 70px;
+    font-family: "EUMWeb";
+    color: #1b1b1b;
+    margin-bottom: 100px;
+}
+
+.appstore-icon-bottom img {
+    margin-bottom: 20px;
+}
+
+.appstore-icon-bottom::after:hover{
+    opacity: 0.8;
+}
+*/
+.download.section {
+  padding-bottom: 50px;
+}
+
+.download.section .slogan {
+  padding-top: 100px;
+  padding-bottom: 25px;
 }
 
 .download.section img {
@@ -407,28 +462,48 @@ body {
   overflow: hidden;
 }
 
-.appstore-icon-bottom {
-  position: absolute;
-  left: 50%;
-  top: 140px;
-  margin-left: -380px;
-}
-
 .appstore-icon-bottom::after {
   content: "A";
   text-indent: 0 !important;
-  font-size: 70px;
+  font-size: 90px;
   font-family: "EUMWeb";
   color: #1b1b1b;
   margin-bottom: 100px;
 }
 
-.appstore-icon-bottom img {
-  margin-bottom: 20px;
-}
-
 .appstore-icon-bottom::after:hover {
   opacity: 0.8;
+}
+
+.download-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.download-container .left-row {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30%;
+  height: 100%;
+}
+
+.download-container .right-row {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  height: 100%;
+}
+
+.download.section p {
+  font-size: 20px;
+  line-height: 130%;
+  padding: 50px 0;
 }
 
 /*# sourceMappingURL=uke101.css.map */

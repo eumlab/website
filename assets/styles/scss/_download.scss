@@ -1,0 +1,72 @@
+
+.download.section{
+    padding-bottom: 50px;
+}
+.download.section .slogan{
+    padding-top: 100px;
+    padding-bottom: 25px;
+}
+.download.section img{
+    padding-bottom: 15px;
+}
+.download.section a:hover{
+    opacity: 0.8;
+}
+
+
+.appstore-icon::before{
+    content: "a";
+    text-indent: 0 !important;
+    font-size: 70px;
+    font-family: "EUMWeb";
+    color: #fff;
+    display: block;
+    margin-bottom: 100px;
+}
+.appstore-icon{
+    line-height: 200%;
+    display: block;
+    overflow: hidden;
+}
+
+.appstore-icon-bottom::after{
+    content: "A";
+    text-indent: 0 !important;
+    font-size: 90px;
+    font-family: "EUMWeb";
+    color: #1b1b1b;
+    margin-bottom: 100px;
+}
+.appstore-icon-bottom::after:hover{
+    opacity: 0.8;
+}
+
+
+.download-container{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.download-container .left-row{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    height: 100%;
+}
+.download-container .right-row{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    height: 100%;
+}
+.download.section p{
+    font-size: 20px;
+    line-height: 130%;
+    padding: 50px 0;
+}

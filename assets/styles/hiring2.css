@@ -108,7 +108,7 @@ html{
 	float: right;
 }
 .position ul.what-we-want::before{
-	content: "What we expected";
+	content: "What we expect";
 }
 .position ul.what-we-want{
 	float: left;
