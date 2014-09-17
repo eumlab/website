@@ -29,10 +29,10 @@ urlpatterns += patterns('mainweb.views',
     (r'^(?i)index.html$',"redirector",{"where":"/"}),
 
 #General Page
-    (r'^hiring/$', 'loadtemplateGeneral', {'template':'hiring.html'}),
-    (r'^press/$', 'loadtemplateGeneral', {'template':'press.html'}),
+    (r'^jobs/$', 'loadtemplateGeneral', {'template':'hiring.html'}),
+    (r'^about/$', 'loadtemplateGeneral', {'template':'press.html'}),
     (r'^imprint/$', 'loadtemplateGeneral', {'template':'imprint.html'}),
-    (r'^contact/$', 'loadtemplateGeneral', {'template':'contact.html'}),
+    #(r'^contact/$', 'loadtemplateGeneral', {'template':'contact.html'}),
     (r'^smtm/$', 'showMeTheMoney', {'template':'showmethemoney.html'}),
 
 #Apps:

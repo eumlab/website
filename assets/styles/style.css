@@ -98,6 +98,13 @@ audio:not([controls]) {
 /***************************
  * base
  ****************************/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
 .nondisplay {
   display: none;
 }
@@ -154,8 +161,12 @@ body {
 }
 
 a {
-  color: #65a8e1;
+  color: #1f94ff;
   text-decoration: none;
+}
+
+a:hover {
+  color: #5cc3f6;
 }
 
 /***************************

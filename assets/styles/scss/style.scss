@@ -5,6 +5,13 @@
  * base
  ****************************/
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 .nondisplay{
     display: none;
 }
@@ -47,8 +54,11 @@ body {
 }
 
 a {
-    color: #65a8e1;
+    color: $link-blue;
     text-decoration: none;
+}
+a:hover{
+  color: $link-blue-light;
 }
 
 /***************************
