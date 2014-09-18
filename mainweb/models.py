@@ -142,13 +142,13 @@ PressItems = [
      'app':applist["uke101"],
      'desc':applist["uke101"]["name"],
      'kit':"https://www.dropbox.com/sh/qk9w8i3icr1xzm2/AADt7UwzbjRR66X8U-2CiHfCa?dl=0",
-     'intro':'https://www.dropbox.com/s/k36cllfc8cwpq2h/PR_Aug_11th.pdf?dl=0',
+     'intro':'https://www.dropbox.com/sh/qk9w8i3icr1xzm2/AACvx0iiCDiic_12Rv8nBntsa/EUMLab%20-%20Uke101%20Press%20Sheet.pdf?dl=0',
      },
     {'title':applist["pm"]["name"],
      'app':applist["pm"],
      'desc':applist["pm"]["desc"],
      'kit':"https://www.dropbox.com/sh/hg5lxx482eb5vhv/AACosxcViu02yOG-ZDBIlNpFa?dl=0",
-     'intro':'https://www.dropbox.com/sh/hg5lxx482eb5vhv/AABmt82ZHkFKfKIgSN68SF9La/Press-Sheet.pdf?dl=0',
+     'intro':'https://www.dropbox.com/sh/hg5lxx482eb5vhv/AAAUBb99uEwN6MARSV5Z3l9ca/EUMLab%20-%20Pro%20Metronome%20Press%20Sheet.pdf?dl=0',
      },
 ]
 
