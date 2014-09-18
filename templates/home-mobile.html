@@ -23,8 +23,9 @@
 
 <div class="main">
 <div class="logo"></div>
-<h1 class="slogan">Presenting <em>EUMLab</em>,creators of <br/>
-the best <em>music apps</em> out there</h1>
+<h1 class="slogan">Welcome to <em>EUMLab</em>,<br/>
+                creators of the best<br/>
+                <em>apps for musicians</em> out there</h1>
 <ul class="apps">
     {% for appitem in appList %}
         <li class="icon-item"><a href="{{ appitem.href }}"><img class="icon120" height="60" width="60" src="/assets/images/icons/120/{{ appitem.icon }}"/><br><h2 class="icon-title">{{ appitem.name }}</h2><p>{{ appitem.desc }}</p></a></li>
@@ -35,7 +36,7 @@ the best <em>music apps</em> out there</h1>
     <div id="sec-figure"  class="main-section-figure">
     <br/><br/><br/><br/><br/>
         <div class="figure-text-container">
-               <h2>Over <em>4,500,000</em> people <br/>are inspired by our apps.</h2>
+               <h2><em>4,500,000</em> musicians <br/> get inspired by our apps</h2>
                <h3>And they <em >♥</em> them.<br/>Check out what they're saying... </h3>
             <div class="figure-reviews">
                 {% include "_reviews.html" %}
