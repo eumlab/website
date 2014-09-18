@@ -1,8 +1,10 @@
 # Django settings for eumlab project.
 import os
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
+
+ALLOWED_HOSTS = ['www.eumlab.com', 'eumlab.com','m.eumlab.com','127.0.0.1']
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),

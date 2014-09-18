@@ -8,19 +8,16 @@
 
 {% block bodystyle %}darktheme {% endblock %}
 {% block body %}
-{% include "_nav2.html" %}
+{% include "_nav2.html" with addstyle='glow' %}
 <div class="container pg-404">
-    <div class="header">
-        <div class="site-title">
-            <h1><a href="/" title="back home">EUM lab</a></h1>
-            <h2>Unleash your music talent</h2>
-        </div>
-    </div>
+
     <div class="center">
         <div class="bg">
         </div>
         <div class="info">
-            <p>This album you were looking for doesn’t exist. You can go to </p>
+            <p>Error 404</p>
+            <p>Page has been removed.</p>
+            <!--<p>This album you were looking for doesn’t exist. You can go to </p>
             <ul>
                 <li><a href="/">Home</a><span>2:59</span></li>
                 <li><a href="/pro-metronome/">Por Metromome</a><span>8:12</span></li>
@@ -34,7 +31,7 @@
                 <li><a href="/string-tuner/">String Tuner</a><span>8:40</span></li>
                 <li><a href="/pro-tuner/">Pro Tuner</a><span>9:28</span></li>
                 <li><a href="http://support.eumlab.com/">Support</a><span>4:50</span></li>
-            </ul>
+            </ul>-->
         </div>
     </div>
 </div>
