@@ -16,15 +16,15 @@ applist = {
     "ukechords":{"mid":"ukechords","name":"UkeChords", "id":"899874539", "iphone":True, "iPad": True, "icon":"ukechords.png", "href":"/ukechords/","desc":"Learn uke chords with real fingering positions","aurl":"eumuc"},
     "iuke":{"mid":"iuke","name":"iUke", "id":"591760977", "iphone":True, "iPad": True, "icon":"iuke.png", "href":"/iuke/","desc":"The ukulele songbook","aurl":"eumiuke"},
     "chordtunes":{"mid":"chordtunes","name":"Chordtunes", "id":"643809129", "iphone":False, "iPad": True, "icon":"chordtunes.png", "href":"/chordtunes/","desc":"The easy chord sheet creator","aurl":"eumct"},
-    "bt":{"mid":"bt","name":"Bass Toolkit", "id":"893031248", "iphone":True, "iPad": True, "icon":"basstoolkit.png", "href":"/bass-toolkit/","desc":"Everything a bass player needs right in your pocket.","aurl":"eumbt"},
-    "st":{"mid":"st","name":"String Tuner", "id":"501971515", "iphone":True, "iPad": True, "icon":"stringtuner.png", "href":"/string-tuner/","desc":"Tune your strings in no minute","aurl":"eumst"},
+    "bt":{"mid":"bt","name":"Bass Toolkit", "id":"893031248", "iphone":True, "iPad": True, "icon":"basstoolkit.png", "href":"/bass-toolkit/","desc":"Everything a bass player needs right in your pocket","aurl":"eumbt"},
+    "st":{"mid":"st","name":"String Tuner", "id":"501971515", "iphone":True, "iPad": True, "icon":"stringtuner.png", "href":"/string-tuner/","desc":"Tune your strings in no time","aurl":"eumst"},
     "pt":{"mid":"pt","name":"Pro Tuner", "id":"483114184", "iphone":True, "iPad": True, "icon":"protuner.png", "href":"/pro-tuner/","desc":"","aurl":"eumpt"},
     "daw":{"mid":"daw","name":"DAW Remote", "id":"435417441", "iphone":True, "iPad": False, "icon":"dawremote.png", "href":"/daw-remote/","desc":"Control your DAW remotely","aurl":""},
     "dawhd":{"mid":"dawhd","name":"DAW Remote HD", "id":"501974930", "iphone":False, "iPad": True, "icon":"dawremotehd.png", "href":"/daw-remote-hd/","desc":"","aurl":""},
 
     "ukehero":{"mid":"ukehero","name":"UkeHero", "id":"904614073", "iphone":True, "iPad": True, "icon":"ukehero.png", "href":"/ukehero/","desc":"Turn your iPhone into a virtual ukulele","aurl":"eumuh"},
     "uketube":{"mid":"uketube","name":"UkeTube", "id":"906939462", "iphone":True, "iPad": True, "icon":"uketube.png", "href":"/uketube/","desc":"Learn the ukulele using YouTube","aurl":"eumut"},
-    "dl":{"mid":"dl","name":"Drum Loops", "id":"918808966", "iphone":True, "iPad": True, "icon":"drumloops.png", "href":"/drum-loops/","desc":"Beats, Rhythms and Grooves","aurl":"eumdl"},
+    "dl":{"mid":"dl","name":"Drum Loops", "id":"918808966", "iphone":True, "iPad": True, "icon":"drumloops.png", "href":"/drum-loops/","desc":"Hundreds of drum loops at your fingertips","aurl":"eumdl"},
     "pc":{"mid":"pc","name":"Piano Handbook", "id":"902368085", "iphone":True, "iPad": True, "icon":"pianochords.png", "href":"/piano-handbook/","desc":"","aurl":"eumpc"},
 }
 
@@ -85,6 +85,7 @@ applist["chordtunes"],
 
 #User Reviews
 applist["ut"]["reviews"] = [
+    "I've been using this app for as long as I can remember. It's an amazing app and definitely the best Metronome app I've found so far!!	",
     "I've been using this app for as long as I can remember. It's an amazing app and definitely the best Metronome app I've found so far!!	",
     "Has all the features I could have wanted and plenty more besides. Works like a hot damn. Excellent value!",
     "Having a metronome everywhere I go is extremely helpful. When I'm in the band room it's great to have, this way I don't have to carry a metronome in my case",
