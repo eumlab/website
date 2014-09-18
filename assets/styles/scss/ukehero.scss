@@ -1,0 +1,263 @@
+html{
+    min-width: 980px;
+    height: 100%;
+}
+
+body {
+    background: #fff;
+}
+
+.ukehero-container{
+    height: 814px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: url('/assets/images/ukehero/highlight-bg.png') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.iphone{
+    position: absolute;
+    left: 0;
+    top: 124px;
+    background: transparent no-repeat url('/assets/images/ukehero/highlight-ip.png') 0 0;
+    height: 1484px;
+    width: 1432px;
+    background-size: 50%;
+}
+
+.right{
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    height: 100%;
+    width: 50%;
+    margin-left: 120px;
+}
+
+.right h1,
+.right h2{
+    font-weight: 200;
+    color: #4d696d;
+    font-size: 32px;
+}
+
+.right h1{
+    font-size: 62px;
+    font-weight: 600;
+    padding-top: 45%;
+}
+.right h2{
+    text-shadow: 0 0 1px rgba(0,0,0,0.5);
+    padding-top: 15px;
+}
+
+.right a {
+    opacity: 0.8;
+    padding-top: 40px;
+    height: 63px;
+    display: inline-block;
+}
+
+.right a:hover{
+    opacity: 1;
+}
+
+.firstpage-container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.page-container{
+    width: 100%;
+    font-weight: 300;
+    min-width: 980px;
+    min-height: 200px;
+    color: #1b1b1b;
+    font-family: "proxima-nova" "helveticaneue-light", "Helvetica Neue", Helvetica, "Hiragino Sans GB" , arial, sans-serif;
+}
+
+.appstore-icon::before{
+    content: "a";
+    text-indent: 0 !important;
+    font-size: 70px;
+    font-family: "EUMWeb";
+    color: #29383e;
+    display: block;
+    margin-bottom: 100px;
+}
+.appstore-icon{
+    line-height: 200%;
+    display: block;
+    overflow: hidden;
+}
+
+.appstore-icon-bottom::after{
+    content: "A";
+    text-indent: 0 !important;
+    font-size: 90px;
+    font-family: "EUMWeb";
+    color: #1b1b1b;
+    margin-bottom: 100px;
+}
+.appstore-icon-bottom::after:hover{
+    opacity: 0.8;
+}
+
+
+/* Section */
+.section{
+    text-align: center;
+}
+.section h1,
+.section h2,
+.section h3{
+    font-weight: 300;
+    font-size: 44px;
+    line-height: 120%;
+}
+
+.section.dark-background{
+     color: #FFF;
+}
+
+.section em{
+    font-weight: 400;
+}
+
+.slogan{
+    padding-top: 120px;
+}
+.section .slogan-desc{
+    padding-top: 20px;
+    font-size: 26px;
+    line-height: 150%;
+}
+
+.real-ukulele .videos {
+    height: 680px;
+}
+
+.smart-fingering {
+    background: url('/assets/images/ukehero/part3-bg.png') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 525px;
+}
+
+.smart-fingering .slogan {
+    padding-top: 70px;
+}
+
+.smart-fingering-image {
+    background: url('/assets/images/ukehero/part3-hand.png') no-repeat 50% 50%;
+    width: 686px;
+    height: 525px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -343px;
+}
+
+.smart-fingering-shadow {
+    background: url('/assets/images/ukehero/part3-topshadow.png') repeat-x 0 0;
+    width: 100%;
+    height: 138px;
+    position: absolute;
+    bottom: 0;
+    left:0;
+}
+
+.smart-chords {
+    background: #fff url('/assets/images/ukehero/part4-bg.png') repeat-x 0 0;
+    position: relative;
+    height: 780px;
+    text-align: right;
+}
+
+.smart-chords-image {
+    background: url('/assets/images/ukehero/part4-ip5.png') no-repeat 0 0;
+    position: absolute;
+    top: 125px;
+    left: 50%;
+    margin-left: -575px;
+    width: 1149px;
+    height: 551px;
+}
+
+.smart-chords-lines {
+    background: url('/assets/images/ukehero/part4-pointer.png') no-repeat 0 0;
+    position: absolute;
+    top: 144px;
+    left: 583px;
+    width: 318px;
+    height: 222px;
+}
+
+.smart-chords .slogan-wrap {
+    position: absolute;
+    top: 125px;
+    right: 600px;
+}
+
+.smart-chords .slogan {
+    font-size: 36px;
+    padding: 0;
+}
+
+.smart-chords .slogan em {
+    font-size: 60px;
+}
+
+.smart-chords .slogan-desc {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.own-chord {
+    background: url('/assets/images/ukehero/part5-bg.png') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 620px;
+}
+
+.own-chord-image {
+    background: url('/assets/images/ukehero/part5-chordmap.png') no-repeat 50% -50px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 620px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.download.section{
+    padding-bottom: 120px;
+}
+.download.section .slogan{
+    padding-top: 100px;
+    padding-bottom: 25px;
+    font-size: 60px;
+}
+.download.section img{
+    padding-bottom: 15px;
+}
+.download.section a:hover{
+    opacity: 0.8;
+}
+
+
+

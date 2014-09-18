@@ -6,5 +6,5 @@ function resize(e) {
     var win = $(window);
     var winH = win.height();
 
-    $(".firstpage-container").css("height", winH);
+    //$(".firstpage-container").css("height", winH);
 }

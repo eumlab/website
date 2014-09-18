@@ -9,10 +9,22 @@ html {
 }
 
 .press-header {
-  padding-top: 30px;
+  margin-top: -50px;
   width: 100%;
-  /*background-color: rgba(0,0,0,0.04);*/
+  background-color: black;
   text-align: center;
+  padding-bottom: 50px;
+}
+
+.press-header h1,
+.press-header h2,
+.press-header p {
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+#idx-header {
+  background: #000 !important;
 }
 
 .press-section-container {
@@ -52,6 +64,7 @@ html {
   min-height: 350px;
   text-align: center;
   margin: 0 auto;
+  margin-top: -90px;
 }
 
 .slogan-container h1 {
@@ -290,6 +303,31 @@ ul.press-covers li p::before {
 
 ul.press-covers li p::after {
   content: "...";
+}
+
+ul.press-covers.stared li.hide {
+  height: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+a#show-more {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-image: -webkit-linear-gradient(#f6f6f6, #ededed);
+  background-image: linear-gradient(#f6f6f6, #ededed);
+  font-size: 18px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ccc;
+}
+
+a#show-more:hover {
+  background-image: -webkit-linear-gradient(#f4f4f4, #ececec);
+  background-image: linear-gradient(#f4f4f4, #ececec);
 }
 
 ul.kits-list {

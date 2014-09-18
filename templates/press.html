@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Press{% endblock %}
+{% block title %}About EUMLab{% endblock %}
 
 {% block meta %}
 
@@ -17,10 +17,10 @@
 
 {% block body %}
 
-    {% include "_nav2.html" with addstyle="fixontop" %}
+    {% include "_nav2.html" with addstyle="fixontop glow" %}
 
     <div class="press-header">
-    <img src="/assets/images/press/staytuned.png" height="290" width="230" />
+    <img src="/assets/images/press/about-logo.png" height="281" width="881"/>
     <div class="slogan-container">
         <h1><em>About Us</em></h1>
         <h2>EUMlab is a group of software developers who are passionate about making excellent tools for musicians.</h2>
@@ -36,7 +36,7 @@
     <div class="divbreaker"></div>
 
 
-    <div class="press-section-container">
+    <div id="Subscribe" class="press-section-container">
 
             <h2>Join to Our <em>Mailing List</em></h2>
             <!-- Begin MailChimp Signup Form -->
@@ -75,7 +75,7 @@
 
     <div class="divbreaker"></div>
 
-    <div class="press-section-container presskits">
+    <div id="presskit" class="press-section-container presskits">
         <h2><em>Press Kits</em></h2>
         <p>We prepared a full range of <em>screenshots</em>, <em>icons</em>, <em>lifestyle photos</em> and <em>review guides</em> for you.<br/>
         We’re always interested to know what you’ve written about either of our apps, so please do <a href="mailto:press@eumlab.com">let us know</a>.</p>
@@ -95,15 +95,16 @@
 
     <div class="press-section-container">
         <h2><em>Press Coverage</em></h2>
-        <ul class="press-covers">
+        <ul id="press-coverage" class="press-covers  stared">
             {% for cover in covers %}
-                <li><a class="cover" target="_blank" href="{{ cover.link }}" title="{{ cover.title }}"><article>{{ cover.title }}</article></a>
+                <li class="{% if not cover.stared %}hide{% endif %} basic-ani"><a class="cover" target="_blank" href="{{ cover.link }}" title="{{ cover.title }}"><article>{{ cover.title }}</article></a>
                     <time>{{ cover.time }}</time> <span class="publisher"><a href="{{ cover.publisherLink }}" target="_blank">{{ cover.publisher }}</a></span>
                     <p class="quo">{{ cover.quo }}</p>
                     <img src="/assets/images/press/covers/{{ cover.img }}" />
                 </li>
             {% endfor %}
         </ul>
+        <a id="show-more" href="javascript:void(0)">Read All</a>
     </div>
 
 
