@@ -70,7 +70,7 @@ applist["uke101"]["pl"] = "https://www.dropbox.com/sh/h16am5vrut0rfqa/AACTrAe-rd
 appsMenu = [
     {"title":"For Daily Practice","items":[applist["pm"],applist["instuner"],applist["gm"],applist["bt"],applist["dl"],]},
     {"title":"For Ukulele Players","items":[applist["ut"],applist["iuke"],applist["ukehero"],applist["uke101"],applist["ukechords"],applist["uketube"],applist["chordtunes"],]},
-    {"title":"More","items":[applist["pt"],applist["st"],applist["daw"],applist["dawhd"],]},
+    {"title":"More Apps For Musicians","items":[applist["pt"],applist["st"],applist["daw"],applist["dawhd"],]},
 ]
 
 ukeApps = [
