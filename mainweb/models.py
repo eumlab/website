@@ -148,7 +148,7 @@ PressItems = [
      'app':applist["pm"],
      'desc':applist["pm"]["desc"],
      'kit':"https://www.dropbox.com/sh/hg5lxx482eb5vhv/AACosxcViu02yOG-ZDBIlNpFa?dl=0",
-     'intro':'http://dropbox.com/',
+     'intro':'https://www.dropbox.com/sh/hg5lxx482eb5vhv/AABmt82ZHkFKfKIgSN68SF9La/Press-Sheet.pdf?dl=0',
      },
 ]
 
