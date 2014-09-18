@@ -81,7 +81,6 @@ html {
   font-weight: 300;
   color: #1b1b1b;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
-  text-align: left;
 }
 
 .slogan-container p {
@@ -91,7 +90,6 @@ html {
   padding-top: 20px;
   color: #1b1b1b;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
-  text-align: left;
 }
 
 .slogan-container p.tip {
