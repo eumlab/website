@@ -39,11 +39,11 @@
             </div>
             <h1 class="main-slogan">Welcome to <em>EUMLab</em>,<br/>
             creators of <em>the best apps for musicians</em> out there</h1>
-            <div id="main-icon-container">
+            <ul id="main-icon-container">
                 {% for appitem in appList %}
-                    <div class="icon-item"><a href="{{ appitem.href }}"><img class="icon120" height="120" width="120" src="/assets/images/icons/120/{{ appitem.icon }}"/><br><h2 class="icon-title">{{ appitem.name }}</h2></a></div>
+                    <li class="icon-item"><a href="{{ appitem.href }}"><img class="icon120" height="120" width="120" src="/assets/images/icons/120/{{ appitem.icon }}"/><br><h2 class="icon-title">{{ appitem.name }}</h2></a></li>
                 {% endfor %}
-            </div>
+            </ul>
         </div>
     </div><!-- End Main -->
 
