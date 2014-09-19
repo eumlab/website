@@ -17,8 +17,11 @@
 	-webkit-transition: opacity 1000ms ease-in-out;
 }
 
+#idx-header.glow {
+  position: absolute;
+}
+
 .app {
-    top: -72px;
     text-align: center;
     position: relative;
 }
