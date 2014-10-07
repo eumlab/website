@@ -1,0 +1,17 @@
+.uke-app-sc-item.active {
+  display: inherit;
+}
+
+.uke-app-sc-item {
+  display: none;
+}
+
+ul#menu-items-container li#menu-item-products sub {
+  margin-top: -15px !important;
+}
+
+a.link-video::after {
+  line-height: 19px;
+}
+
+/*# sourceMappingURL=ie-fix.css.map */

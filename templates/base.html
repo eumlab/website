@@ -51,6 +51,11 @@
 {% if device.ipad %}
     <link href="/assets/styles/style-ipad.css" rel="stylesheet" />
 {% endif %}
+
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="/assets/styles/ie-fix.css"/>
+<![endif]-->
+
 <!-- {{ flavour }} -->
     <!--[if gte IE 9]>
     <style type="text/css">
@@ -63,7 +68,7 @@
 
 
 </head>
-<body class="{% block bodystyle %}{% endblock %}">
+<body class="{% block bodystyle %}{% endblock %} ">
     <!--[if lt IE 8]>
     <div class="fuck-ie">
         <span class="face">:(</span>Your browser is too old. Please use <a href="http://www.google.com/chrome" target="_blank">Google Chrome</a> or <a href="http://windows.microsoft.com/zh-CN/internet-explorer/products/ie/home" target="_blank">update your IE browser</a>

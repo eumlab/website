@@ -1,4 +1,13 @@
 (function($) {
+//Fix IE
+if(Function('/*@cc_on return document.documentMode===10@*/')()){
+    $("<link/>", {
+   rel: "stylesheet",
+   type: "text/css",
+   href: "/assets/styles/ie-fix.css"
+}).appendTo("head");
+}
+
 
 window.eum = {
     isMobile: function(){
