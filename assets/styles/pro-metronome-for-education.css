@@ -265,11 +265,50 @@ em.green {
   font-weight: 400;
   padding-top: 20px;
   font-size: 36px;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 .contact p {
   font-weight: 400;
   padding: 0 0 20px;
+}
+
+/* Pop up*/
+#popup-wrap {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(1, 1, 1, 0.8);
+  top: 0;
+  left: 0;
+  cursor: url("/assets/images/close.png") 14 14, default;
+}
+#popup-wrap .video-popup {
+  height: 576px;
+  width: 890px;
+  cursor: default;
+  background-color: #fff;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -288px;
+  margin-left: -445px;
+  text-align: center;
+}
+#popup-wrap .video-title {
+  font-weight: 200;
+  padding: 20px 0;
+  font-size: 36px;
+  color: #1b1b1b;
+}
+#popup-wrap .mejs-container {
+  margin: 0 auto;
+}
+#popup-wrap .video-container {
+  height: 853px;
+  width: 480px;
 }
 
 /*# sourceMappingURL=pro-metronome-for-education.css.map */

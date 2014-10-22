@@ -80,8 +80,8 @@ $(function() {
     }
     //Scroll
     var lastScroll = $(window).scrollTop();
-    $(window).scroll(onScroll);
-    onScroll(null);
+    //$(window).scroll(onScroll);
+    //onScroll(null);
 
     $(document).on("scrollstop",function(){
       //Hash
