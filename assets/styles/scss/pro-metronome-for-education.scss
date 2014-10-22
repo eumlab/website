@@ -1,3 +1,294 @@
 @import "vars";
-@import "bourbon/bourbon";
+@import "mixins";
 
+html {
+  min-width: 980px;
+  height: 100%;
+  font-family:  $font-basic;
+  font-weight: 300;
+}
+
+body {
+  background: transparent no-repeat center url('/assets/images/pm2/bg.jpg');
+  height: 100%;
+  @include background-size(cover);
+}
+
+a {
+  color: #1f94ff;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  font-size: 24px;
+
+  &:hover {
+    color: #43a6ff;
+  }
+
+  &.link-video {
+    text-shadow: none;
+    margin-top: 30px;
+
+    &::after {
+      content: "▶";
+      width: 40px;
+      height: 40px;
+      font-size: 50px;
+      padding-top: -5px;
+      -webkit-border-radius: 25px;
+      border-radius: 25px;
+      border: solid 1px #1f94ff;
+      font-family: "entypo";
+      display: inline-block;
+      margin-left: 10px;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 40px;
+      text-indent: 3px;
+
+      &:hover {
+        border: solid 1px #43a6ff;
+      }
+    }
+  }
+}
+
+em {
+  font-weight: 400;
+  &.orange {
+    color: $em-orange;
+  }
+
+  &.green {
+    color: $em-green;
+  }
+}
+
+
+.v2-footer {
+    height: 130px;
+}
+
+#idx-header.glow{
+    position: absolute;
+}
+
+/* First Page Container */
+.firstpage-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.head {
+  font-weight: 200;
+  color: #FFFFFF;
+  position: relative;
+
+  .title {
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    height: 100%;
+    width: 50%;
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    padding-top: 45%;
+  }
+
+  h2 {
+    font-size: 30px;
+    text-shadow: 0 0 1px rgba(0,0,0,0.5);
+    padding-top: 15px;
+  }
+}
+
+.page-container {
+  overflow: hidden;
+  width: 100%;
+  background: rgb(255, 255, 255) repeat url('/assets/images/main/n2.png');
+  font-weight: 300;
+  min-width: 980px;
+  min-height: 200px;
+  color: #1b1b1b;
+  font-family: "proxima-nova" "helveticaneue-light", "Helvetica Neue", Helvetica, "Hiragino Sans GB" , arial, sans-serif;
+}
+
+/* Section */
+.section {
+  text-align: center;
+  overflow: hidden;
+
+  h1, h2 {
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 150%;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
+  }
+
+  .dark-background {
+    color: #FFF;
+
+    h1, h2 {
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .slogan {
+    padding-top: 200px;
+    
+    &.second {
+      padding-top: 30px;
+    }
+  }
+
+  .slogan-desc {
+    padding-top: 20px;
+    font-size: 28px;
+    line-height: 150%;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 130%;
+    padding: 50px 0;
+  }
+}
+
+/* Introducation */
+
+.introduction {
+  height: 600px;
+}
+
+/* Features */
+.features {
+  background: #F3F3F3;
+  position: relative;
+  text-align: left;
+  height: 660px;
+
+  .slogan {
+    padding-top: 100px;
+  }
+
+  .slogan-desc {
+    line-height: 110%;
+  }
+
+  .text {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    right: 20px;
+    top: 0;
+
+    ul {
+      margin: 20px 0 25px;
+      list-style: disc inside;
+      font-size: 26px;
+      font-weight: 200;
+      line-height: 150%;
+    }
+  }
+}
+
+/* Lessons */
+.lessons {
+  position: relative;
+  height: 660px;
+
+  .text {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 40px;
+    top: 0;
+    text-align: right;
+  }
+}
+
+.trainer-block-container {
+  position: relative;
+  height: 330px;
+  width: 590px;
+  margin: 60px auto 40px;
+  background-color: #f1cc5a;
+  background: transparent no-repeat top left url('/assets/images/pm2/trainerbg.png');
+}
+
+.note-container {
+  position: absolute;
+  height: 102px;
+  width: 304px;
+  top: 54px;
+  left: 169px;
+}
+
+.wave-container {
+  position: absolute;
+  height: 83px;
+  width: 390px;
+  left: 167px;
+  top:254px;
+  background: transparent no-repeat top left url('/assets/images/pm2/wave-dark.png');
+  opacity: 0;
+}
+
+.beats-container {
+  position: absolute;
+  height: 42px;
+  width: 200px;
+  top: 198px;
+  left: 166px;
+  text-align: left;
+
+  .beat {
+    height: 42px;
+    width: 32px;
+    background-color: #1f94ff;
+    margin-right: 8px;
+    display: inline-block;
+  }
+}
+
+.wave-hl-container {
+  position: absolute;
+  height: 83px;
+  width: 0;
+  left: 167px;
+  top:254px;
+  background: transparent no-repeat top left url('/assets/images/pm2/wave-light.png');
+  border-right: solid 1px #ff4200;
+}
+
+/* Download */
+.download {
+  .slogan {
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+}
+
+/* Contact */
+
+.contact {
+  width: 40%;
+  border: 1px solid #1B1B1B;
+  border-radius: 15px;
+  margin: 60px auto 80px;
+
+  .slogan {
+    font-weight: 400;
+    padding-top: 20px;
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  p {
+    font-weight: 400;
+    padding: 0 0 20px;
+  }
+}

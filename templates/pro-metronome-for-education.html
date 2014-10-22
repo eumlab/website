@@ -1,99 +1,72 @@
 {% extends 'base.html' %}
 
-{% block title %}Pro Metronome{% endblock %}
+{% block title %}Pro Metronome - a music teacher's swiss-army knife{% endblock %}
 
 
 {% block script %}
     <script src="/assets/scripts/video.js"></script>
     <script src="/assets/scripts/bigvideo.js"></script>
     <script src="/assets/scripts/jquery.threesixty.js"></script>
-    <script src="/assets/scripts/pro-metronome2.js"></script>
+    <script src="/assets/scripts/pro-metronome-for-education.js"></script>
 {% endblock %}
 0
 {% block style %}
-    <link href="/assets/styles/bigvideo.css" rel="stylesheet" />
-    <link href="/assets/styles/pro-metronome2.css" rel="stylesheet" />
-    {% include '_fixCSS.html' with page='pro-metronome2' %}
+    <link href="/assets/styles/pro-metronome-for-education.css" rel="stylesheet" />
+    {% include '_fixCSS.html' with page='pro-metronome-for-education' %}
 {% endblock %}
 
 {% block bodystyle %} {% endblock %}
 {% block body %}
 <div class="firstpage-container">
-{% include "_nav2.html" with addstyle='glow' %}
+  {% include "_nav2.html" with addstyle='glow' %}
 
-
-    <div class="pm-container">
-        <div class="iphone">
-            <img class="screen-ani" style="display: none" />
-        </div>
-
-        <div class="right">
-            <h1 id="appname">Pro Metronome</h1>
-            <h2>The best metronome app. Period.</h2>
-            <a href="{{ me.storeurl }}" target="_blank" class="appstore-icon" title="Download Pro Metronome">Download Pro Metronome on the App Store</a>
-
-        </div>
+  <div class="head">
+    <div class="title">
+      <h1 id="appname">Pro Metronome</h1>
+      <h2>A music teacher's swiss-army knife</h2>
     </div>
+  </div>
 </div>
 
 <div class="page-container">
-<div id="Intro" class="section ">
-    <h1 class="slogan"><em>Pro Metronome</em> helps you master<br/>your <em>daily practice</em> and <em>stage performance</em></h1>
-    <h2 class="slogan-desc">It's redefined how over 3 million people sync to a beat<br/>with a combination of innovative design and hardcore engineering.</h2>
-    <img class="daily-training" src="/assets/images/pm2/daily-training.png" height="791" width="1530" />
-</div>
+  <div class="section introduction">
+    <h1 class="slogan">Pro Metronome has helped<br>over <em class="orange">3 million musicians</em> keep in time.</h1>
+    <h1 class="slogan second">It's used in <em class="green">100s of classrooms</em> around the world every day,<br>from conservatories to one-on-one lessons.</h1>
+  </div>
 
 
-<div id="Simple-But-Powerful" class="section both-way dark-background">
-    <div class="both-way-iphone"></div>
-    <h1 class="slogan">Simple to use but<br/>packed with features</h1>
-    <div class="two-row-container">
-        <div class="left-row">
-            <h2 class="slogan-desc">Use it like a traditional metronome.<br/>
-            Pick it up, select a tempo, and hit play.</h2>
-            <img src="/assets/images/pm2/iphone-simple.png" height="851" width="407" />
-        </div>
-        <div class="right-row">
-            <h2 class="slogan-desc">Pro features include a powerful rhythm coach, <br/>
-                sub-divisions, and even polyrhythms.</h2>
-            <img src="/assets/images/pm2/iphone-poly.png" height="851" width="407" />
-        </div>
+  <div class="section features">
+    <div class="image"></div>
+    <div class="text">
+      <h1 class="slogan"><em>Pro Metronome</em> has all the features<br>of a <em>standard metronome</em></h1>
+      <h2 class="slogan-desc">But when it comes to music education, it's invaluable. Use it<br>to help teach your students:</h2>
+      <ul>
+        <li>Basic time signatures</li>
+        <li>Odd time signatures</li>
+        <li>Dotted notes, triplets and more</li>
+        <li>Polyrhythms</li>
+      </ul>
+      <a id="show-poly-video" class="link-video" href="javascript:void(0);" title="See how polyrhythm works">See how it works</a>
     </div>
-</div>
+  </div>
 
 
-<div id="Precision" class="section">
-    <h1 class="slogan">Extreme precision</h1>
-    <h2 class="slogan-desc">Precise timing is critical for any musician.
-    <br/>Pro Metronome uses EUMLab's RTP (Real-Time Playback)<br/>
-    technology to ensure accuracy to 20 microseconds (±20µs).</h2>
-    <img class="supported-techs" src="/assets/images/pm2/precise-iphone.png" height="301" width="1063"/>
-</div>
-
-<div id="Sync" class="section sync-beat dark-background">
-    <h1 class="slogan">Stay in time any way you want</h1>
-    <div class="three-rows-container">
-        <div class="left-row ">
-            <h2 class="slogan-desc">Vibration</h2>
-            <img class="sync-ani" id="sync-vib" src="/assets/images/pm2/PMH@24fps/PMH_00.png" height="114" width="254">
-            <div class="sync-vib"></div>
-        </div>
-        <div class="center-row">
-            <h2 class="slogan-desc">Beats</h2>
-            <img class="sync-ani" id="sync-beat" src="/assets/images/pm2/PMH@24fps/PMH_00.png" height="114" width="254">
-        </div>
-        <div class="right-row">
-            <h2 class="slogan-desc">Flash</h2>
-            <div class="flash-light"></div>
-        </div>
+  <div class="section lessons">
+    <div class="text">
+      <h1 class="slogan">Let <em>Pro Metronome</em><br>help your lessons <em>stand out</em></h1>
+      <h2 class="slogan-desc">Use the app with your iPad's flash to keep the whole class in sync. Beam the video and audio to a projector or speakers with AirPlay.<br>You can even use the counting voice to keep time for you!</h2>
     </div>
-    <div class="overlayer"></div>
-</div>
+
+    <div class="image"></div>
+  </div>
+
+  <div class="section counting">
+  </div>
 
 
-<div id="Rhythm-Trainer" class="section trainer">
-    <h1 class="slogan">Introducing <em>rhythm trainer</em> –<br/>train the metronome in your mind!</h1>
-    <h2 class="slogan-desc">A great teacher trains you to think for yourself.<br /> So we designed Rhythm Trainer to strengthen your mind's metronome.</h2>
+  <div class="section trainer">
+    <h1 class="slogan">The Rhythm Trainer helps<br>strengthening the mind's metronome</h1>
+    <h2 class="slogan-desc">It works by playing a single bar, then muting the next one –<br>it's a great way to improve a student's sense of steady timekeeping.<br>Increase mute intervals as they improve, helping further train their abilities –<br>no other app has this feature.</h2>
     <div class="trainer-block-container">
         <div class="note-container">
             <img src="/assets/images/pm2/trainer-notes-1.png" height="102" width="304" />
@@ -109,123 +82,19 @@
         </div>
         <div id="trainer-wave" class="wave-hl-container"></div>
     </div>
-    <p>How does it work? You set one bar to play, then mute the next.<br/>
-        During the muted bar, keep counting beats in your head. <br/>
-        When the sound comes back, check to see if your counting is synced.<br/>
-    Practice makes perfect and you can increase the number of muted bars as you get better.<br/> </p>
     <a id="show-trainer-video" class="link-video" href="javascript:void(0);" title="See how rhythm trainer works">See how it works</a>
 
-</div>
+  </div>
 
+  <div class="section download">
+    <h1 class="slogan">Pro Metronome for Education</h1>
+    <a class="basic-ani-onlyalpha appstore-icon-bottom" href="{{ me.storeurl }}" target="_blank"><img src="/assets/images/icons/512/prometronome.png" height="256" width="256" ></a>
+  </div>
 
-
-<div id="Polyrhythm" class="section poly dark-background">
-    <div class="poly-row-container">
-        <div class="left-row poly-closeup">
-
-        </div>
-        <div class="right-row">
-            <h1 class="slogan"><em>Polyrhythm</em><br/>for drummers</h1>
-            <h2 class="slogan-desc">Practice your drumming skills with <br/>
-            two rhythms playing simultaneously.<br/>
-            3-over-4? 4-over-5? No problem!<br/>
-            Simply tap a button to hear and visualize it<br/>
-            with our unique interface.</h2>
-            <a id="show-poly-video" class="link-video" href="javascript:void(0);" title="See how polyrhythm works">See how it works</a>
-        </div>
-    </div>
-
-    <img class="supported-techs" src="/assets/images/drumloops/techs.png" height="167" width="656"/>
-</div>
-
-
-
-<div id="Playlist" class="section playlist">
-    <h1 class="slogan"><em>Create</em> and <em>share</em> <em>playlists</em></h1>
-    <h2 class="slogan-desc">Save tempo and other settings to presets.<br/>
-    Store them in a playlist you can recall any time<br/>
-    or share wirelessly with your bandmates.</h2>
-    <img src="/assets/images/pm2/share.png" height="560" width="785" />
-</div>
-<div class="divbreaker" style="margin-top: -3px"></div>
-
-
-<div id="Features" class="section supported-techs">
-    <h2 class="slogan-desc">Other Cool Features</h2>
-
-    <ul class="feature-container">
-        <li class="feature-item">
-            <h2 class="feature-ts feature-icon">Dynamic time signatures</h2>
-            <p>Select any time signature you want. Even odd ones like 4 + 3/4.</p>
-        </li>
-        <li class="feature-item">
-            <h2 class="feature-tone feature-icon">13 time-keeping styles</h2>
-            <p>Choose beat sounds that work for you, including a counting voice.</p>
-        </li>
-        <li class="feature-item">
-            <h2 class="feature-accent feature-icon">Accents</h2>
-            <p>Control beat accent dynamics. Choose between  <em class="">f</em> , <em>mf</em>,  <em>p</em> and mute.</p>
-        </li>
-        <li class="feature-item">
-            <h2 class="feature-tap feature-icon">Tap</h2>
-            <p>Calculate BPM by tapping in real time.</p>
-        </li>
-        <li class="feature-item">
-            <h2 class="feature-timer feature-icon">Practicing timer</h2>
-            <p>Set a timer to reminder you that it's time for your daily practice.</p>
-        </li>
-        <li class="feature-item">
-            <h2 class="feature-background feature-icon">Background play mode</h2>
-            <p>The app works when you return to the home screen, or are in another app.</p>
-        </li>
-        <li class="feature-item">
-            <h2 class="feature-landscape feature-icon">Landscape mode</h2>
-            <p>All features are supported in landscape.</p>
-        </li>
-        <li class="feature-item">
-            <h2 class="feature-visual feature-icon">4 visual modes</h2>
-            <p>Present beats in any one of 4 different modes.</p>
-        </li>
-        <li class="feature-item">
-            <h2 class="feature-adfree feature-icon">Ad free</h2>
-            <p>Our apps are free from in-app banner ads. We hate as much as you do.</p>
-        </li>
-        <li class="feature-item">
-            <h2 class="feature-airplay feature-icon">AirPlay</h2>
-            <p>Use AirPlay to beam your sound to Apple TV or other AirPlay-enabled speakers.</p>
-        </li>
-        <li class="feature-item">
-            <h2 class="feature-audiobus feature-icon">AudioBus</h2>
-            <p>AudioBus support – use the app as an input source for other music apps.</p>
-        </li>
-        <li class="feature-item">
-            <h2 class="feature-iaa feature-icon">Inter-App audio</h2>
-            <p>Route the app's sound directly to other music apps like GarageBand.</p>
-        </li>
-
-
-    </ul>
-</div>
-
-<div class="divbreaker"></div>
-
-<div class="section review">
-        {% include "_reviews.html" %}
-</div>
-
-
-<div class="section download">
-    <h1 class="slogan">Pro Metronome</h1>
-    <a class="basic-ani-onlyalpha appstore-icon-bottom" href="{{ me.storeurl }}" target="_blank"><img src="/assets/images/icons/512/prometronome.png" height="256" width="256" />
-    <br />
-    </a>
-    <p>Available for iPhone, iPad and iPod Touch<br/>
-    Requires iOS 6.1+<br/>
-    <a class="get-presskit" target="_blank" title="Get Presskit" href="/about/#subscribe">Get Presskit</a>
-    </p>
-
-
-</div>
+  <div class="section contact">
+    <h1 class="slogan">Contact Us</h2>
+    <p>Find out more about EUMlab's apps for educators</p>
+  </div>
 
 
     <div class="divbreaker bottom-divbreaker"></div>
@@ -237,7 +106,7 @@
 <div id="popup-wrap">
     <div class="video-popup">
         <h2 id="video-title" class="video-title">How the Polyrhythm Works</h2>
-        <div id="video-container">
+       <div id="video-container">
 
         </div>
     </div>
