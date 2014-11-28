@@ -13,12 +13,30 @@ html {
 }
 
 body {
-  background: transparent no-repeat center url("/assets/images/pm2/bg.jpg");
+  background: transparent no-repeat center url("/assets/images/iuke/bg.jpg");
   height: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.appstore-icon {
+  line-height: 200%;
+  display: inline-block;
+  margin: 20px 0;
+  padding-top: 20px;
+  height: 63px;
+  overflow: hidden;
+}
+.appstore-icon::before {
+  content: "a";
+  text-indent: 0 !important;
+  font-size: 65px;
+  font-family: "EUMWeb";
+  color: #fff;
+  display: block;
+  margin-bottom: 100px;
 }
 
 a {
@@ -83,24 +101,23 @@ em.green {
   font-weight: 200;
   color: #FFFFFF;
   position: relative;
-}
-.head .title {
-  position: absolute;
-  left: 50%;
-  top: 150px;
-  height: 100%;
-  width: 50%;
+  text-align: center;
 }
 .head h1 {
   font-size: 60px;
   font-weight: 600;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  padding-top: 45%;
+  padding-top: 90px;
 }
 .head h2 {
   font-size: 30px;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   padding-top: 15px;
+}
+
+.iphone {
+  background: transparent no-repeat url("/assets/images/iuke/iphone-iuke.png");
+  margin-bottom: 200px;
 }
 
 .page-container {
@@ -149,166 +166,219 @@ em.green {
 }
 
 /* Introducation */
-.introduction {
+.introduction .img {
+  height: 300px;
+}
+
+/* chord  */
+.chord {
   height: 600px;
+}
+.chord .two-rows-container {
+  width: 60%;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+.chord .two-rows-container .left-row {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+}
+.chord .two-rows-container .right-row {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+}
+
+/* solo  */
+.solo .slogan {
+  color: #AF2424;
+}
+.solo .slogan-desc {
+  color: #B17E73;
+}
+
+/* boss  */
+.boss {
+  height: 600px;
+}
+.boss .three-rows-container {
+  min-width: 1170px;
+  /*390*3*/
+  max-width: 1600px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+.boss .three-rows-container .left-row {
+  height: 400px;
+  width: 33.33%;
+  min-width: 390px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.boss .three-rows-container .center-row {
+  height: 400px;
+  width: 33.33%;
+  min-width: 390px;
+  position: absolute;
+  left: 33.33%;
+  bottom: 0;
+}
+.boss .three-rows-container .right-row {
+  height: 400px;
+  width: 33.33%;
+  min-width: 390px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* record  */
+.record .slogan {
+  font-size: 60px;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* practice  */
+.practice .text {
+  margin-left: 40%;
+  text-align: left;
 }
 
 /* Features */
-.features {
-  background: #F3F3F3;
+/* Feature List */
+ul.feature-container {
   position: relative;
-  text-align: left;
-  height: 660px;
-}
-.features .slogan {
-  padding-top: 100px;
-}
-.features .slogan-desc {
-  line-height: 110%;
-}
-.features .text {
-  width: 60%;
-  height: 100%;
-  position: absolute;
-  right: 20px;
-  top: 0;
-}
-.features .text ul {
-  margin: 20px 0 25px;
-  list-style: disc inside;
-  font-size: 26px;
-  font-weight: 200;
-  line-height: 150%;
-}
-
-/* Lessons */
-.lessons {
-  position: relative;
-  height: 660px;
-}
-.lessons .text {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  left: 40px;
-  top: 0;
-  text-align: right;
-}
-
-.trainer-block-container {
-  position: relative;
-  height: 330px;
-  width: 590px;
-  margin: 60px auto 40px;
-  background-color: #f1cc5a;
-  background: transparent no-repeat top left url("/assets/images/pm2/trainerbg.png");
-}
-
-.note-container {
-  position: absolute;
-  height: 102px;
-  width: 304px;
-  top: 54px;
-  left: 169px;
-}
-
-.wave-container {
-  position: absolute;
-  height: 83px;
-  width: 390px;
-  left: 167px;
-  top: 254px;
-  background: transparent no-repeat top left url("/assets/images/pm2/wave-dark.png");
-  opacity: 0;
-}
-
-.beats-container {
-  position: absolute;
-  height: 42px;
-  width: 200px;
-  top: 198px;
-  left: 166px;
-  text-align: left;
-}
-.beats-container .beat {
-  height: 42px;
-  width: 32px;
-  background-color: #1f94ff;
-  margin-right: 8px;
-  display: inline-block;
-}
-
-.wave-hl-container {
-  position: absolute;
-  height: 83px;
-  width: 0;
-  left: 167px;
-  top: 254px;
-  background: transparent no-repeat top left url("/assets/images/pm2/wave-light.png");
-  border-right: solid 1px #ff4200;
-}
-
-/* Download */
-.download .slogan {
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-/* Contact */
-.contact {
-  width: 40%;
-  border: 1px solid #1B1B1B;
-  border-radius: 15px;
-  margin: 60px auto 80px;
-}
-.contact .slogan {
-  font-weight: 400;
-  padding-top: 20px;
-  font-size: 36px;
-  line-height: 1.2;
-}
-.contact p {
-  font-weight: 400;
-  padding: 0 0 20px;
-}
-
-/* Pop up*/
-#popup-wrap {
-  display: none;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(1, 1, 1, 0.8);
-  top: 0;
-  left: 0;
-  cursor: url("/assets/images/close.png") 14 14, default;
-}
-#popup-wrap .video-popup {
-  height: 576px;
-  width: 890px;
-  cursor: default;
-  background-color: #fff;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-top: -288px;
-  margin-left: -445px;
-  text-align: center;
-}
-#popup-wrap .video-title {
-  font-weight: 200;
-  padding: 20px 0;
-  font-size: 36px;
-  color: #1b1b1b;
-}
-#popup-wrap .mejs-container {
+  width: 980px;
   margin: 0 auto;
+  text-align: left;
+  padding-top: 20px;
 }
-#popup-wrap .video-container {
-  height: 853px;
-  width: 480px;
+
+li.feature-item {
+  margin-left: 4px;
+  width: 320px;
+  /* 320x3 = 960px */
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+ul.feature-container:nth-child(3n) {
+  clear: both;
+}
+
+li.feature-item h2 {
+  font-size: 24px;
+}
+
+li.feature-item p {
+  font-size: 18px;
+  line-height: 130%;
+  font-weight: 100;
+  padding: 5px;
+}
+
+.feature-icon::before {
+  content: " ";
+  font-family: "EUMWeb";
+  font-size: 60px;
+  color: #333;
+  padding-right: 7px;
+  vertical-align: -5px;
+}
+
+/*  Icons */
+.feature-icon.feature-airplay::before {
+  content: "2";
+}
+
+.feature-icon.feature-audiobus::before {
+  content: "d";
+}
+
+.feature-icon.feature-iaa::before {
+  content: "e";
+}
+
+.feature-icon.feature-ts::before {
+  content: "1";
+}
+
+.feature-icon.feature-tone::before {
+  content: "f";
+}
+
+.feature-icon.feature-accent::before {
+  content: "4";
+}
+
+.feature-icon.feature-tap::before {
+  content: "5";
+}
+
+.feature-icon.feature-timer::before {
+  content: "g";
+}
+
+.feature-icon.feature-background::before {
+  content: "8";
+}
+
+.feature-icon.feature-landscape::before {
+  content: "b";
+}
+
+.feature-icon.feature-uni::before {
+  content: "l";
+}
+
+.feature-icon.feature-visual::before {
+  content: "c";
+}
+
+.feature-icon.feature-adfree::before {
+  content: "9";
+}
+
+.feature-icon.feature-capo::before {
+  content: "h";
+}
+
+.feature-icon.feature-uke::before {
+  content: "k";
+}
+
+.feature-icon.feature-a4::before {
+  content: "i";
+}
+
+.feature-icon.feature-tuner::before {
+  content: "7";
+}
+
+.feature-icon.feature-battery::before {
+  content: "6";
+}
+
+.feature-icon.feature-lefthanded::before {
+  content: "j";
+}
+
+.features li.feature-item p em {
+  font-style: italic;
 }
 
 /*# sourceMappingURL=iuke2.css.map */

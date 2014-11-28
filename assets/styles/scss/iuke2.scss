@@ -9,9 +9,27 @@ html {
 }
 
 body {
-  background: transparent no-repeat center url('/assets/images/pm2/bg.jpg');
+  background: transparent no-repeat center url('/assets/images/iuke/bg.jpg');
   height: 100%;
   @include background-size(cover);
+}
+
+.appstore-icon {
+  line-height: 200%;
+  display: inline-block;
+  margin: 20px 0;
+  padding-top: 20px;
+  height: 63px;
+  overflow: hidden;
+  &::before{
+    content: "a";
+    text-indent: 0 !important;
+    font-size: 65px;
+    font-family: "EUMWeb";
+    color: #fff;
+    display: block;
+    margin-bottom: 100px;
+  }
 }
 
 a {
@@ -82,20 +100,13 @@ em {
   font-weight: 200;
   color: #FFFFFF;
   position: relative;
-
-  .title {
-    position: absolute;
-    left: 50%;
-    top: 150px;
-    height: 100%;
-    width: 50%;
-  }
+  text-align: center;
 
   h1 {
     font-size: 60px;
     font-weight: 600;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-    padding-top: 45%;
+    padding-top: 90px;
   }
 
   h2 {
@@ -103,6 +114,11 @@ em {
     text-shadow: 0 0 1px rgba(0,0,0,0.5);
     padding-top: 15px;
   }
+}
+
+.iphone {
+  background: transparent no-repeat url('/assets/images/iuke/iphone-iuke.png');
+  margin-bottom: 200px;
 }
 
 .page-container {
@@ -160,178 +176,116 @@ em {
 /* Introducation */
 
 .introduction {
-  height: 600px;
+  .img {
+    height: 300px;
+  }
 }
 
-/* Features */
-.features {
-  background: #F3F3F3;
-  position: relative;
-  text-align: left;
-  height: 660px;
+/* chord  */
+.chord {
+  height: 600px;
 
-  .slogan {
-    padding-top: 100px;
-  }
-
-  .slogan-desc {
-    line-height: 110%;
-  }
-
-  .text {
+  .two-rows-container {
     width: 60%;
+    max-width: 1400px;
+    margin: 0 auto;
     height: 100%;
-    position: absolute;
-    right: 20px;
-    top: 0;
+    position: relative;
+    text-align: center;
 
-    ul {
-      margin: 20px 0 25px;
-      list-style: disc inside;
-      font-size: 26px;
-      font-weight: 200;
-      line-height: 150%;
+    .left-row {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      height: 100%;
+    }
+
+    .right-row {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      height: 100%;
     }
   }
 }
 
-/* Lessons */
-.lessons {
-  position: relative;
-  height: 660px;
+/* solo  */
+.solo {
+  .slogan {
+    color: #AF2424;
+  }
 
+  .slogan-desc {
+    color: #B17E73;
+  }
+}
+
+/* boss  */
+.boss {
+  height: 600px;
+
+  .three-rows-container {
+      min-width: 1170px; /*390*3*/
+      max-width: 1600px;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+
+      .left-row{
+        height: 400px;
+        width: 33.33%;
+        min-width: 390px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      .center-row{
+        height: 400px;
+        width: 33.33%;
+        min-width: 390px;
+        position: absolute;
+        left: 33.33%;
+        bottom: 0;
+      }
+
+      .right-row{
+        height: 400px;
+        width: 33.33%;
+        min-width: 390px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+  }
+}
+
+/* record  */
+.record {
+  .slogan {
+    font-size: 60px;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  }
+}
+
+/* practice  */
+
+.practice {
   .text {
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    left: 40px;
-    top: 0;
-    text-align: right;
+    margin-left: 40%;
+    text-align: left;
   }
 }
 
-.trainer-block-container {
-  position: relative;
-  height: 330px;
-  width: 590px;
-  margin: 60px auto 40px;
-  background-color: #f1cc5a;
-  background: transparent no-repeat top left url('/assets/images/pm2/trainerbg.png');
-}
-
-.note-container {
-  position: absolute;
-  height: 102px;
-  width: 304px;
-  top: 54px;
-  left: 169px;
-}
-
-.wave-container {
-  position: absolute;
-  height: 83px;
-  width: 390px;
-  left: 167px;
-  top:254px;
-  background: transparent no-repeat top left url('/assets/images/pm2/wave-dark.png');
-  opacity: 0;
-}
-
-.beats-container {
-  position: absolute;
-  height: 42px;
-  width: 200px;
-  top: 198px;
-  left: 166px;
-  text-align: left;
-
-  .beat {
-    height: 42px;
-    width: 32px;
-    background-color: #1f94ff;
-    margin-right: 8px;
-    display: inline-block;
-  }
-}
-
-.wave-hl-container {
-  position: absolute;
-  height: 83px;
-  width: 0;
-  left: 167px;
-  top:254px;
-  background: transparent no-repeat top left url('/assets/images/pm2/wave-light.png');
-  border-right: solid 1px #ff4200;
-}
-
-/* Download */
-.download {
-  .slogan {
-    font-weight: 400;
-    margin-bottom: 20px;
-  }
-}
-
-/* Contact */
-
-.contact {
-  width: 40%;
-  border: 1px solid #1B1B1B;
-  border-radius: 15px;
-  margin: 60px auto 80px;
-
-  .slogan {
-    font-weight: 400;
-    padding-top: 20px;
-    font-size: 36px;
-    line-height: 1.2;
-  }
-
-  p {
-    font-weight: 400;
-    padding: 0 0 20px;
-  }
-}
-
-/* Pop up*/
-#popup-wrap {
-  display: none;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(1,1,1,0.8);
-  top: 0;
-  left: 0;
-  cursor: url("/assets/images/close.png") 14 14, default;
-
-  .video-popup {
-    height: 576px;
-    width: 890px;
-    cursor: default;
-    background-color: #fff;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-top:  -288px;
-    margin-left: -445px;
-    text-align: center;
-  }
-
-  .video-title {
-    font-weight: 200;
-    padding: 20px 0;
-    font-size: 36px;
-    color: #1b1b1b;
-  }
-
-  .mejs-container{
-    margin: 0 auto;
-  }
-
-  .video-container {
-    height: 853px;
-    width: 480px;
+/* Features */
+@import "features";
+.features {
+  li.feature-item p em{
+    font-style: italic;
   }
 }
