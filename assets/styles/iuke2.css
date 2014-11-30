@@ -39,6 +39,29 @@ body {
   margin-bottom: 100px;
 }
 
+.two-rows-container {
+  width: 60%;
+  max-width: 1400px;
+  margin: 40px auto 0;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+.two-rows-container .left-row {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+}
+.two-rows-container .right-row {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+}
+
 a {
   color: #1f94ff;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -100,7 +123,6 @@ em.green {
 .head {
   font-weight: 200;
   color: #FFFFFF;
-  position: relative;
   text-align: center;
 }
 .head h1 {
@@ -116,8 +138,14 @@ em.green {
 }
 
 .iphone {
-  background: transparent no-repeat url("/assets/images/iuke/iphone-iuke.png");
-  margin-bottom: 200px;
+  background: transparent no-repeat url("/assets/images/iuke/highlight-iphone.png");
+  background-position: bottom;
+  background-size: 50%;
+  width: 1031px;
+  height: 100%;
+}
+.iphone video {
+  margin: 20px 40px;
 }
 
 .page-container {
@@ -149,7 +177,7 @@ em.green {
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
 .section .slogan {
-  padding-top: 200px;
+  padding-top: 100px;
 }
 .section .slogan.second {
   padding-top: 30px;
@@ -166,35 +194,17 @@ em.green {
 }
 
 /* Introducation */
+.introduction {
+  background: transparent repeat-x bottom url("/assets/images/iuke/part1-bg2.png");
+}
 .introduction .img {
+  background: transparent no-repeat bottom url("/assets/images/iuke/part1-bg1.png");
   height: 300px;
 }
 
 /* chord  */
 .chord {
-  height: 600px;
-}
-.chord .two-rows-container {
-  width: 60%;
-  max-width: 1400px;
-  margin: 0 auto;
-  height: 100%;
-  position: relative;
-  text-align: center;
-}
-.chord .two-rows-container .left-row {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 50%;
-  height: 100%;
-}
-.chord .two-rows-container .right-row {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 50%;
-  height: 100%;
+  height: 900px;
 }
 
 /* solo  */
@@ -207,13 +217,13 @@ em.green {
 
 /* boss  */
 .boss {
-  height: 600px;
+  height: 700px;
 }
 .boss .three-rows-container {
-  min-width: 1170px;
-  /*390*3*/
+  min-width: 690px;
+  /*230*3*/
   max-width: 1600px;
-  height: 100%;
+  height: 70%;
   margin: 0 auto;
   position: relative;
   text-align: center;
@@ -222,7 +232,7 @@ em.green {
 .boss .three-rows-container .left-row {
   height: 400px;
   width: 33.33%;
-  min-width: 390px;
+  min-width: 230px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -230,7 +240,7 @@ em.green {
 .boss .three-rows-container .center-row {
   height: 400px;
   width: 33.33%;
-  min-width: 390px;
+  min-width: 230px;
   position: absolute;
   left: 33.33%;
   bottom: 0;
@@ -238,7 +248,7 @@ em.green {
 .boss .three-rows-container .right-row {
   height: 400px;
   width: 33.33%;
-  min-width: 390px;
+  min-width: 230px;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -252,9 +262,68 @@ em.green {
 }
 
 /* practice  */
+.practice .img {
+  width: 520px;
+  height: 401px;
+  margin: 100px 0 0 100px;
+  float: left;
+  text-align: right;
+  background: transparent no-repeat bottom url("/assets/images/iuke/part6-bg2.png");
+}
+.practice .img img {
+  margin: 20px 50px 0 0;
+}
 .practice .text {
-  margin-left: 40%;
+  margin-left: 50%;
   text-align: left;
+}
+.practice .text .second {
+  padding-top: 0;
+}
+
+/* Christmas */
+.christmas {
+  margin-top: 40px;
+  height: 900px;
+  background: transparent repeat-x top url("/assets/images/iuke/part7-bg.jpg");
+}
+.christmas .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  background: transparent no-repeat top left url("/assets/images/iuke/part7-titlebg.png");
+  margin-top: 0;
+}
+.christmas .left {
+  float: left;
+}
+.christmas .right {
+  font-size: 28px;
+  color: #FEC35F;
+  margin-top: 200px;
+  width: 50%;
+  margin-left: 30%;
+}
+.christmas .slogan {
+  color: #FFF;
+  text-shadow: 0 0 6px rgba(248, 166, 52, 0.8);
+  font-weight: 800;
+  font-size: 70px;
+  margin-top: 120px;
+  margin-left: 218px;
+  width: 400px;
+  line-height: 1;
+}
+.christmas .slogan-desc {
+  font-weight: 400;
+  color: #FFF;
+  text-shadow: none;
+  font-size: 22px;
+  width: 400px;
+  margin-left: 220px;
+  margin-top: 70px;
 }
 
 /* Features */

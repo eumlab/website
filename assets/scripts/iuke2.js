@@ -30,7 +30,7 @@ $(function() {
             winHeight = 750;// min Height.
         var y = a*winHeight + b;
         var hBottom = 0;
-        var mleft = (winWidth - 2012)/2;
+        var mleft = (winWidth - 1031)/2;
         //console.info("y:",y);
 
         if (winHeight < 1163){
@@ -38,16 +38,16 @@ $(function() {
             y = 83;
             if(hBottom>274)
                 hBottom = 274;
+            if (hBottom<226)
+                hBottom = 226;
         }
         else
             hBottom = 0
 
-
-
         iphone.css({"background-size": y.toString()+"%",
                     //"background-position":"50% "+ (hBottom == 0 ? "100%":(100+hBottom)+"%"),
-                    "bottom":-hBottom+"px",
-                    "left":mleft+"px"});
+                    "padding-top":hBottom+"px",
+                    "margin-left":mleft+"px"});
 
         //var titleTop = winHeight - (winHeight/1.6);
         //appname.css({"padding-top":titleTop.toString()+"px"});
