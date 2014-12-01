@@ -255,10 +255,20 @@ em.green {
 }
 
 /* record  */
+.record {
+  height: 800px;
+  background: transparent no-repeat top left url("/assets/images/iuke/part5-bg.jpg");
+}
 .record .slogan {
   font-size: 60px;
   font-weight: 600;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
+  color: #FFF;
+  margin-top: 200px;
+}
+.record .slogan-desc {
+  text-shadow: none;
+  color: #FFF;
 }
 
 /* practice  */
