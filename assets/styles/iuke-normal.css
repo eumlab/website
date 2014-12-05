@@ -1,0 +1,75 @@
+body {
+  background: #f6f6f6 repeat url("/assets/images/main/n2.png");
+  font-weight: 300;
+  min-width: 980px;
+}
+
+html {
+  min-width: 980px;
+}
+
+.section-container {
+  clear: both;
+  margin: 0 auto;
+  width: 960px;
+  position: relative;
+  text-align: center;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.section-container div.section {
+  display: inline-block;
+  width: 100%;
+  margin: 0 10px;
+  vertical-align: top;
+  position: relative;
+}
+
+.section-container h1 {
+  color: #333;
+  font-size: 40px;
+  font-weight: 200;
+  text-align: center;
+  padding-bottom: 40px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.section-container h2 {
+  color: #333;
+  font-size: 28px;
+  font-weight: 300;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.section-container p {
+  color: #333;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: left;
+  line-height: 120%;
+}
+
+.section-container ul,
+.section-container li {
+  text-align: left;
+  color: #333;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 120%;
+}
+
+.section-container ul {
+  list-style: disc;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.section-container h2 em {
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=iuke-normal.css.map */
