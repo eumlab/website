@@ -121,15 +121,19 @@ em {
   position: relative;
 }
 
-#big-video-vid, #big-video-vid_html5_api {
-  top: 0 !important;
-  min-height: 788px !important;
+#big-video-wrap {
+  position: absolute;
+  z-index: -9999;
 }
 
 .head {
   font-weight: 200;
   color: #FFFFFF;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  background: repeat url("/assets/images/main/n3.png");
+  overflow: hidden;
 
   h1 {
     font-size: 60px;
@@ -150,7 +154,7 @@ em {
   background-position: bottom;
   background-size: 50%;
   width: 1031px;
-  height: 100%;
+  padding-top: 280px;
 
   video {
   }
@@ -263,14 +267,13 @@ em {
 
   .band {
     position: relative;
-    width: 70%;
     margin: 60px auto 0;
 
     .bg {
       position: relative;
-      min-width: 1132px;
-      width: 100%;
+      width: 1072px;
       height: 422px;
+      margin: 0 auto;
 
       img {
         position: absolute;

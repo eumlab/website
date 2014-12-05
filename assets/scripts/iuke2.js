@@ -3,7 +3,7 @@
  */
 
 $(function() {
-    var BV = new $.BigVideo({useFlashForFirefox:false});
+    var BV = new $.BigVideo({useFlashForFirefox:false, container:$(".firstpage-container")});
 	BV.init();
     BV.show([
         { type: "video/mp4",  src: "/assets/videos/iukebgvideo.mp4" },
@@ -32,21 +32,13 @@ $(function() {
         var hBottom = 0;
         var mleft = (winWidth - 1031)/2;
         //console.info("y:",y);
-
+        //
         if (winHeight < 1163){
-            hBottom = 1163-winHeight;
             y = 83;
-            if(hBottom>274)
-                hBottom = 274;
-            if (hBottom<226)
-                hBottom = 226;
         }
-        else
-            hBottom = 0
 
         iphone.css({"background-size": y.toString()+"%",
                     //"background-position":"50% "+ (hBottom == 0 ? "100%":(100+hBottom)+"%"),
-                    "padding-top":hBottom+"px",
                     "margin-left":mleft+"px"});
 
         //var titleTop = winHeight - (winHeight/1.6);
