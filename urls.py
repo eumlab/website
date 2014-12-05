@@ -35,6 +35,10 @@ urlpatterns += patterns('mainweb.views',
     #(r'^contact/$', 'loadtemplateGeneral', {'template':'contact.html'}),
     (r'^smtm/$', 'showMeTheMoney', {'template':'showmethemoney.html'}),
 
+#Apps with Subages
+    (r'^iuke/privacy-policy/$', 'loadtemplate', {'template':'iuke-privacy-policy.html','aid':'iuke'}),
+    (r'^iuke/terms/$', 'loadtemplate', {'template':'iuke-terms.html','aid':'iuke'}),
+
 #Apps:
     (r'^iuke/$', 'loadtemplate', {'template':'iuke.html','aid':'iuke'}),
     (r'^drum-loops/$',  'loadtemplate', {'template':'drumloops.html','aid':'dl'}),
