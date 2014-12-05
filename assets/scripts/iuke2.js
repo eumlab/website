@@ -47,5 +47,18 @@ $(function() {
 
     $(window).on('resize', resizeMe);
     resizeMe();
+    
+    // Scroll Animation
+    var songs_offset = $('#sec_intro').offset().top;
+    var songlist = $('#songlist');
+    var songdetail = $('#songdetail');
+    var already_done = 0;
+
+    $(window).on('scroll', function() {
+        if ( $(window).scrollTop() > songs_offset && !already_done) {
+          songlist.animate({top:"60"}, 2000, function(){already_done=1;});
+          songdetail.animate({top:"30"}, 2000, function(){already_done=1;});
+        }
+    });
 });
 

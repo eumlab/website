@@ -211,21 +211,21 @@ em.green {
 .introduction .container {
   background: transparent no-repeat bottom url("/assets/images/iuke/part1-bg1.png");
 }
-.introduction .img {
+.introduction .songs {
   position: relative;
   height: 597px;
   width: 776px;
   margin: 45px auto 0;
 }
-.introduction .img img {
+.introduction .songs img {
   position: absolute;
 }
-.introduction .img img.songlist {
+.introduction .songs img#songlist {
   top: 50px;
   left: 56px;
   z-index: 1;
 }
-.introduction .img img.songdetail {
+.introduction .songs img#songdetail {
   top: 0;
   right: 0;
   z-index: 2;

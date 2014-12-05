@@ -225,7 +225,8 @@ em {
   .container {
     background: transparent no-repeat bottom url('/assets/images/iuke/part1-bg1.png');
   }
-  .img {
+
+  .songs {
     position:relative;
     height: 597px;
     width: 776px;
@@ -234,13 +235,13 @@ em {
     img {
       position: absolute;
 
-      &.songlist {
+      &#songlist {
         top: 50px;
         left: 56px;
         z-index: 1;
       }
 
-      &.songdetail {
+      &#songdetail {
         top: 0;
         right: 0;
         z-index: 2;
