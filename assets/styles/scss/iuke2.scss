@@ -163,7 +163,7 @@ em {
 .page-container {
   overflow: hidden;
   width: 100%;
-  background: rgb(255, 255, 255) repeat url('/assets/images/main/n2.png');
+  background: rgb(246, 246, 246) repeat url('/assets/images/main/n2.png');
   font-weight: 300;
   min-width: 980px;
   min-height: 200px;
@@ -467,6 +467,12 @@ em {
 /* Features */
 @import "features";
 .features {
+  padding: 50px;
+
+  .slogan {
+    padding: 0;
+  }
+
   li.feature-item p em{
     font-style: italic;
   }

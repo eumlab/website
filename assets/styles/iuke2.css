@@ -157,7 +157,7 @@ em.green {
 .page-container {
   overflow: hidden;
   width: 100%;
-  background: white repeat url("/assets/images/main/n2.png");
+  background: #f6f6f6 repeat url("/assets/images/main/n2.png");
   font-weight: 300;
   min-width: 980px;
   min-height: 200px;
@@ -536,6 +536,12 @@ li.feature-item p {
   content: "j";
 }
 
+.features {
+  padding: 50px;
+}
+.features .slogan {
+  padding: 0;
+}
 .features li.feature-item p em {
   font-style: italic;
 }
