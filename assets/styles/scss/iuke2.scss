@@ -117,6 +117,7 @@ em {
 /* First Page Container */
 .firstpage-container {
   height: 100%;
+  min-height: 768px;
   width: 100%;
   position: relative;
 }
@@ -124,6 +125,10 @@ em {
 #big-video-wrap {
   position: absolute;
   z-index: -9999;
+}
+
+#big-video-vid, #big-video-vid_html5_api {
+  min-height: 900px;
 }
 
 .head {
@@ -367,6 +372,9 @@ em {
 /* practice  */
 
 .practice {
+  background: #FFF;
+  padding-bottom: 40px;
+
   .img {
     width: 520px;
     height: 401px;
@@ -392,7 +400,6 @@ em {
 
 /* Christmas */
 .christmas {
-  margin-top: 40px;
   height: 660px;
   background: transparent repeat-x top url('/assets/images/iuke/part7-bg.jpg');
 
