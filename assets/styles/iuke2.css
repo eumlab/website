@@ -242,14 +242,13 @@ em.green {
 }
 .solo .band {
   position: relative;
-  width: 70%;
   margin: 60px auto 0;
 }
 .solo .band .bg {
   position: relative;
-  min-width: 1132px;
-  width: 100%;
+  width: 1060px;
   height: 422px;
+  margin: 0 auto;
 }
 .solo .band .bg img {
   position: absolute;
