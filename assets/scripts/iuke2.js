@@ -62,5 +62,13 @@ $(function() {
         }
     });
 
+    // Solo Hover Animation
+    var solo_sidebar = $('.solo .sidebar');
+    $('.solo .ui').hover(function (){
+      solo_sidebar.animate({'right': 0});
+    }, function (){
+      solo_sidebar.animate({'right': -268});
+    });
+
 });
 

@@ -310,6 +310,21 @@ em {
       top: 0;
       bottom: 0;
       margin: auto;
+
+      .ui {
+        position: relative;
+        margin-top:23px;
+        margin-left: 147px;
+        width: 558px;
+        height: 314px;
+        overflow: hidden;
+
+        .sidebar {
+          position: absolute;
+          right: -268px;
+          top: 0;
+        }
+      }
     }
   }
 }
@@ -362,6 +377,7 @@ em {
 
   height: 800px;
   background: transparent no-repeat top left url('/assets/images/iuke/part5-bg.jpg');
+  background-size: 100%;
 
   .slogan {
     font-size: 60px;
@@ -380,6 +396,13 @@ em {
 .practice {
   background: #FFF;
   padding-bottom: 40px;
+
+  .container {
+    width: 70%;
+    min-width: 690px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
 
   .img {
     width: 520px;
