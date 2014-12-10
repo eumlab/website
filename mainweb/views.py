@@ -113,6 +113,8 @@ def daw_remote(request):
 def pro_metronome(request):
     return render_with_pars(request, 'pro-metronome.html', {"nav": "pm"})
 
+def pro_metronome_education(request):
+    return render_with_pars(request, 'pro-metronome-for-education.html', {"nav": "pme"})
 
 def press(request):
     return render_with_pars(request, 'press.html', {"nav": "pm","pressApps":pressApps})

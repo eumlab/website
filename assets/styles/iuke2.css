@@ -1,0 +1,564 @@
+@charset "UTF-8";
+/*
+ * Common mixins.
+ * Created by Zhuoqun.
+ * 2014.10.21
+ *
+ */
+html {
+  min-width: 980px;
+  height: 100%;
+  font-family: "proxima-nova", "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: 300;
+}
+
+body {
+  background: transparent no-repeat center url("/assets/images/iuke/bg.jpg");
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.appstore-icon {
+  line-height: 200%;
+  display: inline-block;
+  margin: 20px 0;
+  padding-top: 20px;
+  height: 63px;
+  overflow: hidden;
+}
+.appstore-icon::before {
+  content: "a";
+  text-indent: 0 !important;
+  font-size: 65px;
+  font-family: "EUMWeb";
+  color: #fff;
+  display: block;
+  margin-bottom: 100px;
+}
+
+.two-rows-container {
+  width: 60%;
+  max-width: 1400px;
+  margin: 40px auto 0;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+.two-rows-container .left-row {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+}
+.two-rows-container .right-row {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+}
+
+a {
+  color: #1f94ff;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  font-size: 24px;
+}
+a:hover {
+  color: #43a6ff;
+}
+a.link-video {
+  text-shadow: none;
+  margin-top: 30px;
+}
+a.link-video::after {
+  content: "▶";
+  width: 40px;
+  height: 40px;
+  font-size: 50px;
+  padding-top: -5px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  border: solid 1px #1f94ff;
+  font-family: "entypo";
+  display: inline-block;
+  margin-left: 10px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  text-indent: 3px;
+}
+a.link-video::after:hover {
+  border: solid 1px #43a6ff;
+}
+
+em {
+  font-weight: 400;
+}
+em.orange {
+  color: #F8752E;
+}
+em.green {
+  color: #7FB335;
+}
+
+.v2-footer {
+  height: 130px;
+}
+
+#idx-header.glow {
+  position: absolute;
+}
+
+/* First Page Container */
+.firstpage-container {
+  height: 100%;
+  min-height: 768px;
+  width: 100%;
+  position: relative;
+}
+
+#big-video-wrap {
+  position: absolute;
+  z-index: -9999;
+}
+
+#big-video-vid, #big-video-vid_html5_api {
+  min-height: 900px;
+}
+
+.head {
+  font-weight: 200;
+  color: #FFFFFF;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: repeat url("/assets/images/main/n3.png");
+  overflow: hidden;
+}
+.head h1 {
+  font-size: 60px;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  padding-top: 90px;
+}
+.head h2 {
+  font-size: 30px;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  padding-top: 15px;
+}
+
+.iphone {
+  background: transparent no-repeat url("/assets/images/iuke/highlight-iphone.png");
+  background-position: bottom;
+  background-size: 50%;
+  width: 1031px;
+  padding-top: 420px;
+  position: relative;
+  overflow: hidden;
+}
+.iphone #demo {
+  position: absolute;
+  left: 208px;
+  top: 30px;
+}
+
+.page-container {
+  overflow: hidden;
+  width: 100%;
+  background: #f6f6f6 repeat url("/assets/images/main/n2.png");
+  font-weight: 300;
+  min-width: 980px;
+  min-height: 200px;
+  color: #1b1b1b;
+  font-family: "proxima-nova" "helveticaneue-light", "Helvetica Neue", Helvetica, "Hiragino Sans GB" , arial, sans-serif;
+}
+
+/* Section */
+.section {
+  text-align: center;
+  overflow: hidden;
+}
+.section h1, .section h2 {
+  font-weight: 200;
+  font-size: 48px;
+  line-height: 150%;
+  text-shadow: 1px 1px 0 white;
+}
+.section .dark-background {
+  color: #FFF;
+}
+.section .dark-background h1, .section .dark-background h2 {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+.section .slogan {
+  padding-top: 100px;
+}
+.section .slogan.second {
+  padding-top: 30px;
+}
+.section .slogan-desc {
+  padding-top: 20px;
+  font-size: 28px;
+  line-height: 150%;
+}
+.section p {
+  font-size: 20px;
+  line-height: 130%;
+  padding: 50px 0;
+}
+
+/* Introducation */
+.introduction {
+  background: transparent repeat-x bottom url("/assets/images/iuke/part1-bg2.png");
+}
+.introduction .container {
+  background: transparent no-repeat bottom url("/assets/images/iuke/part1-bg1.png");
+}
+.introduction .songs {
+  position: relative;
+  height: 597px;
+  width: 776px;
+  margin: 45px auto 0;
+}
+.introduction .songs img {
+  position: absolute;
+}
+.introduction .songs img#songlist {
+  top: 50px;
+  left: 56px;
+  z-index: 1;
+}
+.introduction .songs img#songdetail {
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+/* chord  */
+.chord {
+  height: 900px;
+}
+
+/* solo  */
+.solo {
+  background: #E6CEB5 no-repeat top center url("/assets/images/iuke/part3-stagelight.png");
+  height: 840px;
+}
+.solo .slogan {
+  color: #AF2424;
+  text-shadow: none;
+}
+.solo .slogan-desc {
+  color: #B17E73;
+  text-shadow: none;
+}
+.solo .band {
+  position: relative;
+  margin: 60px auto 0;
+}
+.solo .band .bg {
+  position: relative;
+  width: 1072px;
+  height: 422px;
+  margin: 0 auto;
+}
+.solo .band .bg img {
+  position: absolute;
+  bottom: 100px;
+}
+.solo .band .bg .left {
+  left: 0;
+}
+.solo .band .bg .right {
+  right: 0;
+}
+.solo .band .demo {
+  background: transparent no-repeat top center url("/assets/images/iuke/part3-iphonebg.png");
+  width: 855px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* boss  */
+.boss {
+  height: 700px;
+}
+.boss .three-rows-container {
+  width: 70%;
+  min-width: 690px;
+  /*230*3*/
+  max-width: 1600px;
+  height: 70%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+.boss .three-rows-container .left-row {
+  height: 400px;
+  width: 33.33%;
+  min-width: 230px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.boss .three-rows-container .center-row {
+  height: 400px;
+  width: 33.33%;
+  min-width: 230px;
+  position: absolute;
+  left: 33.33%;
+  bottom: 0;
+}
+.boss .three-rows-container .right-row {
+  height: 400px;
+  width: 33.33%;
+  min-width: 230px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* record  */
+.record {
+  height: 800px;
+  background: transparent no-repeat top left url("/assets/images/iuke/part5-bg.jpg");
+}
+.record .slogan {
+  font-size: 60px;
+  font-weight: 600;
+  text-shadow: none;
+  margin-top: 200px;
+}
+.record .slogan-desc {
+  text-shadow: none;
+}
+
+/* practice  */
+.practice {
+  background: #FFF;
+  padding-bottom: 40px;
+}
+.practice .img {
+  width: 520px;
+  height: 401px;
+  margin: 100px 0 0 100px;
+  float: left;
+  text-align: right;
+  background: transparent no-repeat bottom url("/assets/images/iuke/part6-bg2.png");
+}
+.practice .img img {
+  margin: 20px 50px 0 0;
+}
+.practice .text {
+  margin-left: 50%;
+  text-align: left;
+}
+.practice .text .second {
+  padding-top: 0;
+}
+
+/* Christmas */
+.christmas {
+  height: 660px;
+  background: transparent repeat-x top url("/assets/images/iuke/part7-bg.jpg");
+}
+.christmas .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  background: transparent no-repeat top left url("/assets/images/iuke/part7-titlebg.png");
+  margin-top: 0;
+}
+.christmas .left {
+  float: left;
+}
+.christmas .right {
+  font-size: 28px;
+  color: #FEC35F;
+  margin-top: 120px;
+  width: 40%;
+  margin-left: 50%;
+  position: relative;
+}
+.christmas .right .mask {
+  position: absolute;
+  background: transparent repeat-x url("/assets/images/iuke/part7-mask.png");
+  width: 100%;
+  height: 40%;
+  left: 70px;
+  z-index: 9999;
+}
+.christmas .right .top {
+  background-position: 0 10%;
+  top: 0;
+}
+.christmas .right .bottom {
+  background-position: 0 96%;
+  bottom: -12px;
+}
+.christmas .right li {
+  padding: 10px 0;
+}
+.christmas .slogan {
+  color: #FFF;
+  text-shadow: 0 0 6px rgba(248, 166, 52, 0.8);
+  font-weight: 800;
+  font-size: 70px;
+  margin-top: 120px;
+  margin-left: 218px;
+  width: 400px;
+  line-height: 1;
+}
+.christmas .slogan-desc {
+  font-weight: 400;
+  color: #FFF;
+  text-shadow: none;
+  font-size: 22px;
+  width: 400px;
+  margin-left: 220px;
+  margin-top: 70px;
+}
+
+/* Features */
+/* Feature List */
+ul.feature-container {
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 20px;
+}
+
+li.feature-item {
+  margin-left: 4px;
+  width: 320px;
+  /* 320x3 = 960px */
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+ul.feature-container:nth-child(3n) {
+  clear: both;
+}
+
+li.feature-item h2 {
+  font-size: 24px;
+}
+
+li.feature-item p {
+  font-size: 18px;
+  line-height: 130%;
+  font-weight: 100;
+  padding: 5px;
+}
+
+.feature-icon::before {
+  content: " ";
+  font-family: "EUMWeb";
+  font-size: 60px;
+  color: #333;
+  padding-right: 7px;
+  vertical-align: -5px;
+}
+
+/*  Icons */
+.feature-icon.feature-airplay::before {
+  content: "2";
+}
+
+.feature-icon.feature-audiobus::before {
+  content: "d";
+}
+
+.feature-icon.feature-iaa::before {
+  content: "e";
+}
+
+.feature-icon.feature-ts::before {
+  content: "1";
+}
+
+.feature-icon.feature-tone::before {
+  content: "f";
+}
+
+.feature-icon.feature-accent::before {
+  content: "4";
+}
+
+.feature-icon.feature-tap::before {
+  content: "5";
+}
+
+.feature-icon.feature-timer::before {
+  content: "g";
+}
+
+.feature-icon.feature-background::before {
+  content: "8";
+}
+
+.feature-icon.feature-landscape::before {
+  content: "b";
+}
+
+.feature-icon.feature-uni::before {
+  content: "l";
+}
+
+.feature-icon.feature-visual::before {
+  content: "c";
+}
+
+.feature-icon.feature-adfree::before {
+  content: "9";
+}
+
+.feature-icon.feature-capo::before {
+  content: "h";
+}
+
+.feature-icon.feature-uke::before {
+  content: "k";
+}
+
+.feature-icon.feature-a4::before {
+  content: "i";
+}
+
+.feature-icon.feature-tuner::before {
+  content: "7";
+}
+
+.feature-icon.feature-battery::before {
+  content: "6";
+}
+
+.feature-icon.feature-lefthanded::before {
+  content: "j";
+}
+
+.features {
+  padding: 50px;
+}
+.features .slogan {
+  padding: 0;
+}
+.features li.feature-item p em {
+  font-style: italic;
+}
+
+/*# sourceMappingURL=iuke2.css.map */

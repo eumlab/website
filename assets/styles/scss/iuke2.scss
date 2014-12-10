@@ -1,0 +1,492 @@
+@import "vars";
+@import "mixins";
+
+html {
+  min-width: 980px;
+  height: 100%;
+  font-family:  $font-basic;
+  font-weight: 300;
+}
+
+body {
+  background: transparent no-repeat center url('/assets/images/iuke/bg.jpg');
+  height: 100%;
+  @include background-size(cover);
+}
+
+.appstore-icon {
+  line-height: 200%;
+  display: inline-block;
+  margin: 20px 0;
+  padding-top: 20px;
+  height: 63px;
+  overflow: hidden;
+  &::before{
+    content: "a";
+    text-indent: 0 !important;
+    font-size: 65px;
+    font-family: "EUMWeb";
+    color: #fff;
+    display: block;
+    margin-bottom: 100px;
+  }
+}
+
+.two-rows-container {
+  width: 60%;
+  max-width: 1400px;
+  margin: 40px auto 0;
+  height: 100%;
+  position: relative;
+  text-align: center;
+
+  .left-row {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+  }
+
+  .right-row {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+a {
+  color: #1f94ff;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  font-size: 24px;
+
+  &:hover {
+    color: #43a6ff;
+  }
+
+  &.link-video {
+    text-shadow: none;
+    margin-top: 30px;
+
+    &::after {
+      content: "▶";
+      width: 40px;
+      height: 40px;
+      font-size: 50px;
+      padding-top: -5px;
+      -webkit-border-radius: 25px;
+      border-radius: 25px;
+      border: solid 1px #1f94ff;
+      font-family: "entypo";
+      display: inline-block;
+      margin-left: 10px;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 40px;
+      text-indent: 3px;
+
+      &:hover {
+        border: solid 1px #43a6ff;
+      }
+    }
+  }
+}
+
+em {
+  font-weight: 400;
+  &.orange {
+    color: $em-orange;
+  }
+
+  &.green {
+    color: $em-green;
+  }
+}
+
+
+.v2-footer {
+    height: 130px;
+}
+
+#idx-header.glow{
+    position: absolute;
+}
+
+/* First Page Container */
+.firstpage-container {
+  height: 100%;
+  min-height: 768px;
+  width: 100%;
+  position: relative;
+}
+
+#big-video-wrap {
+  position: absolute;
+  z-index: -9999;
+}
+
+#big-video-vid, #big-video-vid_html5_api {
+  min-height: 900px;
+}
+
+.head {
+  font-weight: 200;
+  color: #FFFFFF;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: repeat url("/assets/images/main/n3.png");
+  overflow: hidden;
+
+  h1 {
+    font-size: 60px;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    padding-top: 90px;
+  }
+
+  h2 {
+    font-size: 30px;
+    text-shadow: 0 0 1px rgba(0,0,0,0.5);
+    padding-top: 15px;
+  }
+}
+
+.iphone {
+  background: transparent no-repeat url('/assets/images/iuke/highlight-iphone.png');
+  background-position: bottom;
+  background-size: 50%;
+  width: 1031px;
+  padding-top: 420px;
+  position: relative;
+  overflow: hidden;
+
+  #demo {
+    position: absolute;
+    left: 208px;
+    top: 30px;
+  }
+}
+
+.page-container {
+  overflow: hidden;
+  width: 100%;
+  background: rgb(246, 246, 246) repeat url('/assets/images/main/n2.png');
+  font-weight: 300;
+  min-width: 980px;
+  min-height: 200px;
+  color: #1b1b1b;
+  font-family: "proxima-nova" "helveticaneue-light", "Helvetica Neue", Helvetica, "Hiragino Sans GB" , arial, sans-serif;
+}
+
+/* Section */
+.section {
+  text-align: center;
+  overflow: hidden;
+
+  h1, h2 {
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 150%;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
+  }
+
+  .dark-background {
+    color: #FFF;
+
+    h1, h2 {
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .slogan {
+    padding-top: 100px;
+    
+    &.second {
+      padding-top: 30px;
+    }
+  }
+
+  .slogan-desc {
+    padding-top: 20px;
+    font-size: 28px;
+    line-height: 150%;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 130%;
+    padding: 50px 0;
+  }
+}
+
+/* Introducation */
+
+.introduction {
+  background: transparent repeat-x bottom url('/assets/images/iuke/part1-bg2.png');
+  
+  .container {
+    background: transparent no-repeat bottom url('/assets/images/iuke/part1-bg1.png');
+  }
+
+  .songs {
+    position:relative;
+    height: 597px;
+    width: 776px;
+    margin: 45px auto 0;
+
+    img {
+      position: absolute;
+
+      &#songlist {
+        top: 50px;
+        left: 56px;
+        z-index: 1;
+      }
+
+      &#songdetail {
+        top: 0;
+        right: 0;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+/* chord  */
+.chord {
+  height: 900px;
+
+}
+
+/* solo  */
+.solo {
+  background: #E6CEB5 no-repeat top center url('/assets/images/iuke/part3-stagelight.png');
+  height: 840px;
+
+  .slogan {
+    color: #AF2424;
+    text-shadow: none;
+  }
+
+  .slogan-desc {
+    color: #B17E73;
+    text-shadow: none;
+  }
+
+  .band {
+    position: relative;
+    margin: 60px auto 0;
+
+    .bg {
+      position: relative;
+      width: 1072px;
+      height: 422px;
+      margin: 0 auto;
+
+      img {
+        position: absolute;
+        bottom: 100px;
+      }
+
+      .left {
+        left: 0;
+      }
+
+      .right {
+        right: 0;
+      }
+    }
+
+    .demo {
+      background: transparent no-repeat top center url('/assets/images/iuke/part3-iphonebg.png');
+      width: 855px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+}
+
+/* boss  */
+.boss {
+  height: 700px;
+
+  .three-rows-container {
+      width: 70%;
+      min-width: 690px; /*230*3*/
+      max-width: 1600px;
+      height: 70%;
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+
+      .left-row{
+        height: 400px;
+        width: 33.33%;
+        min-width: 230px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      .center-row{
+        height: 400px;
+        width: 33.33%;
+        min-width: 230px;
+        position: absolute;
+        left: 33.33%;
+        bottom: 0;
+      }
+
+      .right-row{
+        height: 400px;
+        width: 33.33%;
+        min-width: 230px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+  }
+}
+
+/* record  */
+.record {
+
+  height: 800px;
+  background: transparent no-repeat top left url('/assets/images/iuke/part5-bg.jpg');
+
+  .slogan {
+    font-size: 60px;
+    font-weight: 600;
+    text-shadow: none;
+    margin-top: 200px;
+  }
+
+  .slogan-desc {
+    text-shadow: none;
+  }
+}
+
+/* practice  */
+
+.practice {
+  background: #FFF;
+  padding-bottom: 40px;
+
+  .img {
+    width: 520px;
+    height: 401px;
+    margin: 100px 0 0 100px;
+    float: left;
+    text-align: right;
+    background: transparent no-repeat bottom url('/assets/images/iuke/part6-bg2.png');
+
+    img {
+      margin: 20px 50px 0 0;
+    }
+  }
+  .text {
+    margin-left: 50%;
+    text-align: left;
+
+    .second {
+      padding-top: 0;
+    }
+  }
+}
+
+
+/* Christmas */
+.christmas {
+  height: 660px;
+  background: transparent repeat-x top url('/assets/images/iuke/part7-bg.jpg');
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    background: transparent no-repeat top left url('/assets/images/iuke/part7-titlebg.png');
+    margin-top: 0;
+  }
+
+  .left {
+    float: left;
+  }
+
+  .right {
+    font-size: 28px;
+    color: #FEC35F;
+    margin-top: 120px;
+    width: 40%;
+    margin-left: 50%;
+    position: relative;
+
+    .mask {
+      position: absolute;
+      background: transparent repeat-x url('/assets/images/iuke/part7-mask.png');
+      width: 100%;
+      height: 40%;
+      left: 70px;
+      z-index: 9999;
+    }
+
+    .top {
+      background-position: 0 10%;
+      top: 0;
+    }
+    
+    .bottom {
+      background-position: 0 96%;
+      bottom: -12px;
+    }
+
+    li {
+      padding: 10px 0;
+    }
+  }
+
+  .slogan {
+    color: #FFF;
+    text-shadow: 0 0 6px rgba(248,166,52,.8);
+    font-weight: 800;
+    font-size: 70px;
+    margin-top: 120px;
+    margin-left: 218px;
+    width: 400px;
+    line-height: 1;
+  }
+
+  .slogan-desc {
+    font-weight: 400;
+    color: #FFF;
+    text-shadow: none;
+    font-size: 22px;
+    width: 400px;
+    margin-left: 220px;
+    margin-top: 70px;
+  }
+}
+
+/* Features */
+@import "features";
+.features {
+  padding: 50px;
+
+  .slogan {
+    padding: 0;
+  }
+
+  li.feature-item p em{
+    font-style: italic;
+  }
+}

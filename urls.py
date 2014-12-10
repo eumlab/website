@@ -40,10 +40,12 @@ urlpatterns += patterns('mainweb.views',
     (r'^iuke/terms/$', 'loadtemplate', {'template':'iuke-terms.html','aid':'iuke'}),
 
 #Apps:
-    (r'^iuke/$', 'loadtemplate', {'template':'iuke.html','aid':'iuke'}),
+    #(r'^iuke/$', 'loadtemplate', {'template':'iuke.html','aid':'iuke'}),
+    (r'^iuke/$', 'loadtemplate', {'template':'iuke2.html','aid':'iuke'}),
     (r'^drum-loops/$',  'loadtemplate', {'template':'drumloops.html','aid':'dl'}),
     (r'^piano-chords/$', 'loadtemplate', {'template':'pianochords.html','aid':'pc'}),
     (r'^pro-metronome/$', 'loadtemplate', {'template':'pro-metronome2.html','aid':'pm'}),
+    #(r'^pro-metronome/edu/$', 'loadtemplate', {'template':'pro-metronome-for-education.html','aid':'pme'}),
     (r'^uketube/$', 'loadtemplate', {'template':'uketube.html','aid':'uketube'}),
     (r'^ukechords/$', 'loadtemplate', {'template':'ukechords.html','aid':'ukechords'}),
     (r'^drum-loops/$', 'loadtemplate', {'template':'drum-loops.html','aid':'dl'}),
