@@ -15,6 +15,32 @@ $(function() {
          $("#big-video-vid_html5_api").css({"display":"inherit"});
     })
 
+    var demovideo = videojs('demo', {
+      children: {
+        textTrackDisplay: false,
+        loadingSpinner: false,
+        bigPlayButton: false,
+        controlBar: {
+          children: {
+            volumeControl: false,
+            fullscreenToggle: false,
+            playToggle: false,
+            currentTimeDisplay: false,
+            timeDivider: false,
+            durationDisplay: false,
+            remainingTimeDisplay: false,
+            progressControl: false
+          }
+        }
+      }
+    });
+
+    demovideo.ready(function(){
+      $('.vjs-mute-control').attr('class', 'vjs-mute-control vjs-control vjs-vol-0');
+      this.muted(true);
+    });
+
+
     // a*878 + b = 50%
     // a*1414 + b = 85%
     var a = (90 -65) / ( 1253 - 878 ),

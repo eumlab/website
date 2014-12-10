@@ -117,7 +117,7 @@ em {
 /* First Page Container */
 .firstpage-container {
   height: 100%;
-  min-height: 768px;
+  min-height: 828px;
   width: 100%;
   position: relative;
 }
@@ -128,7 +128,9 @@ em {
 }
 
 #big-video-vid, #big-video-vid_html5_api {
-  min-height: 900px;
+  .vjs-control-bar {
+    display: none;
+  }
 }
 
 .head {
@@ -165,8 +167,6 @@ em {
 
   #demo {
     position: absolute;
-    left: 208px;
-    top: 30px;
   }
 }
 
@@ -377,7 +377,7 @@ em {
 
   height: 800px;
   background: transparent no-repeat top left url('/assets/images/iuke/part5-bg.jpg');
-  background-size: 100%;
+  background-size: 100% 100%;
 
   .slogan {
     font-size: 60px;

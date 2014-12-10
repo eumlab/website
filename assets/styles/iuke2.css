@@ -116,7 +116,7 @@ em.green {
 /* First Page Container */
 .firstpage-container {
   height: 100%;
-  min-height: 768px;
+  min-height: 828px;
   width: 100%;
   position: relative;
 }
@@ -126,8 +126,8 @@ em.green {
   z-index: -9999;
 }
 
-#big-video-vid, #big-video-vid_html5_api {
-  min-height: 900px;
+#big-video-vid .vjs-control-bar, #big-video-vid_html5_api .vjs-control-bar {
+  display: none;
 }
 
 .head {
@@ -162,8 +162,6 @@ em.green {
 }
 .iphone #demo {
   position: absolute;
-  left: 208px;
-  top: 30px;
 }
 
 .page-container {
@@ -345,7 +343,7 @@ em.green {
 .record {
   height: 800px;
   background: transparent no-repeat top left url("/assets/images/iuke/part5-bg.jpg");
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 .record .slogan {
   font-size: 60px;
