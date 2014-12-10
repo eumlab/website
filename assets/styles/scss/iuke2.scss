@@ -159,9 +159,14 @@ em {
   background-position: bottom;
   background-size: 50%;
   width: 1031px;
-  padding-top: 280px;
+  padding-top: 420px;
+  position: relative;
+  overflow: hidden;
 
-  video {
+  #demo {
+    position: absolute;
+    left: 208px;
+    top: 30px;
   }
 }
 
@@ -422,8 +427,8 @@ em {
     font-size: 28px;
     color: #FEC35F;
     margin-top: 120px;
-    width: 50%;
-    margin-left: 40%;
+    width: 40%;
+    margin-left: 50%;
     position: relative;
 
     .mask {
@@ -431,7 +436,7 @@ em {
       background: transparent repeat-x url('/assets/images/iuke/part7-mask.png');
       width: 100%;
       height: 40%;
-      left: 160px;
+      left: 70px;
       z-index: 9999;
     }
 

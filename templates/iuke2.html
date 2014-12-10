@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Pro Metronome - a music teacher's swiss-army knife{% endblock %}
+{% block title %}iUke - The Ultimate Ukulele Learning Experience{% endblock %}
 
 
 {% block script %}
@@ -12,7 +12,8 @@
 0
 {% block style %}
     <link href="/assets/styles/iuke2.css" rel="stylesheet" />
-    {% include '_fixCSS.html' with page='pro-metronome-for-education' %}
+    <link href="/assets/styles/vjs.css" rel="stylesheet" />
+    {% include '_fixCSS.html' with page='iuke2' %}
 {% endblock %}
 
 {% block bodystyle %} {% endblock %}
@@ -27,7 +28,13 @@
       <a href="{{ me.storeurl }}" target="_blank" class="appstore-icon" >Download iUke on the App Store</a>
     </div>
     <div class="iphone">
-      <video id="demo"></video>
+      <video id="demo" class="video-js vjs-iuke-skin" autoplay height="auto" width="auto"
+        loop preload="auto" muted controls
+        poster="/assets/videos/iuke/iuke-main-loop.jpg">
+       <source src="/assets/videos/iuke/iuke-main-loop.mp4" type='video/mp4' />
+       <source src="/assets/videos/iuke/iuke-main-loop.webm" type='video/webm' />
+       <source src="/assets/videos/iuke/iuke-main-loop.ogv" type='video/ogg' />
+      </video>
     </div>
   </div>
 </div>

@@ -25,7 +25,7 @@ $(function() {
         winWidth = win.width(),
         winHeight = win.height(),
         iphone = $(".iphone"),
-        appname = $("#appname");
+        demo = $("#demo");
         if (winHeight < 750)
             winHeight = 750;// min Height.
         var y = a*winHeight + b;
@@ -35,6 +35,7 @@ $(function() {
         //
         if (winHeight < 1163){
             y = 83;
+            demo.css({"width": 600, "height:": "auto"});
         }
 
         iphone.css({"background-size": y.toString()+"%",
@@ -60,5 +61,6 @@ $(function() {
           songdetail.animate({top:"30"}, 2000, function(){already_done=1;});
         }
     });
+
 });
 
