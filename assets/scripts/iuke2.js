@@ -35,12 +35,16 @@ $(function() {
         //
         if (winHeight < 1163){
             y = 83;
-            demo.css({"width": 600, "height:": "auto"});
         }
 
+        y = y > 100? 100: y;
+
         iphone.css({"background-size": y.toString()+"%",
+                    "padding-top": 420 + y + "px",
                     //"background-position":"50% "+ (hBottom == 0 ? "100%":(100+hBottom)+"%"),
                     "margin-left":mleft+"px"});
+
+        demo.css({"width": 7.23 * y, "left": 145 + (100 - y)*3.65 + "px" , "top": 49 + (100 - y)*3.65 + "px" , "height:": "auto"});
 
         //var titleTop = winHeight - (winHeight/1.6);
         //appname.css({"padding-top":titleTop.toString()+"px"});
