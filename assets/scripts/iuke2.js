@@ -15,6 +15,32 @@ $(function() {
          $("#big-video-vid_html5_api").css({"display":"inherit"});
     })
 
+    var demovideo = videojs('demo', {
+      children: {
+        textTrackDisplay: false,
+        loadingSpinner: false,
+        bigPlayButton: false,
+        controlBar: {
+          children: {
+            volumeControl: false,
+            fullscreenToggle: false,
+            playToggle: false,
+            currentTimeDisplay: false,
+            timeDivider: false,
+            durationDisplay: false,
+            remainingTimeDisplay: false,
+            progressControl: false
+          }
+        }
+      }
+    });
+
+    demovideo.ready(function(){
+      $('.vjs-mute-control').attr('class', 'vjs-mute-control vjs-control vjs-vol-0');
+      this.muted(true);
+    });
+
+
     // a*878 + b = 50%
     // a*1414 + b = 85%
     var a = (90 -65) / ( 1253 - 878 ),
@@ -35,12 +61,16 @@ $(function() {
         //
         if (winHeight < 1163){
             y = 83;
-            demo.css({"width": 600, "height:": "auto"});
         }
 
+        y = y > 100? 100: y;
+
         iphone.css({"background-size": y.toString()+"%",
+                    "padding-top": 420 + y + "px",
                     //"background-position":"50% "+ (hBottom == 0 ? "100%":(100+hBottom)+"%"),
                     "margin-left":mleft+"px"});
+
+        demo.css({"width": 7.23 * y, "left": 145 + (100 - y)*3.65 + "px" , "top": 49 + (100 - y)*3.65 + "px" , "height:": "auto"});
 
         //var titleTop = winHeight - (winHeight/1.6);
         //appname.css({"padding-top":titleTop.toString()+"px"});
@@ -60,6 +90,14 @@ $(function() {
           songlist.animate({top:"60"}, 2000, function(){already_done=1;});
           songdetail.animate({top:"30"}, 2000, function(){already_done=1;});
         }
+    });
+
+    // Solo Hover Animation
+    var solo_sidebar = $('.solo .sidebar');
+    $('.solo .ui').hover(function (){
+      solo_sidebar.animate({'right': 0});
+    }, function (){
+      solo_sidebar.animate({'right': -268});
     });
 
 });

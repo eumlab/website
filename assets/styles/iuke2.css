@@ -116,7 +116,7 @@ em.green {
 /* First Page Container */
 .firstpage-container {
   height: 100%;
-  min-height: 768px;
+  min-height: 828px;
   width: 100%;
   position: relative;
 }
@@ -126,8 +126,8 @@ em.green {
   z-index: -9999;
 }
 
-#big-video-vid, #big-video-vid_html5_api {
-  min-height: 900px;
+#big-video-vid .vjs-control-bar, #big-video-vid_html5_api .vjs-control-bar {
+  display: none;
 }
 
 .head {
@@ -162,8 +162,6 @@ em.green {
 }
 .iphone #demo {
   position: absolute;
-  left: 208px;
-  top: 30px;
 }
 
 .page-container {
@@ -287,6 +285,19 @@ em.green {
   bottom: 0;
   margin: auto;
 }
+.solo .band .demo .ui {
+  position: relative;
+  margin-top: 23px;
+  margin-left: 147px;
+  width: 558px;
+  height: 314px;
+  overflow: hidden;
+}
+.solo .band .demo .ui .sidebar {
+  position: absolute;
+  right: -268px;
+  top: 0;
+}
 
 /* boss  */
 .boss {
@@ -332,6 +343,7 @@ em.green {
 .record {
   height: 800px;
   background: transparent no-repeat top left url("/assets/images/iuke/part5-bg.jpg");
+  background-size: 100% 100%;
 }
 .record .slogan {
   font-size: 60px;
@@ -347,6 +359,12 @@ em.green {
 .practice {
   background: #FFF;
   padding-bottom: 40px;
+}
+.practice .container {
+  width: 70%;
+  min-width: 690px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .practice .img {
   width: 520px;
@@ -549,6 +567,34 @@ li.feature-item p {
 
 .feature-icon.feature-lefthanded::before {
   content: "j";
+}
+
+.feature-icon.feature-mixer::before {
+  content: "l";
+}
+
+.feature-icon.feature-pattern::before {
+  content: "n";
+}
+
+.feature-icon.feature-loop::before {
+  content: "r";
+}
+
+.feature-icon.feature-levels::before {
+  content: "m";
+}
+
+.feature-icon.feature-ticket::before {
+  content: "o";
+}
+
+.feature-icon.feature-share::before {
+  content: "p";
+}
+
+.feature-icon.feature-universal::before {
+  content: "s";
 }
 
 .features {
