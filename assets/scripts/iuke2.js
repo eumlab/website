@@ -126,10 +126,10 @@ $(function() {
            $(window).scrollTop() < (soloInScreen) ){
             //In screen
             if($('.solo .sidebar').css("right") == "-268px")
-                $('.solo .sidebar').animate({'right': 0});
+                $('.solo .sidebar').css({'right': 0});
         }else{
             if($('.solo .sidebar').css("right") == "0px")
-                $('.solo .sidebar').animate({'right': -268});
+                $('.solo .sidebar').css({'right': -268});
         }
     }
 
@@ -146,7 +146,7 @@ $(function() {
         //Margin top start from 110px to 50px
         //img into the screen from bottom to top: offsetScale= 0->1
         var marginTop = 110*(1-offsetScale) +50*offsetScale;
-        $('#practice_img').animate({"margin-top":(marginTop)+"px"});
+        $('#practice_img').css({"margin-top":(marginTop)+"px"});
     }
 
 
@@ -157,13 +157,13 @@ $(function() {
         var offset = $(window).scrollTop() - imgInScreen + screenheight;
         var offsetScale = offset/screenheight;
 
-        if(offsetScale<0) offsetScale = 0;
-        if(offsetScale>1.5) offsetScale = 1.5;
+        //if(offsetScale<0) offsetScale = 0;
+        //if(offsetScale>1.5) offsetScale = 1.5;
         var songlistTop = 120-offsetScale*40;
         var songdetailTop = 120-offsetScale*80;
 
-        $('#songlist').animate({"top":songlistTop+"px"});
-        $('#songdetail').animate({"top": songdetailTop+"px"});
+        $('#songlist').css({"top":songlistTop+"px"});
+        $('#songdetail').css({"top": songdetailTop+"px"});
 
     }
 
