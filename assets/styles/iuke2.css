@@ -131,6 +131,7 @@ em.green {
 }
 
 .vjs-error-display,
+.vjs-control-bar,
 .vjs-big-play-button,
 .vjs-loading-spinner,
 .vjs-text-track-display,
@@ -191,6 +192,24 @@ em.green {
 }
 .iphone #demo {
   position: absolute;
+}
+
+div.mute {
+  position: absolute;
+  right: 240px;
+  bottom: 100px;
+}
+div.mute a {
+  font-family: "VideoJS";
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.4);
+}
+div.mute a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.iphone {
+  display: none;
 }
 
 .page-container {

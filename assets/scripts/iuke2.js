@@ -35,12 +35,14 @@ $(function() {
       }
     });
 
+
     demovideo.ready(function(){
-      $('.vjs-mute-control').attr('class', 'vjs-mute-control vjs-control vjs-vol-0');
+      //$('.vjs-mute-control').attr('class', 'vjs-mute-control vjs-control vjs-vol-0');
       this.userActive(false);
       this.muted(true);
-    });
 
+    });
+    top.vdo = demovideo;
 
     // a*878 + b = 50%
     // a*1414 + b = 85%
@@ -157,6 +159,18 @@ $(function() {
         //console.info("v",offset, offsetScale,marginTop);
         //$('div.practice div.img img').css({"margin-top":(marginTop)+"px"});
     }
+
+    $('.iphone').fadeIn();
+    $('#mute-video').click(function(){
+        //$('#mute-video').html("&#xe006;");
+        if(top.vdo.muted()){
+            top.vdo.muted(false);
+            $('#mute-video').html("&#xe006;");
+        }else{
+            top.vdo.muted(true);
+            $('#mute-video').html("&#xe003;");
+        }
+    });
 
 });
 
