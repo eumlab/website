@@ -21,6 +21,10 @@ body {
   background-size: cover;
 }
 
+div.v2-footer {
+  height: 130px;
+}
+
 .appstore-icon {
   line-height: 200%;
   display: inline-block;
@@ -37,6 +41,19 @@ body {
   color: #fff;
   display: block;
   margin-bottom: 100px;
+}
+
+.appstore-icon-bottom::after {
+  content: "A";
+  text-indent: 0 !important;
+  font-size: 90px;
+  font-family: "EUMWeb";
+  color: #1b1b1b;
+  margin-bottom: 100px;
+}
+
+.appstore-icon-bottom::after:hover {
+  opacity: 0.8;
 }
 
 .two-rows-container {

@@ -15,7 +15,7 @@ applist = {
     "ut":{"mid":"ut","name":"Ukulele Toolkit", "id":"581273909", "iphone":True, "iPad": False, "icon":"ukuleletoolkit.png", "href":"/ukulele-toolkit/","desc":"Everything a uke player needs","aurl":"eumut"},
     "uke101":{"mid":"uke101","name":"Uke101", "id":"887173705", "iphone":True, "iPad": True, "icon":"uke101.png", "href":"/uke101/","desc":"Learn ukulele using tutorials, games & songs","aurl":"eumuke101"},
     "ukechords":{"mid":"ukechords","name":"UkeChords", "id":"899874539", "iphone":True, "iPad": True, "icon":"ukechords.png", "href":"/ukechords/","desc":"Learn uke chords with real fingering positions","aurl":"eumuc"},
-    "iuke":{"mid":"iuke","name":"iUke", "id":"591760977", "iphone":True, "iPad": True, "icon":"iuke.png", "href":"/iuke/","desc":"The ukulele songbook","aurl":"eumiuke"},
+    "iuke":{"mid":"iuke","name":"iUke", "id":"591760977", "iphone":True, "iPad": True, "icon":"iuke.png", "href":"/iuke/","desc":"The ultimate ukulele learning experience","aurl":"eumiuke"},
     "chordtunes":{"mid":"chordtunes","name":"Chordtunes", "id":"643809129", "iphone":False, "iPad": True, "icon":"chordtunes.png", "href":"/chordtunes/","desc":"The easy chord sheet creator","aurl":"eumct"},
     "bt":{"mid":"bt","name":"Bass Toolkit", "id":"893031248", "iphone":True, "iPad": True, "icon":"basstoolkit.png", "href":"/bass-toolkit/","desc":"Everything a bass player needs right in your pocket","aurl":"eumbt"},
     "st":{"mid":"st","name":"String Tuner", "id":"501971515", "iphone":True, "iPad": True, "icon":"stringtuner.png", "href":"/string-tuner/","desc":"Tune your strings in no time","aurl":"eumst"},
@@ -139,17 +139,23 @@ for appkey in applist.keys():
 # PRESS
 
 PressItems = [
-    {'title':applist["uke101"]["name"],
-     'app':applist["uke101"],
-     'desc':applist["uke101"]["name"],
-     'kit':"https://www.dropbox.com/sh/qk9w8i3icr1xzm2/AADt7UwzbjRR66X8U-2CiHfCa?dl=0",
-     'intro':'https://www.dropbox.com/sh/qk9w8i3icr1xzm2/AACvx0iiCDiic_12Rv8nBntsa/EUMLab%20-%20Uke101%20Press%20Sheet.pdf?dl=0',
+    {'title':applist["iuke"]["name"],
+     'app':applist["iuke"],
+     'desc':applist["iuke"]["desc"],
+     'kit':"https://www.dropbox.com/sh/s1jk5gcpgx51qoj/AAA9Hxx--7_2UJwvDKAKVL8ca?dl=0",
+     'intro':'#',
      },
     {'title':applist["pm"]["name"],
      'app':applist["pm"],
      'desc':applist["pm"]["desc"],
      'kit':"https://www.dropbox.com/sh/hg5lxx482eb5vhv/AACosxcViu02yOG-ZDBIlNpFa?dl=0",
      'intro':'https://www.dropbox.com/sh/hg5lxx482eb5vhv/AAAUBb99uEwN6MARSV5Z3l9ca/EUMLab%20-%20Pro%20Metronome%20Press%20Sheet.pdf?dl=0',
+     },
+    {'title':applist["uke101"]["name"],
+     'app':applist["uke101"],
+     'desc':applist["uke101"]["name"],
+     'kit':"https://www.dropbox.com/sh/qk9w8i3icr1xzm2/AADt7UwzbjRR66X8U-2CiHfCa?dl=0",
+     'intro':'https://www.dropbox.com/sh/qk9w8i3icr1xzm2/AACvx0iiCDiic_12Rv8nBntsa/EUMLab%20-%20Uke101%20Press%20Sheet.pdf?dl=0',
      },
 ]
 
