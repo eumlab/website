@@ -54,6 +54,7 @@ $(function() {
         winWidth = win.width(),
         winHeight = win.height(),
         iphone = $(".iphone"),
+        christmas = $(".christmas .left");
         demo = $("#demo");
         if (winHeight < 750)
             winHeight = 750;// min Height.
@@ -74,6 +75,17 @@ $(function() {
                     "margin-left":mleft+"px"});
 
         demo.css({"width": 7.23 * y, "left": 145 + (100 - y)*3.65 + "px" , "top": 49 + (100 - y)*3.65 + "px" , "height:": "auto"});
+
+        var christmas_mleft;
+        if (winWidth <= 1135) {
+          christmas_mleft = -200;
+        } else {
+          christmas_mleft = -200 + (winWidth - 1135)*375/200;
+        }
+
+        if (christmas_mleft > 0) christmas_mleft = 0;
+
+        christmas.css({"margin-left": christmas_mleft+"px"});
 
         //var titleTop = winHeight - (winHeight/1.6);
         //appname.css({"padding-top":titleTop.toString()+"px"});
@@ -115,16 +127,14 @@ $(function() {
             //In screen
             if($('.solo .sidebar').css("right") == "-268px")
                 $('.solo .sidebar').animate({'right': 0});
-            //console.info("ein");
         }else{
             if($('.solo .sidebar').css("right") == "0px")
                 $('.solo .sidebar').animate({'right': -268});
-            //console.info("aus");
         }
     }
 
     function checkPractice(){
-        var imgObject = $('div.practice div.img');
+        var imgObject = $('#practice_img');
         var imgInScreen = imgObject.offset().top;
         var screenheight = $(window).innerHeight();
         var offset = $(window).scrollTop() - imgInScreen + screenheight;
@@ -133,11 +143,10 @@ $(function() {
         if(offsetScale<0) offsetScale = 0;
         if(offsetScale>1.5) offsetScale = 1.5;
 
-        //Margin top start from 150px to 50px
+        //Margin top start from 110px to 50px
         //img into the screen from bottom to top: offsetScale= 0->1
-        var marginTop = 150*(1-offsetScale) +50*offsetScale;
-        //console.info("v",offset, offsetScale,marginTop);
-        $('div.practice div.img img').css({"margin-top":(marginTop)+"px"});
+        var marginTop = 110*(1-offsetScale) +50*offsetScale;
+        $('#practice_img').animate({"margin-top":(marginTop)+"px"});
     }
 
 
@@ -148,16 +157,14 @@ $(function() {
         var offset = $(window).scrollTop() - imgInScreen + screenheight;
         var offsetScale = offset/screenheight;
 
-        console.info("Song offset",offset," scale ",offsetScale);
         if(offsetScale<0) offsetScale = 0;
         if(offsetScale>1.5) offsetScale = 1.5;
+        var songlistTop = 120-offsetScale*40;
+        var songdetailTop = 120-offsetScale*80;
 
-        $('#songlist').css({"top":(120-offsetScale*40)+"px"});
-        $('#songdetail').css({"top":(120-offsetScale*80)+"px"});
+        $('#songlist').animate({"top":songlistTop+"px"});
+        $('#songdetail').animate({"top": songdetailTop+"px"});
 
-        var marginTop = 150*(1-offsetScale) +50*offsetScale;
-        //console.info("v",offset, offsetScale,marginTop);
-        //$('div.practice div.img img').css({"margin-top":(marginTop)+"px"});
     }
 
     $('.iphone').fadeIn();
