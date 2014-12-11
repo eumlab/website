@@ -11,6 +11,7 @@
 {% endblock %}
 0
 {% block style %}
+    <link href="/assets/styles/bigvideo.css" rel="stylesheet" />
     <link href="/assets/styles/iuke2.css" rel="stylesheet" />
     <link href="/assets/styles/vjs.css" rel="stylesheet" />
     {% include '_fixCSS.html' with page='iuke2' %}
@@ -110,13 +111,15 @@
 
   <div class="section practice">
     <div class="container">
-      <div class="img">
-        <img src="/assets/images/iuke/part6-bg1.png" width="430" height="359">
+      <div class="left-image">
+          <div class="img">
+            <img src="/assets/images/iuke/part6-bg1.png" width="430" height="359">
+          </div>
       </div>
       <div class="text">
         <h1 class="slogan"><em>It's a long way to the top</em></h1>
         <h2 class="slogan second">Practice makes perfect.</h2>
-        <h3 class="slogan-desc">iUke provides 50 practice tracks for you to<br>master your chops.<br>Use them to improve all aspects of your<br>playing: strumming, finger and chord<br>switching skills.</h3>
+        <h2 class="slogan-desc">iUke provides 50 practice tracks for you to<br>master your chops.<br>Use them to improve all aspects of your<br>playing: strumming, finger and chord<br>switching skills.</h2>
       </div>
     </div>
   </div>

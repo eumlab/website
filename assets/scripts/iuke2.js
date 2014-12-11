@@ -80,25 +80,82 @@ $(function() {
     resizeMe();
     
     // Scroll Animation
-    var songs_offset = $('#sec_intro').offset().top;
+    /*var songs_offset = $('#sec_intro').offset().top;
     var songlist = $('#songlist');
     var songdetail = $('#songdetail');
     var already_done = 0;
-
+*/
     $(window).on('scroll', function() {
-        if ( $(window).scrollTop() > songs_offset && !already_done) {
+        /*if ( $(window).scrollTop() > songs_offset && !already_done) {
           songlist.animate({top:"60"}, 2000, function(){already_done=1;});
           songdetail.animate({top:"30"}, 2000, function(){already_done=1;});
-        }
+        }*/
+        checkSolo();
+        checkPractice();
+        checkSongs();
     });
 
     // Solo Hover Animation
-    var solo_sidebar = $('.solo .sidebar');
+    /*var solo_sidebar = $('.solo .sidebar');
     $('.solo .ui').hover(function (){
       solo_sidebar.animate({'right': 0});
     }, function (){
       solo_sidebar.animate({'right': -268});
-    });
+    });*/
+
+    function checkSolo(){
+        var soloInScreen = $('.solo .sidebar').offset().top;
+        var screenheight = $(window).innerHeight();
+        var gap = screenheight * 0.2;//Reach 20% of the screen
+        if($(window).scrollTop() > (soloInScreen-screenheight + gap)  &&
+           $(window).scrollTop() < (soloInScreen) ){
+            //In screen
+            if($('.solo .sidebar').css("right") == "-268px")
+                $('.solo .sidebar').animate({'right': 0});
+            //console.info("ein");
+        }else{
+            if($('.solo .sidebar').css("right") == "0px")
+                $('.solo .sidebar').animate({'right': -268});
+            //console.info("aus");
+        }
+    }
+
+    function checkPractice(){
+        var imgObject = $('div.practice div.img');
+        var imgInScreen = imgObject.offset().top;
+        var screenheight = $(window).innerHeight();
+        var offset = $(window).scrollTop() - imgInScreen + screenheight;
+        var offsetScale = offset/screenheight;
+
+        if(offsetScale<0) offsetScale = 0;
+        if(offsetScale>1.5) offsetScale = 1.5;
+
+        //Margin top start from 150px to 50px
+        //img into the screen from bottom to top: offsetScale= 0->1
+        var marginTop = 150*(1-offsetScale) +50*offsetScale;
+        //console.info("v",offset, offsetScale,marginTop);
+        $('div.practice div.img img').css({"margin-top":(marginTop)+"px"});
+    }
+
+
+    function checkSongs(){
+        var songImagesContainer = $('div.songs');
+        var imgInScreen = songImagesContainer.offset().top;
+        var screenheight = $(window).innerHeight();
+        var offset = $(window).scrollTop() - imgInScreen + screenheight;
+        var offsetScale = offset/screenheight;
+
+        console.info("Song offset",offset," scale ",offsetScale);
+        if(offsetScale<0) offsetScale = 0;
+        if(offsetScale>1.5) offsetScale = 1.5;
+
+        $('#songlist').css({"top":(120-offsetScale*40)+"px"});
+        $('#songdetail').css({"top":(120-offsetScale*80)+"px"});
+
+        var marginTop = 150*(1-offsetScale) +50*offsetScale;
+        //console.info("v",offset, offsetScale,marginTop);
+        //$('div.practice div.img img').css({"margin-top":(marginTop)+"px"});
+    }
 
 });
 

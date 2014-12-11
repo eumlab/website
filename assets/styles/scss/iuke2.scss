@@ -114,6 +114,19 @@ em {
     position: absolute;
 }
 
+.vjs-error-display,
+.vjs-control-bar,
+.vjs-big-play-button,
+.vjs-loading-spinner,
+.vjs-text-track-display,
+.vjs-poster{
+    display: none !important;
+}
+
+#big-video-vid_html5_api{
+    display: none;
+}
+
 /* First Page Container */
 .firstpage-container {
   height: 100%;
@@ -322,7 +335,7 @@ em {
         .sidebar {
           position: absolute;
           right: -268px;
-          top: 0;
+          top: 40px;
         }
       }
     }
@@ -376,14 +389,15 @@ em {
 .record {
 
   height: 800px;
-  background: transparent no-repeat top left url('/assets/images/iuke/part5-bg.jpg');
-  background-size: 100% 100%;
+  background: transparent no-repeat top center url('/assets/images/iuke/part5-bg.jpg');
+  //background-size: 100% 100%;
+  @include background-size(cover);
 
   .slogan {
     font-size: 60px;
     font-weight: 600;
     text-shadow: none;
-    margin-top: 200px;
+    margin-top: 0;
   }
 
   .slogan-desc {
@@ -398,25 +412,37 @@ em {
   padding-bottom: 40px;
 
   .container {
-    width: 70%;
+    //width: 70%;
     min-width: 690px;
     max-width: 1600px;
     margin: 0 auto;
   }
 
-  .img {
-    width: 520px;
-    height: 401px;
-    margin: 100px 0 0 100px;
-    float: left;
-    text-align: right;
-    background: transparent no-repeat bottom url('/assets/images/iuke/part6-bg2.png');
+  .h2{
+    font-weight: 200;
+  }
 
-    img {
-      margin: 20px 50px 0 0;
+  .left-image{
+
+    width: 50%;
+    float: left;
+
+    .img {
+      width: 520px;
+      height: 460px;
+      //margin: 100px 0 0 100px;
+      float: right;
+      text-align: right;
+      background: transparent no-repeat bottom url('/assets/images/iuke/part6-bg2.png');
+
+      img {
+        margin: 116px 50px 0 0;
+      }
     }
   }
+
   .text {
+    min-width: 568px;
     margin-left: 50%;
     text-align: left;
 
