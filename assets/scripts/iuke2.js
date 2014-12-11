@@ -37,6 +37,7 @@ $(function() {
 
     demovideo.ready(function(){
       $('.vjs-mute-control').attr('class', 'vjs-mute-control vjs-control vjs-vol-0');
+      this.userActive(false);
       this.muted(true);
     });
 
