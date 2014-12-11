@@ -198,6 +198,27 @@ em {
   }
 }
 
+//Mute Control
+div.mute{
+  position: absolute;
+  right: 240px;
+  bottom: 100px;
+
+
+  a{
+    font-family: "VideoJS";
+    font-size: 28px;
+    color: rgba(255,255,255,0.4);
+  }
+  a:hover{
+    color: rgba(255,255,255,0.8);
+  }
+}
+
+.iphone{
+  display: none;
+}
+
 .page-container {
   overflow: hidden;
   width: 100%;

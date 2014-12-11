@@ -12,8 +12,8 @@
 0
 {% block style %}
     <link href="/assets/styles/bigvideo.css" rel="stylesheet" />
-    <link href="/assets/styles/iuke2.css" rel="stylesheet" />
     <link href="/assets/styles/vjs.css" rel="stylesheet" />
+    <link href="/assets/styles/iuke2.css" rel="stylesheet" />
     {% include '_fixCSS.html' with page='iuke2' %}
 {% endblock %}
 
@@ -30,12 +30,13 @@
     </div>
     <div class="iphone">
       <video id="demo" class="video-js vjs-iuke-skin" autoplay height="auto" width="auto"
-        loop preload="auto" muted controls
+        loop preload="auto" muted
         poster="/assets/videos/iuke/iuke-main-loop.jpg">
        <source src="/assets/videos/iuke/iuke-main-loop.mp4" type='video/mp4' />
        <source src="/assets/videos/iuke/iuke-main-loop.webm" type='video/webm' />
        <source src="/assets/videos/iuke/iuke-main-loop.ogv" type='video/ogg' />
       </video>
+      <div class="mute"><a id="mute-video" href="javascript:void(0);">&#xe003;</a></div>
     </div>
   </div>
 </div>
