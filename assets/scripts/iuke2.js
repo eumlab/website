@@ -135,7 +135,7 @@ $(function() {
         //img into the screen from bottom to top: offsetScale= 0->1
         var marginTop = 150*(1-offsetScale) +50*offsetScale;
         //console.info("v",offset, offsetScale,marginTop);
-        $('div.practice div.img img').css({"margin-top":(marginTop)+"px"});
+        $('div.practice div.img img').animate({"margin-top":(marginTop)+"px"});
     }
 
 
@@ -150,8 +150,8 @@ $(function() {
         if(offsetScale<0) offsetScale = 0;
         if(offsetScale>1.5) offsetScale = 1.5;
 
-        $('#songlist').css({"top":(120-offsetScale*40)+"px"});
-        $('#songdetail').css({"top":(120-offsetScale*80)+"px"});
+        $('#songlist').animate({"top":(120-offsetScale*40)+"px"});
+        $('#songdetail').animate({"top":(120-offsetScale*80)+"px"});
 
         var marginTop = 150*(1-offsetScale) +50*offsetScale;
         //console.info("v",offset, offsetScale,marginTop);

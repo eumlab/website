@@ -131,7 +131,6 @@ em {
 }
 
 .vjs-error-display,
-.vjs-control-bar,
 .vjs-big-play-button,
 .vjs-loading-spinner,
 .vjs-text-track-display,
@@ -406,7 +405,6 @@ em {
 
   height: 800px;
   background: transparent no-repeat top center url('/assets/images/iuke/part5-bg.jpg');
-  //background-size: 100% 100%;
   @include background-size(cover);
 
   .slogan {
@@ -428,7 +426,6 @@ em {
   padding-bottom: 40px;
 
   .container {
-    //width: 70%;
     min-width: 690px;
     max-width: 1600px;
     margin: 0 auto;
@@ -446,7 +443,6 @@ em {
     .img {
       width: 520px;
       height: 460px;
-      //margin: 100px 0 0 100px;
       float: right;
       text-align: right;
       background: transparent no-repeat bottom url('/assets/images/iuke/part6-bg2.png');
