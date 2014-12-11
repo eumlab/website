@@ -126,10 +126,10 @@ $(function() {
            $(window).scrollTop() < (soloInScreen) ){
             //In screen
             if($('.solo .sidebar').css("right") == "-268px")
-                $('.solo .sidebar').css({'right': 0});
+                $('.solo .sidebar').animate({'right': 0});
         }else{
             if($('.solo .sidebar').css("right") == "0px")
-                $('.solo .sidebar').css({'right': -268});
+                $('.solo .sidebar').animate({'right': -268});
         }
     }
 
