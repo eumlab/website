@@ -54,6 +54,7 @@ $(function() {
         winWidth = win.width(),
         winHeight = win.height(),
         iphone = $(".iphone"),
+        christmas = $(".christmas .left");
         demo = $("#demo");
         if (winHeight < 750)
             winHeight = 750;// min Height.
@@ -74,6 +75,17 @@ $(function() {
                     "margin-left":mleft+"px"});
 
         demo.css({"width": 7.23 * y, "left": 145 + (100 - y)*3.65 + "px" , "top": 49 + (100 - y)*3.65 + "px" , "height:": "auto"});
+
+        var christmas_mleft;
+        if (winWidth <= 1135) {
+          christmas_mleft = -200;
+        } else {
+          christmas_mleft = -200 + (winWidth - 1135)*375/200;
+        }
+
+        if (christmas_mleft > 0) christmas_mleft = 0;
+
+        christmas.css({"margin-left": christmas_mleft+"px"});
 
         //var titleTop = winHeight - (winHeight/1.6);
         //appname.css({"padding-top":titleTop.toString()+"px"});
