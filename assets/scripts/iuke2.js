@@ -126,10 +126,10 @@ $(function() {
            $(window).scrollTop() < (soloInScreen) ){
             //In screen
             if($('.solo .sidebar').css("right") == "-268px")
-                $('.solo .sidebar').css({'right': 0});
+                $('.solo .sidebar').animate({'right': 0});
         }else{
             if($('.solo .sidebar').css("right") == "0px")
-                $('.solo .sidebar').css({'right': -268});
+                $('.solo .sidebar').animate({'right': -268});
         }
     }
 
@@ -165,6 +165,12 @@ $(function() {
         $('#songlist').css({"top":songlistTop+"px"});
         $('#songdetail').css({"top": songdetailTop+"px"});
 
+    }
+
+    // iOS can't play video, so hide the mute button
+
+    if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ) {
+      $('#mute-video').hide();
     }
 
     $('.iphone').fadeIn();
