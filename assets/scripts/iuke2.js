@@ -167,6 +167,12 @@ $(function() {
 
     }
 
+    // iOS can't play video, so hide the mute button
+
+    if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ) {
+      $('#mute-video').hide();
+    }
+
     $('.iphone').fadeIn();
     $('#mute-video').click(function(){
         //$('#mute-video').html("&#xe006;");
