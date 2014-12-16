@@ -180,7 +180,8 @@ em.green {
   padding-top: 15px;
 }
 
-.iphone {
+.iphone-frame {
+  display: none;
   background: transparent no-repeat url("/assets/images/iuke/highlight-iphone.png");
   background-position: bottom;
   background-size: 50%;
@@ -189,7 +190,7 @@ em.green {
   position: relative;
   overflow: hidden;
 }
-.iphone #demo {
+.iphone-frame #demo {
   position: absolute;
 }
 
@@ -205,10 +206,6 @@ div.mute a {
 }
 div.mute a:hover {
   color: rgba(255, 255, 255, 0.8);
-}
-
-.iphone {
-  display: none;
 }
 
 .page-container {

@@ -53,7 +53,7 @@ $(function() {
         var win =  $(window),
         winWidth = win.width(),
         winHeight = win.height(),
-        iphone = $(".iphone"),
+        iphone = $(".iphone-frame"),
         christmas = $(".christmas .left");
         demo = $("#demo");
         if (winHeight < 750)
@@ -173,7 +173,7 @@ $(function() {
       $('#mute-video').hide();
     }
 
-    $('.iphone').fadeIn();
+    $('.iphone-frame').fadeIn();
     $('#mute-video').click(function(){
         //$('#mute-video').html("&#xe006;");
         if(top.vdo.muted()){
