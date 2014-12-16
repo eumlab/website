@@ -143,7 +143,7 @@ PressItems = [
      'app':applist["iuke"],
      'desc':applist["iuke"]["desc"],
      'kit':"https://www.dropbox.com/sh/s1jk5gcpgx51qoj/AAA9Hxx--7_2UJwvDKAKVL8ca?dl=0",
-     'intro':'#',
+     'intro':'https://www.dropbox.com/s/8tafdyzq8u0xbpq/EUMLab%20-%20iUke%202%20Press%20Sheet.pdf?dl=0',
      },
     {'title':applist["pm"]["name"],
      'app':applist["pm"],
