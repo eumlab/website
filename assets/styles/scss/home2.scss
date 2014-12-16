@@ -357,6 +357,7 @@ img.uke-app-sc{
     top: 0;
     position: absolute;
     text-align: right;
+	text-shadow: 0 0 8px rgba(255,255,255,0.7);
 }
 
 
@@ -488,11 +489,8 @@ img#img-uke-app-sc-uketube.uke-app-sc{
 /*****   Section Figure ************/
 .main-section-figure{
     background-color: #a8c0d5;
-    background: no-repeat top url('/assets/images/main/app-downloads-bg.jpg');
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: repeat-x top url('/assets/images/main/app-download-bg.png');
+	background-size: contain;
 }
 .figure-ghand{
     position: absolute;
@@ -512,9 +510,10 @@ img#img-uke-app-sc-uketube.uke-app-sc{
 .figure-text-container h2{
     padding-top: 540px;
     font-size: 56px;
-    color: #1b1b1b;
+    color: #ffffff;
     font-weight: 100;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	background: no-repeat 50% 35% url('/assets/images/main/app-download-bulb.png');
 }
 .figure-text-container h2 em{
     font-weight: 600;
@@ -522,10 +521,10 @@ img#img-uke-app-sc-uketube.uke-app-sc{
 }
 .figure-text-container h3{
     padding-top: 50px;
-    color: #1b1b1b;
+    color: #ffffff;
     font-weight: 100;
     font-size: 36px;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 .figure-text-container h3 em{
     font-family: "entypo";
@@ -537,15 +536,17 @@ img#img-uke-app-sc-uketube.uke-app-sc{
     color: #cd4413;
 }
 .figure-reviews{
-    height: 250px;
+    height: 200px;
     width: 960px;
+	margin-top: 30px;
     position: relative;
     display: table;
 }
 .figure-left-quo,
 .figure-right-quo{
-    color: #2b5f8c;
-    font-size: 220px;
+    color: #183b4f;
+    font-size: 140px;
+	font-family: Georgia;
     position: absolute;
     font-weight: 100;
 }
@@ -560,7 +561,7 @@ img#img-uke-app-sc-uketube.uke-app-sc{
 .figure-reviews p{
     width: 800px;
     font-size: 36px;
-    color: #2b5f8c;
+    color: #183b4f;
     text-align: left;
     padding-left: 100px;
     display: table-cell;
@@ -572,15 +573,13 @@ img#img-uke-app-sc-uketube.uke-app-sc{
     font-weight: lighter;
     font-style: italic;
     line-height: 1.2;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
 }
     /* Small Size */
     #sec-figure.sms .figure-ghand{
         background-size: 40%;
     }
-    #sec-figure.sms .figure-text-container h2{
-        padding-top: 380px;
-    }
+
     /* Tiny */
     #sec-figure.tms .figure-ghand{
         background-size: 45%;

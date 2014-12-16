@@ -235,7 +235,7 @@ div.mute{
   h1, h2 {
     font-weight: 200;
     font-size: 48px;
-    line-height: 150%;
+    line-height: 120%;
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
   }
 
@@ -281,7 +281,7 @@ div.mute{
     position:relative;
     height: 597px;
     width: 776px;
-    margin: 45px auto 0;
+    margin: 25px auto 0;
 
     img {
       position: absolute;
@@ -303,7 +303,7 @@ div.mute{
 
 /* chord  */
 .chord {
-  height: 900px;
+  height: 920px;
 
 }
 
@@ -422,18 +422,25 @@ div.mute{
 .record {
 
   height: 800px;
+  text-align: left;
   background: transparent no-repeat top center url('/assets/images/iuke/part5-bg.jpg');
   @include background-size(cover);
 
   .slogan {
-    font-size: 60px;
-    font-weight: 600;
+    font-size: 52px;
+    font-weight: 400;
     text-shadow: none;
-    margin-top: 0;
+    margin: 100px 0 0 100px;
   }
 
   .slogan-desc {
     text-shadow: none;
+	padding-top: 0;
+	margin: 0 0 0 100px;
+  }
+  .container{
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 
@@ -441,7 +448,7 @@ div.mute{
 
 .practice {
   background: #FFF;
-  padding-bottom: 40px;
+  padding: 80px 0 140px;
 
   .container {
     min-width: 690px;
@@ -559,13 +566,22 @@ div.mute{
 /* Features */
 @import "features";
 .features {
-  padding: 50px;
+  padding: 80px;
 
   .slogan {
     padding: 0;
   }
+  
+  li.feature-item p {
+	font-size: 16px;
+  }
 
   li.feature-item p em{
     font-style: italic;
+  }
+  
+  li.feature-item h2 {
+	font-size: 22px;
+	font-weight: 400;
   }
 }
