@@ -394,15 +394,18 @@ div.mute a:hover {
   background-size: cover;
 }
 .record .slogan {
-  font-size: 52px;
+  font-size: 44px;
   font-weight: 400;
   text-shadow: none;
-  margin: 100px 0 0 100px;
+  margin: 140px 0 0 30px;
+  opacity: 0.7;
 }
 .record .slogan-desc {
   text-shadow: none;
   padding-top: 0;
-  margin: 0 0 0 100px;
+  margin: 0 0 0 30px;
+  font-size: 22px;
+  opacity: 0.8;
 }
 .record .container {
   max-width: 1200px;
