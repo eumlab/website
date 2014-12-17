@@ -161,6 +161,7 @@ $(function() {
         //if(offsetScale>1.5) offsetScale = 1.5;
         var songlistTop = 120-offsetScale*40;
         var songdetailTop = 120-offsetScale*80;
+        songdetailTop = songdetailTop < -0.5 ? -0.5 : songdetailTop;
 
         $('#songlist').css({"top":songlistTop+"px"});
         $('#songdetail').css({"top": songdetailTop+"px"});
