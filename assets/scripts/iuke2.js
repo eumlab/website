@@ -77,10 +77,12 @@ $(function() {
         demo.css({"width": 7.23 * y, "left": 145 + (100 - y)*3.65 + "px" , "top": 49 + (100 - y)*3.65 + "px" , "height:": "auto"});
 
         var christmas_mleft;
-        if (winWidth <= 1135) {
-          christmas_mleft = -200;
+        if (winWidth <= 1055) {
+          christmas_mleft = -100;
+        } else if ( winWidth > 1055 && winWidth <= 1135) {
+          christmas_mleft = -160;
         } else {
-          christmas_mleft = -200 + (winWidth - 1135)*375/200;
+          christmas_mleft = -160 + (winWidth - 1135)*375/160;
         }
 
         if (christmas_mleft > 0) christmas_mleft = 0;
