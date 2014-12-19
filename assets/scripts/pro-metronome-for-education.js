@@ -22,26 +22,15 @@ $(function() {
         var y = a*winHeight + b;
         var mleft = -896*y/100.0;
         //console.info("y:",y);
-        iphone.css({"background-size": y.toString()+"%",
-                    "margin-left":mleft.toString()+"px"});
+        //iphone.css({"background-size": y.toString()+"%",
+         //           "margin-left":mleft.toString()+"px"});
 
         var titleTop = winHeight - (winHeight/1.6);
-        appname.css({"padding-top":titleTop.toString()+"px"});
-
-        //screen.css({"transform":"scale("+ y/100.0 +")"});
-        //Screen Animation
-        var scale = y/100.0;
-        screen.css({"margin-left": (163 * scale) + "px",
-        "margin-top":(365 * scale) + "px",
-        "height":(256 *scale )+ "px",
-        "width":(570 * scale)+"px"});
-
-        //$(".firstpage-container").css({"height": $(window).height() + "px"});
-        //console.info("do?");
+        //appname.css({"padding-top":titleTop.toString()+"px"});
     }
 
     $(window).on('resize', resizeMe);
-    resizeMe();
+    //resizeMe();
 
 
     function onScroll(e) {
@@ -80,23 +69,6 @@ $(function() {
     }
     //Scroll
     var lastScroll = $(window).scrollTop();
-    //$(window).scroll(onScroll);
-    //onScroll(null);
-
-    $(document).on("scrollstop",function(){
-      //Hash
-      /*  $('div.section').each(function(){
-                if (
-                   $(this).offset().top < window.pageYOffset + 10
-        //begins before top
-                && $(this).offset().top + $(this).height() > window.pageYOffset + 10
-        //but ends in visible area
-        //+ 10 allows you to change hash before it hits the top border
-                ) {
-                    window.location.hash = $(this).attr('id');
-                }
-        });*/
-    });
 
     var imagesUrl = [];
     for(i = 0 ; i< 44; i++){

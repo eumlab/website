@@ -509,7 +509,8 @@ div.mute{
   .left {
     float: left;
     width: 780px;
-    background: transparent no-repeat top left url('/assets/images/iuke/part7-titlebg.png');
+    background: transparent no-repeat center center url('/assets/images/iuke/part7-titlebg.png');
+    background-size: 100%;
   }
 
   .right {
@@ -517,7 +518,7 @@ div.mute{
     color: #FEC35F;
     margin-top: 120px;
     min-width: 466px;
-    margin-left: 55%;
+    margin-left: 52%;
     position: relative;
 
     .mask {
@@ -550,8 +551,6 @@ div.mute{
     font-weight: 800;
     font-size: 70px;
     margin-top: 120px;
-    margin-left: 200px;
-    width: 400px;
     line-height: 1;
   }
 
@@ -560,8 +559,6 @@ div.mute{
     color: #FFF;
     text-shadow: none;
     font-size: 22px;
-    width: 400px;
-    margin-left: 200px;
     margin-top: 70px;
   }
 }
@@ -586,5 +583,18 @@ div.mute{
   li.feature-item h2 {
 	font-size: 22px;
 	font-weight: 400;
+  }
+}
+
+/* detect screen size */
+@media screen and (max-width: 1055px) {
+  .christmas {
+    .left {
+      width: 640px;
+    }
+
+    .slogan {
+      font-size: 56px;
+    }
   }
 }
