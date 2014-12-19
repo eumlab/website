@@ -55,7 +55,7 @@ em.green {
   color: #7FB335;
 }
 
-.v2-footer {
+div.v2-footer {
   height: 130px;
 }
 
@@ -216,7 +216,7 @@ em.green {
   position: relative;
   height: 787px;
   width: 100%;
-  background: transparent repeat-x top left url("/assets/images/pmedu/part3-bg.jpg");
+  background: transparent repeat-x center center url("/assets/images/pmedu/part3-bg.jpg");
 }
 .lessons .box {
   margin: 0 auto;
