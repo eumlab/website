@@ -18,46 +18,60 @@
 {% block bodystyle %} {% endblock %}
 {% block body %}
 <div class="firstpage-container">
-  {% include "_nav2.html" with addstyle='glow' %}
+{% include "_nav2.html" %}
 
-  <div class="head">
-    <div class="title">
-      <h1 id="appname">Pro Metronome</h1>
-      <h2>A music teacher's swiss-army knife</h2>
+  <div class="first">
+    <div class="head">
+      <div class="iphone">
+      </div>
+      <div class="title">
+        <h1 id="appname">Pro Metronome</h1>
+        <h2>a music teacher's swiss-army knife</h2>
+      </div>
     </div>
   </div>
+
 </div>
 
 <div class="page-container">
+
+
   <div class="section introduction">
-    <h1 class="slogan">Pro Metronome has helped<br>over <em class="orange">3 million musicians</em> keep in time.</h1>
-    <h2 class="slogan second">It's used in <em class="green">100s of classrooms</em> around the world every day,<br>from conservatories to one-on-one lessons.</h1>
+    <h1 class="slogan">Pro Metronome has helped over<br><em class="orange">3 million musicians</em> keep in time.</h1>
+    <h2 class="slogan second">It's used in <em class="green">100s of classrooms</em> around<br>the world every day, from conservato-<br>ries to one-on-one lessons.</h1>
   </div>
 
 
   <div class="section features">
-    <div class="image"></div>
-    <div class="text">
-      <h1 class="slogan"><em>Pro Metronome</em> has all the features<br>of a <em>standard metronome</em></h1>
-      <h2 class="slogan-desc">But when it comes to music education, it's invaluable. Use it<br>to help teach your students:</h2>
-      <ul>
-        <li>Basic time signatures</li>
-        <li>Odd time signatures</li>
-        <li>Dotted notes, triplets and more</li>
-        <li>Polyrhythms</li>
-      </ul>
-      <a id="show-poly-video" class="link-video" href="javascript:void(0);" title="See how polyrhythm works">See how it works</a>
+    <div class="box">
+      <div class="image">
+        <img src="/assets/images/pmedu/part2-iphone.png" width="444" height="687">
+      </div>
+      <div class="text">
+        <h1 class="slogan"><em>Pro Metronome</em> has all<br> the features of a standard metronome</h1>
+        <h2 class="slogan-desc">But when it comes to music education, it's invaluable. Use<br>it to help teach your students:</h2>
+        <ul>
+          <li>Basic time signatures</li>
+          <li>Odd time signatures</li>
+          <li>Dotted notes, triplets and more</li>
+          <li>Polyrhythms</li>
+        </ul>
+        <a id="show-poly-video" class="link-video" href="javascript:void(0);" title="See how polyrhythm works">See how it works</a>
+      </div>
     </div>
   </div>
 
 
-  <div class="section lessons">
-    <div class="text">
-      <h1 class="slogan">Let <em>Pro Metronome</em><br>help your lessons <em>stand out</em></h1>
-      <h2 class="slogan-desc">Use the app with your iPad's flash to keep the whole class in sync. Beam the video and audio to a projector or speakers with AirPlay.<br>You can even use the counting voice to keep time for you!</h2>
-    </div>
+  <div class="section lessons dark-background">
+    <div class="box">
+      <div class="text">
+        <h1 class="slogan"><em>Pro Metronome</em><br>help your lessons stand out</h1>
+        <h2 class="slogan-desc">Use the app with your iPad's flash to keep the<br>whole class in sync. Beam the video and audio to<br>a projector or speakers with AirPlay. You can even<br>use the counting voice to keep time for you!</h2>
+      </div>
 
-    <div class="image"></div>
+      <div class="image">
+      </div>
+    </div>
   </div>
 
   <div class="section counting">
@@ -85,8 +99,8 @@
 
 
   <div class="section trainer">
-    <h1 class="slogan">The Rhythm Trainer helps<br>strengthening the mind's metronome</h1>
-    <h2 class="slogan-desc">It works by playing a single bar, then muting the next one –<br>it's a great way to improve a student's sense of steady timekeeping.<br>Increase mute intervals as they improve, helping further train their abilities –<br>no other app has this feature.</h2>
+    <h1 class="slogan">The <em>Rhythm Trainer</em> helps<br>strengthening the mind's metronome</h1>
+    <h2 class="slogan-desc">It works by playing a single bar, then muting the next one – it's a great way to im-<br>prove a student's sense of steady timekeeping. Increase mute intervals as they<br> improve, helping further train their abilities –<br>no other app has this feature.</h2>
     <div class="trainer-block-container">
         <div class="note-container">
             <img src="/assets/images/pm2/trainer-notes-1.png" height="102" width="304" />
@@ -107,14 +121,14 @@
   </div>
 
   <div class="section download">
-    <h1 class="slogan">Pro Metronome for Education</h1>
-    <a class="basic-ani-onlyalpha appstore-icon-bottom" href="{{ me.storeurl }}" target="_blank"><img src="/assets/images/icons/512/prometronome.png" height="256" width="256" ></a>
+    <h1 class="slogan"><em>Pro Metronome</em><br>for Education</h1>
+    <a class="basic-ani-onlyalpha appstore-icon-bottom" href="mailto:eum+pmedu@eumlab.com?subject=Pro Metronome EDU Inquery" target="_blank"><img src="/assets/images/icons/512/prometronome.png" height="256" width="256" ></a>
   </div>
 
-  <div class="section contact">
+  <a class="section contact">
     <h1 class="slogan">Contact Us</h2>
     <p>Find out more about EUMlab's apps for educators</p>
-  </div>
+  </a>
 
 
     <div class="divbreaker bottom-divbreaker"></div>
