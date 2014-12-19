@@ -13,7 +13,6 @@ $(function() {
         var win =  $(window),
         winWidth = win.width(),
         winHeight = win.height(),
-        iphone = $(".iphone"),
         appname = $("#appname"),
         screen = $(".screen-ani");
 
@@ -21,9 +20,6 @@ $(function() {
             winHeight = 750;// min Height.
         var y = a*winHeight + b;
         var mleft = -896*y/100.0;
-        //console.info("y:",y);
-        //iphone.css({"background-size": y.toString()+"%",
-         //           "margin-left":mleft.toString()+"px"});
 
         var titleTop = winHeight - (winHeight/1.6);
         //appname.css({"padding-top":titleTop.toString()+"px"});
