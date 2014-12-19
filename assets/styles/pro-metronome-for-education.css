@@ -12,17 +12,8 @@ html {
   font-weight: 300;
 }
 
-body {
-  background: transparent no-repeat center url("/assets/images/pm2/bg.jpg");
-  height: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 a {
-  color: #1f94ff;
+  color: #5CC3F6;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
   font-size: 24px;
 }
@@ -41,7 +32,7 @@ a.link-video::after {
   padding-top: -5px;
   -webkit-border-radius: 25px;
   border-radius: 25px;
-  border: solid 1px #1f94ff;
+  border: solid 1px #5CC3F6;
   font-family: "entypo";
   display: inline-block;
   margin-left: 10px;
@@ -55,7 +46,7 @@ a.link-video::after:hover {
 }
 
 em {
-  font-weight: 400;
+  font-weight: 600;
 }
 em.orange {
   color: #F8752E;
@@ -68,39 +59,16 @@ em.green {
   height: 130px;
 }
 
-#idx-header.glow {
+#idx-header {
   position: absolute;
+  background: transparent;
+  box-shadow: none;
 }
 
-/* First Page Container */
 .firstpage-container {
   height: 100%;
   width: 100%;
   position: relative;
-}
-
-.head {
-  font-weight: 200;
-  color: #FFFFFF;
-  position: relative;
-}
-.head .title {
-  position: absolute;
-  left: 50%;
-  top: 150px;
-  height: 100%;
-  width: 50%;
-}
-.head h1 {
-  font-size: 60px;
-  font-weight: 600;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  padding-top: 45%;
-}
-.head h2 {
-  font-size: 30px;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-  padding-top: 15px;
 }
 
 .page-container {
@@ -120,45 +88,111 @@ em.green {
   overflow: hidden;
 }
 .section h1, .section h2 {
-  font-weight: 200;
-  font-size: 48px;
-  line-height: 150%;
-  text-shadow: 1px 1px 0 white;
+  font-weight: 300;
+  font-size: 39px;
+  line-height: 120%;
 }
-.section .dark-background {
+.section.dark-background {
   color: #FFF;
-}
-.section .dark-background h1, .section .dark-background h2 {
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
 .section .slogan {
   padding-top: 200px;
 }
 .section .slogan.second {
-  padding-top: 30px;
+  padding-top: 80px;
 }
 .section .slogan-desc {
   padding-top: 20px;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 150%;
 }
 .section p {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 130%;
   padding: 50px 0;
 }
 
+/* first */
+.first {
+  background: transparent left top url("/assets/images/pmedu/highlight-bg.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 918px;
+  overflow: hidden;
+  font-weight: 200;
+  color: #FFFFFF;
+}
+.first .head {
+  width: 1320px;
+  margin: 142px auto 0;
+}
+.first .head:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.first .iphone {
+  background: transparent no-repeat left top url("/assets/images/pmedu/highlight-iphone.png");
+  width: 759px;
+  height: 776px;
+  float: left;
+}
+.first .title {
+  height: 100%;
+  padding-top: 250px;
+  float: left;
+}
+.first h1 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.first h2 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+}
+
 /* Introducation */
 .introduction {
-  height: 600px;
+  height: 800px;
+  background: transparent no-repeat center center url("/assets/images/pmedu/part1-bg.png");
+}
+.introduction h1, .introduction h2 {
+  font-size: 60px;
+  color: #444;
 }
 
 /* Features */
 .features {
   background: #F3F3F3;
-  position: relative;
   text-align: left;
-  height: 660px;
+  height: 598px;
+  overflow: visible;
+}
+.features .box {
+  margin: 0 auto;
+  width: 1280px;
+}
+.features .box:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.features .image {
+  width: 444px;
+  height: 687px;
+  float: left;
+  position: relative;
+  margin-bottom: -90px;
+}
+.features .image img {
+  margin-left: 30px;
+  position: absolute;
+  top: -89px;
 }
 .features .slogan {
   padding-top: 100px;
@@ -167,32 +201,45 @@ em.green {
   line-height: 110%;
 }
 .features .text {
-  width: 60%;
-  height: 100%;
-  position: absolute;
-  right: 20px;
-  top: 0;
+  float: left;
+  margin-left: 80px;
 }
 .features .text ul {
   margin: 20px 0 25px;
   list-style: disc inside;
-  font-size: 26px;
-  font-weight: 200;
+  font-size: 24px;
   line-height: 150%;
 }
 
 /* Lessons */
 .lessons {
   position: relative;
-  height: 660px;
+  height: 787px;
+  width: 100%;
+  background: transparent repeat-x top left url("/assets/images/pmedu/part3-bg.jpg");
+}
+.lessons .box {
+  margin: 0 auto;
+  width: 1550px;
+  overflow: hidden;
+}
+.lessons .box:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .lessons .text {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  left: 40px;
-  top: 0;
   text-align: right;
+  float: left;
+  margin-left: 30px;
+}
+.lessons .image {
+  background: transparent no-repeat top left url("/assets/images/pmedu/part3-device.png");
+  float: right;
+  width: 917px;
+  height: 570px;
+  margin-top: 110px;
+  margin-right: 30px;
 }
 
 .trainer-block-container {
@@ -256,15 +303,22 @@ em.green {
 
 /* Contact */
 .contact {
-  width: 40%;
+  display: block;
+  width: 600px;
   border: 1px solid #1B1B1B;
   border-radius: 15px;
   margin: 60px auto 80px;
+  text-decoration: none;
+  color: #1b1b1b;
+}
+.contact:hover {
+  color: rgba(27, 27, 27, 0.8);
+  border-color: rgba(27, 27, 27, 0.8);
+  cursor: pointer;
 }
 .contact .slogan {
   font-weight: 400;
   padding-top: 20px;
-  font-size: 36px;
   line-height: 1.2;
 }
 .contact p {

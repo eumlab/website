@@ -8,7 +8,7 @@ from django.db import models
 #For Press
 applist = {
     "pm":{"mid":"pm","name":"Pro Metronome", "id":"477960671", "iphone":True, "iPad": True, "icon":"prometronome.png", "href":"/pro-metronome/","desc":"The best metronome app. Period.","aurl":"eumpm"},
-#    "pme":{"mid":"pme","name":"Pro Metronome Education", "id":"111111", "iphone":True, "iPad": True, "icon":"prometronome.png", "href":"/pro-metronome/edu/","desc":"The best metronome app. Period.","aurl":"eumpme"},
+    "pme":{"mid":"pme","name":"Pro Metronome Education", "id":"", "iphone":True, "iPad": True, "icon":"prometronome.png", "href":"/pro-metronome/edu/","desc":"A music teacher's swiss-army knife","aurl":"eumpme"},
     "instuner":{"mid":"instuner","name":"insTuner", "id":"528923171", "iphone":True, "iPad": True, "icon":"instuner.png", "href":"/instuner/","desc":"The professional chromatic tuner","aurl":"eumit"},
     "instunerlite":{"mid":"instunerlite","name":"insTuner Lite", "id":"603425027", "iphone":True, "iPad": True, "icon":"instuner.png", "href":"/instuner/","desc":"insTuner Lite","aurl":"eumitl"},
     "gm":{"mid":"gm","name":"Guitar Master", "id":"723205500", "iphone":True, "iPad": True, "icon":"guitarmaster.png", "href":"/guitar-master/","desc":"Everything a guitarist needs right in your pocket","aurl":"eumgt"},
@@ -31,6 +31,7 @@ applist = {
 
 indexApps = [
 applist["pm"],
+applist["pme"],
 applist["instuner"],
 applist["gm"],
 applist["bt"],
@@ -69,7 +70,7 @@ applist["uke101"]["pl"] = "https://www.dropbox.com/sh/h16am5vrut0rfqa/AACTrAe-rd
 
 
 appsMenu = [
-    {"title":"For Daily Practice","items":[applist["pm"],applist["instuner"],applist["gm"],applist["bt"],applist["dl"],]},
+    {"title":"For Daily Practice","items":[applist["pm"],applist["pme"],applist["instuner"],applist["gm"],applist["bt"],applist["dl"],]},
     {"title":"For Ukulele Players","items":[applist["ut"],applist["iuke"],applist["ukehero"],applist["uke101"],applist["ukechords"],applist["uketube"],applist["chordtunes"],]},
     {"title":"More Apps For Musicians","items":[applist["pt"],applist["st"],applist["daw"],applist["dawhd"],]},
 ]
