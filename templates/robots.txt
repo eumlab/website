@@ -1,1 +1,1 @@
-Sitemap: http://eumlab.com/sitemap.html
+Sitemap: http://eumlab.com/sitemap.xml

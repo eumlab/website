@@ -30,7 +30,7 @@ urlpatterns += patterns('mainweb.views',
 
 #SEO
     (r'^robots\.txt$', 'loadtemplateGeneral', {'template':'robots.txt'}),
-    (r'^sitemap\.html$', 'sitemap', {'template':'sitemap.xml'}),
+    (r'^sitemap\.xml$', 'sitemap', {'template':'sitemap.xml'}),
 
 #General Page
     (r'^jobs/$', 'loadtemplateGeneral', {'template':'hiring.html'}),
