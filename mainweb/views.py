@@ -8,6 +8,7 @@ from django.http import HttpResponse,HttpResponseRedirect, HttpResponsePermanent
 from httplib import *
 from django.template.loader import render_to_string
 
+from mainweb.sitemap import *
 
 from django.template.response import TemplateResponse
 
@@ -133,7 +134,7 @@ def loadtemplate(request, template,aid):
         me = {}
     else:
         me = applist[aid]
-    return render_with_pars(request, template,{"me":me})
+    return render_with_pars(request, template,{"me":me,"kw":kwList[aid]["kw"]})
 
 
 def loadtemplateGeneral(request, template):
@@ -167,3 +168,6 @@ def redirector_with_hash(request,where,hash,isp=True):
     else:
         return HttpResponseRedirect(where+"#"+hash)
 
+def sitemap(request, template):
+
+    return render_with_pars(request, template,{"urlset":urlset})

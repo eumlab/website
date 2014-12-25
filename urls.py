@@ -28,12 +28,17 @@ urlpatterns += patterns('mainweb.views',
     (r'^$', 'home'),
     (r'^(?i)index.html$',"redirector",{"where":"/"}),
 
+#SEO
+    (r'^robots\.txt$', 'loadtemplateGeneral', {'template':'robots.txt'}),
+    (r'^sitemap\.xml$', 'sitemap', {'template':'sitemap.xml'}),
+
 #General Page
     (r'^jobs/$', 'loadtemplateGeneral', {'template':'hiring.html'}),
     (r'^about/$', 'loadtemplateGeneral', {'template':'press.html'}),
     (r'^imprint/$', 'loadtemplateGeneral', {'template':'imprint.html'}),
     #(r'^contact/$', 'loadtemplateGeneral', {'template':'contact.html'}),
     (r'^smtm/$', 'showMeTheMoney', {'template':'showmethemoney.html'}),
+
 
 #Apps with Subages
     (r'^iuke/privacy-policy/$', 'loadtemplate', {'template':'iuke-privacy-policy.html','aid':'iuke'}),
@@ -54,16 +59,16 @@ urlpatterns += patterns('mainweb.views',
     (r'^guitar-master/$', 'loadtemplate', {'template':'guitar-master.html','aid':'gm'}),
     (r'^bass-toolkit/$', 'loadtemplate', {'template':'bass-toolkit.html','aid':'bt'}),
     (r'^ukehero/$', 'loadtemplate', {'template':'ukehero.html','aid':'ukehero'}),
+    (r'^instuner/$', 'loadtemplate', {'template':'instuner.html','aid':'instuner'}),
+    (r'^daw-remote-hd/$', 'loadtemplate', {'template':'daw-remote-hd.html','aid':'dawhd'}),
+    (r'^daw-remote/$', 'loadtemplate', {'template':'daw-remote.html','aid':'daw'}),
+    (r'^chordtunes/$', 'loadtemplate', {'template':'chordtunes.html','aid':'ct'}),
+    (r'^pro-tuner/$', 'loadtemplate', {'template':'pro-tuner.html','aid':'pt'}),
+    (r'^string-tuner/$', 'loadtemplate', {'template':'string-tuner.html','aid':'st'}),
 
-    (r'^daw-remote-hd/$', 'daw_remote_hd'),
     (r'^daw-remote-hd/docs/$', 'drh_docs'),
     (r'^daw-remote-hd/videos/$', 'drh_videos'),
     (r'^daw-remote-hd/faq/$', 'drh_faq'),
-    (r'^pro-tuner/$', 'pro_tuner'),
-    (r'^string-tuner/$', 'string_tuner'),
-    (r'^instuner/$', 'instuner'),
-    (r'^daw-remote/$', 'daw_remote'),
-    (r'^chordtunes/$', 'chordtunes'),
     #(r'^ukulele-toolkit/$', 'ukulele'),
 
     (r'^ukulele/$',"redirector",{"where":"/ukulele-toolkit/"}),
