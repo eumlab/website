@@ -440,6 +440,130 @@ div.v2-footer{
 }
 
 
+/* Stage Mode */
+.stage{
+    height: 800px;
+    position: relative;
+
+    background: #a69f8d; /* Old browsers */
+
+
+    background: transparent no-repeat center url("/assets/images/pm2/stage-bg.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.stage-row-container{
+    min-width: 980px;
+    max-width: 1600px;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+}
+.stage-row-container .left-row{
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+}
+.stage-text-container{
+  position: relative;
+  height: 100%;
+  width: 95%;
+}
+.stage-row-container .left-row h1,
+.stage-row-container .left-row h2{
+  text-shadow: none !important;
+  max-width: 680px;
+  min-width: 550px;
+  width: 100%;
+  position: absolute;
+}
+.stage-row-container .left-row h1{
+  top:90px;
+  right: 0;
+}
+
+.stage-row-container .left-row h2{
+  top:360px;
+  right: 0;
+}
+
+.stage-row-container .right-row{
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.stage-row-container .right-row img{
+  padding-top: 130px;
+}
+.stage-row-container .slogan-desc{
+    padding-bottom: 10px;
+}
+
+
+/* Practice Mode */
+.practice{
+    height: 880px;
+    position: relative;
+
+    background: transparent repeat-x bottom url("/assets/images/pm2/pratice-bg.png");
+    position: relative;
+    overflow: hidden;
+
+    text-align: center;
+
+}
+.practice h3{
+    font-size: 28px;
+    padding: 10px;
+    font-weight: 300;
+}
+.practice p{
+    padding: 5px 5px 15px;
+    font-size: 18px;
+}
+
+.practice-row-container{
+    min-width: 980px;
+    max-width: 1080px;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.practice-row-container h1.slogan{
+  padding-top: 80px;
+}
+.practice-row-container .left-row{
+    width: 50%;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+}
+
+
+.practice-row-container .right-row{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+}
+
 /* Pop up*/
 #popup-wrap{
     position: fixed;
@@ -547,6 +671,9 @@ div.v2-footer{
 
 
 /* Playlist */
+.playlist {
+  margin-bottom: -3px;
+}
 .playlist .slogan{
     padding-top: 100px;
 }
