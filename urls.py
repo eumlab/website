@@ -63,7 +63,7 @@ urlpatterns += patterns('mainweb.views',
     (r'^instuner/$', 'loadtemplate', {'template':'instuner.html','aid':'instuner'}),
     (r'^daw-remote-hd/$', 'loadtemplate', {'template':'daw-remote-hd.html','aid':'dawhd'}),
     (r'^daw-remote/$', 'loadtemplate', {'template':'daw-remote.html','aid':'daw'}),
-    (r'^chordtunes/$', 'loadtemplate', {'template':'chordtunes.html','aid':'ct'}),
+    (r'^chordtunes/$', 'loadtemplate', {'template':'chordtunes.html','aid':'chordtunes'}),
     (r'^pro-tuner/$', 'loadtemplate', {'template':'pro-tuner.html','aid':'pt'}),
     (r'^string-tuner/$', 'loadtemplate', {'template':'string-tuner.html','aid':'st'}),
 
