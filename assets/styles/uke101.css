@@ -475,6 +475,20 @@ body {
   opacity: 0.8;
 }
 
+.android-icon-bottom::after {
+  content: "X";
+  text-indent: 0 !important;
+  font-size: 90px;
+  font-family: "EUMWeb";
+  color: #1b1b1b;
+  margin-bottom: 100px;
+  padding-left: 20px;
+}
+
+.android-icon-bottom::after:hover {
+  opacity: 0.8;
+}
+
 .download-container {
   width: 100%;
   max-width: 1400px;
@@ -504,6 +518,11 @@ body {
   font-size: 20px;
   line-height: 130%;
   padding: 50px 0;
+}
+
+.download .inline50 {
+  display: inline-block;
+  width: 50%;
 }
 
 /*# sourceMappingURL=uke101.css.map */

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base-zh.html' %}
 
 {% block title %}Music Apps{% endblock %}
 {% block wholetitle %}EUMLab, creators of the best apps for musicians out there{% endblock %}
@@ -11,12 +11,12 @@
 {% block script %}
 <script src="/assets/scripts/jquery.easings.min.js"></script>
 <script src="/assets/scripts/jquery.fullPage.min.js"></script>
-<script src="/assets/scripts/home2.js"></script>
+<script src="/assets/scripts/home3.js"></script>
 {% endblock %}
 
 {% block style %}
     <link href="/assets/styles/jquery.fullPage.css" rel="stylesheet" />
-    <link href="/assets/styles/home2.css" rel="stylesheet" />
+    <link href="/assets/styles/home3.css" rel="stylesheet" />
     {% include '_fixCSS.html' with page='home2' %}
 
 {% endblock %}
@@ -25,96 +25,19 @@
 
     {% include "_nav2.html" %}
 
-  <div id="fullpage" class="main">
-    <div id="sec-intro" data-anchor="intro"class="main-section-intro section" >
-                <div id="main-iphone" class="basic-ani"> </div>
-        <div id="main-ipad" class="basic-ani"></div>
-        <div id="main-imac"></div>
-        <div id="main-over-layer"> </div>
-        <div id="main-container">
-            <div class="clearfix"></div>
-            <div id="main-logo-container">
-                <img class="main-logo" src="/assets/images/main/logo-main.png" />
-                <img class="main-logo-hl logo-ani" src="/assets/images/main/logo-main-hl.png" />
-            </div>
-            <h1 class="main-slogan">Welcome to <em>EUMLab</em>,<br/>
-            creators of <em>the best apps for musicians</em> out there</h1>
-            <ul id="main-icon-container">
-                {% for appitem in appList %}
-                    <li class="icon-item"><a href="{{ appitem.href }}"><img class="icon120" height="120" width="120" src="/assets/images/icons/120/{{ appitem.icon }}"/><br><h2 class="icon-title">{{ appitem.name }}</h2></a></li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div><!-- End Main -->
+    <div class="words">
+        <h1><span class="upper">吉他，贝斯，鼓手，键盘都已就绪</span><br/>
+        就等<span class="you">你</span>开嗓了</h1>
+        <h2>EUMLab 团队正在招募<span>程序员</span>/<span>设计师</span></h2>
+        <a href="/jobs/">查看职位</a>
+
+        <img src="/assets/images/home3/home-mic.png" height="410" width="275" />
+    </div>
+
+    <div class="mic2">
 
 
-    <div id="sec-uke"  data-anchor="ukulele" class="main-section-uke section">
-        <div class="uke-oc-bg"></div>
-        <div class="uke-oc">
-            <h1 class="uke-slogan">We specialize in <em>ukulele</em> apps</h1>
-            <div id="ukeapp-icons-container">
-                <ul>
-                    {% for appitem in ukeApps %}
-                        <li class="basic-ani {% if appitem.mid == 'ut' %}active{% endif %}"><a data="{{ appitem.mid }}" href="javascript:void(0);"><img src="/assets/images/icons/120/{{ appitem.icon }}" height="96" width="96"><h3>{{ appitem.name }}</h3></a></li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-
-        <div class="uke-app-sc-container">
-            {% for appitem in ukeApps reversed %}
-                <div id="uke-app-sc-id-{{ appitem.mid }}" class="uke-app-sc-item basic-ani {% if appitem.mid == 'ut' %}active{% endif %}">
-                <div class="uke-app-sc-right">
-                    <h2>{{ appitem.name }}</h2>
-                    <h3>{{ appitem.desc }}</h3>
-                    <a href="{{ appitem.href }}" title="Learn More" class="learn-more"></a>
-                    <a href="http://itunes.apple.com/app/id{{ appitem.id }}?ls=1&mt=8&at=11lt4f&ct=eumlabwebindex" target="_blank" class="appstore-icon-uke basic-ani-onlyalpha"></a>
-                </div>
-                <img id="img-uke-app-sc-{{ appitem.mid }}" class="uke-app-sc" src="/assets/images/main/{{ appitem.mid }}-sc.png" />
-                </div>
-            {% endfor %}
-        </div>
-    </div><!-- End Apps -->
-
-
-    <div id="sec-figure"  data-anchor="figure" class="main-section-figure section">
-
-        <div class="figure-text-container">
-               <h2>With <em>5,300,000</em> downloads,<br/>musicians get inspired by our apps</h2>
-               <h3>And they <em >♥</em> them. Check out what they're saying... </h3>
-            <div class="figure-reviews">
-
-                <p id="quo-content">I've been using this app for as long as I can remember. It's an amazing app
-and definitely the best Metronome app I've found so far!!</p>
-                <div class="figure-left-quo">“</div>
-                <div class="figure-right-quo">”</div>
-            </div>
-
-
-        </div>
-
-    </div><!-- End Figure -->
-    <div id="sec-press" data-anchor="press" class="main-section-press section">
-        <div class="press-container">
-            <div class="press-slogan"><h2>Behind the screen, <br/><em>backed by the best team</em></h2></div>
-            <div class="press-team press-team-berlin"><img src="/assets/images/main/icon-berlin.png" height="201" width="201"/><h3><em>Berlin</em>, Germany</h3></div>
-            <div class="press-and"><p class="top">in</p> <p class="bottom">&amp;</p></div>
-            <div class="press-team press-team-hangzhou"><img src="/assets/images/main/icon-hangzhou.png" height="201" width="201"/><h3><em>Hangzhou</em>, China</h3></div>
-            <div class="press-hiring"><a href="/jobs/"><h3>And we are still hiring!</h3></a></div>
-
-            <div class="press-footer">
-                {% include "_footer2.html" %}
-            </div>
-        </div>
-
-
-
-    </div><!-- End Press -->
-  </div>
-
-<div id="pre-loader" style="position: fixed;height: 100%;width: 100%;top:0;left:0;bottom: 0;right: 0;z-index: 999;text-align: center;background: #000 no-repeat center url('/assets/images/main/logo-main-hl.png');">
-    <p style="font-size: 24px;color: #00ffff; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;position: absolute;top:50%;left: 0;right: 0;padding-top: 90px;">Loading</p>
-</div>
+    </div>
 
 {% endblock %}
 

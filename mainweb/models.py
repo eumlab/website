@@ -7,12 +7,12 @@ from django.db import models
 
 #For Press
 applist = {
-    "pm":{"mid":"pm","name":"Pro Metronome", "id":"477960671", "iphone":True, "iPad": True, "icon":"prometronome.png", "href":"/pro-metronome/","desc":"The best metronome app. Period.","aurl":"eumpm"},
-    "pme":{"mid":"pme","name":"Pro Metronome Education", "id":"", "iphone":True, "iPad": True, "icon":"prometronome.png", "href":"/pro-metronome/edu/","desc":"A music teacher's swiss-army knife","aurl":"eumpme"},
-    "instuner":{"mid":"instuner","name":"insTuner", "id":"528923171", "iphone":True, "iPad": True, "icon":"instuner.png", "href":"/instuner/","desc":"The professional chromatic tuner","aurl":"eumit"},
-    "instunerlite":{"mid":"instunerlite","name":"insTuner Lite", "id":"603425027", "iphone":True, "iPad": True, "icon":"instuner.png", "href":"/instuner/","desc":"insTuner Lite","aurl":"eumitl"},
-    "gm":{"mid":"gm","name":"Guitar Master", "id":"723205500", "iphone":True, "iPad": True, "icon":"guitarmaster.png", "href":"/guitar-master/","desc":"Everything a guitarist needs right in your pocket","aurl":"eumgt"},
-    "ut":{"mid":"ut","name":"Ukulele Toolkit", "id":"581273909", "iphone":True, "iPad": False, "icon":"ukuleletoolkit.png", "href":"/ukulele-toolkit/","desc":"Everything a uke player needs","aurl":"eumut"},
+    "pm":{"mid":"pm","name":"专业节拍器", "id":"477960671", "iphone":True, "iPad": True, "icon":"prometronome.png", "href":"/pro-metronome/","desc":"The best metronome app. Period.","aurl":"eumpm"},
+    "pme":{"mid":"pme","name":"专业节拍器教育版", "id":"", "iphone":True, "iPad": True, "icon":"prometronome.png", "href":"/pro-metronome/edu/","desc":"A music teacher's swiss-army knife","aurl":"eumpme"},
+    "instuner":{"mid":"instuner","name":"专业调音器", "id":"528923171", "iphone":True, "iPad": True, "icon":"instuner.png", "href":"/instuner/","desc":"The professional chromatic tuner","aurl":"eumit"},
+    "instunerlite":{"mid":"专业调音器 免费版","name":"insTuner Lite", "id":"603425027", "iphone":True, "iPad": True, "icon":"instuner.png", "href":"/instuner/","desc":"insTuner Lite","aurl":"eumitl"},
+    "gm":{"mid":"gm","name":"吉他大师", "id":"723205500", "iphone":True, "iPad": True, "icon":"guitarmaster.png", "href":"/guitar-master/","desc":"Everything a guitarist needs right in your pocket","aurl":"eumgt"},
+    "ut":{"mid":"ut","name":"尤克里里助手", "id":"581273909", "iphone":True, "iPad": False, "icon":"ukuleletoolkit.png", "href":"/ukulele-toolkit/","desc":"Everything a uke player needs","aurl":"eumut"},
     "uke101":{"mid":"uke101","name":"Uke101", "id":"887173705", "iphone":True, "iPad": True, "icon":"uke101.png", "href":"/uke101/","desc":"Learn ukulele using tutorials, games & songs","aurl":"eumuke101"},
     "ukechords":{"mid":"ukechords","name":"UkeChords", "id":"899874539", "iphone":True, "iPad": True, "icon":"ukechords.png", "href":"/ukechords/","desc":"Learn uke chords with real fingering positions","aurl":"eumuc"},
     "iuke":{"mid":"iuke","name":"iUke", "id":"591760977", "iphone":True, "iPad": True, "icon":"iuke.png", "href":"/iuke/","desc":"The ultimate ukulele learning experience","aurl":"eumiuke"},
@@ -69,9 +69,9 @@ applist["uke101"]["pl"] = "https://www.dropbox.com/sh/h16am5vrut0rfqa/AACTrAe-rd
 
 
 appsMenu = [
-    {"title":"For Daily Practice","items":[applist["pm"],applist["instuner"],applist["gm"],applist["bt"],applist["dl"],]},
-    {"title":"For Ukulele Players","items":[applist["ut"],applist["iuke"],applist["ukehero"],applist["uke101"],applist["ukechords"],applist["uketube"],applist["chordtunes"],]},
-    {"title":"More Apps For Musicians","items":[applist["pt"],applist["st"],applist["daw"],applist["dawhd"],]},
+    {"title":"已支持中文","items":[applist["pm"],applist["instuner"],applist["gm"],applist["ut"],]},
+    {"title":"为尤里里里设计","items":[applist["ut"],applist["iuke"],applist["ukehero"],applist["uke101"],applist["ukechords"],applist["uketube"],applist["chordtunes"],]},
+    {"title":"更多产品","items":[applist["bt"],applist["dl"],applist["pt"],applist["st"],applist["daw"],applist["dawhd"],]},
 ]
 
 ukeApps = [

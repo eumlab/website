@@ -58,6 +58,8 @@ def render_with_pars(request, *args, **kwargs):
 
 def home(request):
 
+    return redirector(request,"/jobs/")
+
     me = {}
     me["reviews"]=[
     "Really great app - everything you need as a bass player! Useful, inspiring and handy!",

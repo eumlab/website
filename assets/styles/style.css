@@ -137,6 +137,13 @@ button:focus {
   src: url("/assets/fonts/eumweb-regular.eot");
   src: url("/assets/fonts/eumweb-regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/eumweb-regular.woff") format("woff"), url("/assets/fonts/eumweb-regular.ttf") format("truetype"), url("/assets/fonts/eumweb-regular.svg#EUMWeb") format("svg");
 }
+@font-face {
+  font-family: "PingHei";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/PingHei-light.eot");
+  src: url("/assets/fonts/PingHei-light.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/PingHei-light.woff") format("woff"), url("/assets/fonts/PingHei-light.ttf") format("truetype"), url("/assets/fonts/PingHei-light.svg#PingHei") format("svg");
+}
 .basic-ani {
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
@@ -152,7 +159,7 @@ button:focus {
 body {
   background: #000;
   font-size: 12px;
-  font-family: "proxima-nova", "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-family: "PingHei", "Lucida Grande", "Lucida Sans Unicode", "STHeitiSC-light", "proxima-nova", "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
   font-weight: normal;
   color: #b5c5ca;
   overflow-y: scroll;
@@ -161,7 +168,7 @@ body {
 }
 
 html {
-  font-family: "proxima-nova", "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-family: "PingHei", "Lucida Grande", "Lucida Sans Unicode", "STHeitiSC-light", "proxima-nova", "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
 }
 
 a {

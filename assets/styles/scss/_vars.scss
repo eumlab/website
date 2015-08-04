@@ -11,7 +11,14 @@ $logo-blue:#54ceea;
 $em-orange:#F8752E;
 $em-green:#7FB335;
 
-$font-basic:"proxima-nova",  "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
-
+//$font-basic:"proxima-nova",  "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
+$font-basic: "PingHei","Lucida Grande", "Lucida Sans Unicode", "STHeitiSC-light", "proxima-nova",  "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
 //Enable Bourbon
 @import "bourbon/bourbon";
+
+
+@mixin opacity($opt){
+  -webkit-opacity: $opt;
+  -moz-opacity: $opt;
+  opacity: $opt;
+}

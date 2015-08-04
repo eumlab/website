@@ -1,6 +1,6 @@
-{% extends 'base.html' %}
+{% extends 'base-zh.html' %}
 
-{% block title %}Jobs - We are hiring!{% endblock %}
+{% block title %}加入我们 - EUMLab 招聘{% endblock %}
 
 {% block meta %}
     <meta name="keywords" content="eum, eumlab, xanin, hiring, jobs, developers" />
@@ -8,6 +8,9 @@
 {% endblock %}
 
 {% block script %}
+<script src="/assets/scripts/video.js"></script>
+<script src="/assets/scripts/bigvideo.js"></script>
+<script src="/assets/scripts/jquery.threesixty.js"></script>
 <script src="/assets/scripts/hiring2.js"></script>
 {% endblock %}
 
@@ -16,63 +19,226 @@
 {% endblock %}
 
 {% block body %}
-
-    {% include "_nav2.html" with addstyle='fixontop' %}
-
+    {% include "_nav2.html" with addstyle='fixontop glow' %}
     <div class="hiring-header">
-    <img src="/assets/images/hiring/hiring-stuff.png" />
-    <div class="slogan-container">
-        <h1><em>We need you</em><br/>to helps us make the music sound lush</h1>
-        <div class="eum-intro">
-        <p >EUMlab is a group of software developers who are passionate about making excellent tools for musicians. 
-        We make Guitar Master and Bass Toolkit, Pro Metronome, the powerful insTuner, and a group of tools for the world’s Ukulele players. 
-        Our tools have been downloaded over 4.5 million times. Everyone who works for EUMlab is a musician themselves and we believe that music is the universal language of humankind.
-            And we're hiring! See below for our open positions.
-        </p>
+        <div class="header-container">
+            <div class="slogan-container">
+                <h1><em>加入我们</em><br/>一起释放音乐潜能</h1>
+                <div class="eum-intro">
+
+                </div>
+            </div>
         </div>
     </div>
+
+
+    <div class="products">
+        <h2>我们的产品已经帮助 <em><span>　　　</span>7,064,863<span>位用户</span></em> 更轻松地学习音乐 </h2>
+        <div class="our-apps">
+        </div>
     </div>
+
+
+    <div class="team-photo">
+        <div class="tools-space" ></div>
+        <div class="tools">
+            <h2>我们是 EUMLab </h2>
+            <p>我们热爱音乐，更相信人们在科技的帮助下可以更轻松快乐地学习音乐。我们的小伙伴弹吉他、钢琴、打鼓和拉手风琴。在他们逗比或严肃工作时，根本看不出来他们之中还有的是黑客，有的骑行318去西藏，有的重装徒步者足迹遍布川西东南亚和阿尔卑斯，有吃货大厨 PM ，有的小学就开始做 RC Oscillator，有的自己设计定做背包，他们中间还有深藏不露的国画研究生。。。 </p>
+            <h3>我们热衷创造最好的产品，也喜欢这些追求极致的公司</h3>
+            <img src="/assets/images/hiring/tools.png" width="800" height="220" />
+        </div>
+
+    </div>
+
+
+
+    <div class="welfare">
+    <h2>在这里你除了可以快乐地工作，还可以...</h2>
+    <ul>
+        <li class="icon-app">不设置上限的 App 下载<br/>让你开了又开</li>
+        <li class="icon-inst-edu">免费的乐器教学<br/>包学包会</li>
+        <li class="icon-books">不设上限制的购书费用<br/>根本停不下来</li>
+        <li class="icon-coffee">自制 Espresso 和功夫茶<br/>(已被喝掉 0xFFFF 杯)</li>
+    </ul>
+    </div>
+
     <div class="divbreaker"></div>
 
     <div class="hiring-section-container">
-        <div class="section berlin clearfix">
-            <h2><em>Berlin</em>, Germany</h2>
+        <div class="section hangzhou clearfix">
+            <h2><em>杭州</em> 开放职位</h2>
+
             <div class="position">
-                <h3>Head of Marketing</h3>
-                <p class="desc">Our community is made up of professional musicians, hobbyists, students and educators. We need a Head of Marketing who can engage with that community, help us gain user insight to make our our apps better, reach an even wider audience, and find trusted partners as we continue to expand. </p>
-                <ul class="what-you-do">
-                    <li>Develop brand strategy for EUMLab as a whole, in addition to focusing on individual apps.</li>
-                    <li>Engage with the EUMLab community and identify key influencers for closer collaboration.</li>
-                    <li>Optimize and build marketing campaigns – including SEO and some copywriting.</li>
-                    <li>Develop marketing strategies optimized for growth, and in line with brand goals.</li>
-                    <li>Manage existing EUMLab social channels – including Facebook, Twitter, YouTube.</li>
-                    <li>Evaluate new social/community platforms for EUMLab involvement, and develop relevant strategies.</li>
-                    <li>Work with the product/development team to relay community/influencer feedback and advise on future EUMLab products.</li>
-                    <li>Occasional travel within Europe to industry conferences or to meet with partners.</li>
-                    <li>The position will be part-time to begin with, with the possibilities for full-time employment following an introductory period.</li>
-                    <li>The position reports to the CEO.</li>
+                <h3>全局加分项</h3>
+                <p class="desc">以下为所有职位通用的全局加分项，<br/>如果你觉得我们说的就是你，请毫不犹豫联系我们 </p>
+                <ul class="bounces">
+                    <li>爱学习、爱音乐、爱户外、爱研究用户体验</li>
+                    <li>会某种乐器</li>
+                    <li>SoundCloud/豆瓣音乐人</li>
+                    <li>GitHub 沉迷者</li>
+                    <li>Dribbble 中毒者</li>
                 </ul>
-                <ul class="what-we-want ">
-                    <li>Believe in the power of music</li>
-                    <li>2-3 years experience in marketing</li>
-                    <li>Native or C2-level English speaking and writing skills</li>
-                    <li>Familiarity with mobile and desktop platforms for music-making</li>
-                    <li>Active understanding of popular social networks (Facebook, Twitter, YouTube, etc.)</li>
-                    <li>B.A. degree or equivalent (marketing, music industry or related fields preferred)</li>
-                </ul>
-                <ul class="stand-out ">
-                    <li>Play at least one musical instrument</li>
-                    <li>Familiarity with music education field</li>
-                    <li>Blogging or journalism experience</li>
-                    <li>German and/or Chinese language skills</li>
-                </ul>
-                <a class="apply clearfix" href="mailto:hiring@eumlab.com?subject=Hi, I wanna be your Head of Marketing&body=(Please attach your current Resumé/CV alongside salary expectations and links or information about your prior marketing experience.)" >Apply</a>
             </div>
 
-            <!--Press Release Director-->
+            <div class="divbreaker"></div>
 
 
+            <div class="position">
+                <h3>超级Android 工程师</h3>
+                <h4>月薪 12k - 30k</h4>
+                <p class="desc">你受够了周围的人不停地说 iOS 的体验有多好，你是一位隐忍的高手，Android的先天限制对你来说根本不算什么。你希望用实际的产品来让用户膛目结舌，“ 我靠！～这难道不是爱疯应用吗 ”</p>
+                <ul class="what-you-do">
+                    <li>参与架构基于安卓手机客户端程序</li>
+                    <li>参与我们安卓新产品的UI开发</li>
+                    <li>参与设计开发现有产品的新功能，包括数据库设计及编程</li>
+                    <li>为我们团队带来丰富的经验</li>
+                    <li>和团队一起高速成长</li>
+
+                </ul>
+                <ul class="what-we-want ">
+                    <li>有扎实的代码基础</li>
+                    <li>有丰富的Android商业产品开发经验</li>
+                    <li>了解和能使用各种系统API及SDK</li>
+                    <li>能熟练地操作数据库</li>
+                    <li>会查阅Android系统的源代码</li>
+                </ul>
+                <ul class="stand-out ">
+                    <li>已经成功地上架了2款以上安卓应用</li>
+                    <li>会使用PS/Sketch</li>
+                    <li>熟悉 C/C++</li>
+                    <li>做过原型设计</li>
+                </ul>
+                <a class="apply clearfix" href="mailto:hr@eumlab.com?subject=Hi，我想成为EUMLab的超级Android工程师&body=(请在文中附上简历，以及参与过的产品)" >成为我们的超级Android工程师</a>
+            </div>
+
+            <div class="divbreaker"></div>
+
+            <div class="position">
+                <h3>超级 iOS 工程师</h3>
+                <h4>月薪 12k - 30k</h4>
+                <p class="desc">你热爱 iPhone 以及 Apple 的哲学<br/>
+你拥有力量，一种改变现状和突破体验边界的力量。<br/>
+不过不失的 Good products 会让你昏昏欲睡，只有让人拍案的 Great products 才能触动你敏感的神经。</p>
+                <ul class="what-you-do">
+                    <li>参与架构基于 iOS 手机客户端程序</li>
+                    <li>参与我们新产品的UI开发</li>
+                    <li>参与设计开发现有产品的新功能，包括数据库设计及编程</li>
+                    <li>为我们团队带来丰富的经验</li>
+                    <li>和团队一起高速成长</li>
+                </ul>
+                <ul class="what-we-want ">
+                    <li>有扎实的代码基础</li>
+                    <li>有丰富的 iOS 商业产品开发经验</li>
+                    <li>了解和能使用各种系统API及SDK</li>
+                    <li>熟练地使用CocoaPods</li>
+                    <li>能熟练地操作数据库</li>
+                </ul>
+                <ul class="stand-out ">
+                    <li>已经成功地参与上架了2款以上iOS应用</li>
+                    <li>会使用PS/Sketch</li>
+                    <li>熟悉 C/C++</li>
+                    <li>做过原型设计</li>
+                </ul>
+                <a class="apply clearfix" href="mailto:hr@eumlab.com?subject=Hi，我想成为EUMLab的超级iOS工程师&body=(请在文中附上简历，以及参与过的产品)" >成为我们的超级 iOS 工程师</a>
+            </div>
+
+            <div class="divbreaker"></div>
+
+            <div class="position">
+            <h3>服务器后端工程师</h3>
+            <h4>月薪 12k - 30k</h4>
+            <p class="desc">你相信 Don't Repeat Yourself 的哲学，<br/>你热爱Ruby on Rails，相信天下武功唯快不破 <br/>再酷的 App 背后总是需要强大的服务器给予支持，而你就是这后面的英雄</p>
+            <ul class="what-you-do">
+                <li>参与架构移动端App会使用的服务器接口</li>
+                <li>参与开发服务器程序，向App提供API</li>
+                <li>参与数据库设计</li>
+                <li>日常维护服务器</li>
+                <li>为我们团队带来丰富的经验</li>
+                <li>和团队一起高速成长</li>
+            </ul>
+            <ul class="what-we-want ">
+                <li>有扎实的代码基础</li>
+                <li>精通 Ruby on Rails</li>
+                <li>精通数据库设计</li>
+                <li>熟悉 Ngnix, Cap 等服务器技术</li>
+                <li>熟悉阿里云</li>
+            </ul>
+            <ul class="stand-out ">
+                <li>熟悉iOS/Android的开发流程或逻辑</li>
+                <li>参与过App的服务器端程序开发</li>
+                <li>熟悉服务器程序架构</li>
+                <li>了解各种安全技术</li>
+                <li>了解Python</li>
+            </ul>
+            <a class="apply clearfix" href="mailto:hr@eumlab.com?subject=Hi，我想成为EUMLab的超级服务器后端工程师&body=(请在文中附上简历，以及参与过的产品)" >成为我们的服务器后端工程师</a>
         </div>
+
+            <div class="divbreaker"></div>
+
+            <div class="position">
+            <h3>网站前端工程师</h3>
+            <h4>月薪 10k - 25k</h4>
+            <p class="desc">你看到漂亮的网站真的会笑起来，<br/>右键, Inspect Element 是你的职业惯性。<br/> console.info("I'm in!") </p>
+            <ul class="what-you-do">
+                <li>参与架构移动端App会使用的服务器接口</li>
+                <li>参与开发服务器程序，向App提供API</li>
+                <li>参与数据库设计</li>
+                <li>日常维护服务器</li>
+                <li>为我们团队带来丰富的经验</li>
+                <li>和团队一起高速成长</li>
+            </ul>
+            <ul class="what-we-want ">
+                <li>熟悉 Rails 4 的特性</li>
+                <li>精通JQuery</li>
+                <li>熟悉CoffeeScript</li>
+                <li>精通SCSS</li>
+                <li>精通Slim模版语言</li>
+                <li>精通HTML5的特性</li>
+            </ul>
+            <ul class="stand-out ">
+                <li>参与过移动端网站开发</li>
+                <li>精通Ruby on Rails</li>
+                <li>了解App的开发流程</li>
+            </ul>
+            <a class="apply clearfix" href="mailto:hr@eumlab.com?subject=Hi，我想成为EUMLab的网站前端工程师&body=(请在文中附上简历，以及参与过的产品)" >成为我们的网站前端工程师</a>
+        </div>
+
+            <div class="divbreaker"></div>
+
+            <div class="position">
+            <h3>平面 / UI设计师</h3>
+            <h4>月薪 10k - 30k</h4>
+            <p class="desc">Dribbble，Bēhance，Pinterest 简直就因你而生<br/> 你相信每个像素，每个颜色都有他的哲学和灵魂<br/>你阅遍中外各种牛逼App，手握 Wacom 笔，跃跃欲试</p>
+            <ul class="what-you-do">
+                <li>参与移动产品的 UI 设计</li>
+                <li>参与网站设计</li>
+                <li>参与插画设计</li>
+                <li>参与周边产品视觉设计</li>
+                <li>为我们团队带来丰富的经验</li>
+                <li>和团队一起高速成长</li>
+            </ul>
+            <ul class="what-we-want ">
+                <li>图形设计相关专业毕业（自学成才者例外）</li>
+                <li>有扎实的美术功底</li>
+                <li>精通PS, AI, Sketch等平面设计软件</li>
+                <li>有丰富的商业设计经验</li>
+            </ul>
+            <ul class="stand-out ">
+                <li>会使用3D软件（例如C4D）</li>
+                <li>具备视频编辑能力（例如AE）</li>
+                <li>会前端程序开发</li>
+            </ul>
+            <a class="apply clearfix" href="mailto:hr@eumlab.com?subject=Hi，我想成为EUMLab的平面 / UI设计师&body=(请在文中附上简历，以及参与过的产品)" >成为我们的平面 / UI设计师</a>
+        </div>
+
+            <!-- Hangzhou -->
+        </div>
+
+
+
+
+
+
 
 
 
@@ -112,6 +278,17 @@
 
         </div>
 
+    </div>
+
+    <div class="position-bar">
+        <ul>
+            <li><a href="javascript:void(0)">全局加分项</a></li>
+            <li><a href="javascript:void(0)">Android工程师</a></li>
+            <li class="selected"><a href="javascript:void(0)">iOS工程师</a></li>
+            <li><a href="javascript:void(0)">服务器后端工程师</a></li>
+            <li><a href="javascript:void(0)">网站前端工程师</a></li>
+            <li><a href="javascript:void(0)">平面/UI设计师</a></li>
+        </ul>
     </div>
 
     <div class="divbreaker bottom-divbreaker"></div>

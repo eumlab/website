@@ -1,0 +1,73 @@
+body, html {
+  -webkit-font-smoothing: antialiased;
+  font-family: "PingHei", "Lucida Grande", "Lucida Sans Unicode", "STHeitiSC-light", "proxima-nova", "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: 300;
+  background-color: #fff;
+  background: #fff repeat url("/assets/images/home3/homebg.jpg");
+}
+
+#idx-header {
+  box-shadow: none !important;
+  background: transparent !important;
+  padding-top: 50px;
+  z-index: 2;
+}
+
+.words {
+  position: absolute;
+  text-align: center;
+  width: 960px;
+  left: 50%;
+  top: 50%;
+  margin-top: -320px;
+  margin-left: -480px;
+}
+.words h1 {
+  font-size: 72px;
+  color: #000;
+}
+.words h1 span.upper {
+  color: #45636c;
+  font-size: 28px;
+}
+.words h1 span.you {
+  color: #ff6b29;
+}
+.words h2 {
+  color: #45636c;
+  font-size: 25px;
+}
+.words h2 span {
+  color: #ff6b29;
+}
+.words a {
+  display: block;
+  clear: both;
+  height: 40px;
+  padding-top: 14px;
+  width: 190px;
+  background-color: #007eff;
+  border: none;
+  -webkit-border-radius: 27px;
+  border-radius: 27px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  color: #fff;
+  margin: 50px auto;
+  /*font-family:  "proxima-nova", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;*/
+  -webkit-font-smoothing: antialiased;
+}
+.words a:hover {
+  background-color: #51a2f4;
+}
+
+.mic {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: transparent no-repeat bottom center url("/assets/images/home3/home-mic.png");
+}
+
+/*# sourceMappingURL=home3.css.map */

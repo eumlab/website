@@ -1,7 +1,11 @@
-{% extends 'base.html' %}
+{% extends 'base-zh.html' %}
 
-{% block title %}Pro Metronome{% endblock %}
+{% block title %}专业节拍器 Pro Metronome - 免费的手机节拍器{% endblock %}
 
+{% block meta %}
+    <meta name="keywords" content="节拍器, 免费, 手机节拍器, metornome, 调音器, 吉他, 钢琴, 小提琴, 架子鼓, 鼓手, eum, eumlab, 弦音, 杭州弦音" />
+    <meta name="description" content="免费的专业节拍器 Pro Metronome " />
+{% endblock %}
 
 {% block script %}
     <script src="/assets/scripts/video.js"></script>
@@ -28,8 +32,8 @@
         </div>
 
         <div class="right">
-            <h1 id="appname">Pro Metronome</h1>
-            <h2>The best metronome app. Period.</h2>
+            <h1 id="appname">专业节拍器</h1>
+            <h2>最专业易用的电子节拍器</h2>
             <a href="{{ me.storeurl }}" target="_blank" class="appstore-icon" title="Download Pro Metronome">Download Pro Metronome on the App Store</a>
 
         </div>
@@ -38,24 +42,24 @@
 
 <div class="page-container">
 <div id="Intro" class="section ">
-    <h1 class="slogan"><em>Pro Metronome</em> helps you master<br/>your <em>daily practice</em> and <em>stage performance</em></h1>
-    <h2 class="slogan-desc">It's redefined how over 3 million people sync to a beat<br/>with a combination of innovative design and hardcore engineering.</h2>
+    <h1 class="slogan"><em>专业节拍器</em> 助力你的<br/> <em>每日训练</em> 和 <em>台上演出</em></h1>
+    <h2 class="slogan-desc">通过创新的设计和牛X的音频技术<br/>它帮助了全球超过 <em>4,000,000</em> 用户学习和练习节奏</h2>
     <img class="daily-training" src="/assets/images/pm2/daily-training.png" height="791" width="1530" />
 </div>
 
 
 <div id="Simple-But-Powerful" class="section both-way dark-background">
     <div class="both-way-iphone"></div>
-    <h1 class="slogan">Simple to use but<br/>packed with features</h1>
+    <h1 class="slogan">简单易用<br/>却不简单</h1>
     <div class="two-row-container">
         <div class="left-row">
-            <h2 class="slogan-desc">Use it like a traditional metronome.<br/>
-            Pick it up, select a tempo, and hit play.</h2>
+            <h2 class="slogan-desc">可像传统节拍器一样<br/>
+            拿起来，选择拍速，播放即可</h2>
             <img src="/assets/images/pm2/iphone-simple.png" height="851" width="407" />
         </div>
         <div class="right-row">
-            <h2 class="slogan-desc">Pro features include a powerful rhythm coach, <br/>
-                sub-divisions, and even polyrhythms.</h2>
+            <h2 class="slogan-desc">专业功能包括节奏训练器， <br/>
+                节奏细分以及支持高级复合节拍</h2>
             <img src="/assets/images/pm2/iphone-poly.png" height="851" width="407" />
         </div>
     </div>
@@ -63,27 +67,27 @@
 
 
 <div id="Precision" class="section">
-    <h1 class="slogan">Extreme precision</h1>
-    <h2 class="slogan-desc">Precise timing is critical for any musician.
-    <br/>Pro Metronome uses EUMLab's RTP (Real-Time Playback)<br/>
-    technology to ensure accuracy to 20 microseconds (±20µs).</h2>
+    <h1 class="slogan">超级精准</h1>
+    <h2 class="slogan-desc">准确的节拍是音乐的基础
+    <br/>专业节拍器 使用了 EUMLab 的RTP技术<br/>
+    确保每拍误差不超过 20 微秒</h2>
     <img class="supported-techs" src="/assets/images/pm2/precise-iphone.png" height="420" width="1063"/>
 </div>
 
 <div id="Sync" class="section sync-beat dark-background">
-    <h1 class="slogan">Stay in time any way you want</h1>
+    <h1 class="slogan">全方位地帮助保持节奏</h1>
     <div class="three-rows-container">
         <div class="left-row ">
-            <h2 class="slogan-desc">Vibration</h2>
+            <h2 class="slogan-desc">震动</h2>
             <img class="sync-ani" id="sync-vib" src="/assets/images/pm2/PMH@24fps/PMH_00.png" height="114" width="254">
             <div class="sync-vib"></div>
         </div>
         <div class="center-row">
-            <h2 class="slogan-desc">Beats</h2>
+            <h2 class="slogan-desc">屏幕显示</h2>
             <img class="sync-ani" id="sync-beat" src="/assets/images/pm2/PMH@24fps/PMH_00.png" height="114" width="254">
         </div>
         <div class="right-row">
-            <h2 class="slogan-desc">Flash</h2>
+            <h2 class="slogan-desc">闪光</h2>
             <div class="flash-light"></div>
         </div>
     </div>
@@ -92,8 +96,8 @@
 
 
 <div id="Rhythm-Trainer" class="section trainer">
-    <h1 class="slogan">Introducing <em>rhythm trainer</em> –<br/>train the metronome in your mind!</h1>
-    <h2 class="slogan-desc">A great teacher trains you to think for yourself.<br /> So we designed Rhythm Trainer to strengthen your mind's metronome.</h2>
+    <h1 class="slogan">独创 <em>节奏训练器</em> <br/>帮助你训练校正心中的节拍器</h1>
+    <h2 class="slogan-desc">不要成为节拍器的奴隶，脱离节拍器亦应保持节奏<br /> 因此我们设计了节奏训练器，帮助你建立心中的节拍器</h2>
     <div class="trainer-block-container">
         <div class="note-container">
             <img src="/assets/images/pm2/trainer-notes-1.png" height="102" width="304" />
@@ -109,11 +113,10 @@
         </div>
         <div id="trainer-wave" class="wave-hl-container"></div>
     </div>
-    <p>How does it work? You set one bar to play, then mute the next.<br/>
-        During the muted bar, keep counting beats in your head. <br/>
-        When the sound comes back, check to see if your counting is synced.<br/>
-    Practice makes perfect and you can increase the number of muted bars as you get better.<br/> </p>
-    <a id="show-trainer-video" class="link-video" href="javascript:void(0);" title="See how rhythm trainer works">See how it works</a>
+    <p>怎么做到的？ 打开节奏训练器后，节拍器会根据设置关闭声音<br/>
+        在无声的时间内，你心中默数节奏，当声音再次出现时，你会发现默数是快是慢。<br/>
+    <br/> </p>
+    <a id="show-trainer-video" class="link-video" href="javascript:void(0);" title="节奏训练器是如何工作的">看看此功能是如何工作的</a>
 
 </div>
 
@@ -125,13 +128,10 @@
 
         </div>
         <div class="right-row">
-            <h1 class="slogan"><em>Polyrhythm</em><br/>for drummers</h1>
-            <h2 class="slogan-desc">Practice your drumming skills with <br/>
-            two rhythms playing simultaneously.<br/>
-            3-over-4? 4-over-5? No problem!<br/>
-            Simply tap a button to hear and visualize it<br/>
-            with our unique interface.</h2>
-            <a id="show-poly-video" class="link-video" href="javascript:void(0);" title="See how polyrhythm works">See how it works</a>
+            <h1 class="slogan"><em>复合节拍</em><br/> 专为鼓手设计</h1>
+            <h2 class="slogan-desc">左手3拍，右手4拍<br/>
+            轻松找到复合节拍感<br/></h2>
+            <a id="show-poly-video" class="link-video" href="javascript:void(0);" title="复合节拍是如何工作的">看看此功能是如何工作的</a>
         </div>
     </div>
 
@@ -141,10 +141,10 @@
 
 
 <div id="Playlist" class="section playlist">
-    <h1 class="slogan"><em>Create</em> and <em>share</em> <em>playlists</em></h1>
-    <h2 class="slogan-desc">Save tempo and other settings to presets.<br/>
-    Store them in a playlist you can recall any time<br/>
-    or share wirelessly with your bandmates.</h2>
+    <h1 class="slogan"><em>创建</em> 和 <em>共享</em> <em>预设列表</em></h1>
+    <h2 class="slogan-desc">保存拍速和其他设置到预设列表中<br/>
+    随时轻松切换歌曲<br/>
+    或者分享给乐队队友</h2>
     <img src="/assets/images/pm2/share.png" height="560" width="785" />
 </div>
 
@@ -152,8 +152,8 @@
     <div class="stage-row-container">
         <div class="left-row ">
             <div class="stage-text-container">
-            <h1 class="slogan">Stage Mode</h1>
-            <h2 class="slogan-desc">Stage Mode helps you calibrate your sense of tempo for those all-important live performances. Either use the click for the whole song, or enable the 'Auto Stop' feature to stop the metronome automatically after playing a certain amount of bars.</h2>
+            <h1 class="slogan">现场模式</h1>
+            <h2 class="slogan-desc">现场模式可以帮助你在台上快速校正拍速感。在台上演出，常常会因为上首歌曲拍速太快而起拍起快。 现场模式可以播放歌曲拍速并且自动在预设的小节数后停止。</h2>
 
             </div>
         </div>
@@ -166,16 +166,16 @@
 
 <div id="Practice" class="section practice">
     <div class="practice-row-container">
-        <h1 class="slogan">Practice Mode</h1>
-        <h2 class="slogan-desc">Practice Mode allows you to programme <br/>automatic tempo change to suit your practice regime.</h2>
+        <h1 class="slogan">练习模式</h1>
+        <h2 class="slogan-desc">练习模式可以让你轻松编制自动变速<br/>热身模式就像热身运动，可以让你在表演前先快速进入状态<br/>自动调速模式可以帮助你反复地练习不熟的小节</h2>
         <div class="left-row ">
-            <h3>Warmup</h3>
-            <p>Set a target tempo and the value of the tempo ratios. If 180 BPM is your goal then start out at 0.5x – 90 BPM for 3 mins before increasing to 0.75x – 135 BPM for the next 5 mins.</p>
+            <h3>热身模式</h3>
+            <p>例如你想达到拍速180 BPM，可以设置先以0.5倍速 - 90 BPM 练习3分钟，再提速到0.75倍速练习5分钟，最终达到 180 BPM</p>
             <img src="/assets/images/pm2/pratice-warmup.png" >
         </div>
         <div class="right-row">
-            <h3>Automator</h3>
-            <p>Increase the tempo automatically by 10 BPM every 10 bars, starting from 90 and ending with 180 BPM. This allows for gradual increase in speed.</p>
+            <h3>自动调速模式</h3>
+            <p>例如设置每经10个小节，增加10 BPM。<br/>从90 BPM 一直提速到 180 BPM</p>
             <img src="/assets/images/pm2/pratice-automator.png" >
         </div>
     </div>
@@ -184,56 +184,56 @@
 
 
 <div id="Features" class="section supported-techs">
-    <h2 class="slogan-desc">Other Cool Features</h2>
+    <h2 class="slogan-desc">其他更多功能</h2>
 
     <ul class="feature-container">
         <li class="feature-item">
-            <h2 class="feature-ts feature-icon">Dynamic time signatures</h2>
-            <p>Select any time signature you want. Even odd ones like 4 + 3/4.</p>
+            <h2 class="feature-ts feature-icon">可自定义拍号</h2>
+            <p>可任意设置拍号，例如4/4，3/4，7/4</p>
         </li>
         <li class="feature-item">
-            <h2 class="feature-tone feature-icon">13 time-keeping styles</h2>
-            <p>Choose beat sounds that work for you, including a counting voice.</p>
+            <h2 class="feature-tone feature-icon">13种节拍器音色</h2>
+            <p>从传统的节拍器声音到读数</p>
         </li>
         <li class="feature-item">
-            <h2 class="feature-accent feature-icon">Accents</h2>
-            <p>Control beat accent dynamics. Choose between  <em class="">f</em> , <em>mf</em>,  <em>p</em> and mute.</p>
+            <h2 class="feature-accent feature-icon">自定义重音</h2>
+            <p>任意改变每拍重音 <em class="">f</em> , <em>mf</em>,  <em>p</em> 和休止</p>
         </li>
         <li class="feature-item">
-            <h2 class="feature-tap feature-icon">Tap</h2>
-            <p>Calculate BPM by tapping in real time.</p>
+            <h2 class="feature-tap feature-icon">TAP</h2>
+            <p>按拍连续点TAP按钮，自动测定拍速</p>
         </li>
         <li class="feature-item">
-            <h2 class="feature-timer feature-icon">Practicing timer</h2>
-            <p>Set a timer to reminder you that it's time for your daily practice.</p>
+            <h2 class="feature-timer feature-icon">定时器</h2>
+            <p>随意设置练习时间</p>
         </li>
         <li class="feature-item">
-            <h2 class="feature-background feature-icon">Background play mode</h2>
-            <p>The app works when you return to the home screen, or are in another app.</p>
+            <h2 class="feature-background feature-icon">背景播放模式</h2>
+            <p>播放节拍器时可以打开其他程序</p>
         </li>
         <li class="feature-item">
-            <h2 class="feature-landscape feature-icon">Landscape mode</h2>
-            <p>All features are supported in landscape.</p>
+            <h2 class="feature-landscape feature-icon">支持横屏</h2>
+            <p>所有功能均支持横屏</p>
         </li>
         <li class="feature-item">
-            <h2 class="feature-visual feature-icon">4 visual modes</h2>
-            <p>Present beats in any one of 4 different modes.</p>
+            <h2 class="feature-visual feature-icon">4种拍子显示模式</h2>
+            <p>可选择闪所有拍，或者只闪重拍</p>
         </li>
         <li class="feature-item">
-            <h2 class="feature-adfree feature-icon">Ad free</h2>
-            <p>Our apps are free from in-app banner ads. We hate as much as you do.</p>
+            <h2 class="feature-adfree feature-icon">无广告</h2>
+            <p>我们痛恨广告，即便免费也无广告</p>
         </li>
         <li class="feature-item">
             <h2 class="feature-airplay feature-icon">AirPlay</h2>
-            <p>Use AirPlay to beam your sound to Apple TV or other AirPlay-enabled speakers.</p>
+            <p>用AirPlay可以把屏幕投射到投影仪上</p>
         </li>
         <li class="feature-item">
             <h2 class="feature-audiobus feature-icon">AudioBus</h2>
-            <p>AudioBus support – use the app as an input source for other music apps.</p>
+            <p>支持AudioBus，可以把节拍器作为其他程序的输入</p>
         </li>
         <li class="feature-item">
             <h2 class="feature-iaa feature-icon">Inter-App audio</h2>
-            <p>Route the app's sound directly to other music apps like GarageBand.</p>
+            <p>把节拍器声音输出到其他程序，例如GarageBand</p>
         </li>
 
 
@@ -248,14 +248,23 @@
 
 
 <div class="section download">
-    <h1 class="slogan">Pro Metronome</h1>
-    <a class="basic-ani-onlyalpha appstore-icon-bottom" href="{{ me.storeurl }}" target="_blank"><img src="/assets/images/icons/512/prometronome.png" height="256" width="256" />
-    <br />
+    <h1 class="slogan">专业节拍器<br/>Pro Metronome</h1>
+    <img src="/assets/images/icons/512/prometronome.png" height="256" width="256" />
+    <br/>
+    <a class="basic-ani-onlyalpha appstore-icon-bottom" href="{{ me.storeurl }}" target="_blank">
     </a>
-    <p>Available for iPhone, iPad and iPod Touch<br/>
-    Requires iOS 6.1+<br/>
-   <a class="get-presskit" target="_blank" title="Get Presskit" href="/pro-metronome/edu/">Need Volume Licencing? Learn more about Pro Metronome for education</a><br/>
-    <a class="get-presskit" target="_blank" title="Get Presskit" href="/about/#subscribe">Get Presskit</a>
+
+    <!--<a class="basic-ani-onlyalpha android-icon-bottom" href="{{ me.storeurl }}" target="_blank">
+    </a>-->
+
+    <p>支持 iPhone, iPad, iPod Touch iOS 版本 6.1以上<br/>
+        <!--安卓设备支持 4.0 以上版本（部分功能开发中）-->
+        <br/>
+
+
+
+   <a class="get-presskit" target="_blank" title="Get Presskit" href="/pro-metronome/edu/">想在学校/琴行中使用我们产品？我们提供教育计划</a><br/>
+    <a class="get-presskit" target="_blank" title="Get Presskit" href="/about/#subscribe">想报道我们产品？点这里获得高精图片</a>
     </p>
 
 

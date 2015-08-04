@@ -194,11 +194,11 @@ $(function() {
     });
 
     $("#show-poly-video").on("click",function(){
-       playVideo("5Yk5nQd0HaI","How the Polyrhythm Works");
+       playVideo("5Yk5nQd0HaI","复合节拍是如何工作的");
     });
 
     $("#show-trainer-video").on("click",function(){
-       playVideo("S4B9yihy8LU","How the Rhythm Trainer Works");
+       playVideo("S4B9yihy8LU","节奏训练器是如何工作的");
     });
 
 });

@@ -186,7 +186,7 @@ audio:not([controls]) {
 body {
   background: #000;
   font-size: 12px;
-  font-family: "proxima-nova", "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-family: "PingHei", "Lucida Grande", "Lucida Sans Unicode", "STHeitiSC-light", "proxima-nova", "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
   font-weight: normal;
   color: #fff;
   overflow-y: scroll;
@@ -274,7 +274,7 @@ ul.apps li a p {
 }
 
 ul.apps li::after {
-  font-family: "Al Nile", "proxima-nova", "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-family: "Al Nile", "PingHei", "Lucida Grande", "Lucida Sans Unicode", "STHeitiSC-light", "proxima-nova", "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
   content: ">";
   height: 100%;
   width: 30px;
