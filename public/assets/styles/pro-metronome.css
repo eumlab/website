@@ -1,0 +1,389 @@
+.header {
+    height: 800px;
+}
+
+.header .bg {
+    width: 100%;
+    height: 800px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: 50%;
+    background-position: 50% bottom;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1000ms ease-in-out;
+    -moz-transition: opacity 1000ms ease-in-out;
+    -webkit-transition: opacity 1000ms ease-in-out;
+}
+
+.app {
+    margin-top: 200px;
+}
+
+.app .btn-video {
+    -moz-box-shadow: 0 0 24px rgba(104,199,255, 0.7), 0 0 27px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0 0 24px rgba(104,199,255, 0.7), 0 0 27px rgba(0,0,0,0.75);
+    box-shadow: 0 0 24px rgba(104,199,255, 0.7), 0 0 27px rgba(0,0,0,0.75);
+}
+
+.app .link-app-store {
+    position: absolute;
+    background: url(../images/pm-app-store-link-top.png) no-repeat 0 0;
+    top: 298px;
+    left: 780px;
+    width: 153px;
+    height: 54px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -moz-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+    -webkit-box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+    box-shadow: 0 0 24px rgba(104,199,255, 0.7);
+}
+
+    .app .link-app-store:hover {
+        background-position: -153px 0;
+    }
+
+.app .center {
+    position: relative;
+}
+    .app .pic {
+        width: 1035px;
+        height: 615px;
+        background: url(../images/pm-app.png) 0 0 no-repeat;
+        position: absolute;
+        top: 0;
+        left: -60px;
+    }
+
+    .app .app-animation {
+        height: 519px;
+        width: 624px;
+        position: absolute;
+        top: -15px;
+        left: -6px;
+    }
+
+.section-0 {
+}
+
+    .section-0 .center {
+        height: 704px;
+        position: relative;
+    }
+
+    .section-0 .pic {
+        background: url(../images/pm-feature-0.jpg) 0 0 no-repeat;
+        position: absolute;
+        top: 80px;
+        right: -380px;
+        width: 1083px;
+        height: 624px;
+    }
+
+    .section-0 .intro {
+        padding: 155px 0 0 25px;
+        width: 541px;
+        position: relative;
+    }
+
+    .section-0 .title {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .section-0 .desc {
+        margin-bottom: 18px; 
+        font-size: 18px;
+    }
+
+.section-1 {
+}
+
+    .section-1 .center {
+        height: 567px;
+        position: relative;
+    }
+
+    .section-1 .pic {
+        position: absolute;
+        top: 220px;
+        left: 160px;
+        background: url(../images/pm/TAP_00.jpg) 0 0 no-repeat;
+        width: 751px;
+        height: 347px;
+    }
+
+    .section-1 .intro {
+        text-align: center;
+        padding: 20px 0 0 0;
+        /* width: 668px; */
+        font-size: 18px;
+        position: relative;
+    }
+
+    .section-1 .title {
+        font-size: 32px;
+        margin-bottom: 15px
+    }
+
+    .section-1 .title em {
+        color: #e782ab;
+    }
+
+.section-2 {
+}
+
+    .section-2 .center {
+        height: 693px;
+        position: relative;
+    }
+
+    .section-2 .pic {
+        position: absolute;
+        top: 140px;
+        left: 67px;
+        background: url(../images/pm-feature-2.jpg) 0 0 no-repeat;
+        width: 409px;
+        height: 553px;
+    }
+
+    .section-2 .intro {
+        padding: 280px 0 0 460px;
+        width: 498px;
+        font-size: 16px;
+        position: relative;
+    }
+
+    .section-2 .title {
+        font-size: 36px;
+    }
+
+.section-3 {
+    background: url(../images/drh-section-0-bg.jpg) 0 0 repeat-x;
+}
+
+    .section-3 .center {
+        height: 520px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .section-3 .pic {
+        position: absolute;
+        bottom: 210px;
+        right: -80px;
+        background: url(../images/pm/FLASH_00.png) 0 0 no-repeat;
+        width: 700px;
+        height: 350px;
+    }
+
+    .section-3 .intro {
+        padding: 270px 0 0 100px;
+        width: 422px;
+        font-size: 16px;
+        position: relative;
+    }
+
+    .section-3 .title {
+        font-size: 36px;
+    }
+
+.section-4 {
+    margin-top: 140px;
+}
+
+    .section-4 .center {
+        height: 565px;
+        position: relative;
+    }
+
+    .section-4 .pic {
+        position: absolute;
+        top: 135px;
+        left: 50%;
+        margin-left: -746px;
+        width: 1493px;
+        height: 430px;
+        background: url(../images/pm-feature-4.jpg) 0 0 no-repeat;
+    }
+
+    .section-4 .intro {
+        text-align: center;
+        font-size: 16px;
+        position: relative;
+    }
+
+    .section-4 .title {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+.section-5 {
+    margin-top: 180px;
+}
+
+    .section-5 .center {
+        height: 370px;
+        position: relative;
+    }
+
+    .section-5 .pic {
+        position: absolute;
+        top: 0;
+        left: -180px;
+        width: 874px;
+        height: 440px;
+        background: url(../images/pm-feature-5.jpg) 0 0 no-repeat;
+    }
+
+    .section-5 .intro {
+        position: relative;
+        padding: 80px 0 0 540px;
+        width: 452px;
+        font-size: 16px;
+    }
+
+    .section-5 .title {
+        font-size: 36px;
+    }
+
+    .section-5 .desc em {
+        font-style: italic;
+    }
+
+.section-6 {
+    margin-top: 100px
+}
+
+    .section-6 .center {
+        height: 460px;
+        position: relative;
+    }
+
+    .section-6 .pic {
+        position: absolute;
+        top: 0;
+        right: -40px;
+        width: 620px;
+        height: 460px;
+        background: url(../images/pm-feature-6.jpg) 0 0 no-repeat;
+    }
+
+    .section-6 .intro {
+        position: relative;
+        padding: 180px 0 0 48px;
+        width: 453px;
+        font-size: 16px;
+    }
+
+    .section-6 .title {
+        font-size: 36px;
+    }
+
+.section-7 {
+    margin-top: 30px
+}
+
+    .section-7 .center {
+        height: 488px;
+        position: relative;
+    }
+
+    .section-7 .pic {
+        position: absolute;
+        top: 0;
+        left: 170px;
+        width: 479px;
+        height: 488px;
+        background: url(../images/pm-feature-7.jpg) 0 0 no-repeat;
+    }
+
+    .section-7 .intro {
+        position: relative;
+        padding: 200px 0 0 570px;
+        width: 453px;
+        font-size: 16px;
+    }
+
+    .section-7 .title {
+        font-size: 36px;
+    }
+
+.section-8 {
+    margin-top: 70px;
+}
+
+    .section-8 .center {
+        height: 607px;
+        position: relative;
+    }
+
+    .section-8 .pic {
+        position: absolute;
+        top: -120px;
+        left: 50%;
+        margin-left: -870px;
+        width: 1740px;
+        height: 727px;
+        background: url(../images/pm-feature-8.jpg) 0 0 no-repeat;
+    }
+
+    .section-8 .intro {
+        position: relative;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .section-8 .title {
+        font-size: 36px;
+    }
+
+.section-9 {
+    margin-top: 60px;
+}
+
+    .section-9 .center {
+        height: 780px;
+        position: relative;
+    }
+
+    .section-9 .pic {
+        position: absolute;
+        top: 190px;
+        left: 60px;
+        width: 881px;
+        height: 490px;
+        background: url(../images/pm-feature-9.jpg) 0 0 no-repeat;
+    }
+
+    .section-9 .intro {
+        position: relative;
+        width: 637px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .section-9 .title {
+        font-size: 36px;
+    }
+
+    .section-9 .link-app-store {
+        position: absolute;
+        top: 485px;
+        right: 33px;
+        background: url(../images/dr-app-store-link-bottom.png) no-repeat 0 0;
+        width: 220px;
+        height: 77px;
+    }
+
+    .section-9 .link-app-store:hover {
+        background-position: -220px 0;
+    }

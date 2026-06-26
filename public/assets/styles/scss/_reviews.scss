@@ -1,0 +1,64 @@
+/* Reviews */
+.app-reviews-container{
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+.app-reviews-container h1{
+    font-size: 30px;
+}
+.app-reviews{
+    height: 300px;
+    width: 960px;
+    position: relative;
+    display: table;
+    margin:0 auto;
+}
+.review-left-quo,
+.review-right-quo{
+    color: #ccc;
+    font-size: 220px;
+    position: absolute;
+    font-weight: 100;
+}
+.review-left-quo{
+    top: 0;
+    left: 0;
+}
+.review-right-quo{
+    right: 0;
+    top: 190px;
+}
+.app-reviews p#review-content{
+    width: 800px;
+    color: #333;
+    text-align: left;
+    padding-left: 100px;
+    display: table-cell;
+    vertical-align: middle;
+}
+#review-content{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 26px;
+    font-weight: lighter;
+    font-style: italic;
+    line-height: 1.2;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+}
+.review-change-progressbar-bg{
+    height: 1px;
+    width: 80%;
+    background-color: #ccc;
+    bottom: 50px;
+    left: 10%;
+    right: 10%;
+    position: absolute;
+}
+#review-change-progressbar{
+    content: " ";
+    width: 0%;
+    height: 1px;
+    background-color: #1f94ff;
+}

@@ -1,0 +1,22 @@
+# Legacy URL redirects, ported from the Django urls.py redirector() routes.
+# Honored as real 301s by Netlify / Cloudflare Pages and most static hosts.
+/index.html               /                         301
+/ukulele/                 /ukulele-toolkit/          301
+/guitar-toolkit/          /guitar-master/           301
+/bonjour/                 /daw-remote-hd/bonjour/    301
+/rtpmidi/                 /daw-remote-hd/rtpmidi/    301
+/eum/string-tuner/        /string-tuner/            301
+/eum/daw-remote.html      /daw-remote/              301
+/daw-remote.html          /daw-remote/              301
+/dawremote/               /daw-remote/              301
+/eum/dawremote/           /daw-remote/              301
+/tuner.html               /pro-tuner/               301
+/metronome.html           /pro-metronome/           301
+/midi-pad.html            /                         301
+/eum/                     /                         301
+/eum/metronome.html       /pro-metronome/           301
+/eum/midi-pad.html        /                         301
+# External support-site redirects
+/network/                 http://support.eumlab.com/customer/portal/articles/958423-network-config   301
+/daw-remote-hd/network/   http://support.eumlab.com/customer/portal/articles/958423-network-config   301
+/clip-mic/                http://support.eumlab.com/customer/portal/articles/930136-about-clip-sensor  301

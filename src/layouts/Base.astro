@@ -1,0 +1,143 @@
+---
+// Port of templates/base.html (desktop variant).
+import type { App } from '../data/apps';
+interface Props {
+  title?: string;
+  wholetitle?: string;
+  me?: App | null;
+  bodystyle?: string;
+  mobile?: boolean;       // iPhone variant: emit mobile-only meta + orientation script
+  deviceClass?: string;   // value of top.device (device.classes); 'baseline' on desktop
+}
+const { title = '', wholetitle, me = null, bodystyle = '', mobile = false, deviceClass = 'baseline' } = Astro.props;
+// Matches Django `{% if me != None and me.id != None %}` — '' is not None, so an
+// app with an empty id (e.g. pme) still renders the meta block.
+const showMe = me != null && me.id != null;
+const fullTitle = wholetitle ?? `${title} - EUMLab `;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="rating" content="general" />
+{showMe && (
+  <>
+    <meta name="keywords" content={me!.kw ?? ''}>
+    <meta name="description" content={me!.mdesc ?? ''}>
+    <meta name="apple-itunes-app" content={`app-id=${me!.id}`}>
+    <meta name="twitter:card" content="app">
+    {me!.iphone && <meta name="twitter:app:id:iphone" content={`id${me!.id}`}>}
+    {me!.iPad && <meta name="twitter:app:id:ipad" content={`id${me!.id}`}>}
+    {me!.aurl !== '' && (
+      <>
+        <meta name="twitter:app:url:iphone" content={`${me!.aurl}://start`}/>
+        <meta name="twitter:app:url:ipad" content={`${me!.aurl}://start`}/>
+      </>
+    )}
+  </>
+)}
+{mobile && (
+  <>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="user-scalable=1;">
+  </>
+)}
+
+    <slot name="meta" />
+
+    <title>{fullTitle}</title>
+
+    <link rel="index" title="EUMLab - Music APPs on iPhone iPad" href="http://eumlab.com/">
+    <link rel="canonical" href="http://eumlab.com/">
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-touch-icon-152x152.png">
+    <meta name="apple-mobile-web-app-title" content="EUMLab">
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png?v=2" sizes="16x16">
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png">
+    <meta name="application-name" content="EUMLab">
+
+    <slot name="basestyle"><link href="/assets/styles/style.css" rel="stylesheet" /></slot>
+
+    <slot name="style" />
+
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="/assets/styles/ie-fix.css"/>
+<![endif]-->
+
+<!--  -->
+    <!--[if gte IE 9]>
+    <style type="text/css">
+        .gradient {
+           filter: none;
+        }
+    </style>
+    <![endif]-->
+
+</head>
+<body class={`${bodystyle} `}>
+    <!--[if lt IE 8]>
+    <div class="fuck-ie">
+        <span class="face">:(</span>Your browser is too old. Please use <a href="http://www.google.com/chrome" target="_blank">Google Chrome</a> or <a href="http://windows.microsoft.com/zh-CN/internet-explorer/products/ie/home" target="_blank">update your IE browser</a>
+    </div>
+    <![endif]-->
+    <slot />
+    <script type="application/javascript" is:inline set:html={`
+        top.device = {};
+        top.device = "${deviceClass}";
+    `}></script>
+    <script src="/assets/scripts/jquery-1.11.1.min.js" is:inline></script>
+    <script src="/assets/scripts/eum.js" is:inline></script>
+    <script type="text/javascript" src="//use.typekit.net/agm3gqh.js" is:inline></script>
+    <script type="text/javascript" is:inline>try{Typekit.load();}catch(e){}</script>
+{mobile && (
+    <script is:inline set:html={`
+            $(window).on('load orientationchange', function() {
+                /*
+                // home page height is not enough
+                if ($('.pg-home').length) {
+                    var container = $('html, body, .container');
+
+                    if (window.innerWidth > window.innerHeight) {
+                        container.height($(window).height() + 124);
+                    } else {
+                        container.height($(window).height());
+                    }
+                }
+
+                setTimeout(function() {
+                    window.scrollTo(0, 1);
+                }, 0);
+                */
+            });
+        `}></script>
+)}
+
+    <slot name="script" />
+
+<script is:inline>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-389402-11', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

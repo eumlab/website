@@ -1,0 +1,117 @@
+---
+// Port of templates/string-tuner.html (route: /string-tuner/ )
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { applist, appsMenu } from '../../data/apps';
+const me = applist.st;
+---
+<Base title="String Tuner" me={me} bodystyle="darktheme ">
+  <Fragment slot="meta">
+    <meta name="apple-itunes-app" content="app-id=501971515">
+  </Fragment>
+
+  <Fragment slot="style">
+    <link href="/assets/styles/string-tuner.css" rel="stylesheet" />
+  </Fragment>
+
+  <Fragment slot="script">
+    <script src="/assets/scripts/string-tuner.js" is:inline></script>
+  </Fragment>
+
+<Nav products={appsMenu} addstyle="glow" />
+<div class="container pg-string-tuner">
+    <div class="header">
+        <div class="bg"></div>
+        <div class="app">
+            <div class="center">
+                <h2 class="app-title">String Tuner</h2>
+                <a href="http://itunes.apple.com/app/id501971515?ls=1&mt=8" target="_blank" class="link-app-store" title="Download String Tuner from APP Store">Available on the App Store</a>
+                <div class="pic"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-0">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">What is String Tuner</h3>
+                <p class="desc">String Tuner is the first chromatic tuner that is especially designed and optimized for string instruments: <em>Violin</em>, <em>Viola</em>, <em>Cello</em> and <em>Double bass</em>.</p>
+                <p class="desc">A reference sound generator is provided to help you do coarse tuning. Moreover, with the optimized algorithms up to <em>±0.1cent</em> precise , it helps you to do fine tuning quickly with the built-in or external microphone on your iOS devices.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-1">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">It's Accurate</h3>
+                <p class="desc">String Tuner uses a highly accurate algorithm (up to <em>±0.1cent</em>) to make sure your string sound is more accurate than ever, even with only using the iPhone inner-microphone.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-2">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">It's Professional!</h3>
+                <p class="desc">String Tuner supports 3 temperaments: <em>12TET</em> (twelve-tone equal temperament), <em>Pythagorean</em> Temperament and <em>Pure</em> (or Just) Intonation.</p>
+                <p class="desc">It also supports adjustable calibration A4.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-3">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">It's Universal</h3>
+                <p class="desc">You don't need purchase iPhone and iPad separately. String Tuner a is universal APP. It works on all of your iOS devices.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-4">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Intelligent Learning Mode</h3>
+                <p class="desc">Wanna play with piano whose A4 frequency is unknown? String Tuner can detect it for you! Just hit the A4 key of the piano and String Tuner will take care of the rest.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-5">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Tone Generator Mode</h3>
+                <p class="desc">Are you a classical string player? Want to tune your string instruments just by ear? No problem. String Tuner provides 4 useful tones for your reference, including Triangle, Sine, Square waveform + REAL String Sound.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-6">
+        <div class="center">
+            <div class="intro">
+                <h3 class="title">Features List</h3>
+                <ul class="desc">
+                    <li><em>User-friendly.</em> Extremely easy to use</li>
+                    <li><em>Universal APP.</em> Purchase once, available on all of your iPhone/iPod/iPad/iPad Mini.<li>
+                    <li><em>30 cent range fine tuning display.</em></li>
+                    <li><em>Precise up to ±1/1000 semitone (±0.1 cent)</em></li>
+                    <li><em>3 Temperaments provided</em>:  12TET, Pure (Standard Just Intonation) and Pythagorean Tuning.</li>
+                    <li><em>Adjustable A4</em> calibration up to 0.1 Hz precise with the range 400-480</li>
+                    <li><em>Tone generator</em> helps to do coarse tuning or practice tune by ear (Intonation Practice).</li>
+                    <li>4 Tones are supported: Triangle, Sine, Square waveform and REAL String Sound. </li>
+                    <li>Support and optimized for Violin, Viola, Cello and Contra Bass</li>
+                    <li>Tuning Range from A0 - C8 (full range)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section section-7">
+        <div class="center">
+            <div class="pic"></div>
+            <a href="http://itunes.apple.com/app/id501971515?ls=1&mt=8" target="_blank" class="link-app-store" title="Download String Tuner from APP Store">Available on the App Store</a>
+        </div>
+    </div>
+
+</div><Footer />
+</Base>

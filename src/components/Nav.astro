@@ -1,0 +1,34 @@
+---
+// Port of templates/_nav2.html
+import type { App } from '../data/apps';
+interface MenuGroup { title: string; items: App[]; }
+interface Props { products: MenuGroup[]; addstyle?: string; }
+const { products, addstyle = '' } = Astro.props;
+---
+    <div id="menu-apps-container" class="basic-ani-onlyalpha not-shown" style="visibility: hidden">
+    <div id="menu-apps" class="basic-ani">
+      {products.flatMap((item) => [
+        <h2>{item.title}</h2>,
+        <ul>
+          {item.items.flatMap((appitem) => [
+            <li class="basic-ani"><a href={appitem.href}><img src={`/assets/images/icons/120/${appitem.icon}`} height="72" width="72"><h3>{appitem.name}</h3></a></li>,
+            ' ',
+          ])}
+        </ul>,
+        ' ',
+      ])}
+    </div>
+    </div>
+  <div id="idx-header" class={`basic-ani ${addstyle}`}>
+    <div id="idx-header-container">
+        <a href="javaScript:void(0);"><div id="menu-logo" class="menu-logo"><h1><em>EUM</em>Lab</h1></div></a>
+        <ul id="menu-items-container">
+            <li id="menu-item-support"><a href="http://support.eumlab.com" target="_blank" rel="nofollow"><h2>Support</h2></a></li>
+            <li id="menu-item-jobs"><a href="/jobs/"><h2>Jobs</h2></a></li>
+            <li id="menu-item-team"><a href="http://blog.eumlab.com"><h2>Blog</h2></a></li>
+            <li id="menu-item-press"><a href="/about/"><h2>About</h2></a></li>
+            <li id="menu-item-products"><a href="javaScript:void(0);"><h2>Products </h2><sub>{''}</sub></a></li>
+
+        </ul>
+    </div>
+  </div><!-- End Header -->

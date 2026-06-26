@@ -1,0 +1,20 @@
+{
+  "name": "eumlab-website",
+  "version": "3.0.0",
+  "description": "EUMLab website — Astro migration (CSS-faithful)",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "reference": "python verify/render_reference.py",
+    "verify": "node verify/run.mjs",
+    "verify:devices": "node verify/run-devices.mjs"
+  },
+  "devDependencies": {
+    "astro": "^4.16.18",
+    "pixelmatch": "^6.0.0",
+    "playwright": "^1.49.1",
+    "pngjs": "^7.0.0"
+  }
+}

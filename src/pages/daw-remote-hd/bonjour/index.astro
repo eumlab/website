@@ -1,0 +1,27 @@
+---
+// Port of templates/drh-bonjour.html (route: /daw-remote-hd/bonjour/ )
+import Base from '../../../layouts/Base.astro';
+import Nav from '../../../components/Nav.astro';
+import Footer from '../../../components/Footer.astro';
+import { appsMenu } from '../../../data/apps';
+---
+<Base title="Bonjour - DAW Remote HD" bodystyle="darktheme ">
+  <Fragment slot="style">
+    <link href="/assets/styles/drh.css" rel="stylesheet" />
+  </Fragment>
+
+<Nav products={appsMenu} />
+<div class="container pg-drh-bonjour">
+    <div class="header">
+        <div class="bg"></div>
+
+        <div class="download">
+            <h2 class="title">Download Apple Bonjour form:</h2>
+            <p><a href="http://support.apple.com/kb/DL999" target="_blank">Download from Apple official website</a></p>
+            <p><a href="/payload/BonjourPSSetup.zip" target="_blank">Download from our website</a> (version:v2.0.2)</p>
+            <p><a href="http://dl.dropbox.com/u/102818/payload/BonjourPSSetup.zip" target="_blank">Download from Dropbox</a> (version:v2.0.2)</p>
+        </div>
+    </div>
+    </div>
+    <Footer />
+</Base>

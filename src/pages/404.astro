@@ -1,0 +1,39 @@
+---
+// Port of templates/404.html (Astro outputs dist/404.html)
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import { appsMenu } from '../data/apps';
+---
+<Base title="404 error" bodystyle="darktheme ">
+  <Fragment slot="style">
+    <link href="/assets/styles/error.css" rel="stylesheet" />
+  </Fragment>
+
+<Nav products={appsMenu} addstyle="glow" />
+<div class="container pg-404">
+
+    <div class="center">
+        <div class="bg">
+        </div>
+        <div class="info">
+            <p>Error 404</p>
+            <p>Page has been removed.</p>
+            <!--<p>This album you were looking for doesn’t exist. You can go to </p>
+            <ul>
+                <li><a href="/">Home</a><span>2:59</span></li>
+                <li><a href="/pro-metronome/">Por Metromome</a><span>8:12</span></li>
+                <li><a href="/guitar-master/">Guitar Master</a><span>11:19</span></li>
+                <li><a href="/ukulele/">Ukulele Toolkit</a><span>10:20</span></li>
+                <li><a href="/instuner/">InsTuner</a><span>8:00</span></li>
+                <li><a href="/daw-remote-hd/">DAW Remote HD</a><span>8:26</span></li>
+
+
+
+                <li><a href="/string-tuner/">String Tuner</a><span>8:40</span></li>
+                <li><a href="/pro-tuner/">Pro Tuner</a><span>9:28</span></li>
+                <li><a href="http://support.eumlab.com/">Support</a><span>4:50</span></li>
+            </ul>-->
+        </div>
+    </div>
+</div>
+</Base>

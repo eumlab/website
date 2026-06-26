@@ -1,0 +1,114 @@
+---
+// Port of templates/daw-remote-hd.html (route: /daw-remote-hd/ )
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { applist, appsMenu } from '../../data/apps';
+const me = applist.dawhd;
+---
+<Base title="DAW Remote HD" me={me} bodystyle="darktheme ">
+  <Fragment slot="meta">
+    <meta name="apple-itunes-app" content="app-id=501974930">
+            <meta name="twitter:card" content="app">
+    <meta name="twitter:app:id:iphone" content="id501974930">
+    <meta name="twitter:app:id:ipad" content="id501974930">
+  </Fragment>
+
+  <Fragment slot="style">
+    <link href="/assets/styles/drh.css" rel="stylesheet" />
+  </Fragment>
+
+  <Fragment slot="script">
+    <script src="/assets/scripts/drh.js" is:inline></script>
+  </Fragment>
+
+<Nav products={appsMenu} />
+<div class="container pg-drh">
+    <div class="header">
+        <div class="bg"></div>
+
+        <div class="app">
+            <div class="center">
+                <h2 class="app-title">DAW Remote HD</h2>
+                <a href="http://itunes.apple.com/app/id501974930?ls=1&mt=8" target="_blank" class="link-app-store" title="Download DAW Remote HD from APP Store">Available on the App Store</a>
+            </div>
+        </div>
+    </div>
+    <div class="section section-0">
+        <div class="center">
+            <div class="intro">
+                <h3 class="title">Everywhere in your Studio</h3>
+                <p class="desc">Taking full advantage of the iPad revolutionary features, DAW Remote brings you a portable control surface with full functions. Now you have full control to your DAW everywhere in your studio.</p>
+                <p class="desc link"><a href="/daw-remote-hd/videos/">See video tutorials</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-1">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">Stay with your Inspiration</h3>
+                <p class="desc">Just bring the portable iPad and stay with your instrument. </p>
+                <p class="desc">You can now concentrate on your inspiration and record yourself smoothly. No need to move between instrument and computer to manage your recording.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-2">
+        <div class="center">
+            <div class="intro">
+                <h3 class="title">Easy access to the DAW</h3>
+                <p class="desc">If you didn't have a control surface before, DAW Remote HD should be the best choice as your first one. Embedded into the iPad, DAW Remote is inexpensive but professional. It helps you control the DAW remotely and wirelessly, so you can have a far more smooth workflow and concentrate on composing.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-3">
+        <div class="center">
+            <div class="daw-slide-wrap">
+                <div id="daw-slide"></div>
+                <div class="ipad-highlight"></div>
+            </div>
+            <div class="intro">
+                <h3 class="title">Compatibility Maximum</h3>
+                <p class="desc">DAW Remote employs Mackie Control and HUI Protocol which support most of the DAWs. We provide optimized layouts for more than 10 DAWs, and we are creating more DAWs.</p>
+                <p class="desc link"><a href="/daw-remote-hd/docs/">See more about compatibility</a>
+            </div>
+            <div class="daw-nav tab-nav">
+                <a href="javascript:;" data-count="2" data-type="pt">ProTools</a>
+                <a href="javascript:;" data-count="3" data-type="logic">Logic</a>
+                <a href="javascript:;" data-count="3" data-type="live">Live</a>
+                <a href="javascript:;" data-count="3" data-type="cubase">Cubase|Nuendo</a>
+                <a href="javascript:;" data-count="3" data-type="fl">FL Studio</a>
+                <a href="javascript:;" data-count="3" data-type="sonar">Sonar</a>
+                <a href="javascript:;" data-count="2" data-type="s1">Studio One</a>
+                <a href="javascript:;" data-count="3" data-type="other">Others</a>
+            </div>
+        </div>
+    </div>
+    <div class="section section-4">
+        <div class="center">
+            <div id="bcs-pic" class="pic"></div>
+            <div id="bcs-intro" class="intro">
+                <h3 class="title">Build your own Control Surface</h3>
+                <p class="desc">Many love customizing, and so do we! Maybe you don't like so many buttons on the screen, maybe you want some bigger buttons or timecode, or maybe you want to change the label and color on the buttons. Making a layout fit yourself most is easy and fast with DAW Remote HD.</p>
+                <p class="desc link"><a id="btn-play-bcs-video" href="javascript:;">Play Video ▸</a>
+            </div>
+            <div id="bcs-video-wrap" class="bcs-video-wrap"><span class="btn-close">&times;</span></div>
+        </div>
+    </div>
+    <div class="section section-5">
+        <div class="center">
+            <div class="intro">
+                <h3 class="title">Mixing on your Sofa</h3>
+                <p class="desc">Traditional Control surface looks great indeed, but you are stuck there when mixing, aren't you? With DAW Remote you can relax on the sofa and mix there with your iPad!</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-6">
+        <div class="center">
+            <div class="pic"></div>
+            <a href="http://itunes.apple.com/app/id501974930?ls=1&mt=8" target="_blank" class="link-app-store" title="Download DAW Remote HD from APP Store">Available on the App Store</a>
+        </div>
+    </div>
+    </div>
+    <Footer />
+</Base>

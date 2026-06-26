@@ -1,0 +1,443 @@
+html, body {
+    /*height: 100%;*/
+    overflow: hidden;
+}
+
+.pg-home {
+    background: #000 url(../images/home-bg@1920.jpg) center -1px no-repeat;
+    /*height: 100%;*/
+    min-width: 1000px;
+    min-height: 620px;
+    position: relative;
+    overflow: auto;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+
+
+.ipad {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -258px;
+    margin-left: -500px;
+    background: url(../images/home-ipad.png) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* height: 898px;
+    width: 1253px; */
+    width: 1000px;
+    height: 676px;
+}
+
+.ipad .iphone {
+    position: absolute;
+    top: 86px;
+    right: -280px;
+    background: url(../images/home-iphone5back.png) 0 0 no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* width: 323px;
+    height: 761px; */
+    width: 258px;
+    height: 607px;
+}
+
+.apps {
+    position: absolute;
+    top: 275px;
+    left: 185px;
+    width: 600px;
+    height: 230px;
+}
+
+.app {
+    float: left;
+    height: 60px;
+    width: 60px;
+    display: block;
+    position: relative;
+    padding: 0 30px 45px 30px;
+}
+
+.app .icon-name {
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    height: 45px;
+    line-height: 35px;
+    width: 120px;
+    margin-left: -30px;
+    -webkit-text-shadow: 2px 8px 20px rgba(0,0,0,0.7);
+    -moz-text-shadow: 2px 8px 20px rgba(0,0,0,0.7);
+    text-shadow: 2px 8px 20px rgba(0,0,0,0.7);
+}
+
+.app .icon {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 2px 8px 20px rgba(0,0,0,0.7);
+    -moz-box-shadow: 2px 8px 20px rgba(0,0,0,0.7);
+    box-shadow: 2px 8px 20px rgba(0,0,0,0.7);
+}
+    .app:hover .icon {
+        -webkit-box-shadow: 2px 15px 30px rgba(0,0,0,0.8);
+        -moz-box-shadow: 2px 15px 30px rgba(0,0,0,0.8);
+        box-shadow: 2px 15px 30px rgba(0,0,0,0.8);
+    }
+
+    .app .icon,
+    .app:hover .icon {
+        -moz-transition: -moz-box-shadow 0.25s 0.1s ease-in-out;
+        -webkit-transition: -webkit-box-shadow 0.25s 0.1s ease-in-out;
+        -o-transition: -o-box-shadow 0.25s 0.1s ease-in-out;
+        transition: box-shadow 0.25s 0.1s ease-in-out;
+    }
+
+.app:hover .app-intro {
+    opacity: 100;
+    width: 400px;
+    left: -360px;
+
+    -moz-transition: all 0.25s 0.1s ease-in-out;
+    -webkit-transition: all 0.25s 0.1s ease-in-out;
+    -o-transition: all 0.25s 0.1s ease-in-out;
+    transition: all 0.25s 0.1s ease-in-out;
+}
+
+.app-intro {
+    width: 0;
+    height: 40px;
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+    padding: 10px 0;
+    left: 0;
+    top: 2px;
+    font-family: "DIN-Regular", "Helvetica Neue", Helvetica, arial, sans-serif;
+    text-align: right;
+    background-color: rgba(0,0,0,1);
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC42NSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-8 */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.app.pt .app-intro,
+.ct.app .app-intro {
+    text-align: left;
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-8 */
+}
+
+.app.pt .app-intro h5,
+.app.ct .app-intro h5 {
+    margin: 0 10px 4px 20px;
+}
+
+.app.pt .app-intro p,
+.app.ct .app-intro p {
+    margin: 0 10px 0 20px;
+}
+
+.app.pt:hover .app-intro,
+.ct.app:hover .app-intro {
+    left: 80px;
+}
+
+.app-intro h5 {
+    color: #54ceea;
+    font-size: 22px;
+    margin: 0 20px 4px 10px;
+}
+
+.app-intro p {
+    color: #aaa;
+    font-size: 14px;
+    margin: 0 20px 0 10px;
+}
+
+.ct .icon {
+    background: url(../images/app-icon-ct.png) center center no-repeat;
+}
+
+.it .icon {
+    background: url(../images/app-icon-it.png) center center no-repeat;
+}
+
+.pt .icon {
+    background: url(../images/app-icon-pt.png) center center no-repeat;
+}
+
+.gt .icon {
+    background: url(../images/app-icon-gt.png) center center no-repeat;
+}
+
+.dr .icon {
+    background: url(../images/app-icon-dr.png) center center no-repeat;
+}
+
+.drh .icon {
+    background: url(../images/app-icon-drh.png) center center no-repeat;
+}
+
+.st .icon {
+    background: url(../images/app-icon-st.png) center center no-repeat;
+}
+
+.ut .icon {
+    background: url(../images/app-icon-ut.png) center center no-repeat;
+}
+
+.pm .icon {
+    background: url(../images/app-icon-pm.png) center center no-repeat;
+}
+
+.iuke .icon {
+    background: url(../images/app-icon-iuke.png) center center no-repeat;
+}
+
+.app .icon {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.footer {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    text-align: left;
+}
+
+.footer .copyright {
+    padding: 10px 0 0px 8px;
+}
+
+.social-medias {
+    margin: 0;
+    height: 25px;
+}
+
+    .social-medias a {
+        width: 35px;
+        background-size: 180px 50px;
+    }
+
+    .social-medias .email {
+        background-position: 4px 0; 
+    }
+
+    .social-medias .email:hover {
+        background-position: 4px -25px;
+    }
+
+    .social-medias .facebook {
+        width: 30px;
+        background-position: -38px 0; 
+    }
+
+    .social-medias .facebook:hover {
+        background-position: -38px -25px;
+    }
+
+    .social-medias .twitter {
+        background-position: -84px 0
+    }
+
+    .social-medias .twitter:hover {
+        background-position: -84px -25px;
+    }
+
+    .social-medias .youtube {
+        background-position: -130px 0; 
+    }
+
+    .social-medias .youtube:hover {
+        background-position: -130px -25px;
+    }
+
+    .social-medias .join {
+        width: 70px;
+        background-size: 70px 60px;
+        top: -1px;
+        left: 10px;
+        background: url(../images/join-us-icon-home.png) 0 0 no-repeat;
+    }
+
+    .social-medias .join:hover {
+        background-position: 0 -30px;
+    }
+
+@media screen and (max-width: 1440px) {
+    .ipad {
+        margin-top: -277px;
+        margin-left: -440px;
+        width: 880px;
+        height: 595px;
+    }
+
+    .ipad .iphone {
+        top: 76px;
+        right: -205px;
+        width: 227px;
+        height: 534px;
+    }
+
+    .apps {
+        top: 242px;
+        left: 152px;
+        width: 566px;
+        height: 202px;
+    }
+
+    .app {
+        height: 53px;
+        width: 53px;
+        padding: 0 30px 40px 30px;
+    }
+
+    .app .icon-name {
+        font-size: 13px;
+        height: 40px;
+        line-height: 31px;
+        width: 113px;
+        margin-left: -30px;
+    }
+
+    .app .icon {
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+    }
+
+    .app:hover .app-intro {
+        width: 380px;
+        left: -340px;
+    }
+
+    .app-intro {
+        height: 38px;
+        padding: 6px 0;
+        left: 0;
+        top: 2px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    .app.pt:hover .app-intro,
+    .ct.app:hover .app-intro {
+        left: 70px;
+    }
+
+    .app-intro h5 {
+        font-size: 16px;
+    }
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) {
+    html, body, .container {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .ipad {
+        margin-top: -189px;
+        margin-left: -300px;
+        width: 600px;
+        height: 406px;
+    }
+
+    .ipad .iphone {
+        top: 52px;
+        right: -240px;
+        width: 155px;
+        height: 364px;
+    }
+
+    .apps {
+        top: 165px;
+        left: 104px;
+        width: 386px;
+        height: 138px;
+    }
+
+    .app {
+        height: 36px;
+        width: 36px;
+        padding: 0 20px 40px 20px;
+    }
+
+    .app .icon-name {
+        font-size: 8px;
+        height: 40px;
+        line-height: 31px;
+        width: 76px;
+        margin-left: -20px;
+    }
+
+    .app .icon {
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    .app:hover .app-intro {
+        width: 260px;
+        left: -236px;
+    }
+
+    .app-intro {
+        height: 24px;
+        padding: 6px 0;
+        left: 0;
+        top: 0px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    .app.pt:hover .app-intro,
+    .ct.app:hover .app-intro {
+        left: 50px;
+    }
+
+    .app-intro h5 {
+        font-size: 12px;
+    }
+
+    .app-intro p {
+        font-size: 8px;
+    }
+}

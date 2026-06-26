@@ -1,0 +1,358 @@
+.header {
+    height: 1200px;
+    background: transparent repeat-x url(../images/guitar-toolkit-top-bg-unload.jpg);
+}
+
+.header .bg {
+    width: 100%;
+    height: 1200px;
+    background-position: 40% bottom;
+    background-image: url(../images/gt-header@2500.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: 50%;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+.app {
+    top: -72px;
+    text-align: center;
+    position: relative;
+}
+
+.app .link-app-store {
+    background: url(../images/dr-app-store-link-bottom.png) no-repeat 0 0;
+    /*margin: 520px 0 0 360px;*/
+    width: 220px;
+    height: 81px;
+    position: absolute;
+    right: 140px;
+    top: 540px;
+}
+
+    .app .link-app-store:hover {
+        background-position: -220px 0;
+    }
+
+.app .center {
+    position: relative;
+}
+    .app .mainpic {
+        position: absolute;
+        top: 400px;
+        left: 0;
+        background: url(../images/guitar-toolkit-top-devices.png) 0 0 no-repeat;
+        width: 1119px;
+        height: 523px;
+    }
+    .app .pic {
+        position: absolute;
+        top: 400px;
+        right: 50px;
+        background: url(../images/guitar-toolkit-title.png) 0 0 no-repeat;
+        width: 433px;
+        height: 274px;
+    }
+
+.section-0 {
+    margin-top: -100px;
+}
+
+    .section-0 .center {
+        height: 811px;
+        position: relative;
+    }
+
+    .section-0 .pic {
+        position: relative;
+        z-index: 0;
+        width: 672px;
+        height: 736px;
+        left: -190px;
+        background: url(../images/GTV2/GTV2_00.jpg) 0 100% no-repeat;
+    }
+
+    .section-0 .intro {
+        padding: 205px 0 0 60px;
+        width: 487px;
+        font-size: 16px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .section-0 .intro .title {
+        margin-bottom: 10px;
+        font-size: 36px;
+    }
+
+    .section-0 .intro .desc {
+        margin-bottom: 10px;
+    }
+
+.section-1 {
+    text-align: center;
+    margin-top: -10px;
+}
+
+    .section-1 .center {
+        height: 790px;
+        position: relative;
+
+    }
+
+    .section-1 .pic {
+        position: absolute;
+        top: 238px;
+        left: 50%;
+        margin-left: -590px;
+        background: url(../images/gt-feature-1.jpg) 50% 100% no-repeat;
+        width: 1179px;
+        height: 552px;
+    }
+
+    .section-1 .intro {
+        margin: 0 auto;
+        width: 767px;
+        font-size: 16px;
+    }
+
+    .section-1 .title {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+.section-2 {
+}
+
+    .section-2 .center {
+        height: 474px;
+        position: relative;
+    }
+
+    .section-2 .pic {
+        position: absolute;
+        top: 60px;
+        right: 40px;
+        background: url(../images/gt-feature-2.jpg) 0 0 no-repeat;
+        width: 420px;
+        height: 414px;
+    }
+
+    .section-2 .intro {
+        padding: 95px 0 0 40px;
+        width: 441px;
+        font-size: 16px;
+    }
+
+    .section-2 .title {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .section-2 .desc {
+        margin-bottom: 15px;
+    }
+
+.section-3 {
+}
+
+    .section-3 .center {
+        height: 764px;
+        position: relative;
+    }
+
+    .section-3 .pic {
+        position: absolute;
+        top: 150px;
+        left: 25px;
+        background: url(../images/gt-feature-3.jpg) 0 0 no-repeat;
+        width: 480px;
+        height: 574px;
+    }
+
+    .section-3 .intro {
+        padding: 300px 0 0 520px;
+        width: 447px;
+        font-size: 16px;
+    }
+
+    .section-3 .title {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .section-3 .desc {
+        margin-bottom: 15px;
+    }
+
+
+.section-4 {
+    text-align: center;
+    margin-top: 80px;
+}
+
+    .section-4 .center {
+        height: 820px;
+        position: relative;
+
+    }
+
+    .section-4 .pic {
+        position: absolute;
+        top: 238px;
+        left: 50%;
+        margin-left: -590px;
+        background: url(../images/gt-feature-chords.jpg) 50% 100% no-repeat;
+        width: 1180px;
+        height: 630px;
+    }
+
+    .section-4 .intro {
+        margin: 0 auto;
+        width: 767px;
+        font-size: 16px;
+    }
+
+    .section-4 .title {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+     .section-4 .desc {
+        margin-bottom: 15px;
+    }
+
+.section-5 {
+    margin-top: 30px;
+}
+
+    .section-5 .center {
+        height: 474px;
+        position: relative;
+    }
+
+    .section-5 .pic {
+        position: absolute;
+        top: 60px;
+        right: 40px;
+        background: url(../images/gt-feature-revsearch.jpg) 0 0 no-repeat;
+        width: 420px;
+        height: 414px;
+    }
+
+    .section-5 .intro {
+        padding: 250px 0 0 40px;
+        width: 441px;
+        font-size: 16px;
+    }
+
+    .section-5 .title {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .section-5 .desc {
+        margin-bottom: 15px;
+    }
+
+.section-6 {
+}
+
+    .section-6 .center {
+        height: 764px;
+        position: relative;
+    }
+
+    .section-6 .pic {
+        position: absolute;
+        top: 150px;
+        left: 25px;
+        background: url(../images/gt-feature-chord-progression.jpg) 0 0 no-repeat;
+        width: 480px;
+        height: 574px;
+    }
+
+    .section-6 .intro {
+        padding: 400px 0 0 520px;
+        width: 447px;
+        font-size: 16px;
+    }
+
+    .section-6 .title {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .section-6 .desc {
+        margin-bottom: 15px;
+    }
+
+
+
+.section-7 {
+    height: 884px;
+    background: url(../images/gt-feature-4-bg.jpg) 0 bottom repeat-x;
+    border-bottom: 1px solid #000;
+}
+
+    .section-7 .center {
+        position: relative;
+    }
+
+    .section-7 .pic {
+        position: absolute;
+        top: 120px;
+        left: -260px;
+        width: 1260px;
+        height: 796px;
+        background: url(../images/gt-feature-4.png) 0 0 no-repeat;
+    }
+
+    .section-7 .app-name {
+        font-size: 18px;
+        color: #d3f3f6;
+        font-family: "DIN-Regular", "Helvetica Neue", Helvetica, arial, sans-serif;
+        font-weight: bold;
+        position: absolute;
+        top: 425px;
+        right: 56px;
+    }
+
+    .section-7 .link-app-store {
+        position: absolute;
+        top: 500px;
+        right: 11px;
+        background: url(../images/dr-app-store-link-bottom.png) no-repeat 0 0;
+        width: 220px;
+        height: 108px;
+    }
+
+    .section-7 .link-app-store:hover {
+        background-position: -220px 0;
+    }
+
+@media screen and (max-width: 1920px) {
+    .header {
+        height: 922px;
+    }
+
+    .header .bg {
+        height: 922px;
+        background-position: center bottom;
+        background-image: url(../images/gt-header@1920.jpg);
+    }
+    .app .link-app-store {
+        top: 400px;
+    }
+    .app .mainpic,
+    .app .pic{
+        top: 250px;
+    }
+
+}

@@ -1,0 +1,25 @@
+---
+// Port of templates/_reviews.html
+interface Props { reviews: string[]; }
+const { reviews } = Astro.props;
+// Mirror the legacy inline array (used by the review carousel JS).
+const reviewArray = '[\n' + reviews.map((r) => '        "' + r + '" ').join(',\n') + '\n]';
+---
+<script type="application/javascript" is:inline set:html={`
+top.reviewIdx = 0;
+top.reviews = ${reviewArray};
+`}></script>
+<div class="app-reviews-container">
+    <h1>Check out what people are saying</h1>
+    <div class="app-reviews">
+            <p id="review-content"></p>
+            <div class="review-left-quo">“</div>
+            <div class="review-right-quo">”</div>
+        <ul class="nondisplay">
+            {reviews.flatMap((review) => [<li>{review}</li>, ' '])}
+        </ul>
+    </div>
+    <div class="review-change-progressbar-bg">
+        <div id="review-change-progressbar"></div>
+    </div>
+</div>

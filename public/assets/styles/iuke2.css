@@ -1,0 +1,687 @@
+@charset "UTF-8";
+/*
+ * Common mixins.
+ * Created by Zhuoqun.
+ * 2014.10.21
+ *
+ */
+html {
+  min-width: 980px;
+  height: 100%;
+  font-family: "proxima-nova", "helveticaneue-light", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: 300;
+}
+
+body {
+  background: transparent no-repeat center url("/assets/images/iuke/bg.jpg");
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+div.v2-footer {
+  height: 130px;
+}
+
+.appstore-icon {
+  line-height: 200%;
+  display: inline-block;
+  margin: 20px 0;
+  padding-top: 20px;
+  height: 63px;
+  overflow: hidden;
+}
+.appstore-icon::before {
+  content: "a";
+  text-indent: 0 !important;
+  font-size: 65px;
+  font-family: "EUMWeb";
+  color: #fff;
+  display: block;
+  margin-bottom: 100px;
+}
+
+.appstore-icon-bottom::after {
+  content: "A";
+  text-indent: 0 !important;
+  font-size: 90px;
+  font-family: "EUMWeb";
+  color: #1b1b1b;
+  margin-bottom: 100px;
+}
+
+.appstore-icon-bottom::after:hover {
+  opacity: 0.8;
+}
+
+.two-rows-container {
+  width: 60%;
+  max-width: 1400px;
+  margin: 40px auto 0;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+.two-rows-container .left-row {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+}
+.two-rows-container .right-row {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+}
+
+a {
+  color: #1f94ff;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  font-size: 24px;
+}
+a:hover {
+  color: #43a6ff;
+}
+a.link-video {
+  text-shadow: none;
+  margin-top: 30px;
+}
+a.link-video::after {
+  content: "▶";
+  width: 40px;
+  height: 40px;
+  font-size: 50px;
+  padding-top: -5px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  border: solid 1px #1f94ff;
+  font-family: "entypo";
+  display: inline-block;
+  margin-left: 10px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  text-indent: 3px;
+}
+a.link-video::after:hover {
+  border: solid 1px #43a6ff;
+}
+
+em {
+  font-weight: 400;
+}
+em.orange {
+  color: #F8752E;
+}
+em.green {
+  color: #7FB335;
+}
+
+.v2-footer {
+  height: 130px;
+}
+
+#idx-header.glow {
+  position: absolute;
+}
+
+.vjs-error-display,
+.vjs-big-play-button,
+.vjs-loading-spinner,
+.vjs-text-track-display,
+.vjs-poster {
+  display: none !important;
+}
+
+#big-video-vid_html5_api {
+  display: none;
+}
+
+/* First Page Container */
+.firstpage-container {
+  height: 100%;
+  min-height: 828px;
+  width: 100%;
+  position: relative;
+}
+
+#big-video-wrap {
+  position: absolute;
+  z-index: -9999;
+}
+
+#big-video-vid .vjs-control-bar, #big-video-vid_html5_api .vjs-control-bar {
+  display: none;
+}
+
+.head {
+  font-weight: 200;
+  color: #FFFFFF;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: repeat url("/assets/images/main/n3.png");
+  overflow: hidden;
+}
+.head h1 {
+  font-size: 60px;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  padding-top: 90px;
+}
+.head h2 {
+  font-size: 30px;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  padding-top: 15px;
+}
+
+.iphone-frame {
+  display: none;
+  background: transparent no-repeat url("/assets/images/iuke/highlight-iphone.png");
+  background-position: bottom;
+  background-size: 50%;
+  width: 1031px;
+  padding-top: 420px;
+  position: relative;
+  overflow: hidden;
+}
+.iphone-frame #demo {
+  position: absolute;
+}
+
+div.mute {
+  position: absolute;
+  right: 240px;
+  bottom: 100px;
+}
+div.mute a {
+  font-family: "VideoJS";
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.4);
+}
+div.mute a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.page-container {
+  overflow: hidden;
+  width: 100%;
+  background: #f6f6f6 repeat url("/assets/images/main/n2.png");
+  font-weight: 300;
+  min-width: 980px;
+  min-height: 200px;
+  color: #1b1b1b;
+  font-family: "proxima-nova" "helveticaneue-light", "Helvetica Neue", Helvetica, "Hiragino Sans GB" , arial, sans-serif;
+}
+
+/* Section */
+.section {
+  text-align: center;
+  overflow: hidden;
+}
+.section h1, .section h2 {
+  font-weight: 200;
+  font-size: 48px;
+  line-height: 120%;
+  text-shadow: 1px 1px 0 white;
+}
+.section .dark-background {
+  color: #FFF;
+}
+.section .dark-background h1, .section .dark-background h2 {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+.section .slogan {
+  padding-top: 100px;
+}
+.section .slogan.second {
+  padding-top: 30px;
+}
+.section .slogan-desc {
+  padding-top: 20px;
+  font-size: 28px;
+  line-height: 150%;
+}
+.section p {
+  font-size: 20px;
+  line-height: 130%;
+  padding: 50px 0;
+}
+
+/* Introducation */
+.introduction {
+  background: transparent repeat-x bottom url("/assets/images/iuke/part1-bg2.png");
+}
+.introduction .container {
+  background: transparent no-repeat bottom url("/assets/images/iuke/part1-bg1.png");
+}
+.introduction .songs {
+  position: relative;
+  height: 597px;
+  width: 776px;
+  margin: 25px auto 0;
+}
+.introduction .songs img {
+  position: absolute;
+}
+.introduction .songs img#songlist {
+  top: 50px;
+  left: 56px;
+  z-index: 1;
+}
+.introduction .songs img#songdetail {
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+/* chord  */
+.chord {
+  height: 920px;
+}
+
+/* solo  */
+.solo {
+  background: #E6CEB5 no-repeat top center url("/assets/images/iuke/part3-stagelight.png");
+  height: 840px;
+}
+.solo .slogan {
+  color: #AF2424;
+  text-shadow: none;
+}
+.solo .slogan-desc {
+  color: #B17E73;
+  text-shadow: none;
+}
+.solo .band {
+  position: relative;
+  margin: 60px auto 0;
+}
+.solo .band .bg {
+  position: relative;
+  width: 1072px;
+  height: 422px;
+  margin: 0 auto;
+}
+.solo .band .bg img {
+  position: absolute;
+  bottom: 100px;
+}
+.solo .band .bg .left {
+  left: 0;
+}
+.solo .band .bg .right {
+  right: 0;
+}
+.solo .band .demo {
+  background: transparent no-repeat top center url("/assets/images/iuke/part3-iphonebg.png");
+  width: 855px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.solo .band .demo .ui {
+  position: relative;
+  margin-top: 23px;
+  margin-left: 147px;
+  width: 558px;
+  height: 314px;
+  overflow: hidden;
+}
+.solo .band .demo .ui .sidebar {
+  position: absolute;
+  right: -268px;
+  top: 40px;
+}
+
+/* boss  */
+.boss {
+  height: 700px;
+}
+.boss .three-rows-container {
+  width: 70%;
+  min-width: 690px;
+  /*230*3*/
+  max-width: 1600px;
+  height: 70%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+.boss .three-rows-container .left-row {
+  height: 400px;
+  width: 33.33%;
+  min-width: 230px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.boss .three-rows-container .center-row {
+  height: 400px;
+  width: 33.33%;
+  min-width: 230px;
+  position: absolute;
+  left: 33.33%;
+  bottom: 0;
+}
+.boss .three-rows-container .right-row {
+  height: 400px;
+  width: 33.33%;
+  min-width: 230px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* record  */
+.record {
+  height: 800px;
+  text-align: left;
+  background: transparent no-repeat top center url("/assets/images/iuke/part5-bg.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.record .slogan {
+  font-size: 44px;
+  font-weight: 400;
+  text-shadow: none;
+  margin: 140px 0 0 30px;
+  opacity: 0.7;
+}
+.record .slogan-desc {
+  text-shadow: none;
+  padding-top: 0;
+  margin: 0 0 0 30px;
+  font-size: 22px;
+  opacity: 0.8;
+}
+.record .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* practice  */
+.practice {
+  background: #FFF;
+  padding: 80px 0 140px;
+}
+.practice .container {
+  min-width: 690px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.practice .h2 {
+  font-weight: 200;
+}
+.practice .left-image {
+  width: 50%;
+  float: left;
+}
+.practice .left-image .img {
+  width: 520px;
+  height: 460px;
+  float: right;
+  text-align: right;
+  background: transparent no-repeat bottom url("/assets/images/iuke/part6-bg2.png");
+}
+.practice .left-image .img img {
+  margin: 116px 50px 0 0;
+}
+.practice .text {
+  min-width: 568px;
+  margin-left: 50%;
+  text-align: left;
+}
+.practice .text .second {
+  padding-top: 0;
+}
+
+/* Christmas */
+.christmas {
+  height: 660px;
+  background: transparent repeat-x top url("/assets/images/iuke/part7-bg.jpg");
+}
+.christmas .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+.christmas .left {
+  float: left;
+  width: 780px;
+  background: transparent no-repeat center center url("/assets/images/iuke/part7-titlebg.png");
+  background-size: 100%;
+}
+.christmas .right {
+  font-size: 28px;
+  color: #FEC35F;
+  margin-top: 120px;
+  min-width: 466px;
+  margin-left: 52%;
+  position: relative;
+}
+.christmas .right .mask {
+  position: absolute;
+  background: transparent repeat-x url("/assets/images/iuke/part7-mask.png");
+  width: 100%;
+  height: 40%;
+  left: 50px;
+  z-index: 9999;
+}
+.christmas .right .top {
+  background-position: 0 10%;
+  top: 0;
+}
+.christmas .right .bottom {
+  background-position: 0 96%;
+  bottom: -12px;
+}
+.christmas .right li {
+  padding: 10px 0;
+}
+.christmas .slogan {
+  color: #FFF;
+  text-shadow: 0 0 6px rgba(248, 166, 52, 0.8);
+  font-weight: 800;
+  font-size: 70px;
+  margin-top: 120px;
+  line-height: 1;
+}
+.christmas .slogan-desc {
+  font-weight: 400;
+  color: #FFF;
+  text-shadow: none;
+  font-size: 22px;
+  margin-top: 70px;
+}
+
+/* Features */
+/* Feature List */
+ul.feature-container {
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 20px;
+}
+
+li.feature-item {
+  margin-left: 4px;
+  width: 320px;
+  /* 320x3 = 960px */
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+ul.feature-container:nth-child(3n) {
+  clear: both;
+}
+
+li.feature-item h2 {
+  font-size: 24px;
+}
+
+li.feature-item p {
+  font-size: 18px;
+  line-height: 130%;
+  font-weight: 100;
+  padding: 5px;
+}
+
+.feature-icon::before {
+  content: " ";
+  font-family: "EUMWeb";
+  font-size: 60px;
+  color: #333;
+  padding-right: 7px;
+  vertical-align: -5px;
+}
+
+/*  Icons */
+.feature-icon.feature-airplay::before {
+  content: "2";
+}
+
+.feature-icon.feature-audiobus::before {
+  content: "d";
+}
+
+.feature-icon.feature-iaa::before {
+  content: "e";
+}
+
+.feature-icon.feature-ts::before {
+  content: "1";
+}
+
+.feature-icon.feature-tone::before {
+  content: "f";
+}
+
+.feature-icon.feature-accent::before {
+  content: "4";
+}
+
+.feature-icon.feature-tap::before {
+  content: "5";
+}
+
+.feature-icon.feature-timer::before {
+  content: "g";
+}
+
+.feature-icon.feature-background::before {
+  content: "8";
+}
+
+.feature-icon.feature-landscape::before {
+  content: "b";
+}
+
+.feature-icon.feature-uni::before {
+  content: "l";
+}
+
+.feature-icon.feature-visual::before {
+  content: "c";
+}
+
+.feature-icon.feature-adfree::before {
+  content: "9";
+}
+
+.feature-icon.feature-capo::before {
+  content: "h";
+}
+
+.feature-icon.feature-uke::before {
+  content: "k";
+}
+
+.feature-icon.feature-a4::before {
+  content: "i";
+}
+
+.feature-icon.feature-tuner::before {
+  content: "7";
+}
+
+.feature-icon.feature-battery::before {
+  content: "6";
+}
+
+.feature-icon.feature-lefthanded::before {
+  content: "j";
+}
+
+.feature-icon.feature-mixer::before {
+  content: "l";
+}
+
+.feature-icon.feature-pattern::before {
+  content: "n";
+}
+
+.feature-icon.feature-loop::before {
+  content: "r";
+}
+
+.feature-icon.feature-levels::before {
+  content: "m";
+}
+
+.feature-icon.feature-ticket::before {
+  content: "o";
+}
+
+.feature-icon.feature-share::before {
+  content: "p";
+}
+
+.feature-icon.feature-universal::before {
+  content: "s";
+}
+
+.features {
+  padding: 80px;
+}
+.features .slogan {
+  padding: 0;
+}
+.features li.feature-item p {
+  font-size: 16px;
+}
+.features li.feature-item p em {
+  font-style: italic;
+}
+.features li.feature-item h2 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+/* detect screen size */
+@media screen and (max-width: 1055px) {
+  .christmas .left {
+    width: 640px;
+  }
+  .christmas .slogan {
+    font-size: 56px;
+  }
+}
+
+/*# sourceMappingURL=iuke2.css.map */

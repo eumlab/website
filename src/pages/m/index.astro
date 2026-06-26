@@ -1,0 +1,56 @@
+---
+// Port of templates/home-mobile.html — the iPhone variant served at / by UA.
+// Served via an edge/UA rule in production (see README); built here at /m/ so its
+// CSS fidelity is verified at a mobile viewport.
+import Base from '../../layouts/Base.astro';
+import Reviews from '../../components/Reviews.astro';
+import { indexAppsMobile } from '../../data/apps';
+const appList = indexAppsMobile;
+// Local `me` from the home view: only the 3 hardcoded reviews, no id.
+const me = { reviews: [
+  'Really great app - everything you need as a bass player! Useful, inspiring and handy!',
+  'The first tuner that I have found in the App Store that can tune my bass guitar!!!!',
+  'Everything you will need to get inspired to practice playing and writing music. Tons of scales, chords, and chord progressions. I really like the interactive fretboard, it has opened my eyes to new melodies. I get stuck from time to time relying on finger patterns instead of using my ears, but I am thinking and playing in a whole new creative way thanks to this app. I would recommend this to beginners, as well as experienced shredders alike.',
+] };
+---
+<Base wholetitle="EUMLab, creators of the best music apps out there." mobile={true} deviceClass="iphone8">
+  <Fragment slot="basestyle">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no,width=device-width" />
+  </Fragment>
+  <Fragment slot="style">
+    <link href="/assets/styles/home2-mobile.css" rel="stylesheet" />
+    <link href="/assets/styles/style-mobile.css" rel="stylesheet" />
+  </Fragment>
+  <Fragment slot="script">
+    <script src="/assets/scripts/jquery.easings.min.js" is:inline></script>
+    <script src="/assets/scripts/jquery.fullPage.min.js" is:inline></script>
+  </Fragment>
+
+<div class="main">
+<div class="logo"></div>
+<h1 class="slogan">Welcome to <em>EUMLab</em>,<br/>
+                creators of the best<br/>
+                <em>apps for musicians</em> out there</h1>
+<ul class="apps">
+    {appList.flatMap((appitem) => [
+      <li class="icon-item"><a href={appitem.href}><img class="icon120" height="60" width="60" src={`/assets/images/icons/120/${appitem.icon}`}/><br><h2 class="icon-title">{appitem.name}</h2><p>{appitem.desc}</p></a></li>,
+      ' ',
+    ])}
+</ul>
+</div>
+
+    <div id="sec-figure"  class="main-section-figure">
+    <br/><br/><br/><br/><br/>
+        <div class="figure-text-container">
+               <h2><em>4,500,000</em> musicians <br/> get inspired by our apps</h2>
+               <h3>And they <em >♥</em> them.<br/>Check out what they're saying... </h3>
+            <div class="figure-reviews">
+                <Reviews reviews={me.reviews} />
+            </div>
+
+
+        </div>
+
+    </div><!-- End Figure -->
+
+</Base>

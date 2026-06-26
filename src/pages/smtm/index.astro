@@ -1,0 +1,39 @@
+---
+// Port of templates/showmethemoney.html (route: /smtm/ )
+// Standalone HTML document — does NOT extend base.
+import { applist } from '../../data/apps';
+const appitems = Object.values(applist);
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<h1>We've got {appitems.length} Apps</h1>
+<table width="1000">
+<tr>
+	<td>mid</td>
+	<td>id</td>
+	<td>name</td>
+	<td>aurl</td>
+	<td>href</td>
+	<td>device</td>
+	<td>desc</td>
+</tr>
+
+{appitems.map((item) => (
+<tr height="50">
+	<td>{item.mid}</td>
+	<td>{item.id}</td>
+	<td><a href={`http://itunes.apple.com/app/id${item.id}`} target="_blank">{item.name}</a></td>
+	<td><a href={`${item.aurl}://start`}>{item.aurl}</a></td>
+	<td><a href={item.href}>{item.href}</a></td>
+	<td>{item.iphone ? 'iPhone' : ''} {item.iPad ? 'iPad' : ''}</td>
+	<td>{item.desc}</td>
+</tr>
+))}
+
+</table>
+</body>
+</html>
