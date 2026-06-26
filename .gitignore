@@ -15,5 +15,8 @@ verify/out/
 # local tooling
 .claude/
 
+# local-only docs (server/deploy specifics — public repo)
+*.local.md
+
 # os
 .DS_Store
