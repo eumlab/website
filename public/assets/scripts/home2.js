@@ -17,7 +17,7 @@
 });
 */
 
-var pages = ['intro', 'ukulele','figure','press'];
+var pages = ['intro', 'figure'];
 
 top.fullpageCreated = false;
 function createFullPage(){
@@ -122,27 +122,6 @@ function heartBeat(){
     },90)
 }
 
-function resizeForUke(){
-    var win = $('.main'),
-        winWidth = win.width(),
-        winHeight = win.height();
-
-    var scrollHeight = document.body.scrollHeight;
-
-    if(winHeight < 1000){
-        $("#sec-uke").removeClass("sms");
-        $("#sec-uke").addClass("tms");
-    }else if(winHeight < 1195){
-        $("#sec-uke").addClass("sms");
-        $("#sec-uke").removeClass("tms");
-    }else{
-        //Default
-        $("#sec-uke").removeClass("sms");
-        $("#sec-uke").removeClass("tms");
-    }
-}
-
-
 function resizeForFigures(){
     var win = $('.main'),
         winWidth = win.width(),
@@ -163,29 +142,6 @@ function resizeForFigures(){
     }
 
 }
-
-function resizeForPress(){
-    var win = $('.main'),
-        winWidth = win.width(),
-        winHeight = win.height();
-
-    var scrollHeight = document.body.scrollHeight;
-
-    if(winHeight < 840){
-        $("#sec-press").removeClass("sms");
-        $("#sec-press").addClass("tms");
-    }else if(winHeight < 1100){
-        $("#sec-press").addClass("sms");
-        $("#sec-press").removeClass("tms");
-    }else{
-        //Default
-        $("#sec-press").removeClass("sms");
-        $("#sec-press").removeClass("tms");
-    }
-
-}
-
-
 
 function checkScreenSize(){
      var win =  $(window),
@@ -310,9 +266,7 @@ function setAppsPosition() {
         top: top,
         right: right
     });*/
-    resizeForUke();
     resizeForFigures();
-    resizeForPress();
 }
     checkScreenSize();
     changeQuos();
@@ -325,24 +279,6 @@ function setAppsPosition() {
 
 
         setAppsPosition();
-
-
-
-        //Uke Apps Click
-        $("#ukeapp-icons-container li a").click(function(me){
-            var t = $(me.target);
-            $("#ukeapp-icons-container li").removeClass("active");
-            var dt = t.parent().attr("data");
-            t.parent().parent().addClass("active");
-
-            var scc = $("#uke-app-sc-id-"+dt);
-            $(".uke-app-sc-item").removeClass("active");
-            scc.addClass("active");
-
-            $(".uke-app-sc-container").append(scc);
-
-
-        });
     });
 
     setTimeout(function(){

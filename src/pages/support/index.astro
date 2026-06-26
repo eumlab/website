@@ -1,0 +1,46 @@
+---
+// In-site Support / Contact Us page (route: /support/ ).
+// Reuses the imprint page's light theme for visual consistency.
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { appsMenu } from '../../data/apps';
+---
+<Base title="Support" bodystyle="">
+  <Fragment slot="style">
+    <link href="/assets/styles/imprint.css" rel="stylesheet" />
+  </Fragment>
+
+    <Nav products={appsMenu} addstyle="fixontop" />
+
+    <div class="imprint-header support-header">
+        <div class="slogan-container">
+            <h1><em>Contact</em> Us</h1>
+        </div>
+    </div>
+
+    <div class="imprint-section-container">
+        <h2>We'd love to hear from you</h2>
+        <p>Questions, feedback, or need a hand with one of our apps?<br/>
+        Drop us a line and we'll get back to you as soon as we can.</p>
+
+        <h2>Email</h2>
+        <p class="support-email"><a href="mailto:team@eumlab.com">team@eumlab.com</a></p>
+    </div>
+
+    <div class="divbreaker bottom-divbreaker"></div>
+    <Footer />
+    <div class="clearfix"></div>
+
+  <style>
+    /* imprint-header reserves space for a graphic this page doesn't use */
+    .support-header {
+      height: auto;
+      padding-top: 90px;
+      padding-bottom: 10px;
+    }
+    .support-email {
+      font-size: 30px;
+    }
+  </style>
+</Base>

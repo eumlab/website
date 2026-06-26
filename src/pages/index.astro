@@ -3,9 +3,8 @@
 import Base from '../layouts/Base.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import { indexApps, ukeApps, appsMenu } from '../data/apps';
+import { indexApps, appsMenu } from '../data/apps';
 const appList = indexApps;
-const ukeAppsReversed = [...ukeApps].reverse();
 ---
 <Base wholetitle="EUMLab, creators of the best apps for musicians out there">
   <Fragment slot="meta">
@@ -50,41 +49,10 @@ const ukeAppsReversed = [...ukeApps].reverse();
     </div><!-- End Main -->
 
 
-    <div id="sec-uke"  data-anchor="ukulele" class="main-section-uke section">
-        <div class="uke-oc-bg"></div>
-        <div class="uke-oc">
-            <h1 class="uke-slogan">We specialize in <em>ukulele</em> apps</h1>
-            <div id="ukeapp-icons-container">
-                <ul>
-                    {ukeApps.flatMap((appitem) => [
-                      <li class={`basic-ani ${appitem.mid === 'ut' ? 'active' : ''}`}><a data={appitem.mid} href="javascript:void(0);"><img src={`/assets/images/icons/120/${appitem.icon}`} height="96" width="96"><h3>{appitem.name}</h3></a></li>,
-                      ' ',
-                    ])}
-                </ul>
-            </div>
-        </div>
-
-        <div class="uke-app-sc-container">
-            {ukeAppsReversed.flatMap((appitem) => [
-              <div id={`uke-app-sc-id-${appitem.mid}`} class={`uke-app-sc-item basic-ani ${appitem.mid === 'ut' ? 'active' : ''}`}>
-                <div class="uke-app-sc-right">
-                    <h2>{appitem.name}</h2>
-                    <h3>{appitem.desc}</h3>
-                    <a href={appitem.href} title="Learn More" class="learn-more"></a>
-                    <a href={`http://itunes.apple.com/app/id${appitem.id}?ls=1&mt=8&at=11lt4f&ct=eumlabwebindex`} target="_blank" class="appstore-icon-uke basic-ani-onlyalpha"></a>
-                </div>
-                <img id={`img-uke-app-sc-${appitem.mid}`} class="uke-app-sc" src={`/assets/images/main/${appitem.mid}-sc.png`} />
-                </div>,
-              ' ',
-            ])}
-        </div>
-    </div><!-- End Apps -->
-
-
     <div id="sec-figure"  data-anchor="figure" class="main-section-figure section">
 
         <div class="figure-text-container">
-               <h2>With <em>5,300,000</em> downloads,<br/>musicians get inspired by our apps</h2>
+               <h2>With <em>150 million</em> downloads,<br/>musicians get inspired by our apps</h2>
                <h3>And they <em >♥</em> them. Check out what they're saying... </h3>
             <div class="figure-reviews">
 
@@ -94,26 +62,13 @@ and definitely the best Metronome app I've found so far!!</p>
                 <div class="figure-right-quo">”</div>
             </div>
 
+            <div class="press-footer">
+                <Footer />
+            </div>
 
         </div>
 
     </div><!-- End Figure -->
-    <div id="sec-press" data-anchor="press" class="main-section-press section">
-        <div class="press-container">
-            <div class="press-slogan"><h2>Behind the screen, <br/><em>backed by the best team</em></h2></div>
-            <div class="press-team press-team-berlin"><img src="/assets/images/main/icon-berlin.png" height="201" width="201"/><h3><em>Berlin</em>, Germany</h3></div>
-            <div class="press-and"><p class="top">in</p> <p class="bottom">&amp;</p></div>
-            <div class="press-team press-team-hangzhou"><img src="/assets/images/main/icon-hangzhou.png" height="201" width="201"/><h3><em>Hangzhou</em>, China</h3></div>
-            <div class="press-hiring"><a href="/jobs/"><h3>And we are still hiring!</h3></a></div>
-
-            <div class="press-footer">
-                <Footer />
-            </div>
-        </div>
-
-
-
-    </div><!-- End Press -->
   </div>
 
 <div id="pre-loader" style="position: fixed;height: 100%;width: 100%;top:0;left:0;bottom: 0;right: 0;z-index: 999;text-align: center;background: #000 no-repeat center url('/assets/images/main/logo-main-hl.png');">

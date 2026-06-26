@@ -13,8 +13,10 @@ export default defineConfig({
   devToolbar: { enabled: false },
 
   // Legacy URL redirects, ported from the Django urls.py redirector() routes.
+  // NOTE: '/index.html' -> '/' is intentionally NOT here: with format:'directory'
+  // it collides with the home page's dist/index.html (ENOTDIR at build). It is
+  // handled at the edge instead (Caddy: `redir /index.html / permanent`).
   redirects: {
-    '/index.html': '/',
     '/ukulele/': '/ukulele-toolkit/',
     '/guitar-toolkit/': '/guitar-master/',
     '/bonjour/': '/daw-remote-hd/bonjour/',

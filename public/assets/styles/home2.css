@@ -556,6 +556,41 @@ img#img-uke-app-sc-uketube.uke-app-sc {
   height: 100%;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+}
+
+/* Footer relocated into the (now last) figure section, hugging the bottom.
+   Reuses .press-footer styling from the removed press section. */
+#sec-figure .press-footer {
+  left: 0;
+  bottom: 24px;
+}
+
+/* In the sms height range the figure h2 keeps its tall 540px top padding, which
+   pushes content into the relocated footer. Compress it so the footer clears. */
+#sec-figure.sms .figure-text-container h2 {
+  padding-top: 340px;
+}
+
+#sec-figure.sms .press-footer {
+  bottom: 20px;
+}
+
+#sec-figure.sms .press-footer li {
+  font-size: 18px;
+}
+
+#sec-figure.tms .press-footer {
+  bottom: 12px;
+}
+
+#sec-figure.tms .press-footer li {
+  font-size: 18px;
+}
+
+#sec-figure.tms .press-footer .social,
+#sec-figure.tms .press-footer .copyright {
+  display: none;
 }
 
 .figure-text-container h2 {
