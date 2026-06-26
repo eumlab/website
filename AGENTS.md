@@ -97,6 +97,43 @@ the legacy Django code is branch **`2.0`** (the repo default).
 view context) to the `PAGES` list in `verify/render_reference.py`; then
 `npm run reference && npm run build && npm run verify` and fix until 0 diff.
 
+## SEO layer (added on top of the faithful port)
+
+The site carries a deliberate, **visually-inert** SEO/AI-discoverability layer. None
+of it changes a single rendered pixel — it lives in `<head>` metadata, `<script>`
+JSON-LD, and standalone files. It is an *intentional divergence* from the legacy
+reference (per the golden rule), and the verifier is taught to allow exactly it.
+
+What was added:
+- **`public/robots.txt`** — welcomes search + AI crawlers (GPTBot, OAI-SearchBot,
+  ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended, CCBot, …) and points
+  to the sitemap + `llms.txt`. *(Not verified — non-`.html`.)*
+- **`public/sitemap.xml`** — real routes only, `https://`, current dates. *(Not verified.)*
+- **`public/llms.txt`** — machine-readable site summary for LLMs, Pro Metronome first. *(Not verified.)*
+- **JSON-LD** (`src/layouts/Base.astro`) — a `SoftwareApplication` on each app's own
+  landing page (data-driven from `apps.ts`; rich `featureList` for Pro Metronome),
+  plus `Organization` + `WebSite` on the home page. Emitted as `<script type="application/ld+json">`,
+  which the head-diff does **not** collect, so it's verify-safe by construction.
+- **Open Graph / Twitter** meta + a **per-page self-canonical** (the legacy site
+  wrongly pointed every page's canonical at `/`). These *do* touch the verified `<head>`.
+
+How the verifier tolerates it (see `diffHead` in `verify/run.mjs`): it permits, and
+*only* permits, three additive/inert deltas — (1) `meta` keys prefixed `og:` /
+`twitter:title|description|image`, (2) a `canonical` link compared by presence not
+href, (3) an enriched `<title>` that still contains the reference page's core name.
+**Everything else in `<head>` stays byte-strict** (stylesheets, favicons, charset,
+viewport, every original meta), so genuine fidelity regressions still fail. Per-page
+SEO is set via `Base.astro` props: `wholetitle`, `description`, `ogImage`, `ogType`, `jsonLd`.
+
+**Heads-up on the gate's current state:** the desktop verifier is *already* red
+independent of SEO, because the earlier "trim homepage / nav / footer" content update
+intentionally diverged the body markup from the Django reference (which is rendered
+from the untouched legacy templates and can't reflect that change). Those failures are
+all body pixel/geometry diffs with `headIssues=0`. The SEO layer adds **zero** new
+diffs: `headIssues=0` on all 33 pages and byte-identical pixel output vs. pre-SEO. To
+get back to green, the reference baseline needs re-snapshotting against the *intended*
+content, which is a separate decision from this SEO work.
+
 ## Non-obvious gotchas (these will bite you)
 
 - The nav "Products ▾" `<sub>` contains an **invisible U+E75C** entypo glyph (the arrow).

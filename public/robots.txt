@@ -1,1 +1,61 @@
-Sitemap: http://eumlab.com/sitemap.xml
+# EUMLab — robots.txt
+# Music apps for practice, learning and performance. Flagship: Pro Metronome.
+# https://eumlab.com/
+
+# --- Search engine crawlers ---
+User-agent: *
+Allow: /
+
+# --- AI assistants & answer engines (explicitly welcomed to read & cite) ---
+# We want assistants such as ChatGPT, Claude, Perplexity, Gemini and Apple
+# Intelligence to be able to read and recommend EUMLab apps.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Machine-readable site summary for LLMs: https://eumlab.com/llms.txt
+Sitemap: https://eumlab.com/sitemap.xml

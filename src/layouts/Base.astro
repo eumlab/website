@@ -8,12 +8,69 @@ interface Props {
   bodystyle?: string;
   mobile?: boolean;       // iPhone variant: emit mobile-only meta + orientation script
   deviceClass?: string;   // value of top.device (device.classes); 'baseline' on desktop
+  // --- SEO (additive; see AGENTS.md "SEO layer"). None of these affect rendering. ---
+  description?: string;   // og/twitter description (falls back to me.mdesc, then site default)
+  ogImage?: string;       // social preview image (root-relative or absolute)
+  ogType?: string;        // Open Graph type; default 'website'
+  jsonLd?: object | object[]; // extra JSON-LD (e.g. Organization/WebSite on home)
 }
-const { title = '', wholetitle, me = null, bodystyle = '', mobile = false, deviceClass = 'baseline' } = Astro.props;
+const {
+  title = '', wholetitle, me = null, bodystyle = '', mobile = false, deviceClass = 'baseline',
+  description, ogImage, ogType, jsonLd,
+} = Astro.props;
 // Matches Django `{% if me != None and me.id != None %}` — '' is not None, so an
 // app with an empty id (e.g. pme) still renders the meta block.
 const showMe = me != null && me.id != null;
 const fullTitle = wholetitle ?? `${title} - EUMLab `;
+
+// --- SEO layer (Open Graph / Twitter / canonical / JSON-LD) -------------------
+// Visually inert: the verify harness's <head> diff only checks title/meta/link.
+// These additions (meta og:*/twitter:*, per-page canonical, ld+json scripts) are
+// declared intentional in AGENTS.md and tolerated by verify/run.mjs's diffHead.
+const SITE = 'https://eumlab.com';
+// Self-referential canonical per page (the legacy site wrongly pointed every page
+// at the homepage). The UA-served mobile home (/m/) consolidates onto the desktop /.
+const canonicalUrl = mobile ? SITE + '/' : SITE + Astro.url.pathname;
+const ogTitle = (wholetitle ?? `${title} - EUMLab`).trim();
+const SITE_DESC = 'EUMLab makes award-winning music apps for iPhone and iPad — including Pro Metronome, insTuner, Guitar Master and more — to help you practice, learn and perform.';
+const ogDesc = (description ?? (showMe ? (me!.mdesc || me!.desc) : '')) || SITE_DESC;
+const defaultImg = showMe ? `/assets/images/icons/512/${me!.icon}` : '/assets/images/logo-home.png';
+const ogImg = ogImage ?? defaultImg;
+const ogImageAbs = ogImg.startsWith('http') ? ogImg : SITE + ogImg;
+const ogTypeFinal = ogType ?? 'website';
+
+// JSON-LD: a SoftwareApplication for an app's own landing page (data-driven from
+// apps.ts) + any page-supplied schema (Organization/WebSite, etc.). Gated to the
+// app's canonical route so shared sub-pages (e.g. /iuke/terms/) aren't mislabeled.
+const isAppLanding = showMe && me!.href === Astro.url.pathname;
+const appSchema = isAppLanding ? {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: me!.name,
+  operatingSystem: 'iOS',
+  applicationCategory: 'MultimediaApplication',
+  ...(me!.mid === 'pm' ? { applicationSubCategory: 'Metronome' } : {}),
+  description: me!.mdesc || me!.desc || '',
+  url: canonicalUrl,
+  image: ogImageAbs,
+  // Store links + free offer only for shipping App Store apps (id set); the
+  // education page (empty id, paid volume licensing) gets neither.
+  ...(me!.id ? {
+    installUrl: me!.storeurl,
+    downloadUrl: me!.storeurl,
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  } : {}),
+  author: { '@type': 'Organization', name: 'EUMLab', url: SITE + '/' },
+  publisher: { '@type': 'Organization', name: 'Xanin Technology GmbH', url: SITE + '/' },
+  ...(me!.mid === 'pm' ? { featureList: [
+    'Subdivisions', 'Polyrhythms', 'Rhythm Trainer', 'Practice Mode', 'Stage Mode',
+    'Dynamic time signatures', '13 time-keeping sounds', 'Accents', 'Tap tempo',
+    'Visual modes (flash, beat, vibration)', 'Background play', 'AirPlay', 'Audiobus', 'Inter-App Audio',
+  ] } : {}),
+} : null;
+const extraJsonLd = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const allJsonLd = [appSchema, ...extraJsonLd].filter(Boolean);
+const ldStr = (o: object) => JSON.stringify(o).replace(/</g, '\\u003c');
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +107,7 @@ const fullTitle = wholetitle ?? `${title} - EUMLab `;
     <title>{fullTitle}</title>
 
     <link rel="index" title="EUMLab - Music APPs on iPhone iPad" href="http://eumlab.com/">
-    <link rel="canonical" href="http://eumlab.com/">
+    <link rel="canonical" href={canonicalUrl}>
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-touch-icon-72x72.png">
@@ -85,6 +142,23 @@ const fullTitle = wholetitle ?? `${title} - EUMLab `;
         }
     </style>
     <![endif]-->
+
+    <!-- SEO: Open Graph + Twitter (social/AI link previews). Visually inert. -->
+    <meta property="og:type" content={ogTypeFinal} />
+    <meta property="og:site_name" content="EUMLab" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDesc} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageAbs} />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={ogDesc} />
+    <meta name="twitter:image" content={ogImageAbs} />
+
+    <!-- SEO: JSON-LD structured data (schema.org). Not collected by the head diff. -->
+    {allJsonLd.map((o) => (
+      <script type="application/ld+json" is:inline set:html={ldStr(o)} />
+    ))}
 
 </head>
 <body class={`${bodystyle} `}>

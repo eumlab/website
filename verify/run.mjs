@@ -199,16 +199,33 @@ function diffStyles(refEls, candEls) {
   return issues;
 }
 
+// Intentional SEO additions (see AGENTS.md "SEO layer"). These are visually inert
+// — Open Graph / Twitter previews, JSON-LD (a <script>, not collected here), and a
+// per-page canonical that fixes the legacy bug of pointing every page at '/'. They
+// are allowed to differ from the Django reference; EVERYTHING ELSE in <head>
+// (stylesheets, favicons, charset, viewport, all original metas) stays strict, so
+// real fidelity regressions still fail.
+const SEO_META_EXTRA = ['og:', 'twitter:title', 'twitter:description', 'twitter:image'];
+
 function diffHead(a, b) {
   const issues = [];
-  if (a.title !== b.title) issues.push({ kind: 'title', ref: a.title, cand: b.title });
-  const cmp = (key, ra, ca) => {
+  // Title: exact match, OR an enriched title that still contains the reference
+  // page's core name (e.g. "Pro Metronome – Best Metronome App | EUMLab").
+  if (a.title !== b.title) {
+    const i = a.title.indexOf(' - ');
+    const core = (i >= 0 ? a.title.slice(0, i) : a.title).trim();
+    if (!(core && b.title.includes(core))) issues.push({ kind: 'title', ref: a.title, cand: b.title });
+  }
+  const isSeoMeta = (m) => SEO_META_EXTRA.some((p) => m.startsWith(p));
+  // Canonical href is intentionally per-page now → compare by presence only.
+  const normLink = (l) => (l.startsWith('canonical|') ? 'canonical' : l);
+  const cmp = (key, ra, ca, allowExtra) => {
     const setR = new Set(ra), setC = new Set(ca);
     for (const x of ra) if (!setC.has(x)) issues.push({ kind: key + '-missing', ref: x, cand: null });
-    for (const x of ca) if (!setR.has(x)) issues.push({ kind: key + '-extra', ref: null, cand: x });
+    for (const x of ca) if (!setR.has(x) && !(allowExtra && allowExtra(x))) issues.push({ kind: key + '-extra', ref: null, cand: x });
   };
-  cmp('meta', a.metas, b.metas);
-  cmp('link', a.links, b.links);
+  cmp('meta', a.metas, b.metas, isSeoMeta);
+  cmp('link', a.links.map(normLink), b.links.map(normLink), null);
   return issues;
 }
 

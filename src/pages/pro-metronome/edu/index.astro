@@ -6,7 +6,12 @@ import Footer from '../../../components/Footer.astro';
 import { applist, appsMenu } from '../../../data/apps';
 const me = applist.pme;
 ---
-<Base title="Pro Metronome - a music teacher's swiss-army knife" me={me} bodystyle=" ">
+<Base
+  title="Pro Metronome - a music teacher's swiss-army knife"
+  wholetitle="Pro Metronome for Education – Metronome Volume Licensing for Schools | EUMLab"
+  me={me}
+  bodystyle=" "
+  ogImage="/assets/images/pm2/daily-training.png">
   <Fragment slot="style">
     <link href="/assets/styles/pro-metronome-for-education.css" rel="stylesheet" />
   </Fragment>

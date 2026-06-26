@@ -7,7 +7,12 @@ import Reviews from '../../components/Reviews.astro';
 import { applist, appsMenu } from '../../data/apps';
 const me = applist.pm;
 ---
-<Base title="Pro Metronome" me={me} bodystyle=" ">
+<Base
+  title="Pro Metronome"
+  wholetitle="Pro Metronome – The Best Metronome App for iPhone & iPad | EUMLab"
+  me={me}
+  bodystyle=" "
+  ogImage="/assets/images/pm2/daily-training.png">
   <Fragment slot="style">
     <link href="/assets/styles/bigvideo.css" rel="stylesheet" />
     <link href="/assets/styles/pro-metronome2.css" rel="stylesheet" />

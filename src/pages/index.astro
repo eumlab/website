@@ -5,8 +5,36 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import { indexApps, appsMenu } from '../data/apps';
 const appList = indexApps;
+
+// JSON-LD: who EUMLab is, for search engines and AI answer engines.
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'EUMLab',
+  legalName: 'Xanin Technology GmbH',
+  url: 'https://eumlab.com/',
+  logo: 'https://eumlab.com/assets/images/logo-home.png',
+  email: 'support@eumlab.com',
+  description: 'EUMLab makes award-winning music apps for iPhone and iPad, including the flagship Pro Metronome, to help musicians practice, learn and perform.',
+  sameAs: [
+    'https://www.facebook.com/eumlab',
+    'https://twitter.com/eumlab',
+    'https://www.youtube.com/eumlab',
+    'https://vimeo.com/eumlab',
+  ],
+};
+const siteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'EUMLab',
+  url: 'https://eumlab.com/',
+  publisher: { '@type': 'Organization', name: 'EUMLab' },
+};
 ---
-<Base wholetitle="EUMLab, creators of the best apps for musicians out there">
+<Base
+  wholetitle="EUMLab, creators of the best apps for musicians out there"
+  description="EUMLab create apps help people learn, practice and perform music. The award winning products including Pro Metronome, insTuner, Ukulele Toolkit, Guitar Master, iUke and more."
+  jsonLd={[orgSchema, siteSchema]}>
   <Fragment slot="meta">
     <meta name="keywords" content="music apps, eum, eumlab, xanin, pro metronome, metornome, instuner, daw remote, ukulele toolkit, iuke, ukechords, guitar master, bass toolkit, drum loops, piano handbook, tempo, education, learn music" />
     <meta name="description" content="EUMLab create apps help people learn, practice and perform music. The award winning products including Pro Metronome, insTuner, Ukulele Toolkit, Guitar Master, iUke and more." />
