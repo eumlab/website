@@ -1,12 +1,95 @@
 ---
-// In-site Support / Contact Us page (route: /support/ ).
-// Reuses the imprint page's light theme for visual consistency.
+// In-site Support page (route: /support/ ).
+// Pro Metronome help center: concise usage guide, AI-assistant guide (copy link),
+// YouTube tutorials, FAQ, and contact. Reuses the imprint page's light theme.
+// NOTE: /support/ is NOT in the verify reference set (verify/render_reference.py),
+// so this page is content-owned here and not pixel-checked against legacy Django.
 import Base from '../../layouts/Base.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import { appsMenu } from '../../data/apps';
+
+const AI_GUIDE_URL = 'https://eumlab.com/pro-metronome/pro-metronome-guide.md';
+const YT_CHANNEL = 'https://www.youtube.com/@EUMLab';
+const metaDesc =
+  'Get help with Pro Metronome by EUMLab: a quick start guide, official video tutorials, ' +
+  'an FAQ, and an AI assistant guide you can paste into ChatGPT or Claude. Covers tempo, ' +
+  'time signatures, subdivisions, polyrhythms, Rhythm Trainer, Practice Mode and Stage Mode.';
+
+// 5 official tutorial videos (EUMLab channel, by drummer Brett Clur, published 2024-09-09).
+const videos = [
+  { id: '2ZIkl4mPSkQ', title: 'Basic Usage of Pro Metronome — Part 1',
+    blurb: 'Play/stop, three ways to set the tempo, the settings panel, sounds, visual beat cues, vibration & flash, and themes.' },
+  { id: '3jnHEkCEd6k', title: 'Basic Usage of Pro Metronome — Part 2',
+    blurb: 'Time signatures, accents, subdivisions, polyrhythms, the timer, landscape mode and external foot pedals.' },
+  { id: 'DFF5U-99spk', title: 'How to use Practice Mode in Pro Metronome',
+    blurb: 'Warm-up and Automator modes that gradually raise the tempo so you can build speed cleanly.' },
+  { id: '9IWHAxfCYcA', title: 'Playlist and Stage Mode on Pro Metronome',
+    blurb: 'Build setlists with a tempo per song, switch songs cleanly, use Stage Mode, and share playlists.' },
+  { id: 'cQt_bPkkGhg', title: 'How to use Rhythm Trainer in Pro Metronome',
+    blurb: 'Ghost-click muting that trains your internal sense of time, with fixed and randomized modes.' },
+];
+
+// FAQ — rendered visibly AND emitted as FAQPage JSON-LD (kept in sync from one source).
+const faqs = [
+  { q: 'Is Pro Metronome free? What platforms does it run on?',
+    a: 'Yes. Pro Metronome is free to download on iOS (App Store) and Android (Google Play).' },
+  { q: 'How do I change the tempo?',
+    a: 'Three ways: turn the tempo dial, tap the BPM number at the top to type an exact value, or use Tap Tempo to tap it out in time with the music.' },
+  { q: 'How do I open the settings?',
+    a: 'Place a finger on the left edge of the screen and drag right to slide the settings panel in.' },
+  { q: 'How do I accent or silence specific beats?',
+    a: 'Tap the beat blocks at the top of the home screen (or the Accents row in the time-signature panel) and cycle each beat through full accent, sub accent, normal, or silent.' },
+  { q: 'Can it do triplets, odd time signatures and polyrhythms?',
+    a: 'Yes. Tap the time signature to set the meter and choose a subdivision (eighths, triplets, dotted and off-beat patterns), or turn on Polyrhythm for layers like 3:2, 4:5 and 4:7.' },
+  { q: 'What is the Rhythm Trainer?',
+    a: 'It mutes some beats — "ghost clicks" — so you keep time on your own until the click returns, training your internal pulse. It offers fixed and randomized muting.' },
+  { q: 'How do I gradually speed up while practicing?',
+    a: 'Use Practice Mode. Warm-up steps through percentage-of-goal sections; Automator raises the tempo by a fixed amount every few bars up to a target.' },
+  { q: 'Can I save tempos for a live set?',
+    a: 'Yes. Playlist Mode stores a tempo and beat settings per song; Stage Mode gives big buttons with auto-switch and auto-stop for the stage.' },
+  { q: 'Can it flash or vibrate instead of playing a sound?',
+    a: 'Yes — enable haptic vibration and/or the screen flash and the front-facing camera light (availability depends on your device).' },
+  { q: 'Where can I get more help with Pro Metronome?',
+    a: 'Read the quick guide and FAQ on this page, watch the official video tutorials, paste our AI guide link into ChatGPT or Claude, or email team@eumlab.com.' },
+];
+
+const ORG = { '@type': 'Organization', name: 'EUMLab', url: 'https://eumlab.com/' };
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question', name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+const breadcrumbLd = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://eumlab.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Pro Metronome', item: 'https://eumlab.com/pro-metronome/' },
+    { '@type': 'ListItem', position: 3, name: 'Support', item: 'https://eumlab.com/support/' },
+  ],
+};
+const videoLd = videos.map((v) => ({
+  '@context': 'https://schema.org', '@type': 'VideoObject',
+  name: v.title, description: v.blurb,
+  thumbnailUrl: `https://i.ytimg.com/vi/${v.id}/maxresdefault.jpg`,
+  uploadDate: '2024-09-09',
+  embedUrl: `https://www.youtube.com/embed/${v.id}`,
+  contentUrl: `https://youtu.be/${v.id}`,
+  publisher: ORG,
+}));
+const jsonLd = [faqLd, breadcrumbLd, ...videoLd];
 ---
-<Base title="Support" bodystyle="">
+<Base
+  title="Support"
+  wholetitle="Pro Metronome Support — Tutorials, FAQ & AI Guide | EUMLab"
+  description={metaDesc}
+  jsonLd={jsonLd}
+  bodystyle="">
+  <Fragment slot="meta">
+    <meta name="description" content={metaDesc} />
+  </Fragment>
   <Fragment slot="style">
     <link href="/assets/styles/imprint.css" rel="stylesheet" />
   </Fragment>
@@ -15,14 +98,122 @@ import { appsMenu } from '../../data/apps';
 
     <div class="imprint-header support-header">
         <div class="slogan-container">
-            <h1><em>Contact</em> Us</h1>
+            <h1><em>Pro Metronome</em> Support</h1>
         </div>
     </div>
 
+    <p class="support-intro">
+      Everything you need to master Pro Metronome — a quick guide, official video
+      tutorials, an FAQ, and an AI assistant that answers your questions in detail.
+    </p>
+
+    <!-- AI assistant: copy the guide URL, paste into Claude / ChatGPT, then ask. -->
+    <section class="ai-help" aria-label="Ask AI for help">
+      <h2>Ask AI for instant, detailed help</h2>
+      <p>Copy the link below, paste it into <strong>Claude</strong> or <strong>ChatGPT</strong>,
+      and ask anything about Pro Metronome. The assistant reads our guide and walks you
+      through it step by step.</p>
+      <div class="ai-help-row">
+        <code id="ai-guide-url">{AI_GUIDE_URL}</code>
+        <button id="copy-ai-guide" type="button" aria-label="Copy the AI guide link">Copy link</button>
+      </div>
+      <p class="ai-help-hint">Try: <em>“Using this guide, how do I set up a 3:2 polyrhythm in Pro Metronome?”</em></p>
+    </section>
+
+    <!-- Concise usage guide -->
+    <article class="pm-support">
+      <h2>Quick guide</h2>
+
+      <h3>Play &amp; set the tempo</h3>
+      <ul>
+        <li>Tap the big <strong>play button</strong> in the center to start or stop.</li>
+        <li>Set the tempo three ways: turn the <strong>dial</strong>, tap the <strong>BPM number</strong> at the top to type it, or use <strong>Tap Tempo</strong>.</li>
+        <li>For odd meters (e.g. 3/8), switch <strong>Tempo Calculation</strong> to <em>quarter notes per minute</em> in Settings so the pulse feels right.</li>
+      </ul>
+      <p class="watch">▶ <a href={`https://youtu.be/2ZIkl4mPSkQ`} target="_blank" rel="noopener">Watch: Basic Usage Part 1</a></p>
+
+      <h3>Settings panel</h3>
+      <ul>
+        <li>Open it by placing a finger on the <strong>left edge</strong> and dragging right.</li>
+        <li><strong>Sound:</strong> choose a tone, set volume, toggle button-click feedback, AirPlay.</li>
+        <li><strong>Visual:</strong> beat blocks, pendulum, colored accent lights (red / yellow / green), bar counter.</li>
+        <li><strong>Vibration &amp; Flash:</strong> haptics on every pulse or accent; screen flash; front-facing camera light on beat 1 (device-dependent).</li>
+        <li><strong>Count-in bars</strong> and the BPM ↔ quarter-notes unit switch live here too.</li>
+      </ul>
+      <p class="watch">▶ <a href={`https://youtu.be/2ZIkl4mPSkQ`} target="_blank" rel="noopener">Watch: Basic Usage Part 1</a></p>
+
+      <h3>Time signatures, accents, subdivisions &amp; polyrhythms</h3>
+      <ul>
+        <li>Tap the time signature (e.g. <strong>4/4</strong>) at the top to set beats and note value.</li>
+        <li>Tap a beat to cycle its accent: <strong>full → sub accent → normal → silent</strong>.</li>
+        <li>Pick a <strong>subdivision</strong> (eighths, triplets, dotted, off-beat — two pages of options).</li>
+        <li>Flip <strong>Polyrhythm</strong> on to play two layers at once, e.g. 3:2, 4:5, 4:7, with a visual aid.</li>
+      </ul>
+      <p class="watch">▶ <a href={`https://youtu.be/3jnHEkCEd6k`} target="_blank" rel="noopener">Watch: Basic Usage Part 2</a></p>
+
+      <h3>Rhythm Trainer</h3>
+      <ul>
+        <li>Mutes some beats (“ghost clicks”) so you hold the tempo yourself until the click returns.</li>
+        <li>Enable in Settings → <strong>Rhythm Trainer</strong>; a shortcut then appears above the time signature.</li>
+        <li>Choose <strong>fixed</strong> (same spot each bar) or <strong>randomized</strong> muting; optionally hide the visuals over muted bars.</li>
+      </ul>
+      <p class="watch">▶ <a href={`https://youtu.be/cQt_bPkkGhg`} target="_blank" rel="noopener">Watch: Rhythm Trainer</a></p>
+
+      <h3>Practice Mode</h3>
+      <ul>
+        <li>Open from the <strong>bottom-middle</strong> button, tap <strong>+</strong> to create a named sequence.</li>
+        <li><strong>Warm-up:</strong> hold sections at a percentage of your goal tempo for a set number of bars, stepping up.</li>
+        <li><strong>Automator:</strong> raise the tempo by a fixed amount (e.g. +5 BPM) every few bars from a start to a target tempo.</li>
+      </ul>
+      <p class="watch">▶ <a href={`https://youtu.be/DFF5U-99spk`} target="_blank" rel="noopener">Watch: Practice Mode</a></p>
+
+      <h3>Playlist &amp; Stage Mode</h3>
+      <ul>
+        <li>Build a <strong>playlist</strong> of songs, each with its own BPM and per-beat sounds (accent / soft / none / rest).</li>
+        <li>Switch <strong>immediately</strong>, <strong>on the next bar</strong>, or <strong>auto-switch</strong> after a set number of bars (set each song's <em>Repeated bars</em> to its real length).</li>
+        <li><strong>Stage Mode</strong> shows big buttons with auto-switch and auto-stop. Share a list to a laptop, a bandmate, or Files.</li>
+      </ul>
+      <p class="watch">▶ <a href={`https://youtu.be/9IWHAxfCYcA`} target="_blank" rel="noopener">Watch: Playlist &amp; Stage Mode</a></p>
+
+      <h3>Also handy</h3>
+      <ul>
+        <li><strong>Timer</strong> (start/stop/repeat), <strong>landscape mode</strong> for bigger visuals, and external <strong>foot-pedal</strong> control.</li>
+        <li>Three <strong>themes</strong> — Legacy, Vibrant, Dark — under Profile settings (same features in each).</li>
+      </ul>
+    </article>
+
+    <!-- Video tutorials -->
+    <section class="pm-support" aria-label="Video tutorials">
+      <h2>Video tutorials</h2>
+      <p>Official walkthroughs on our <a href={YT_CHANNEL} target="_blank" rel="noopener">YouTube channel</a>:</p>
+      <ul class="video-list">
+        {videos.map((v) => (
+          <li>
+            <a href={`https://youtu.be/${v.id}`} target="_blank" rel="noopener">{v.title}</a>
+            <br /><span class="dur">{v.blurb}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- FAQ (also emitted as FAQPage structured data) -->
+    <section class="pm-support" aria-label="Frequently asked questions">
+      <h2>Frequently asked questions</h2>
+      {faqs.map((f) => (
+        <div class="faq-item">
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </div>
+      ))}
+    </section>
+
+    <!-- Contact -->
     <div class="imprint-section-container">
-        <h2>We'd love to hear from you</h2>
-        <p>Questions, feedback, or need a hand with one of our apps?<br/>
-        Drop us a line and we'll get back to you as soon as we can.</p>
+        <h2>Still need help?</h2>
+        <p>If you run into a problem using Pro Metronome, check the guide and FAQ above, or
+        watch the basic walkthroughs on our
+        <a href={YT_CHANNEL} target="_blank" rel="noopener">YouTube channel</a>.
+        Still stuck? We'd love to hear from you.</p>
 
         <h2>Email</h2>
         <p class="support-email"><a href="mailto:team@eumlab.com">team@eumlab.com</a></p>
@@ -32,13 +223,112 @@ import { appsMenu } from '../../data/apps';
     <Footer />
     <div class="clearfix"></div>
 
+  <script is:inline>
+    (function () {
+      var btn = document.getElementById('copy-ai-guide');
+      var src = document.getElementById('ai-guide-url');
+      if (!btn || !src) return;
+      function flash() {
+        var original = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(function () { btn.textContent = original; btn.classList.remove('copied'); }, 2000);
+      }
+      function legacyCopy(text) {
+        try {
+          var ta = document.createElement('textarea');
+          ta.value = text; ta.setAttribute('readonly', '');
+          ta.style.position = 'absolute'; ta.style.left = '-9999px';
+          document.body.appendChild(ta); ta.select();
+          document.execCommand('copy'); document.body.removeChild(ta); flash();
+        } catch (e) { /* user can select the link manually */ }
+      }
+      btn.addEventListener('click', function () {
+        var text = (src.textContent || '').trim();
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(flash, function () { legacyCopy(text); });
+        } else {
+          legacyCopy(text);
+        }
+      });
+    })();
+  </script>
+
   <style>
-    /* imprint-header reserves space for a graphic this page doesn't use */
+    /* imprint-header reserves space for a graphic this page doesn't use.
+       The base .slogan-container is a fixed 50px tall — shorter than the 50px-font
+       h1 — so without height:auto the title overflows and the intro overlaps it. */
     .support-header {
       height: auto;
-      padding-top: 90px;
-      padding-bottom: 10px;
+      padding-top: 80px;
+      padding-bottom: 0;
     }
+    .support-header .slogan-container {
+      height: auto;
+    }
+    .support-intro {
+      width: 760px;
+      max-width: 92%;
+      margin: 24px auto 6px;
+      text-align: center;
+      font-size: 21px;
+      font-weight: 200;
+      line-height: 1.5;
+      color: #1b1b1b;
+    }
+
+    /* AI assistant card */
+    .ai-help {
+      width: 860px;
+      max-width: 92%;
+      margin: 26px auto 0;
+      padding: 26px 30px 22px;
+      background: #ffffff;
+      border: 1px solid #e4e4e4;
+      border-radius: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    .ai-help h2 { font-size: 25px; padding: 0 0 4px; }
+    .ai-help p { font-size: 16px; line-height: 1.6; font-weight: 300; margin: 6px 0; }
+    .ai-help-row {
+      display: flex; align-items: stretch; gap: 10px;
+      margin: 16px 0 8px; flex-wrap: wrap;
+    }
+    .ai-help code#ai-guide-url {
+      flex: 1 1 420px;
+      display: flex; align-items: center;
+      padding: 12px 14px;
+      background: #f4f6f8; border: 1px solid #e4e4e4; border-radius: 8px;
+      font-family: Menlo, Consolas, "Courier New", monospace;
+      font-size: 15px; color: #1b1b1b; word-break: break-all;
+    }
+    .ai-help button {
+      flex: 0 0 auto; padding: 12px 24px;
+      background: #007eff; color: #fff; border: none; border-radius: 8px;
+      font-size: 16px; cursor: pointer; transition: background .15s ease;
+    }
+    .ai-help button:hover { background: #0a6fd6; }
+    .ai-help button.copied { background: #34a853; }
+    .ai-help-hint { font-size: 15px; color: #555; }
+    .ai-help-hint em { font-weight: 300; }
+
+    /* Concise documentation blocks */
+    .pm-support {
+      width: 860px; max-width: 92%; margin: 0 auto; text-align: left;
+    }
+    .pm-support h2 { font-size: 30px; padding: 46px 0 4px; }
+    .pm-support h3 { font-size: 20px; font-weight: 500; margin: 24px 0 2px; }
+    .pm-support p { font-size: 17px; line-height: 1.6; font-weight: 300; }
+    .pm-support ul { font-size: 17px; line-height: 1.65; font-weight: 300; padding-left: 22px; margin: 4px 0; }
+    .pm-support li { margin: 4px 0; }
+    .pm-support a { color: #007eff; }
+    .pm-support .watch { font-size: 14px; margin: 6px 0 0; }
+    .video-list { list-style: none; padding: 0; }
+    .video-list li { margin: 12px 0; font-size: 18px; }
+    .video-list .dur { color: #777; font-size: 15px; }
+    .faq-item { margin: 0 0 14px; }
+
     .support-email {
       font-size: 30px;
     }

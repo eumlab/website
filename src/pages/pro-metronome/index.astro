@@ -6,6 +6,7 @@ import Footer from '../../components/Footer.astro';
 import Reviews from '../../components/Reviews.astro';
 import { applist, appsMenu } from '../../data/apps';
 const me = applist.pm;
+const playUrl = 'https://play.google.com/store/apps/details?id=com.eumlab.android.prometronome';
 ---
 <Base
   title="Pro Metronome"
@@ -38,6 +39,7 @@ const me = applist.pm;
             <h1 id="appname">Pro Metronome</h1>
             <h2>The best metronome app. Period.</h2>
             <a href={me.storeurl} target="_blank" class="appstore-icon" title="Download Pro Metronome">Download Pro Metronome on the App Store</a>
+            <a href={playUrl} target="_blank" rel="noopener" class="googleplay-text" title="Get Pro Metronome on Google Play">Also available on Google Play Store</a>
 
         </div>
     </div>
@@ -46,7 +48,7 @@ const me = applist.pm;
 <div class="page-container">
 <div id="Intro" class="section ">
     <h1 class="slogan"><em>Pro Metronome</em> helps you master<br/>your <em>daily practice</em> and <em>stage performance</em></h1>
-    <h2 class="slogan-desc">It's redefined how over 3 million people sync to a beat<br/>with a combination of innovative design and hardcore engineering.</h2>
+    <h2 class="slogan-desc">It's redefined how over 150 million people sync to a beat<br/>with a combination of innovative design and hardcore engineering.</h2>
     <img class="daily-training" src="/assets/images/pm2/daily-training.png" height="791" width="1530" />
 </div>
 
@@ -259,8 +261,10 @@ const me = applist.pm;
     <a class="basic-ani-onlyalpha appstore-icon-bottom" href={me.storeurl} target="_blank"><img src="/assets/images/icons/512/prometronome.png" height="256" width="256" />
     <br />
     </a>
-    <p>Available for iPhone, iPad and iPod Touch<br/>
-    Requires iOS 6.1+<br/>
+    <a class="google-play-bottom" href={playUrl} target="_blank" rel="noopener" title="Get Pro Metronome on Google Play"><img src="/assets/images/google-play-badge.png" alt="Get Pro Metronome on Google Play" width="150" height="58" /></a>
+    <p>Available on the App Store for iPhone, iPad and iPod Touch (iOS 6.1+)<br/>
+    and on Google Play for Android<br/>
+   <a class="get-presskit" title="Pro Metronome Support, tutorials and FAQ" href="/support/">Need help? Visit Pro Metronome Support, tutorials &amp; FAQ</a><br/>
    <a class="get-presskit" target="_blank" title="Get Presskit" href="/pro-metronome/edu/">Need Volume Licencing? Learn more about Pro Metronome for education</a><br/>
     <a class="get-presskit" target="_blank" title="Get Presskit" href="/about/#subscribe">Get Presskit</a>
     </p>
@@ -283,5 +287,24 @@ const me = applist.pm;
         </div>
     </div>
 </div>
+
+<style>
+  /* Hero: a small text link under the App Store button, styled like the title. */
+  .pm-container .right .googleplay-text {
+    display: block;
+    padding-top: 16px;
+    height: auto;
+    color: #FFFFFF;
+    font-weight: 200;
+    font-size: 16px;
+    opacity: 0.85;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  }
+  .pm-container .right .googleplay-text:hover { opacity: 1; }
+
+  /* Bottom download: Google Play badge on its own line, sized to match. */
+  .section.download .google-play-bottom { display: block; margin: 12px auto 0; }
+  .section.download .google-play-bottom img { display: block; margin: 0 auto; width: 150px; height: auto; padding-bottom: 0; }
+</style>
 
 </Base>
