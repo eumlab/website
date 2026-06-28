@@ -8,6 +8,7 @@ const es: Strings = {
     about: 'Acerca de',
     moreProducts: 'Más productos ',
     categories: ['Para la práctica diaria', 'Para ukelelistas', 'Más apps para músicos'],
+    home: 'Inicio',
   },
   footer: {
     about: 'Acerca de',
@@ -175,18 +176,18 @@ const es: Strings = {
   },
   meta: {
     proMetronome: {
-      title: 'Pro Metronome – La mejor app de metrónomo para iPhone y iPad | EUMLab',
+      title: 'Pro Metronome – La mejor app de metrónomo iPhone & iPad | EUMLab',
       description: 'La app Pro Metronome te ayuda tanto en la práctica diaria como en el escenario, con subdivisiones, polirritmia, entrenador de ritmo, presets y mucho más.',
       keywords: 'metrónomo, gratis, Pro Metronome, tempo, ritmo, batería, polirritmias, subdivisión, acento, compás, práctica, músico, escuela de música, EUMLab, iPhone, iPad, iOS, Android',
     },
     edu: {
-      title: 'Pro Metronome para educación – Licencias por volumen para escuelas | EUMLab',
+      title: 'Pro Metronome Educación – Licencias por volumen | EUMLab',
       description: 'Licencias por volumen de Pro Metronome para educación: el guardián del tempo para la escuela de música y el aula.',
       keywords: 'metrónomo, Pro Metronome, educación, licencia por volumen, licencia, escuela de música, clase, ritmo, polirritmias, subdivisión, tempo, EUMLab, iPhone, iPad, iOS, Android',
     },
     support: {
       title: 'Soporte de Pro Metronome — Tutoriales, FAQ y guía de IA | EUMLab',
-      description: 'Obtén ayuda con Pro Metronome de EUMLab: una guía de inicio rápido, tutoriales en vídeo oficiales, una FAQ y una guía de IA que puedes pegar en ChatGPT o Claude. Cubre tempo, compases, subdivisiones, polirritmias, entrenador de ritmo, modo práctica y modo escenario.',
+      description: 'Ayuda con Pro Metronome: guía de inicio rápido, tutoriales en vídeo oficiales, FAQ y una guía de IA para ChatGPT o Claude.',
     },
   },
 };

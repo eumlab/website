@@ -8,6 +8,7 @@ const ja: Strings = {
     about: '概要',
     moreProducts: 'その他の製品 ',
     categories: ['毎日の練習に', 'ウクレレ奏者に', '音楽家向けのその他のApp'],
+    home: 'ホーム',
   },
   footer: {
     about: '概要',
@@ -20,7 +21,7 @@ const ja: Strings = {
     label: '言語を選択',
   },
   proMetronome: {
-    tagline: '最高のメトロノームApp。それだけです。',
+    tagline: '最高のメトロノームアプリ。それだけです。',
     downloadAppStore: 'App Store で Pro Metronome をダウンロード',
     downloadAppStoreTitle: 'Pro Metronome をダウンロード',
     googlePlayText: 'Google Play ストアでも入手可能',
@@ -175,12 +176,12 @@ const ja: Strings = {
   },
   meta: {
     proMetronome: {
-      title: 'Pro Metronome —— iPhone と iPad に最適なメトロノームApp | EUMLab',
-      description: 'Pro Metronome は毎日の練習からステージ本番まで支えます。分割、ポリリズム、リズムトレーナー、プリセットなどの機能を搭載。',
-      keywords: 'メトロノーム, 無料, Pro Metronome, ビート, テンポ, リズム, ドラマー, ポリリズム, 分割, アクセント, 拍子記号, 練習, 音楽家, 音楽教室, EUMLab, iPhone, iPad, iOS, Android',
+      title: 'Pro Metronome —— iPhone・iPad 向けメトロノームアプリ | EUMLab',
+      description: '定番の無料メトロノームアプリ Pro Metronome。毎日の練習からステージ本番まで、分割・ポリリズム・リズムトレーナー・プリセットなどを搭載。',
+      keywords: 'メトロノーム, メトロノームアプリ, 無料, Pro Metronome, ビート, テンポ, リズム, ドラマー, ポリリズム, 分割, アクセント, 拍子記号, 練習, 音楽家, 音楽教室, EUMLab, iPhone, iPad, iOS, Android',
     },
     edu: {
-      title: 'Pro Metronome 教育向け —— 学校向けメトロノームのボリュームライセンス | EUMLab',
+      title: 'Pro Metronome 教育向け —— 学校向けボリュームライセンス | EUMLab',
       description: 'Pro Metronome の教育向けボリュームライセンス。音楽教室や授業のためのテンポキーパー。',
       keywords: 'メトロノーム, Pro Metronome, 教育, ボリュームライセンス, ライセンス, 音楽教室, 授業, リズム, ポリリズム, 分割, テンポ, EUMLab, iPhone, iPad, iOS, Android',
     },

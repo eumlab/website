@@ -8,6 +8,7 @@ const fr: Strings = {
     about: 'À propos',
     moreProducts: 'Plus de produits ',
     categories: ['Pour la pratique quotidienne', 'Pour les ukulélistes', 'Plus d’apps pour musiciens'],
+    home: 'Accueil',
   },
   footer: {
     about: 'À propos',
@@ -175,18 +176,18 @@ const fr: Strings = {
   },
   meta: {
     proMetronome: {
-      title: 'Pro Metronome – La meilleure app de métronome pour iPhone et iPad | EUMLab',
-      description: 'L’app Pro Metronome vous accompagne dans votre pratique quotidienne comme sur scène – avec subdivisions, polyrythmie, entraîneur de rythme, presets et bien plus.',
-      keywords: 'métronome, gratuit, Pro Metronome, tempo, rythme, batteur, polyrythmie, subdivision, accent, signature rythmique, pratique, musicien, école de musique, EUMLab, iPhone, iPad, iOS, Android',
+      title: 'Pro Metronome – Appli métronome pour iPhone & iPad | EUMLab',
+      description: 'L’appli métronome Pro Metronome vous accompagne à la pratique quotidienne comme sur scène : subdivisions, polyrythmie, entraîneur de rythme, presets et plus.',
+      keywords: 'métronome, appli métronome, application métronome, gratuit, Pro Metronome, tempo, rythme, batteur, polyrythmie, subdivision, accent, signature rythmique, pratique, musicien, école de musique, EUMLab, iPhone, iPad, iOS, Android',
     },
     edu: {
-      title: 'Pro Metronome pour l’éducation – Licences en volume pour les écoles | EUMLab',
+      title: 'Pro Metronome Éducation – Licences en volume pour écoles | EUMLab',
       description: 'Licences en volume de Pro Metronome pour l’éducation – le gardien du tempo pour l’école de musique et la classe.',
       keywords: 'métronome, Pro Metronome, éducation, licence en volume, licence, école de musique, cours, rythme, polyrythmie, subdivision, tempo, EUMLab, iPhone, iPad, iOS, Android',
     },
     support: {
       title: 'Assistance Pro Metronome — Tutoriels, FAQ et guide IA | EUMLab',
-      description: 'Obtenez de l’aide pour Pro Metronome d’EUMLab : un guide de démarrage rapide, des tutoriels vidéo officiels, une FAQ et un guide IA à coller dans ChatGPT ou Claude. Couvre le tempo, les signatures rythmiques, les subdivisions, les polyrythmies, l’entraîneur de rythme, le mode entraînement et le mode scène.',
+      description: 'Aide pour Pro Metronome : guide de démarrage rapide, tutoriels vidéo officiels, FAQ et un guide IA à coller dans ChatGPT ou Claude.',
     },
   },
 };

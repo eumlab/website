@@ -1,7 +1,7 @@
 ---
 // Port of templates/base.html (desktop variant).
 import type { App } from '../data/apps';
-import { getLocale, DEFAULT_LOCALE } from '../i18n/config';
+import { getLocale, DEFAULT_LOCALE, localizedPath } from '../i18n/config';
 interface Props {
   title?: string;
   wholetitle?: string;
@@ -14,6 +14,7 @@ interface Props {
   lang?: string;
   metaKeywords?: string;
   alternates?: Record<string, string>; // locale code -> root-relative path
+  appFeatureList?: string[];           // localized featureList for the SoftwareApplication schema
   // --- SEO (additive; see AGENTS.md "SEO layer"). None of these affect rendering. ---
   description?: string;   // og/twitter + meta description (falls back to me.mdesc, then site default)
   ogImage?: string;       // social preview image (root-relative or absolute)
@@ -22,7 +23,7 @@ interface Props {
 }
 const {
   title = '', wholetitle, me = null, bodystyle = '', mobile = false, deviceClass = 'baseline',
-  lang = DEFAULT_LOCALE, metaKeywords, alternates,
+  lang = DEFAULT_LOCALE, metaKeywords, alternates, appFeatureList,
   description, ogImage, ogType, jsonLd,
 } = Astro.props;
 const loc = getLocale(lang);
@@ -58,16 +59,20 @@ const xDefaultHref = alternates && alternates[DEFAULT_LOCALE] ? toAbs(alternates
 
 // JSON-LD: a SoftwareApplication for an app's own landing page (data-driven from
 // apps.ts) + any page-supplied schema (Organization/WebSite, etc.). Gated to the
-// app's canonical route so shared sub-pages (e.g. /iuke/terms/) aren't mislabeled.
-const isAppLanding = showMe && me!.href === Astro.url.pathname;
+// app's canonical route *for the current locale* so the localized landing pages
+// (/de/pro-metronome/ …) also emit it, while shared sub-pages stay unlabeled.
+const isAppLanding = showMe && Astro.url.pathname === localizedPath(lang, me!.href);
 const appSchema = isAppLanding ? {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
+  '@id': canonicalUrl + '#app',
   name: me!.name,
-  operatingSystem: 'iOS',
+  inLanguage: loc.htmlLang,
+  // Pro Metronome ships on iOS + Android; the other apps are iOS-only.
+  operatingSystem: me!.mid === 'pm' ? 'iOS, Android' : 'iOS',
   applicationCategory: 'MultimediaApplication',
   ...(me!.mid === 'pm' ? { applicationSubCategory: 'Metronome' } : {}),
-  description: me!.mdesc || me!.desc || '',
+  description: description || me!.mdesc || me!.desc || '',
   url: canonicalUrl,
   image: ogImageAbs,
   // Store links + free offer only for shipping App Store apps (id set); the
@@ -79,11 +84,8 @@ const appSchema = isAppLanding ? {
   } : {}),
   author: { '@type': 'Organization', name: 'EUMLab', url: SITE + '/' },
   publisher: { '@type': 'Organization', name: 'Xanin Technology GmbH', url: SITE + '/' },
-  ...(me!.mid === 'pm' ? { featureList: [
-    'Subdivisions', 'Polyrhythms', 'Rhythm Trainer', 'Practice Mode', 'Stage Mode',
-    'Dynamic time signatures', '13 time-keeping sounds', 'Accents', 'Tap tempo',
-    'Visual modes (flash, beat, vibration)', 'Background play', 'AirPlay', 'Audiobus', 'Inter-App Audio',
-  ] } : {}),
+  // featureList is passed in already-localized (from the page's i18n strings).
+  ...(me!.mid === 'pm' && appFeatureList && appFeatureList.length ? { featureList: appFeatureList } : {}),
 } : null;
 const extraJsonLd = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 const allJsonLd = [appSchema, ...extraJsonLd].filter(Boolean);
@@ -168,6 +170,9 @@ const ldStr = (o: object) => JSON.stringify(o).replace(/</g, '\\u003c');
     <meta property="og:type" content={ogTypeFinal} />
     <meta property="og:site_name" content="EUMLab" />
     <meta property="og:locale" content={loc.ogLocale} />
+    {alternates && Object.keys(alternates).filter((c) => c !== lang).map((c) => (
+      <meta property="og:locale:alternate" content={getLocale(c).ogLocale} />
+    ))}
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={ogDesc} />
     <meta property="og:url" content={canonicalUrl} />

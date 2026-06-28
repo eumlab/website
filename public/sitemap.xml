@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url><loc>https://eumlab.com/</loc><lastmod>2026-06-26</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-
-  <!-- Flagship product -->
-  <url><loc>https://eumlab.com/pro-metronome/</loc><lastmod>2026-06-26</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://eumlab.com/pro-metronome/edu/</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <!-- Apps -->
   <url><loc>https://eumlab.com/instuner/</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://eumlab.com/pro-tuner/</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://eumlab.com/string-tuner/</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -24,22 +18,217 @@
   <url><loc>https://eumlab.com/ukechords/</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://eumlab.com/uketube/</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://eumlab.com/ukehero/</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <!-- DAW Remote HD support pages -->
   <url><loc>https://eumlab.com/daw-remote-hd/rtpmidi/</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://eumlab.com/daw-remote-hd/faq/</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://eumlab.com/daw-remote-hd/docs/</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://eumlab.com/daw-remote-hd/videos/</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://eumlab.com/daw-remote-hd/bonjour/</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
-
-  <!-- Company & info -->
   <url><loc>https://eumlab.com/about/</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://eumlab.com/support/</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://eumlab.com/jobs/</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://eumlab.com/smtm/</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://eumlab.com/imprint/</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://eumlab.com/iuke/privacy-policy/</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://eumlab.com/iuke/terms/</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://eumlab.com/chord-cloud/agreement/</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <!-- Pro Metronome cluster — localized (en/de/fr/es/zh/ja) with hreflang alternates -->
+  <url>
+    <loc>https://eumlab.com/pro-metronome/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/pro-metronome/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/de/pro-metronome/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/pro-metronome/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/fr/pro-metronome/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/pro-metronome/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/es/pro-metronome/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/pro-metronome/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/zh/pro-metronome/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/pro-metronome/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/ja/pro-metronome/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/pro-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/pro-metronome/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/pro-metronome/edu/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/pro-metronome/edu/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/de/pro-metronome/edu/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/pro-metronome/edu/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/fr/pro-metronome/edu/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/pro-metronome/edu/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/es/pro-metronome/edu/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/pro-metronome/edu/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/zh/pro-metronome/edu/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/pro-metronome/edu/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/ja/pro-metronome/edu/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/pro-metronome/edu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/pro-metronome/edu/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/support/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/support/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/support/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/support/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/support/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/de/support/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/support/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/support/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/support/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/support/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/fr/support/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/support/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/support/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/support/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/support/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/es/support/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/support/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/support/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/support/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/support/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/zh/support/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/support/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/support/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/support/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/support/"/>
+  </url>
+  <url>
+    <loc>https://eumlab.com/ja/support/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eumlab.com/support/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eumlab.com/de/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eumlab.com/fr/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://eumlab.com/es/support/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://eumlab.com/zh/support/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://eumlab.com/ja/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eumlab.com/support/"/>
+  </url>
 
 </urlset>

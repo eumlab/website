@@ -8,6 +8,7 @@ const en: Strings = {
     about: 'About',
     moreProducts: 'More products ',
     categories: ['For Daily Practice', 'For Ukulele Players', 'More Apps For Musicians'],
+    home: 'Home',
   },
   footer: {
     about: 'About',
@@ -186,7 +187,7 @@ const en: Strings = {
     },
     support: {
       title: 'Pro Metronome Support — Tutorials, FAQ & AI Guide | EUMLab',
-      description: 'Get help with Pro Metronome by EUMLab: a quick start guide, official video tutorials, an FAQ, and an AI assistant guide you can paste into ChatGPT or Claude. Covers tempo, time signatures, subdivisions, polyrhythms, Rhythm Trainer, Practice Mode and Stage Mode.',
+      description: 'Get help with Pro Metronome: quick-start guide, video tutorials, FAQ and an AI assistant guide for ChatGPT or Claude — tempo, polyrhythms and more.',
     },
   },
 };

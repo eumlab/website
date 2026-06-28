@@ -32,6 +32,7 @@ const featureIcons = ['feature-ts', 'feature-tone', 'feature-accent', 'feature-t
   alternates={urls}
   description={isEn ? undefined : t.meta.proMetronome.description}
   metaKeywords={isEn ? undefined : t.meta.proMetronome.keywords}
+  appFeatureList={pm.features.map((f) => f.title)}
   bodystyle=" "
   ogImage="/assets/images/pm2/daily-training.png">
   <Fragment slot="style">

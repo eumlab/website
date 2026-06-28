@@ -13,6 +13,7 @@ export interface NavStrings {
   about: string;
   moreProducts: string;          // trailing space preserved in en to match legacy
   categories: [string, string, string]; // appsMenu group titles, in order
+  home: string;                  // breadcrumb "Home" crumb (JSON-LD only)
 }
 
 export interface FooterStrings {

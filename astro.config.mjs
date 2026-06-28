@@ -4,6 +4,7 @@ import { defineConfig } from 'astro/config';
 // Django URLs exactly ( / and /pro-metronome/ ), and absolute /assets/* paths
 // keep resolving against public/.
 export default defineConfig({
+  site: 'https://eumlab.com',
   output: 'static',
   trailingSlash: 'always',
   build: {

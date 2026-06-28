@@ -162,9 +162,18 @@ five locales are served under a path prefix.
   is inert (selectors are all under `#menu-item-lang`, absent elsewhere; the head
   diff ignores `<style>`), so the other 30 pages stay byte-identical.
 - **Base/SEO:** `lang` drives `<html lang>` + `og:locale`; cluster pages emit
-  `<link rel="alternate" hreflang>` (+ `x-default`) and per-locale
-  title/description/keywords. **`verify/run.mjs` `diffHead` now allows extra
-  `alternate` links** (visually inert, like the og/twitter allowance).
+  `<link rel="alternate" hreflang>` (+ `x-default`), `og:locale:alternate`, and
+  per-locale title/description/keywords. **`verify/run.mjs` `diffHead` now allows
+  extra `alternate` links** (visually inert, like the og/twitter allowance).
+- **Multilingual SEO (data-driven, all head/JSON-LD/static — zero pixel impact):**
+  the `SoftwareApplication` JSON-LD gate in `Base.astro` matches
+  `localizedPath(lang, me.href)` so it emits on every locale (with localized
+  `description`/`featureList`, `inLanguage`, `@id`); `public/sitemap.xml` lists the
+  15 localized cluster URLs with `xhtml:link` hreflang sets; `public/llms.txt` has a
+  "Localized versions" block; localized titles/descriptions carry native query terms
+  (e.g. ja「メトロノームアプリ」, zh「节拍器App/软件」). Deferred: `aggregateRating`
+  (needs a visible on-page rating first) and the multi-`<h1>` restructure (touches
+  the pixel-verified body). Audit + plan: the i18n-seo-audit workflow output.
 - **Fidelity:** localized routes aren't in `verify/reference/` → not pixel-checked.
   English `pro-metronome`/`edu` gain the switcher (intentional body divergence on
   the already-red gate); **`headIssues` stays 0 on all 33 pages**. To extend i18n to

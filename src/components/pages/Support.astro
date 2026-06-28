@@ -6,7 +6,7 @@ import Base from '../../layouts/Base.astro';
 import Nav from '../Nav.astro';
 import Footer from '../Footer.astro';
 import { appsMenu } from '../../data/apps';
-import { getStrings, localizedPath, localeUrls, DEFAULT_LOCALE } from '../../i18n';
+import { getStrings, getLocale, localizedPath, localeUrls, DEFAULT_LOCALE } from '../../i18n';
 
 interface Props { lang?: string; }
 const { lang = DEFAULT_LOCALE } = Astro.props;
@@ -14,6 +14,7 @@ const t = getStrings(lang);
 const s = t.support;
 const urls = localeUrls('/support/');
 const metaDesc = t.meta.support.description;
+const htmlLang = getLocale(lang).htmlLang;
 
 const AI_GUIDE_URL = 'https://eumlab.com/pro-metronome/pro-metronome-guide.md';
 const YT_CHANNEL = 'https://www.youtube.com/@EUMLab';
@@ -25,6 +26,7 @@ const guideVideoIds = ['2ZIkl4mPSkQ', '2ZIkl4mPSkQ', '3jnHEkCEd6k', 'cQt_bPkkGhg
 const ORG = { '@type': 'Organization', name: 'EUMLab', url: 'https://eumlab.com/' };
 const faqLd = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
+  inLanguage: htmlLang,
   mainEntity: s.faqs.map((f) => ({
     '@type': 'Question', name: f.q,
     acceptedAnswer: { '@type': 'Answer', text: f.a },
@@ -34,13 +36,14 @@ const SITE = 'https://eumlab.com';
 const breadcrumbLd = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE + localizedPath(lang, '/') },
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: SITE + localizedPath(lang, '/') },
     { '@type': 'ListItem', position: 2, name: 'Pro Metronome', item: SITE + localizedPath(lang, '/pro-metronome/') },
     { '@type': 'ListItem', position: 3, name: t.nav.support, item: SITE + localizedPath(lang, '/support/') },
   ],
 };
 const videoLd = s.videos.map((v, i) => ({
   '@context': 'https://schema.org', '@type': 'VideoObject',
+  inLanguage: htmlLang,
   name: v.title, description: v.blurb,
   thumbnailUrl: `https://i.ytimg.com/vi/${videoIds[i]}/maxresdefault.jpg`,
   uploadDate: '2024-09-09',

@@ -8,6 +8,7 @@ const de: Strings = {
     about: 'Über uns',
     moreProducts: 'Mehr Produkte ',
     categories: ['Für das tägliche Üben', 'Für Ukulelenspieler', 'Weitere Apps für Musiker'],
+    home: 'Startseite',
   },
   footer: {
     about: 'Über uns',
@@ -176,17 +177,17 @@ const de: Strings = {
   meta: {
     proMetronome: {
       title: 'Pro Metronome – Die beste Metronom-App für iPhone & iPad | EUMLab',
-      description: 'Die Pro-Metronome-App unterstützt dich beim täglichen Üben und bei Bühnenauftritten – mit Funktionen wie Unterteilungen, Polyrhythmus, Rhythmus-Trainer, Presets und mehr.',
-      keywords: 'Metronom, kostenlos, Pro Metronome, Takt, Tempo, Rhythmus, Schlagzeuger, Polyrhythmen, Unterteilung, Akzent, üben, Musiker, Musikschule, EUMLab, iPhone, iPad, iOS, Android',
+      description: 'Die kostenlose Metronom App Pro Metronome – fürs tägliche Üben und die Bühne: Unterteilungen, Polyrhythmus, Rhythmus-Trainer, Presets und mehr.',
+      keywords: 'Metronom, Metronom App, bestes Metronom, kostenlos, Pro Metronome, Takt, Tempo, Rhythmus, Schlagzeuger, Polyrhythmen, Unterteilung, Akzent, üben, Musiker, Musikschule, EUMLab, iPhone, iPad, iOS, Android',
     },
     edu: {
-      title: 'Pro Metronome für Bildung – Metronom-Volumenlizenzen für Schulen | EUMLab',
+      title: 'Pro Metronome für Bildung – Volumenlizenzen für Schulen | EUMLab',
       description: 'Volumenlizenzen für Pro Metronome im Bildungsbereich – der Taktgeber für Musikschule und Unterricht.',
       keywords: 'Metronom, Pro Metronome, Bildung, Volumenlizenz, Lizenz, Musikschule, Unterricht, Rhythmus, Polyrhythmen, Unterteilung, Tempo, EUMLab, iPhone, iPad, iOS, Android',
     },
     support: {
       title: 'Pro Metronome Support — Tutorials, FAQ & KI-Anleitung | EUMLab',
-      description: 'Hilfe zu Pro Metronome von EUMLab: eine Kurzanleitung, offizielle Video-Tutorials, eine FAQ und eine KI-Anleitung, die du in ChatGPT oder Claude einfügen kannst. Behandelt Tempo, Taktarten, Unterteilungen, Polyrhythmen, Rhythmus-Trainer, Übungsmodus und Bühnenmodus.',
+      description: 'Hilfe zu Pro Metronome: Kurzanleitung, offizielle Video-Tutorials, FAQ und eine KI-Anleitung für ChatGPT oder Claude.',
     },
   },
 };

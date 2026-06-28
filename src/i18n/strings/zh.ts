@@ -8,6 +8,7 @@ const zh: Strings = {
     about: '关于',
     moreProducts: '更多产品 ',
     categories: ['日常练习', '尤克里里玩家', '更多音乐人 App'],
+    home: '首页',
   },
   footer: {
     about: '关于',
@@ -20,7 +21,7 @@ const zh: Strings = {
     label: '选择语言',
   },
   proMetronome: {
-    tagline: '最好的节拍器 App，没有之一。',
+    tagline: '最好的节拍器App，没有之一。',
     downloadAppStore: '在 App Store 下载 Pro Metronome',
     downloadAppStoreTitle: '下载 Pro Metronome',
     googlePlayText: '也可在 Google Play 商店获取',
@@ -175,12 +176,12 @@ const zh: Strings = {
   },
   meta: {
     proMetronome: {
-      title: 'Pro Metronome —— 适用于 iPhone 和 iPad 的最佳节拍器 App | EUMLab',
-      description: 'Pro Metronome 助你兼顾每日练习与舞台演出，功能涵盖细分音、复合节奏、节奏训练器、预设等。',
-      keywords: '节拍器, 免费, Pro Metronome, 节拍, 速度, 节奏, 鼓手, 复合节奏, 细分音, 重音, 拍号, 练习, 音乐人, 音乐学校, EUMLab, iPhone, iPad, iOS, Android',
+      title: 'Pro Metronome —— 适用于 iPhone 和 iPad 的专业节拍器App | EUMLab',
+      description: '免费节拍器App、专业节拍器软件 Pro Metronome，助你兼顾每日练习与舞台演出，支持细分音、复合节奏、节奏训练器、预设等。',
+      keywords: '节拍器, 节拍器App, 节拍器软件, 免费节拍器, 免费, Pro Metronome, 节拍, 速度, 节奏, 鼓手, 复合节奏, 细分音, 重音, 拍号, 练习, 音乐人, 音乐学校, EUMLab, iPhone, iPad, iOS, Android',
     },
     edu: {
-      title: 'Pro Metronome 教育版 —— 面向学校的节拍器批量授权 | EUMLab',
+      title: 'Pro Metronome 教育版 —— 学校节拍器批量授权 | EUMLab',
       description: 'Pro Metronome 教育批量授权，音乐学校与课堂的节拍守护者。',
       keywords: '节拍器, Pro Metronome, 教育, 批量授权, 授权, 音乐学校, 课堂, 节奏, 复合节奏, 细分音, 速度, EUMLab, iPhone, iPad, iOS, Android',
     },
