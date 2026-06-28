@@ -1,0 +1,120 @@
+---
+// Header language switcher: a nav <li> showing the current language as
+// "flag + 2-letter code", with a hover/focus dropdown of the other languages.
+// Rendered as the FIRST item of #menu-items-container so that (because the items
+// are float:right) it sits at the far right, just past "Support".
+import { LOCALES, getLocale } from '../i18n/config';
+interface Props {
+  lang: string;
+  urls: Record<string, string>; // locale code -> href for the current page
+  label?: string;
+}
+const { lang, urls, label = 'Select language' } = Astro.props;
+const current = getLocale(lang);
+const others = LOCALES.filter((l) => l.code !== lang);
+---
+<li id="menu-item-lang">
+  <div class="lang-current" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" aria-label={label}>
+    <img class="lang-flag" src={`/assets/images/flags/${current.flag}.svg`} width="20" height="13" alt="" />
+    <span class="lang-code">{current.short}</span>
+    <span class="lang-caret" aria-hidden="true"></span>
+  </div>
+  <ul class="lang-menu" role="menu">
+    {others.map((l) => (
+      <li role="none">
+        <a role="menuitem" href={urls[l.code]} lang={l.htmlLang} hreflang={l.htmlLang}>
+          <img class="lang-flag" src={`/assets/images/flags/${l.flag}.svg`} width="20" height="13" alt="" />
+          <span class="lang-name">{l.native}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</li>
+
+<style is:global>
+  /* Reuses the nav item box (#menu-items-container li: inline-block, float:right,
+     padding:10px 5px, margin:0 8px). Typography matches the nav h2 (18px / 300). */
+  #menu-item-lang { position: relative; cursor: pointer; }
+  #menu-item-lang .lang-current {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    outline: none;
+  }
+  #menu-item-lang .lang-flag {
+    display: inline-block;
+    width: 20px;
+    height: 13px;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+    vertical-align: middle;
+    flex: 0 0 auto;
+  }
+  #menu-item-lang .lang-code {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #333;
+  }
+  #menu-item-lang .lang-caret {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid currentColor;
+    color: #333;
+    opacity: 0.8;
+    transition: transform 0.15s ease;
+  }
+
+  /* Dropdown */
+  #menu-item-lang .lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin: 6px 0 0;
+    padding: 6px 0;
+    min-width: 168px;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+    z-index: 600;
+    text-align: left;
+  }
+  #menu-item-lang:hover .lang-menu,
+  #menu-item-lang:focus-within .lang-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  #menu-item-lang .lang-menu li { display: block; float: none; padding: 0; margin: 0; }
+  #menu-item-lang .lang-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 16px;
+    color: #333 !important;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  #menu-item-lang .lang-menu a:hover { background: #f4f6f8; color: #111 !important; }
+  #menu-item-lang .lang-menu .lang-name { color: #333; }
+
+  /* Glow header variant (transparent over the dark hero, e.g. /pro-metronome/):
+     keep the collapsed switcher white, matching the other nav items. The dropdown
+     panel stays white-on-dark-text for readability. */
+  #idx-header.glow #menu-item-lang .lang-code,
+  #idx-header.glow #menu-item-lang .lang-caret { color: #fff; }
+  #idx-header.glow #menu-item-lang:hover .lang-code,
+  #idx-header.glow #menu-item-lang:hover .lang-caret { color: #36fffc; }
+  #menu-item-lang:hover .lang-code { color: #666; }
+</style>

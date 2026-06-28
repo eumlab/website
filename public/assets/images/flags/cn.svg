@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" width="30" height="20">
+  <rect width="30" height="20" fill="#DE2910"/>
+  <defs>
+    <polygon id="s" fill="#FFDE00"
+      points="0,-1 0.2245,-0.309 0.9511,-0.309 0.3633,0.118 0.5878,0.809 0,0.382 -0.5878,0.809 -0.3633,0.118 -0.9511,-0.309 -0.2245,-0.309"/>
+  </defs>
+  <use href="#s" transform="translate(5,5) scale(3)"/>
+  <use href="#s" transform="translate(10,2) scale(1)"/>
+  <use href="#s" transform="translate(12,4) scale(1)"/>
+  <use href="#s" transform="translate(12,7) scale(1)"/>
+  <use href="#s" transform="translate(10,9) scale(1)"/>
+</svg>

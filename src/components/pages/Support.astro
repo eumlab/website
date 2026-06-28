@@ -1,0 +1,254 @@
+---
+// Pro Metronome support / help center — shared by /support/ and the localized
+// /<lang>/support/ routes. NOT in the verify reference set, so this page is
+// content-owned here and not pixel-checked against legacy Django.
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+import { appsMenu } from '../../data/apps';
+import { getStrings, localizedPath, localeUrls, DEFAULT_LOCALE } from '../../i18n';
+
+interface Props { lang?: string; }
+const { lang = DEFAULT_LOCALE } = Astro.props;
+const t = getStrings(lang);
+const s = t.support;
+const urls = localeUrls('/support/');
+const metaDesc = t.meta.support.description;
+
+const AI_GUIDE_URL = 'https://eumlab.com/pro-metronome/pro-metronome-guide.md';
+const YT_CHANNEL = 'https://www.youtube.com/@EUMLab';
+
+// Video ids, in the order of s.videos and of the guide "Watch:" links.
+const videoIds = ['2ZIkl4mPSkQ', '3jnHEkCEd6k', 'DFF5U-99spk', '9IWHAxfCYcA', 'cQt_bPkkGhg'];
+const guideVideoIds = ['2ZIkl4mPSkQ', '2ZIkl4mPSkQ', '3jnHEkCEd6k', 'cQt_bPkkGhg', 'DFF5U-99spk', '9IWHAxfCYcA', ''];
+
+const ORG = { '@type': 'Organization', name: 'EUMLab', url: 'https://eumlab.com/' };
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: s.faqs.map((f) => ({
+    '@type': 'Question', name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+const SITE = 'https://eumlab.com';
+const breadcrumbLd = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE + localizedPath(lang, '/') },
+    { '@type': 'ListItem', position: 2, name: 'Pro Metronome', item: SITE + localizedPath(lang, '/pro-metronome/') },
+    { '@type': 'ListItem', position: 3, name: t.nav.support, item: SITE + localizedPath(lang, '/support/') },
+  ],
+};
+const videoLd = s.videos.map((v, i) => ({
+  '@context': 'https://schema.org', '@type': 'VideoObject',
+  name: v.title, description: v.blurb,
+  thumbnailUrl: `https://i.ytimg.com/vi/${videoIds[i]}/maxresdefault.jpg`,
+  uploadDate: '2024-09-09',
+  embedUrl: `https://www.youtube.com/embed/${videoIds[i]}`,
+  contentUrl: `https://youtu.be/${videoIds[i]}`,
+  publisher: ORG,
+}));
+const jsonLd = [faqLd, breadcrumbLd, ...videoLd];
+---
+<Base
+  title="Support"
+  wholetitle={t.meta.support.title}
+  description={metaDesc}
+  lang={lang}
+  alternates={urls}
+  jsonLd={jsonLd}
+  bodystyle="">
+  <Fragment slot="meta">
+    <meta name="description" content={metaDesc} />
+  </Fragment>
+  <Fragment slot="style">
+    <link href="/assets/styles/imprint.css" rel="stylesheet" />
+  </Fragment>
+
+    <Nav products={appsMenu} addstyle="fixontop" lang={lang} langUrls={urls} />
+
+    <div class="imprint-header support-header">
+        <div class="slogan-container">
+            <h1 set:html={s.headingHtml}></h1>
+        </div>
+    </div>
+
+    <p class="support-intro">{s.intro}</p>
+
+    <!-- AI assistant: copy the guide URL, paste into Claude / ChatGPT, then ask. -->
+    <section class="ai-help" aria-label={s.aiHeading}>
+      <h2>{s.aiHeading}</h2>
+      <p set:html={s.aiBodyHtml}></p>
+      <div class="ai-help-row">
+        <code id="ai-guide-url">{AI_GUIDE_URL}</code>
+        <button id="copy-ai-guide" type="button" aria-label={s.copyLink} data-copied={s.copied}>{s.copyLink}</button>
+      </div>
+      <p class="ai-help-hint" set:html={s.aiHintHtml}></p>
+    </section>
+
+    <!-- Concise usage guide -->
+    <article class="pm-support">
+      <h2>{s.quickGuideHeading}</h2>
+      {s.guide.map((b, i) => (
+        <Fragment>
+          <h3>{b.heading}</h3>
+          <ul>
+            {b.itemsHtml.map((it) => <li set:html={it}></li>)}
+          </ul>
+          {b.watchLabel && guideVideoIds[i] && (
+            <p class="watch">▶ <a href={`https://youtu.be/${guideVideoIds[i]}`} target="_blank" rel="noopener">{b.watchLabel}</a></p>
+          )}
+        </Fragment>
+      ))}
+    </article>
+
+    <!-- Video tutorials -->
+    <section class="pm-support" aria-label={s.videosHeading}>
+      <h2>{s.videosHeading}</h2>
+      <p set:html={s.videosIntroHtml}></p>
+      <ul class="video-list">
+        {s.videos.map((v, i) => (
+          <li>
+            <a href={`https://youtu.be/${videoIds[i]}`} target="_blank" rel="noopener">{v.title}</a>
+            <br /><span class="dur">{v.blurb}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- FAQ (also emitted as FAQPage structured data) -->
+    <section class="pm-support" aria-label={s.faqHeading}>
+      <h2>{s.faqHeading}</h2>
+      {s.faqs.map((f) => (
+        <div class="faq-item">
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </div>
+      ))}
+    </section>
+
+    <!-- Contact -->
+    <div class="imprint-section-container">
+        <h2>{s.contactHeading}</h2>
+        <p set:html={s.contactBodyHtml}></p>
+
+        <h2>{s.emailHeading}</h2>
+        <p class="support-email"><a href="mailto:team@eumlab.com">team@eumlab.com</a></p>
+    </div>
+
+    <div class="divbreaker bottom-divbreaker"></div>
+    <Footer lang={lang} />
+    <div class="clearfix"></div>
+
+  <script is:inline>
+    (function () {
+      var btn = document.getElementById('copy-ai-guide');
+      var src = document.getElementById('ai-guide-url');
+      if (!btn || !src) return;
+      var copiedLabel = btn.getAttribute('data-copied') || 'Copied!';
+      function flash() {
+        var original = btn.textContent;
+        btn.textContent = copiedLabel;
+        btn.classList.add('copied');
+        setTimeout(function () { btn.textContent = original; btn.classList.remove('copied'); }, 2000);
+      }
+      function legacyCopy(text) {
+        try {
+          var ta = document.createElement('textarea');
+          ta.value = text; ta.setAttribute('readonly', '');
+          ta.style.position = 'absolute'; ta.style.left = '-9999px';
+          document.body.appendChild(ta); ta.select();
+          document.execCommand('copy'); document.body.removeChild(ta); flash();
+        } catch (e) { /* user can select the link manually */ }
+      }
+      btn.addEventListener('click', function () {
+        var text = (src.textContent || '').trim();
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(flash, function () { legacyCopy(text); });
+        } else {
+          legacyCopy(text);
+        }
+      });
+    })();
+  </script>
+
+  <style>
+    /* imprint-header reserves space for a graphic this page doesn't use.
+       The base .slogan-container is a fixed 50px tall — shorter than the 50px-font
+       h1 — so without height:auto the title overflows and the intro overlaps it. */
+    .support-header {
+      height: auto;
+      padding-top: 80px;
+      padding-bottom: 0;
+    }
+    .support-header .slogan-container {
+      height: auto;
+    }
+    .support-intro {
+      width: 760px;
+      max-width: 92%;
+      margin: 24px auto 6px;
+      text-align: center;
+      font-size: 21px;
+      font-weight: 200;
+      line-height: 1.5;
+      color: #1b1b1b;
+    }
+
+    /* AI assistant card */
+    .ai-help {
+      width: 860px;
+      max-width: 92%;
+      margin: 26px auto 0;
+      padding: 26px 30px 22px;
+      background: #ffffff;
+      border: 1px solid #e4e4e4;
+      border-radius: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    .ai-help h2 { font-size: 25px; padding: 0 0 4px; }
+    .ai-help p { font-size: 16px; line-height: 1.6; font-weight: 300; margin: 6px 0; }
+    .ai-help-row {
+      display: flex; align-items: stretch; gap: 10px;
+      margin: 16px 0 8px; flex-wrap: wrap;
+    }
+    .ai-help code#ai-guide-url {
+      flex: 1 1 420px;
+      display: flex; align-items: center;
+      padding: 12px 14px;
+      background: #f4f6f8; border: 1px solid #e4e4e4; border-radius: 8px;
+      font-family: Menlo, Consolas, "Courier New", monospace;
+      font-size: 15px; color: #1b1b1b; word-break: break-all;
+    }
+    .ai-help button {
+      flex: 0 0 auto; padding: 12px 24px;
+      background: #007eff; color: #fff; border: none; border-radius: 8px;
+      font-size: 16px; cursor: pointer; transition: background .15s ease;
+    }
+    .ai-help button:hover { background: #0a6fd6; }
+    .ai-help button.copied { background: #34a853; }
+    .ai-help-hint { font-size: 15px; color: #555; }
+    .ai-help-hint em { font-weight: 300; }
+
+    /* Concise documentation blocks */
+    .pm-support {
+      width: 860px; max-width: 92%; margin: 0 auto; text-align: left;
+    }
+    .pm-support h2 { font-size: 30px; padding: 46px 0 4px; }
+    .pm-support h3 { font-size: 20px; font-weight: 500; margin: 24px 0 2px; }
+    .pm-support p { font-size: 17px; line-height: 1.6; font-weight: 300; }
+    .pm-support ul { font-size: 17px; line-height: 1.65; font-weight: 300; padding-left: 22px; margin: 4px 0; }
+    .pm-support li { margin: 4px 0; }
+    .pm-support a { color: #007eff; }
+    .pm-support .watch { font-size: 14px; margin: 6px 0 0; }
+    .video-list { list-style: none; padding: 0; }
+    .video-list li { margin: 12px 0; font-size: 18px; }
+    .video-list .dur { color: #777; font-size: 15px; }
+    .faq-item { margin: 0 0 14px; }
+
+    .support-email {
+      font-size: 30px;
+    }
+  </style>
+</Base>

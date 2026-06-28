@@ -1,7 +1,7 @@
 ---
 // Port of templates/_reviews.html
-interface Props { reviews: string[]; }
-const { reviews } = Astro.props;
+interface Props { reviews: string[]; heading?: string; }
+const { reviews, heading = 'Check out what people are saying' } = Astro.props;
 // Mirror the legacy inline array (used by the review carousel JS).
 const reviewArray = '[\n' + reviews.map((r) => '        "' + r + '" ').join(',\n') + '\n]';
 ---
@@ -10,7 +10,7 @@ top.reviewIdx = 0;
 top.reviews = ${reviewArray};
 `}></script>
 <div class="app-reviews-container">
-    <h1>Check out what people are saying</h1>
+    <h1>{heading}</h1>
     <div class="app-reviews">
             <p id="review-content"></p>
             <div class="review-left-quo">“</div>

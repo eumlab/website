@@ -1,13 +1,19 @@
 ---
 // Port of templates/_footer2.html
+import { getStrings } from '../i18n';
+import { localizedPath } from '../i18n/config';
+interface Props { lang?: string; }
+const { lang = 'en' } = Astro.props;
+const t = getStrings(lang).footer;
+const supportHref = localizedPath(lang, '/support/');
 ---
             <div class="v2-footer">
                 <ul>
                     <!--Team      Press      Imprint      Contact      Support-->
-                    <li><a href="/about/">About</a></li>
-                    <li><a href="/imprint/">Imprint</a></li>
-                    <li><a href="mailto:support@eumlab.com?subject=Hi">Contact</a></li>
-                    <li><a href="/support/">Support</a></li>
+                    <li><a href="/about/">{t.about}</a></li>
+                    <li><a href="/imprint/">{t.imprint}</a></li>
+                    <li><a href="mailto:support@eumlab.com?subject=Hi">{t.contact}</a></li>
+                    <li><a href={supportHref}>{t.support}</a></li>
                 </ul>
                 <div class="social basic-ani">
                     <ul class="spicesocialwidget">
@@ -31,6 +37,6 @@
 
                 </div>
                 <div class="copyright">
-                    <p>Designed by EUMLab - Xanin Technology GmbH with love. <br/>All Rights Reserved.</p>
+                    <p set:html={t.copyrightHtml}></p>
                 </div>
             </div>

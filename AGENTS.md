@@ -68,7 +68,11 @@ the legacy Django code is branch **`2.0`** (the repo default).
 | Path | Purpose |
 |---|---|
 | `src/layouts/Base.astro` | head/scripts shell — port of legacy `templates/base.html` |
-| `src/components/` | `Nav`, `Footer`, `Reviews` (ports of `_nav2.html`, `_footer2.html`, `_reviews.html`) |
+| `src/components/` | `Nav`, `Footer`, `Reviews` (ports of `_nav2.html`, `_footer2.html`, `_reviews.html`), `LangSwitcher` |
+| `src/components/pages/` | shared page bodies (`ProMetronome`, `ProMetronomeEdu`, `Support`) rendered per-locale |
+| `src/i18n/` | locale config + per-locale string dictionaries (`strings/{en,de,fr,es,zh,ja}.ts`) |
+| `src/pages/[lang]/` | localized routes (Pro Metronome cluster) generated via `getStaticPaths` |
+| `public/assets/images/flags/` | inline SVG flags for the language switcher (`us,de,fr,es,cn,jp`) |
 | `src/data/apps.ts` | app catalog — ported from `original/mainweb/models.py` |
 | `src/data/seo.json` | per-app keywords/description — from `original/mainweb/sitemap.py` |
 | `src/data/press.json` | about-page press kits/coverage — from `models.py` PressItems/PressCovers |
@@ -133,6 +137,39 @@ all body pixel/geometry diffs with `headIssues=0`. The SEO layer adds **zero** n
 diffs: `headIssues=0` on all 33 pages and byte-identical pixel output vs. pre-SEO. To
 get back to green, the reference baseline needs re-snapshotting against the *intended*
 content, which is a separate decision from this SEO work.
+
+## Internationalization (i18n)
+
+A multilingual layer for the **Pro Metronome cluster** (`/pro-metronome/`,
+`/pro-metronome/edu/`, `/support/`). English is the unprefixed default; the other
+five locales are served under a path prefix.
+
+- **Locales** (order = switcher order, user-defined): `en, de, fr, es, zh, ja`.
+  Defined once in `src/i18n/config.ts` (`LOCALES`, `localizedPath`, `localeUrls`).
+- **URLs:** `/de/pro-metronome/`, `/zh/support/`, … — 15 new pages (5 × 3). No
+  existing English route changes; `/en/...` is never generated.
+- **Strings:** `src/i18n/strings/<code>.ts` each `satisfies Strings`
+  (`strings/types.ts`). **`en.ts` reproduces legacy copy verbatim** (incl. inline
+  `<em>`/`<br/>`) so the English render stays byte-identical. Rich fragments are
+  rendered with `set:html`; brand/app names are never translated.
+- **Page bodies:** `src/components/pages/*.astro` hold the markup and take a `lang`
+  prop; the English `src/pages/...` files and the `src/pages/[lang]/...` routes are
+  thin wrappers around them, so markup has one source of truth.
+- **Switcher:** `LangSwitcher.astro`, rendered as the **first** `<li>` of
+  `#menu-items-container` (items are `float:right`, so DOM-first = far right, just
+  past "Support"). Shown **only when `Nav` gets `langUrls`** → only on the cluster
+  pages. Its `<style is:global>` is inlined into every page that imports `Nav` but
+  is inert (selectors are all under `#menu-item-lang`, absent elsewhere; the head
+  diff ignores `<style>`), so the other 30 pages stay byte-identical.
+- **Base/SEO:** `lang` drives `<html lang>` + `og:locale`; cluster pages emit
+  `<link rel="alternate" hreflang>` (+ `x-default`) and per-locale
+  title/description/keywords. **`verify/run.mjs` `diffHead` now allows extra
+  `alternate` links** (visually inert, like the og/twitter allowance).
+- **Fidelity:** localized routes aren't in `verify/reference/` → not pixel-checked.
+  English `pro-metronome`/`edu` gain the switcher (intentional body divergence on
+  the already-red gate); **`headIssues` stays 0 on all 33 pages**. To extend i18n to
+  more apps later, add their strings + a `[lang]/<route>` wrapper and reuse the body
+  component pattern.
 
 ## Non-obvious gotchas (these will bite you)
 

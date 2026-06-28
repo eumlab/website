@@ -1,6 +1,7 @@
 ---
 // Port of templates/base.html (desktop variant).
 import type { App } from '../data/apps';
+import { getLocale, DEFAULT_LOCALE } from '../i18n/config';
 interface Props {
   title?: string;
   wholetitle?: string;
@@ -8,16 +9,23 @@ interface Props {
   bodystyle?: string;
   mobile?: boolean;       // iPhone variant: emit mobile-only meta + orientation script
   deviceClass?: string;   // value of top.device (device.classes); 'baseline' on desktop
+  // --- i18n. lang drives <html lang> + og:locale; metaKeywords overrides the
+  // app's English keywords on a translated page; alternates emits hreflang links. ---
+  lang?: string;
+  metaKeywords?: string;
+  alternates?: Record<string, string>; // locale code -> root-relative path
   // --- SEO (additive; see AGENTS.md "SEO layer"). None of these affect rendering. ---
-  description?: string;   // og/twitter description (falls back to me.mdesc, then site default)
+  description?: string;   // og/twitter + meta description (falls back to me.mdesc, then site default)
   ogImage?: string;       // social preview image (root-relative or absolute)
   ogType?: string;        // Open Graph type; default 'website'
   jsonLd?: object | object[]; // extra JSON-LD (e.g. Organization/WebSite on home)
 }
 const {
   title = '', wholetitle, me = null, bodystyle = '', mobile = false, deviceClass = 'baseline',
+  lang = DEFAULT_LOCALE, metaKeywords, alternates,
   description, ogImage, ogType, jsonLd,
 } = Astro.props;
+const loc = getLocale(lang);
 // Matches Django `{% if me != None and me.id != None %}` — '' is not None, so an
 // app with an empty id (e.g. pme) still renders the meta block.
 const showMe = me != null && me.id != null;
@@ -38,6 +46,15 @@ const defaultImg = showMe ? `/assets/images/icons/512/${me!.icon}` : '/assets/im
 const ogImg = ogImage ?? defaultImg;
 const ogImageAbs = ogImg.startsWith('http') ? ogImg : SITE + ogImg;
 const ogTypeFinal = ogType ?? 'website';
+
+// hreflang alternates (visually inert; head-only — verify/run.mjs allows extra
+// `alternate` links). Emitted only when a page declares its localized variants;
+// x-default points at the English (default-locale) URL.
+const toAbs = (p: string) => (p.startsWith('http') ? p : SITE + p);
+const altEntries = alternates
+  ? Object.entries(alternates).map(([code, p]) => ({ hreflang: getLocale(code).htmlLang, href: toAbs(p) }))
+  : [];
+const xDefaultHref = alternates && alternates[DEFAULT_LOCALE] ? toAbs(alternates[DEFAULT_LOCALE]) : null;
 
 // JSON-LD: a SoftwareApplication for an app's own landing page (data-driven from
 // apps.ts) + any page-supplied schema (Organization/WebSite, etc.). Gated to the
@@ -73,15 +90,15 @@ const allJsonLd = [appSchema, ...extraJsonLd].filter(Boolean);
 const ldStr = (o: object) => JSON.stringify(o).replace(/</g, '\\u003c');
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang={loc.htmlLang}>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="rating" content="general" />
 {showMe && (
   <>
-    <meta name="keywords" content={me!.kw ?? ''}>
-    <meta name="description" content={me!.mdesc ?? ''}>
+    <meta name="keywords" content={metaKeywords ?? me!.kw ?? ''}>
+    <meta name="description" content={description ?? me!.mdesc ?? ''}>
     <meta name="apple-itunes-app" content={`app-id=${me!.id}`}>
     <meta name="twitter:card" content="app">
     {me!.iphone && <meta name="twitter:app:id:iphone" content={`id${me!.id}`}>}
@@ -108,6 +125,10 @@ const ldStr = (o: object) => JSON.stringify(o).replace(/</g, '\\u003c');
 
     <link rel="index" title="EUMLab - Music APPs on iPhone iPad" href="http://eumlab.com/">
     <link rel="canonical" href={canonicalUrl}>
+    {altEntries.map((a) => (
+      <link rel="alternate" hreflang={a.hreflang} href={a.href}>
+    ))}
+    {xDefaultHref && <link rel="alternate" hreflang="x-default" href={xDefaultHref}>}
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-touch-icon-72x72.png">
@@ -146,7 +167,7 @@ const ldStr = (o: object) => JSON.stringify(o).replace(/</g, '\\u003c');
     <!-- SEO: Open Graph + Twitter (social/AI link previews). Visually inert. -->
     <meta property="og:type" content={ogTypeFinal} />
     <meta property="og:site_name" content="EUMLab" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content={loc.ogLocale} />
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={ogDesc} />
     <meta property="og:url" content={canonicalUrl} />

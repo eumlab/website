@@ -1,0 +1,10 @@
+---
+// Localized Pro Metronome landing — /de|fr|es|zh|ja/pro-metronome/.
+import ProMetronome from '../../../components/pages/ProMetronome.astro';
+import { NON_DEFAULT_LOCALES } from '../../../i18n/config';
+export function getStaticPaths() {
+  return NON_DEFAULT_LOCALES.map((l) => ({ params: { lang: l.code } }));
+}
+const { lang } = Astro.params;
+---
+<ProMetronome lang={lang} />

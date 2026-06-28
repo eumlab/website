@@ -225,7 +225,9 @@ function diffHead(a, b) {
     for (const x of ca) if (!setR.has(x) && !(allowExtra && allowExtra(x))) issues.push({ kind: key + '-extra', ref: null, cand: x });
   };
   cmp('meta', a.metas, b.metas, isSeoMeta);
-  cmp('link', a.links.map(normLink), b.links.map(normLink), null);
+  // Allow extra `alternate` (hreflang) links — visually inert i18n SEO additions,
+  // present on the localized cluster pages (see AGENTS.md "SEO layer").
+  cmp('link', a.links.map(normLink), b.links.map(normLink), (x) => x.startsWith('alternate|'));
   return issues;
 }
 
