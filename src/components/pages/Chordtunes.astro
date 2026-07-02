@@ -1,0 +1,118 @@
+---
+// Chordtunes landing page body — shared by the English route (/chordtunes/)
+// and the localized routes (/<lang>/chordtunes/). Markup is the verbatim port of
+// templates/chordtunes.html; all copy comes from src/i18n/pages/chordtunes.ts so
+// the English render stays byte-identical (it is in the verify reference set).
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+import { applist, appsMenu } from '../../data/apps';
+import { CHORDTUNES } from '../../i18n/pages/chordtunes';
+import { localeUrls, DEFAULT_LOCALE } from '../../i18n';
+
+interface Props { lang?: string; }
+const { lang = DEFAULT_LOCALE } = Astro.props;
+const isEn = lang === DEFAULT_LOCALE;
+const t = CHORDTUNES[lang] ?? CHORDTUNES[DEFAULT_LOCALE];
+const me = applist.chordtunes;
+const urls = localeUrls('/chordtunes/');
+---
+<Base
+  title="Chordtunes"
+  wholetitle={t.meta.wholetitle}
+  me={me}
+  lang={lang}
+  alternates={urls}
+  description={isEn ? undefined : t.meta.description}
+  metaKeywords={isEn ? undefined : t.meta.keywords}
+  bodystyle="darktheme ">
+  <Fragment slot="meta">
+    <meta name="apple-itunes-app" content="app-id=643809129">
+    <meta name="twitter:card" content="app">
+<meta name="twitter:app:id:iphone" content="id643809129">
+<meta name="twitter:app:id:ipad" content="id643809129">
+  </Fragment>
+
+  <Fragment slot="style">
+    <link href="/assets/styles/chordtunes.css" rel="stylesheet" />
+  </Fragment>
+
+  <Fragment slot="script">
+    <script src="/assets/scripts/chordtunes.js" is:inline></script>
+  </Fragment>
+
+<Nav products={appsMenu} lang={lang} langUrls={urls} />
+<div class="container pg-chordtunes">
+    <div class="header">
+        <div class="bg"></div>
+
+        <div class="app">
+            <div class="center">
+                <div class="pic">
+                </div>
+                <h2 class="app-title">{t.appTitle}</h2>
+                <a href="http://itunes.apple.com/app/id643809129?ls=1&mt=8" target="_blank" class="link-app-store" title={t.heroStoreTitle}>{t.appStoreLabel}</a>
+            </div>
+        </div>
+    </div>
+    <div class="section section-0">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.s0Title}</h3>
+                <p class="desc">{t.s0Desc1}</p>
+                <p class="desc">{t.s0Desc2}</p>
+                <p class="desc">{t.s0Desc3}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-1">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.s1Title}</h3>
+                <p class="desc">{t.s1Desc1}</p>
+                <p class="desc">{t.s1Desc2}</p>
+                <p class="desc">{t.s1Desc3}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-2">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.s2Title}</h3>
+                <p class="desc">{t.s2Desc1}</p>
+                <p class="desc" set:html={t.s2Desc2Html}></p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-3">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.s3Title}</h3>
+                <p class="desc">{t.s3Desc1}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-4">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.s4Title}</h3>
+                <p class="desc">{t.s4Desc1}</p>
+                <p class="desc">{t.s4Desc2}</p>
+                <p class="desc">{t.s4Desc3}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-5">
+        <div class="center">
+            <div class="pic"></div>
+            <a href="http://itunes.apple.com/app/id643809129?ls=1&mt=8" target="_blank" class="link-app-store" title={t.bottomStoreTitle}>{t.appStoreLabel}</a>
+        </div>
+    </div>
+    </div>
+    <Footer lang={lang} />
+</Base>

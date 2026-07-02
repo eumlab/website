@@ -1,0 +1,170 @@
+---
+// DAW Remote landing page body — shared by the English route (/daw-remote/)
+// and the localized routes (/<lang>/daw-remote/).
+// Markup is the verbatim port of templates/daw-remote.html; all visible copy
+// comes from src/i18n/pages/daw-remote.ts so the English render stays
+// byte-identical (it is in the verify reference set). App/brand names, the App
+// Store badge, video URLs and the hardcoded testimonials stay English.
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+import { applist, appsMenu } from '../../data/apps';
+import { DAW_REMOTE } from '../../i18n/pages/daw-remote';
+import { localeUrls, DEFAULT_LOCALE } from '../../i18n';
+
+interface Props { lang?: string; }
+const { lang = DEFAULT_LOCALE } = Astro.props;
+const isEn = lang === DEFAULT_LOCALE;
+const t = DAW_REMOTE[lang] ?? DAW_REMOTE[DEFAULT_LOCALE];
+const me = applist.daw;
+const urls = localeUrls('/daw-remote/');
+---
+<Base
+  title="DAW Remote"
+  me={me}
+  lang={lang}
+  alternates={urls}
+  wholetitle={t.meta.wholetitle}
+  description={isEn ? undefined : t.meta.description}
+  metaKeywords={isEn ? undefined : t.meta.keywords}
+  bodystyle="darktheme ">
+  <Fragment slot="style">
+    <link href="/assets/styles/daw-remote.css" rel="stylesheet" />
+  </Fragment>
+
+  <Fragment slot="script">
+    <script src="/assets/scripts/daw-remote.js" is:inline></script>
+  </Fragment>
+
+<Nav products={appsMenu} lang={lang} langUrls={urls} />
+<div class="container pg-dr">
+    <div class="header">
+        <div class="bg"></div>
+
+        <div class="app">
+            <div class="center">
+                <h2 class="app-title">{t.appTitle}</h2>
+                <a href="http://itunes.apple.com/app/id435417441?ls=1&mt=8" target="_blank" class="link-app-store" title={t.appStoreTitle}>{t.appStore}</a>
+            </div>
+        </div>
+    </div>
+    <div class="section section-0">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.whatTitle}</h3>
+                <p class="desc" set:html={t.whatDesc1Html}></p>
+                <p class="desc" set:html={t.whatDesc2Html}></p>
+                <p class="desc" set:html={t.whatDesc3Html}></p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-1">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title" set:html={t.fiveStarsTitleHtml}></h3>
+                <div class="desc">
+                    <blockquote>“ I have spent a lot of money on remotes on both APP and hardware based and this is  by far THE best !!!! ”</blockquote>
+                    <p class="from">- Mohamad Makki <span>(a 12-year ProTools user)</span></p>
+                </div>
+                <div class="desc">
+                    <blockquote>“ It has just the right number of controls to be useful during a recording session ”</blockquote>
+                    <p class="from">- Seb4242</p>
+                </div>
+                <div class="desc">
+                    <blockquote>“ It’s great to be able to remotely control logic when I’m sitting behind the kit recording myself. No more back and forth ! ”</blockquote>
+                    <p class="from">- David Wallenbaughv</p>
+                </div>
+                <div class="desc">
+                    <blockquote>“ I love the simplicity of this app. It’s a wonderful tool to have and it works great and is very easy to use. Customer service is great too. They got back to me right away when I need help with something. ”</blockquote>
+                    <p class="from">- BigPocketMusic</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-2">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.lightTitle}</h3>
+                <p class="desc">{t.lightDesc}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-3">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.wirelessTitle}</h3>
+                <p class="desc">{t.wirelessDesc}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-4">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.timelineTitle}</h3>
+                <p class="desc">{t.timelineDesc}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-5">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.recordingTitle}</h3>
+                <p class="desc">{t.recordingDesc}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-6">
+        <div class="center">
+            <div class="intro">
+                <h3 class="title">{t.featuresTitle}</h3>
+                <ul class="desc">
+                    {t.featureItemsHtml.map((item) => <li set:html={item}></li>)}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section section-7">
+        <div class="center">
+            <div class="intro">
+                <h3 class="title">{t.videosTitle}</h3>
+                <div class="videos clearfix">
+                    <div class="video">
+                        <div class="video-wrap">
+                            <iframe width="300px" height="170px" src="http://www.youtube.com/embed/cfO-Wa5hNoI?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+                            <div class="video-mask"></div>
+                        </div>
+                        <p class="desc">{t.videoLogic}</p>
+                    </div>
+                    <div class="video">
+                        <div class="video-wrap">
+                            <iframe width="300px" height="170px" src="http://www.youtube.com/embed/GCQru_DD2hE?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+                            <div class="video-mask"></div>
+                        </div>
+                        <p class="desc">{t.videoProTools}</p>
+                    </div>
+                    <div class="video">
+                        <div class="video-wrap">
+                            <iframe width="300px" height="170px" src="http://www.youtube.com/embed/_XfwxBpbXFk?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+                            <div class="video-mask"></div>
+                        </div>
+                        <p class="desc">{t.videoLive}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-8">
+        <div class="center">
+            <div class="pic"></div>
+            <a href="http://itunes.apple.com/app/id435417441?ls=1&mt=8" target="_blank" class="link-app-store" title={t.appStoreTitle}>{t.appStore}</a>
+        </div>
+    </div>
+    </div>
+    <Footer lang={lang} />
+</Base>

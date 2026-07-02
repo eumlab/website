@@ -1,0 +1,133 @@
+---
+// DAW Remote HD landing page body — shared by the English route
+// (/daw-remote-hd/) and the localized routes (/<lang>/daw-remote-hd/).
+// Markup is the verbatim port of templates/daw-remote-hd.html; all copy comes
+// from src/i18n/pages/daw-remote-hd.ts so the English render stays byte-identical.
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+import { applist, appsMenu } from '../../data/apps';
+import { localeUrls, DEFAULT_LOCALE } from '../../i18n';
+import { DAW_REMOTE_HD } from '../../i18n/pages/daw-remote-hd';
+
+interface Props { lang?: string; }
+const { lang = DEFAULT_LOCALE } = Astro.props;
+const isEn = lang === DEFAULT_LOCALE;
+const t = DAW_REMOTE_HD[lang] ?? DAW_REMOTE_HD[DEFAULT_LOCALE];
+const me = applist.dawhd;
+const urls = localeUrls('/daw-remote-hd/');
+---
+<Base
+  title="DAW Remote HD"
+  wholetitle={t.meta.wholetitle}
+  me={me}
+  lang={lang}
+  alternates={urls}
+  description={isEn ? undefined : t.meta.description}
+  metaKeywords={isEn ? undefined : t.meta.keywords}
+  bodystyle="darktheme ">
+  <Fragment slot="meta">
+    <meta name="apple-itunes-app" content="app-id=501974930">
+            <meta name="twitter:card" content="app">
+    <meta name="twitter:app:id:iphone" content="id501974930">
+    <meta name="twitter:app:id:ipad" content="id501974930">
+  </Fragment>
+
+  <Fragment slot="style">
+    <link href="/assets/styles/drh.css" rel="stylesheet" />
+  </Fragment>
+
+  <Fragment slot="script">
+    <script src="/assets/scripts/drh.js" is:inline></script>
+  </Fragment>
+
+<Nav products={appsMenu} lang={lang} langUrls={urls} />
+<div class="container pg-drh">
+    <div class="header">
+        <div class="bg"></div>
+
+        <div class="app">
+            <div class="center">
+                <h2 class="app-title">{t.appTitle}</h2>
+                <a href="http://itunes.apple.com/app/id501974930?ls=1&mt=8" target="_blank" class="link-app-store" title={t.appStoreTitle}>{t.appStore}</a>
+            </div>
+        </div>
+    </div>
+    <div class="section section-0">
+        <div class="center">
+            <div class="intro">
+                <h3 class="title">{t.studioTitle}</h3>
+                <p class="desc">{t.studioDesc}</p>
+                <p class="desc link"><a href="/daw-remote-hd/videos/">{t.seeVideoTutorials}</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-1">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.inspirationTitle}</h3>
+                <p class="desc">{t.inspirationDesc1}</p>
+                <p class="desc">{t.inspirationDesc2}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-2">
+        <div class="center">
+            <div class="intro">
+                <h3 class="title">{t.easyAccessTitle}</h3>
+                <p class="desc">{t.easyAccessDesc}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-3">
+        <div class="center">
+            <div class="daw-slide-wrap">
+                <div id="daw-slide"></div>
+                <div class="ipad-highlight"></div>
+            </div>
+            <div class="intro">
+                <h3 class="title">{t.compatibilityTitle}</h3>
+                <p class="desc">{t.compatibilityDesc}</p>
+                <p class="desc link"><a href="/daw-remote-hd/docs/">{t.seeMoreCompatibility}</a>
+            </div>
+            <div class="daw-nav tab-nav">
+                <a href="javascript:;" data-count="2" data-type="pt">ProTools</a>
+                <a href="javascript:;" data-count="3" data-type="logic">Logic</a>
+                <a href="javascript:;" data-count="3" data-type="live">Live</a>
+                <a href="javascript:;" data-count="3" data-type="cubase">Cubase|Nuendo</a>
+                <a href="javascript:;" data-count="3" data-type="fl">FL Studio</a>
+                <a href="javascript:;" data-count="3" data-type="sonar">Sonar</a>
+                <a href="javascript:;" data-count="2" data-type="s1">Studio One</a>
+                <a href="javascript:;" data-count="3" data-type="other">Others</a>
+            </div>
+        </div>
+    </div>
+    <div class="section section-4">
+        <div class="center">
+            <div id="bcs-pic" class="pic"></div>
+            <div id="bcs-intro" class="intro">
+                <h3 class="title">{t.buildTitle}</h3>
+                <p class="desc">{t.buildDesc}</p>
+                <p class="desc link"><a id="btn-play-bcs-video" href="javascript:;">{t.playVideo}</a>
+            </div>
+            <div id="bcs-video-wrap" class="bcs-video-wrap"><span class="btn-close">&times;</span></div>
+        </div>
+    </div>
+    <div class="section section-5">
+        <div class="center">
+            <div class="intro">
+                <h3 class="title">{t.mixingTitle}</h3>
+                <p class="desc">{t.mixingDesc}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-6">
+        <div class="center">
+            <div class="pic"></div>
+            <a href="http://itunes.apple.com/app/id501974930?ls=1&mt=8" target="_blank" class="link-app-store" title={t.appStoreTitle}>{t.appStore}</a>
+        </div>
+    </div>
+    </div>
+    <Footer lang={lang} />
+</Base>

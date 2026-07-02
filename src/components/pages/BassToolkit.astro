@@ -1,0 +1,231 @@
+---
+// Bass Toolkit landing page body — shared by the English route (/bass-toolkit/)
+// and the localized routes (/<lang>/bass-toolkit/).
+// Port of templates/bass-toolkit.html; all copy comes from the i18n module so the
+// English render stays byte-identical (it is in the verify reference set).
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+import { applist, appsMenu } from '../../data/apps';
+import { BASS_TOOLKIT } from '../../i18n/pages/bass-toolkit';
+import { localeUrls, DEFAULT_LOCALE } from '../../i18n';
+
+interface Props { lang?: string; }
+const { lang = DEFAULT_LOCALE } = Astro.props;
+const isEn = lang === DEFAULT_LOCALE;
+const t = BASS_TOOLKIT[lang] ?? BASS_TOOLKIT[DEFAULT_LOCALE];
+const me = applist.bt;
+const urls = localeUrls('/bass-toolkit/');
+
+// Icon classes for the "Other Cool Features" grid, in markup order.
+const featureIcons = ['feature-tone', 'feature-tap', 'feature-lefthanded', 'feature-capo', 'feature-uke', 'feature-a4', 'feature-airplay', 'feature-audiobus', 'feature-iaa'];
+---
+<Base
+  title="Bass Toolkit"
+  me={me}
+  lang={lang}
+  alternates={urls}
+  wholetitle={t.meta.wholetitle}
+  description={isEn ? undefined : t.meta.description}
+  metaKeywords={isEn ? undefined : t.meta.keywords}
+  bodystyle=" ">
+  <Fragment slot="style">
+    <link href="/assets/styles/bigvideo.css" rel="stylesheet" />
+    <link href="/assets/styles/bass-toolkit.css" rel="stylesheet" />
+  </Fragment>
+
+  <Fragment slot="script">
+    <script src="/assets/scripts/video.js" is:inline></script>
+    <script src="/assets/scripts/bigvideo.js" is:inline></script>
+    <script src="/assets/scripts/jquery.threesixty.js" is:inline></script>
+    <script src="/assets/scripts/bass-toolkit.js" is:inline></script>
+  </Fragment>
+
+<div class="firstpage-container">
+<Nav products={appsMenu} addstyle="glow" lang={lang} langUrls={urls} />
+
+
+    <div class="ut-container">
+        <div class="iphone">
+        </div>
+
+        <div class="right">
+            <h1 id="appname">{t.heroName}</h1>
+            <h2 set:html={t.heroTaglineHtml}></h2>
+            <a href={me.storeurl} target="_blank" class="appstore-icon" title={t.downloadAppStoreTitle}>{t.downloadAppStore}</a>
+
+        </div>
+    </div>
+</div>
+
+<div class="page-container">
+<div class="section intro dark-background">
+    <h1 class="slogan" set:html={t.introSloganHtml}></h1>
+    <h2 class="slogan-desc" set:html={t.introDescHtml}></h2>
+    <div class="tools-4-iphones"></div>
+</div>
+
+
+<div class="section both-way dark-background">
+    <div class="both-way-iphone"></div>
+
+    <div class="two-row-container">
+        <div id="tuner-ani-container" class="left-row">
+            <div id="tuner-ani">
+                <video autoplay loop preload width="640" height="472" poster="/assets/images/ut/tuner-poster.jpg" >
+                     <source src="/assets/videos/ukulele-toolkit-tuner.mp4" type='video/mp4' />
+                     <source src="/assets/videos/ukulele-toolkit-tuner.webm" type='video/webm' />
+                     <source src="/assets/videos/ukulele-toolkit-tuner.ogv" type='video/ogg' />
+                </video>
+            </div>
+        </div>
+        <div class="right-row">
+            <h1 class="slogan" set:html={t.tuningSloganHtml}></h1>
+            <h2 class="slogan-desc" set:html={t.tuningDescHtml}></h2>
+            <!--<a id="show-tuner-video" class="link-video" href="javascript:void(0);" title="See how tuner works">See how it works</a>-->
+        </div>
+    </div>
+</div>
+
+
+<div class="section metronome">
+    <h1 class="slogan" set:html={t.metronomeSloganHtml}></h1>
+    <h2 class="slogan-desc" set:html={t.metronomeDescHtml}></h2>
+    <a id="show-metronome-video" class="link-video" href="javascript:void(0);" title={t.metronomeLinkTitle}>{t.metronomeLink}</a>
+    <img class="metronome-iphone" src="/assets/images/bt/bt-metronome.png" height="556" width="993"/>
+</div>
+
+<div class="section scale">
+    <div class="two-row-container">
+        <div  class="left-row">
+
+        </div>
+        <div class="right-row">
+            <h1 class="slogan" set:html={t.scalesSloganHtml}></h1>
+            <h2 class="slogan-desc" set:html={t.scalesDescHtml}></h2>
+        </div>
+    </div>
+
+</div>
+
+
+
+    <div class="section chords dark-background">
+    <h1 class="slogan">{t.arpeggioSlogan}</h1>
+    <h2 class="slogan-desc" set:html={t.arpeggioDescHtml}></h2>
+    <img src="/assets/images/bt/arpeggios.png" height="492" width="785" />
+    <p set:html={t.arpeggioChordTypes}></p>
+    <div class="overlayer"></div>
+</div>
+
+
+<div class="section transposer">
+    <h1 class="slogan" set:html={t.transposerSloganHtml}></h1>
+    <h2 class="slogan-desc" set:html={t.transposerDescHtml}></h2>
+
+    <div class="two-row-container">
+        <div class="left-row">
+            <h2 class="slogan-desc" id="chords-5th-ks"></h2>
+            <div class="chords-5th-container">
+                <div id="chords-5th">
+
+                </div>
+                <div id="chords-5th-cover">
+
+                </div>
+            </div>
+        </div>
+        <div class="right-row">
+                <div id="chords-5th-iphone" class="basic-ani" >
+                    <!--<img src="/assets/images/ut/transpose-a.jpg" height="450" width="400" class="basic-ani" />-->
+                </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="section poly dark-background">
+    <div class="poly-row-container">
+        <div class="left-row progression-closeup">
+
+        </div>
+        <div class="right-row">
+            <h1 class="slogan" set:html={t.progressionSloganHtml}></h1>
+            <h2 class="slogan-desc" set:html={t.progressionDescHtml}></h2>
+            <a id="show-progressions-video" class="link-video" href="javascript:void(0);" title={t.progressionLinkTitle}>{t.progressionLink}</a>
+        </div>
+    </div>
+
+    <img class="supported-techs" src="/assets/images/drumloops/techs.png" height="167" width="656"/>
+</div>
+
+
+
+<div id="Features" class="section supported-techs">
+    <h2 class="slogan-desc">{t.featuresHeading}</h2>
+
+    <ul class="feature-container">
+        {t.features.flatMap((f, i) => [
+          <li class="feature-item">
+            <h2 class={`${featureIcons[i]} feature-icon`}>{f.title}</h2>
+            <p set:html={f.descHtml}></p>
+          </li>,
+          ' ',
+        ])}
+    </ul>
+
+    <em></em>
+</div>
+
+<!--<div class="section playlist">
+    <h1 class="slogan">All Features Are Available For<br/>
+        <em>Tenor</em>, <em>Soprano</em> and <em>Baritone</em> Ukulele</h1>
+    <h2 class="slogan-desc">You can tune your ukulele to C Tuning, D Tuning or Baritone Tuning. <br/>
+    Tuner, Scales, Chords and everything will be changed for the tuning you selected.</h2>
+    <img class="" src="/assets/images/ut/ukes.png" height="786" width="976"/>
+</div>
+
+
+<div class="section supported-techs">
+    <h1 class="slogan"><em>AirPlay</em>, <em>Bluetooth</em> and <em>AudioBus</em> Supported</h1>
+    <img class="" src="/assets/images/drumloops/techs.png" height="167" width="656"/>
+    <em></em>
+</div>
+-->
+
+<div class="divbreaker"></div>
+
+
+
+
+<div class="section download">
+    <h1 class="slogan">{t.downloadName}</h1>
+    <a class="basic-ani-onlyalpha appstore-icon-bottom" href={me.storeurl} target="_blank"><img src="/assets/images/icons/512/basstoolkit.png" height="256" width="256" />
+    <br />
+    </a>
+    <p>
+    <Fragment set:html={t.downloadAvailHtml} />
+    {me.pl && <a class="get-presskit" target="_blank" title={t.getPresskitTitle} href={me.pl}>{t.getPresskit}</a>}
+    </p>
+</div>
+
+
+
+    <div class="divbreaker bottom-divbreaker"></div>
+
+    <Footer lang={lang} />
+    <div class="clearfix"></div>
+</div>
+
+<div id="popup-wrap">
+    <div class="video-popup">
+        <h2 id="video-title" class="video-title">{t.videoPopupTitle}</h2>
+        <div id="video-container">
+
+        </div>
+    </div>
+</div>
+
+</Base>

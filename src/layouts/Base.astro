@@ -83,7 +83,7 @@ const appSchema = isAppLanding ? {
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   } : {}),
   author: { '@type': 'Organization', name: 'EUMLab', url: SITE + '/' },
-  publisher: { '@type': 'Organization', name: 'Xanin Technology GmbH', url: SITE + '/' },
+  publisher: { '@type': 'Organization', name: 'Polybeat PTE.LTD.', url: SITE + '/' },
   // featureList is passed in already-localized (from the page's i18n strings).
   ...(me!.mid === 'pm' && appFeatureList && appFeatureList.length ? { featureList: appFeatureList } : {}),
 } : null;

@@ -15,7 +15,7 @@ const ja: Strings = {
     imprint: '法的情報',
     contact: 'お問い合わせ',
     support: 'サポート',
-    copyrightHtml: 'EUMLab - Xanin Technology GmbH が心を込めて制作。<br/>無断転載を禁じます。',
+    copyrightHtml: 'EUMLab - Polybeat PTE.LTD. が心を込めて制作。<br/>無断転載を禁じます。',
   },
   switcher: {
     label: '言語を選択',

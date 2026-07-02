@@ -1,0 +1,7 @@
+---
+import Uke101 from '../../../components/pages/Uke101.astro';
+import { NON_DEFAULT_LOCALES } from '../../../i18n/config';
+export function getStaticPaths(){return NON_DEFAULT_LOCALES.map((l)=>({params:{lang:l.code}}));}
+const { lang } = Astro.params;
+---
+<Uke101 lang={lang} />

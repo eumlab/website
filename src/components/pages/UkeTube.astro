@@ -1,0 +1,55 @@
+---
+// UkeTube landing page body — shared by the English route (/uketube/) and the
+// localized routes (/<lang>/uketube/). Markup is the verbatim port of
+// templates/uketube.html; all copy comes from src/i18n/pages/uketube.ts so the
+// English render stays byte-identical.
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+import { applist, appsMenu } from '../../data/apps';
+import { localeUrls, DEFAULT_LOCALE } from '../../i18n';
+import { UKETUBE } from '../../i18n/pages/uketube';
+
+interface Props { lang?: string; }
+const { lang = DEFAULT_LOCALE } = Astro.props;
+const isEn = lang === DEFAULT_LOCALE;
+const t = UKETUBE[lang] ?? UKETUBE[DEFAULT_LOCALE];
+const me = applist.uketube;
+const urls = localeUrls('/uketube/');
+---
+<Base
+  title="UkeTube"
+  wholetitle={t.meta.wholetitle}
+  me={me}
+  lang={lang}
+  alternates={urls}
+  description={isEn ? undefined : t.meta.description}
+  metaKeywords={isEn ? undefined : t.meta.keywords}
+  bodystyle="darktheme ">
+  <Fragment slot="style">
+    <link href="/assets/styles/bigvideo.css" rel="stylesheet" />
+    <link href="/assets/styles/uketube.css" rel="stylesheet" />
+  </Fragment>
+
+  <Fragment slot="script">
+    <script src="/assets/scripts/video.js" is:inline></script>
+    <script src="/assets/scripts/bigvideo.js" is:inline></script>
+    <script src="/assets/scripts/uketube.js" is:inline></script>
+  </Fragment>
+
+<Nav products={appsMenu} addstyle="glow" lang={lang} langUrls={urls} />
+
+    <div class="uketube-container">
+        <div class="iphone">
+
+        </div>
+
+        <div class="right">
+            <h1 id="appname">UkeTube</h1>
+            <h2 set:html={t.taglineHtml}></h2>
+            <a href={me.storeurl} target="_blank" class="appstore-icon">{t.downloadAppStore}</a>
+
+        </div>
+    </div>
+
+</Base>

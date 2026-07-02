@@ -2,15 +2,16 @@
 // Port of templates/_nav2.html
 import type { App } from '../data/apps';
 import { getStrings } from '../i18n';
-import { localizedPath } from '../i18n/config';
+import { localizedPath, localeUrls } from '../i18n/config';
 import LangSwitcher from './LangSwitcher.astro';
 interface MenuGroup { title: string; items: App[]; }
 interface Props {
   products: MenuGroup[];
   addstyle?: string;
   lang?: string;
-  // When provided (only on translated pages for now), render the header language
-  // switcher and localize the Support / Pro Metronome nav links.
+  // Per-page locale URL map for the switcher. Pages with their own translation pass
+  // their variants; otherwise the switcher falls back to the localized home so it can
+  // be shown globally. Localizes the Support / Pro Metronome nav links too.
   langUrls?: Record<string, string>;
 }
 const { products, addstyle = '', lang = 'en', langUrls } = Astro.props;
@@ -18,6 +19,9 @@ const t = getStrings(lang).nav;
 const cats = t.categories;
 const supportHref = localizedPath(lang, '/support/');
 const pmHref = localizedPath(lang, '/pro-metronome/');
+// The switcher is global: shown on every page. Untranslated pages fall back to the
+// localized home page for each language.
+const switcherUrls = langUrls ?? localeUrls('/');
 ---
     <div id="menu-apps-container" class="basic-ani-onlyalpha not-shown" style="visibility: hidden">
     <div id="menu-apps" class="basic-ani">
@@ -37,7 +41,7 @@ const pmHref = localizedPath(lang, '/pro-metronome/');
     <div id="idx-header-container">
         <a href="javaScript:void(0);"><div id="menu-logo" class="menu-logo"><h1><em>EUM</em>Lab</h1></div></a>
         <ul id="menu-items-container">
-            {langUrls && <LangSwitcher lang={lang} urls={langUrls} label={getStrings(lang).switcher.label} />}
+            <LangSwitcher lang={lang} urls={switcherUrls} label={getStrings(lang).switcher.label} />
             <li id="menu-item-support"><a href={supportHref}><h2>{t.support}</h2></a></li>
             <li id="menu-item-press"><a href="/about/"><h2>{t.about}</h2></a></li>
             <li id="menu-item-products"><a href="javaScript:void(0);"><h2>{t.moreProducts}</h2><sub>{''}</sub></a></li>

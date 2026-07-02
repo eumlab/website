@@ -1,0 +1,231 @@
+---
+// iUke landing page body — shared by the English route (/iuke/) and the
+// localized routes (/<lang>/iuke/). Markup is the verbatim port of
+// templates/iuke2.html; all copy comes from the i18n module so the English
+// render stays byte-identical (iUke is in the verify reference set).
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+import { applist, appsMenu } from '../../data/apps';
+import { localeUrls, DEFAULT_LOCALE } from '../../i18n';
+import { IUKE } from '../../i18n/pages/iuke';
+
+interface Props { lang?: string; }
+const { lang = DEFAULT_LOCALE } = Astro.props;
+const isEn = lang === DEFAULT_LOCALE;
+const t = IUKE[lang] ?? IUKE[DEFAULT_LOCALE];
+const me = applist.iuke;
+const urls = localeUrls('/iuke/');
+---
+<Base
+  title="iUke - The Ultimate Ukulele Learning Experience"
+  wholetitle={t.meta.wholetitle}
+  me={me}
+  lang={lang}
+  alternates={urls}
+  description={isEn ? undefined : t.meta.description}
+  metaKeywords={isEn ? undefined : t.meta.keywords}
+  bodystyle=" ">
+  <Fragment slot="style">
+    <link href="/assets/styles/bigvideo.css" rel="stylesheet" />
+    <link href="/assets/styles/vjs.css" rel="stylesheet" />
+    <link href="/assets/styles/iuke2.css" rel="stylesheet" />
+  </Fragment>
+
+  <Fragment slot="script">
+    <script src="/assets/scripts/video.js" is:inline></script>
+    <script src="/assets/scripts/bigvideo.js" is:inline></script>
+    <script src="/assets/scripts/jquery.threesixty.js" is:inline></script>
+    <script src="/assets/scripts/iuke2.js" is:inline></script>
+  </Fragment>
+
+<div class="firstpage-container">
+  <Nav products={appsMenu} addstyle="glow" lang={lang} langUrls={urls} />
+
+  <div class="head">
+    <div class="title">
+      <h1 id="appname">iUke</h1>
+      <h2>{t.heroTagline}</h2>
+      <a href={me.storeurl} target="_blank" class="appstore-icon" >{t.downloadAppStore}</a>
+    </div>
+    <div class="iphone-frame">
+      <video id="demo" class="video-js vjs-iuke-skin" autoplay height="auto" width="auto"
+        loop preload="auto" muted
+        poster="/assets/videos/iuke/iuke-main-loop.jpg">
+       <source src="/assets/videos/iuke/iuke-main-loop.mp4" type='video/mp4' />
+       <source src="/assets/videos/iuke/iuke-main-loop.webm" type='video/webm' />
+       <source src="/assets/videos/iuke/iuke-main-loop.ogv" type='video/ogg' />
+      </video>
+      <div class="mute"><a id="mute-video" href="javascript:void(0);">&#xe003;</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="page-container">
+  <div class="section introduction">
+    <h1 id="sec_intro" class="slogan" set:html={t.introSloganHtml}></h1>
+    <h2 class="slogan-desc" set:html={t.introDescHtml}></h2>
+    <div class="container">
+      <div class="songs">
+        <img id="songlist" src="/assets/images/iuke/part1-songlist.png" width="388" height="552">
+        <img id="songdetail" src="/assets/images/iuke/part1-songdetail.png" width="388" height="597">
+      </div>
+    </div>
+  </div>
+
+  <div class="section chord">
+    <h1 class="slogan">{t.chordSlogan}</h1>
+    <div class="two-rows-container">
+      <div class="left-row ">
+        <img src="/assets/images/iuke/part2-iphonestrumming.png" height="536" width="375">
+        <h2 class="slogan-desc" set:html={t.chordLeftHtml}></h2>
+      </div>
+      <div class="right-row">
+        <img src="/assets/images/iuke/part2-iphonechord.png" height="536" width="375">
+        <h2 class="slogan-desc" set:html={t.chordRightHtml}></h2>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section solo">
+    <h1 class="slogan">{t.soloSlogan}</h1>
+    <h2 class="slogan-desc" set:html={t.soloDescHtml}></h2>
+
+    <div class="band">
+      <div class="bg">
+        <img class="left" src="/assets/images/iuke/part3-bandbassnpiano.png" height="292" width="220">
+        <img class="right" src="/assets/images/iuke/part3-banddrummernuker.png" height="316" width="250">
+      </div>
+      <div class="demo">
+        <div class="ui">
+          <img src="/assets/images/iuke/solo.jpg" class="main">
+          <img src="/assets/images/iuke/solo-side-bar.jpg" class="sidebar">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section boss">
+    <h1 class="slogan">{t.bossSlogan}</h1>
+    <h2 class="slogan-desc">{t.bossDesc}</h2>
+    <div class="three-rows-container">
+      <div class="left-row ">
+        <img src="/assets/images/iuke/part4-icontranspose.png" height="230" width="230">
+        <h2 class="slogan-desc">{t.bossTranspose}</h2>
+      </div>
+      <div class="center-row">
+        <img src="/assets/images/iuke/part4-icontempo.png" height="230" width="230">
+        <h2 class="slogan-desc">{t.bossTempo}</h2>
+      </div>
+      <div class="right-row">
+        <img src="/assets/images/iuke/part4-iconmute.png" height="230" width="230">
+        <h2 class="slogan-desc">{t.bossMute}</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="section record">
+      <div class="container">
+    <h1 class="slogan">{t.recordSlogan}</h1>
+    <h2 class="slogan-desc">{t.recordDesc}</h2>
+      </div>
+  </div>
+
+  <div class="section practice">
+    <div class="container">
+      <div class="left-image">
+          <div class="img">
+            <img id="practice_img" src="/assets/images/iuke/part6-bg1.png" width="430" height="359">
+          </div>
+      </div>
+      <div class="text">
+        <h1 class="slogan" set:html={t.practiceSloganHtml}></h1>
+        <h2 class="slogan second">{t.practiceSecond}</h2>
+        <h2 class="slogan-desc" set:html={t.practiceDescHtml}></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="section christmas">
+    <div class="container">
+      <div class="left">
+        <h1 class="slogan" set:html={t.christmasSloganHtml}></h1>
+        <h2 class="slogan-desc" set:html={t.christmasDescHtml}></h2>
+      </div>
+      <div class="right">
+        <div class="top mask"></div>
+        <ul>
+          <li>We wish you a merry christmas</li>
+          <li>Here we come a-caroling</li>
+          <li>O Come All Ye Faithful</li>
+          <li>Deck The Hall</li>
+          <li>God Rest Ye Merry Gentle Man</li>
+          <li>Jingle Bell</li>
+          <li>O Christmas tree</li>
+          <li>Auld lang syne</li>
+          <li>Deck the hall</li>
+          <li>Jolly old St Nicholas</li>
+          <li>What Child is This</li>
+        </ul>
+        <div class="bottom mask"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section features">
+    <h2 class="slogan">{t.featuresHeading}</h2>
+    <ul class="feature-container">
+      {t.features.flatMap((f, i) => [
+        <li class="feature-item">
+          <h2 class={`feature-${['mixer','pattern','loop','levels','ticket','lefthanded','tuner','share','universal'][i]} feature-icon`}>{f.title}</h2>
+          <p class="detail" set:html={f.descHtml}></p>
+        </li>,
+        ' ',
+      ])}
+    </ul>
+  </div>
+
+  <div class="divbreaker"></div>
+
+  <div class="section review">
+    <!-- <script type="application/javascript">
+top.reviewIdx = 0;
+top.reviews = [
+
+];
+</script>
+<div class="app-reviews-container">
+    <h1>Check out what people are saying</h1>
+    <div class="app-reviews">
+            <p id="review-content"></p>
+            <div class="review-left-quo">“</div>
+            <div class="review-right-quo">”</div>
+        <ul class="nondisplay">
+
+        </ul>
+    </div>
+    <div class="review-change-progressbar-bg">
+        <div id="review-change-progressbar"></div>
+    </div>
+</div>
+ -->
+  </div>
+
+  <div class="section download">
+    <h1 class="slogan">iUke</h1>
+    <a class="basic-ani-onlyalpha appstore-icon-bottom" href={me.storeurl} target="_blank"><img src="/assets/images/icons/512/iuke.png" height="256" width="256" ><br></a>
+    <p><Fragment set:html={t.downloadAvailHtml} /><a class="get-presskit" target="_blank" title={t.getPresskitTitle} href="/about/#subscribe">{t.getPresskit}</a>
+
+    </p>
+  </div>
+
+
+
+    <div class="divbreaker bottom-divbreaker"></div>
+
+    <Footer lang={lang} />
+    <div class="clearfix"></div>
+</div>
+
+</Base>

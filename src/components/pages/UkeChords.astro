@@ -1,0 +1,80 @@
+---
+// UkeChords landing page body — shared by the English route (/ukechords/)
+// and the localized routes (/<lang>/ukechords/).
+// Markup is the verbatim port of templates/ukechords.html; visible copy comes
+// from src/i18n/pages/ukechords.ts so the English render stays byte-identical.
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+import { applist, appsMenu } from '../../data/apps';
+import { localeUrls, DEFAULT_LOCALE } from '../../i18n';
+import { UKECHORDS } from '../../i18n/pages/ukechords';
+
+interface Props { lang?: string; }
+const { lang = DEFAULT_LOCALE } = Astro.props;
+const isEn = lang === DEFAULT_LOCALE;
+const t = UKECHORDS[lang] ?? UKECHORDS[DEFAULT_LOCALE];
+const me = applist.ukechords;
+const urls = localeUrls('/ukechords/');
+---
+<Base
+  title="UkeChords"
+  wholetitle={t.meta.wholetitle}
+  me={me}
+  lang={lang}
+  alternates={urls}
+  description={isEn ? undefined : t.meta.description}
+  metaKeywords={isEn ? undefined : t.meta.keywords}
+  bodystyle="darktheme ">
+  <Fragment slot="style">
+    <link href="/assets/styles/ukechords.css" rel="stylesheet" />
+  </Fragment>
+
+  <Fragment slot="script">
+    <script src="/assets/scripts/ukechords.js" is:inline></script>
+  </Fragment>
+
+<Nav products={appsMenu} addstyle="glow" lang={lang} langUrls={urls} />
+
+    <div class="ukechords-container">
+        <div class="iphone">
+            <div class="cd-product-wrapper">
+                <div id="showpic2" class="cd-single-point">
+                    <a class="cd-img-replace" href="javascript:void(0);"></a>
+                </div>
+
+                <div id="back" class="cd-single-point">
+                    <a class="cd-img-replace" href="javascript:void(0);"></a>
+                </div>
+
+
+
+                <div id="cc" class="cd-single-point pall">
+                    <a class="cd-img-replace" fdata="uc_c"  href="javascript:void(0);"></a>
+                </div>
+
+                <div id="cg" class="cd-single-point pall">
+                    <a class="cd-img-replace" fdata="uc_g"  href="javascript:void(0);"></a>
+                </div>
+
+                <div id="cf"  class="cd-single-point pall">
+                    <a class="cd-img-replace" fdata="uc_f" href="javascript:void(0);"></a>
+                </div>
+
+                <div id="cam" class="cd-single-point pall">
+                    <a class="cd-img-replace" fdata="uc_am" href="javascript:void(0);"></a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="right">
+            <h1 id="appname">UkeChords</h1>
+            <h2 set:html={t.taglineHtml}></h2>
+            <a href={me.storeurl} target="_blank" class="appstore-icon">{t.downloadAppStore}</a>
+
+        </div>
+    </div>
+
+</Base>

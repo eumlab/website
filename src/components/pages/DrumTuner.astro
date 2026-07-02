@@ -1,0 +1,52 @@
+---
+// Drum Tuner landing page body — shared by the English route (/drum-tuner/)
+// and the localized routes (/<lang>/drum-tuner/).
+// Markup is the verbatim port of templates/drum-tuner.html; all copy comes from
+// the i18n module so the English render stays byte-identical.
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+import { appsMenu } from '../../data/apps';
+import { localeUrls, DEFAULT_LOCALE } from '../../i18n';
+import { DRUM_TUNER } from '../../i18n/pages/drum-tuner';
+
+interface Props { lang?: string; }
+const { lang = DEFAULT_LOCALE } = Astro.props;
+const isEn = lang === DEFAULT_LOCALE;
+const t = DRUM_TUNER[lang] ?? DRUM_TUNER[DEFAULT_LOCALE];
+const urls = localeUrls('/drum-tuner/');
+---
+<Base
+  title="Drum Tuner"
+  wholetitle={t.meta.wholetitle}
+  lang={lang}
+  alternates={urls}
+  description={isEn ? undefined : t.meta.description}
+  metaKeywords={isEn ? undefined : t.meta.keywords}
+  bodystyle="darktheme ">
+  <Fragment slot="meta">
+    <meta name="apple-itunes-app" content="app-id=834487922">
+  </Fragment>
+
+  <Fragment slot="style">
+    <link href="/assets/styles/drum-tuner.css" rel="stylesheet" />
+  </Fragment>
+
+  <Fragment slot="script">
+    <script src="/assets/scripts/jquery.threesixty.js" is:inline></script>
+    <script src="/assets/scripts/guitar-toolkit.js" is:inline></script>
+  </Fragment>
+
+<Nav products={appsMenu} lang={lang} langUrls={urls} />
+<div class="container pg-drumtuner">
+<div class="section section-3">
+        <div class="center">
+            <div class="intro">
+                <h3 class="title">{t.comingSoon}</h3>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <Footer lang={lang} />
+</Base>

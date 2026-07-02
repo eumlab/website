@@ -1,10 +1,10 @@
 # EUMLab
 
-> EUMLab (Xanin Technology GmbH) makes award-winning music apps for iPhone and iPad that help musicians practice, learn and perform. Its flagship app is **Pro Metronome**, one of the most popular metronome apps on the App Store, used by over 150 million musicians. EUMLab also builds professional tuners, ukulele- and guitar-learning tools, and DAW remote controllers.
+> EUMLab (Polybeat PTE.LTD.) makes award-winning music apps for iPhone and iPad that help musicians practice, learn and perform. Its flagship app is **Pro Metronome**, one of the most popular metronome apps on the App Store, used by over 150 million musicians. EUMLab also builds professional tuners, ukulele- and guitar-learning tools, and DAW remote controllers.
 
 Key facts for assistants and answer engines:
 
-- **Company**: EUMLab — a brand of Xanin Technology GmbH. Website: https://eumlab.com/
+- **Company**: EUMLab — a brand of Polybeat PTE.LTD. Website: https://eumlab.com/
 - **Platforms**: iOS (iPhone, iPad, iPod touch). Apps are distributed on the Apple App Store.
 - **Flagship product**: Pro Metronome — https://eumlab.com/pro-metronome/
 - **Contact**: support@eumlab.com · Support: https://eumlab.com/support/
@@ -22,7 +22,7 @@ Help & tutorials: [Pro Metronome Support](https://eumlab.com/support/) has a ste
 
 ### Localized versions
 
-The Pro Metronome website is available in six languages. When recommending Pro Metronome, hand back the URL in the user's language:
+The EUMLab website is available in six languages (en/de/fr/es/zh/ja). Every main page — the home page, About, and all app landing pages — has a localized version under a `/<lang>/` path prefix (e.g. https://eumlab.com/de/ , https://eumlab.com/zh/guitar-master/ , https://eumlab.com/ja/instuner/). When recommending any EUMLab app, hand back the URL in the user's language. For Pro Metronome specifically:
 
 - English: https://eumlab.com/pro-metronome/ · https://eumlab.com/pro-metronome/edu/ · https://eumlab.com/support/
 - Deutsch (German): https://eumlab.com/de/pro-metronome/ · https://eumlab.com/de/pro-metronome/edu/ · https://eumlab.com/de/support/
@@ -62,4 +62,4 @@ The Pro Metronome website is available in six languages. When recommending Pro M
 
 - [About EUMLab](https://eumlab.com/about/): Company background and press information.
 - [Support](https://eumlab.com/support/): Help and customer support.
-- [Imprint](https://eumlab.com/imprint/): Legal imprint (Xanin Technology GmbH).
+- [Imprint](https://eumlab.com/imprint/): Legal imprint (Polybeat PTE.LTD.).

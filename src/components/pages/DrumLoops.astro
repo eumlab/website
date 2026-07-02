@@ -1,0 +1,119 @@
+---
+// Drum Loops landing page body — shared by the English route (/drum-loops/)
+// and the localized routes (/<lang>/drum-loops/). Markup is the verbatim port of
+// templates/drumloops.html; all copy comes from the i18n module so the English
+// render stays byte-identical. App/brand names stay in their original language.
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+import { applist, appsMenu } from '../../data/apps';
+import { DRUM_LOOPS } from '../../i18n/pages/drum-loops';
+import { localeUrls, DEFAULT_LOCALE } from '../../i18n';
+
+interface Props { lang?: string; }
+const { lang = DEFAULT_LOCALE } = Astro.props;
+const isEn = lang === DEFAULT_LOCALE;
+const t = DRUM_LOOPS[lang] ?? DRUM_LOOPS[DEFAULT_LOCALE];
+const me = applist.dl;
+const urls = localeUrls('/drum-loops/');
+---
+<Base
+  title="Drum Loops"
+  me={me}
+  lang={lang}
+  alternates={urls}
+  wholetitle={t.meta.wholetitle}
+  description={isEn ? undefined : t.meta.description}
+  metaKeywords={isEn ? undefined : t.meta.keywords}
+  bodystyle=" ">
+  <Fragment slot="style">
+    <link href="/assets/styles/bigvideo.css" rel="stylesheet" />
+    <link href="/assets/styles/drumloops.css" rel="stylesheet" />
+  </Fragment>
+
+  <Fragment slot="script">
+    <script src="/assets/scripts/video.js" is:inline></script>
+    <script src="/assets/scripts/bigvideo.js" is:inline></script>
+    <script src="/assets/scripts/drumloops.js" is:inline></script>
+  </Fragment>
+
+<div class="firstpage-container">
+<Nav products={appsMenu} addstyle="glow" lang={lang} langUrls={urls} />
+
+
+    <div class="drumloops-container">
+        <div class="iphone">
+
+        </div>
+
+        <div class="right">
+            <h1 id="appname">Drum Loops</h1>
+            <h2>{t.tagline}</h2>
+            <a href={me.storeurl} target="_blank" class="appstore-icon">{t.downloadAppStore}</a>
+
+        </div>
+    </div>
+</div>
+
+<div class="page-container">
+<div class="section ">
+    <h1 class="slogan" set:html={t.sloganHtml}></h1>
+    <h2 class="slogan-desc" set:html={t.sloganDescHtml}></h2>
+    <img class="loops-style" src="/assets/images/drumloops/styles.png" height="356" width="1082" />
+</div>
+
+
+<div class="section change-tempo dark-background">
+    <div class="change-tempo-ipad"></div>
+    <h1 class="slogan" set:html={t.changeTempoSloganHtml}></h1>
+    <h2 class="slogan-desc" set:html={t.changeTempoDescHtml}></h2>
+</div>
+
+<div class="section">
+    <h1 class="slogan demo-tracks">{t.listenSlogan}</h1>
+    <h2 class="slogan-desc" set:html={t.listenDescHtml}></h2>
+<iframe class="soundcloud" width="100%" height="540" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/48310123&amp;color=448dd7&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>
+</div>
+
+
+<div id="Features" class="section supported-techs">
+    <h2 class="slogan-desc">{t.featuresHeading}</h2>
+
+    <ul class="feature-container">
+
+        <li class="feature-item">
+            <h2 class="feature-airplay feature-icon">AirPlay</h2>
+            <p>{t.airplayDesc}</p>
+        </li>
+        <li class="feature-item">
+            <h2 class="feature-audiobus feature-icon">AudioBus</h2>
+            <p>{t.audiobusDesc}</p>
+        </li>
+        <li class="feature-item">
+            <h2 class="feature-iaa feature-icon">Inter-App audio</h2>
+            <p>{t.iaaDesc}</p>
+        </li>
+    </ul>
+
+</div>
+
+
+
+
+<div class="section download">
+    <h1 class="slogan">{me.name}</h1>
+    <a class="basic-ani-onlyalpha appstore-icon-bottom" href={me.storeurl} target="_blank"><img src="/assets/images/icons/512/drumloops.png" height="256" width="256" />
+    <br />
+    </a>
+    <p><Fragment set:html={t.downloadAvailHtml} />{me.pl && <a class="get-presskit" target="_blank" title={t.getPresskitTitle} href={me.pl}>{t.getPresskit}</a>}
+    </p>
+
+</div>
+
+
+    <div class="divbreaker bottom-divbreaker"></div>
+
+    <Footer lang={lang} />
+    <div class="clearfix"></div>
+</div>
+</Base>

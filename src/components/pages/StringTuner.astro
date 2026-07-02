@@ -1,0 +1,127 @@
+---
+// String Tuner landing page body — shared by the English route (/string-tuner/)
+// and the localized routes (/<lang>/string-tuner/). Markup is the verbatim port of
+// templates/string-tuner.html; all copy comes from src/i18n/pages/string-tuner.ts
+// so the English render stays byte-identical (it is in the verify reference set).
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+import { applist, appsMenu } from '../../data/apps';
+import { STRING_TUNER } from '../../i18n/pages/string-tuner';
+import { localeUrls, DEFAULT_LOCALE } from '../../i18n';
+
+interface Props { lang?: string; }
+const { lang = DEFAULT_LOCALE } = Astro.props;
+const isEn = lang === DEFAULT_LOCALE;
+const t = STRING_TUNER[lang] ?? STRING_TUNER[DEFAULT_LOCALE];
+const me = applist.st;
+const urls = localeUrls('/string-tuner/');
+---
+<Base
+  title="String Tuner"
+  me={me}
+  lang={lang}
+  alternates={urls}
+  wholetitle={t.meta.wholetitle}
+  description={isEn ? undefined : t.meta.description}
+  metaKeywords={isEn ? undefined : t.meta.keywords}
+  bodystyle="darktheme ">
+  <Fragment slot="meta">
+    <meta name="apple-itunes-app" content="app-id=501971515">
+  </Fragment>
+
+  <Fragment slot="style">
+    <link href="/assets/styles/string-tuner.css" rel="stylesheet" />
+  </Fragment>
+
+  <Fragment slot="script">
+    <script src="/assets/scripts/string-tuner.js" is:inline></script>
+  </Fragment>
+
+<Nav products={appsMenu} addstyle="glow" lang={lang} langUrls={urls} />
+<div class="container pg-string-tuner">
+    <div class="header">
+        <div class="bg"></div>
+        <div class="app">
+            <div class="center">
+                <h2 class="app-title">{t.appTitle}</h2>
+                <a href="http://itunes.apple.com/app/id501971515?ls=1&mt=8" target="_blank" class="link-app-store" title={t.appStoreTitle}>{t.appStoreLabel}</a>
+                <div class="pic"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-0">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.whatIsTitle}</h3>
+                <p class="desc" set:html={t.whatIsDesc1Html}></p>
+                <p class="desc" set:html={t.whatIsDesc2Html}></p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-1">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.accurateTitle}</h3>
+                <p class="desc" set:html={t.accurateDescHtml}></p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-2">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.professionalTitle}</h3>
+                <p class="desc" set:html={t.professionalDesc1Html}></p>
+                <p class="desc">{t.professionalDesc2}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-3">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.universalTitle}</h3>
+                <p class="desc">{t.universalDesc}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-4">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.learningTitle}</h3>
+                <p class="desc">{t.learningDesc}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-5">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.toneGenTitle}</h3>
+                <p class="desc">{t.toneGenDesc}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-6">
+        <div class="center">
+            <div class="intro">
+                <h3 class="title">{t.featuresTitle}</h3>
+                <ul class="desc">
+                    {t.features.map((f) => (<li set:html={f}></li>))}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section section-7">
+        <div class="center">
+            <div class="pic"></div>
+            <a href="http://itunes.apple.com/app/id501971515?ls=1&mt=8" target="_blank" class="link-app-store" title={t.appStoreTitle}>{t.appStoreLabel}</a>
+        </div>
+    </div>
+
+</div><Footer lang={lang} />
+</Base>

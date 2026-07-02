@@ -15,7 +15,7 @@ const zh: Strings = {
     imprint: '法律声明',
     contact: '联系我们',
     support: '支持',
-    copyrightHtml: 'EUMLab - Xanin Technology GmbH 用心打造。<br/>保留所有权利。',
+    copyrightHtml: 'EUMLab - Polybeat PTE.LTD. 用心打造。<br/>保留所有权利。',
   },
   switcher: {
     label: '选择语言',

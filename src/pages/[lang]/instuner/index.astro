@@ -1,0 +1,10 @@
+---
+// Localized insTuner landing — /de|fr|es|zh|ja/instuner/.
+import Instuner from '../../../components/pages/Instuner.astro';
+import { NON_DEFAULT_LOCALES } from '../../../i18n/config';
+export function getStaticPaths() {
+  return NON_DEFAULT_LOCALES.map((l) => ({ params: { lang: l.code } }));
+}
+const { lang } = Astro.params;
+---
+<Instuner lang={lang} />

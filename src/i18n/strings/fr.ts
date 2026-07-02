@@ -15,7 +15,7 @@ const fr: Strings = {
     imprint: 'Mentions légales',
     contact: 'Contact',
     support: 'Assistance',
-    copyrightHtml: 'Conçu avec amour par EUMLab - Xanin Technology GmbH. <br/>Tous droits réservés.',
+    copyrightHtml: 'Conçu avec amour par EUMLab - Polybeat PTE.LTD. <br/>Tous droits réservés.',
   },
   switcher: {
     label: 'Choisir la langue',

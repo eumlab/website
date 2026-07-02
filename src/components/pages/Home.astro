@@ -1,0 +1,116 @@
+---
+// Home page body — shared by / (English) and /<lang>/ (localized).
+// Port of templates/home2.html; copy from src/i18n/pages/home.ts so the English
+// render stays byte-identical (home is in the verify reference set). App names and
+// the testimonial quote stay in their original language.
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+import { indexApps, appsMenu } from '../../data/apps';
+import { HOME } from '../../i18n/pages/home';
+import { localeUrls, DEFAULT_LOCALE } from '../../i18n';
+
+interface Props { lang?: string; }
+const { lang = DEFAULT_LOCALE } = Astro.props;
+const h = HOME[lang] ?? HOME[DEFAULT_LOCALE];
+const appList = indexApps;
+const urls = localeUrls('/');
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'EUMLab',
+  legalName: 'Polybeat PTE.LTD.',
+  url: 'https://eumlab.com/',
+  logo: 'https://eumlab.com/assets/images/logo-home.png',
+  email: 'support@eumlab.com',
+  description: 'EUMLab makes award-winning music apps for iPhone and iPad, including the flagship Pro Metronome, to help musicians practice, learn and perform.',
+  sameAs: [
+    'https://www.facebook.com/eumlab',
+    'https://twitter.com/eumlab',
+    'https://www.youtube.com/eumlab',
+    'https://vimeo.com/eumlab',
+  ],
+};
+const siteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'EUMLab',
+  url: 'https://eumlab.com/',
+  publisher: { '@type': 'Organization', name: 'EUMLab' },
+};
+---
+<Base
+  wholetitle={h.meta.wholetitle}
+  lang={lang}
+  alternates={urls}
+  description={h.meta.description}
+  jsonLd={[orgSchema, siteSchema]}>
+  <Fragment slot="meta">
+    <meta name="keywords" content={h.meta.keywords} />
+    <meta name="description" content={h.meta.description} />
+  </Fragment>
+
+  <Fragment slot="style">
+    <link href="/assets/styles/jquery.fullPage.css" rel="stylesheet" />
+    <link href="/assets/styles/home2.css" rel="stylesheet" />
+  </Fragment>
+
+  <Fragment slot="script">
+    <script src="/assets/scripts/jquery.easings.min.js" is:inline></script>
+    <script src="/assets/scripts/jquery.fullPage.min.js" is:inline></script>
+    <script src="/assets/scripts/home2.js" is:inline></script>
+  </Fragment>
+
+    <Nav products={appsMenu} lang={lang} langUrls={urls} />
+
+  <div id="fullpage" class="main">
+    <div id="sec-intro" data-anchor="intro"class="main-section-intro section" >
+                <div id="main-iphone" class="basic-ani"> </div>
+        <div id="main-ipad" class="basic-ani"></div>
+        <div id="main-imac"></div>
+        <div id="main-over-layer"> </div>
+        <div id="main-container">
+            <div class="clearfix"></div>
+            <div id="main-logo-container">
+                <img class="main-logo" src="/assets/images/main/logo-main.png" />
+                <img class="main-logo-hl logo-ani" src="/assets/images/main/logo-main-hl.png" />
+            </div>
+            <h1 class="main-slogan" set:html={h.mainSloganHtml}></h1>
+            <ul id="main-icon-container">
+                {appList.flatMap((appitem) => [
+                  <li class="icon-item"><a href={appitem.href}><img class="icon120" height="120" width="120" src={`/assets/images/icons/120/${appitem.icon}`}/><br><h2 class="icon-title">{appitem.name}</h2></a></li>,
+                  ' ',
+                ])}
+            </ul>
+        </div>
+    </div><!-- End Main -->
+
+
+    <div id="sec-figure"  data-anchor="figure" class="main-section-figure section">
+
+        <div class="figure-text-container">
+               <h2 set:html={h.figureH2Html}></h2>
+               <h3 set:html={h.figureH3Html}></h3>
+            <div class="figure-reviews">
+
+                <p id="quo-content">I've been using this app for as long as I can remember. It's an amazing app
+and definitely the best Metronome app I've found so far!!</p>
+                <div class="figure-left-quo">“</div>
+                <div class="figure-right-quo">”</div>
+            </div>
+
+            <div class="press-footer">
+                <Footer lang={lang} />
+            </div>
+
+        </div>
+
+    </div><!-- End Figure -->
+  </div>
+
+<div id="pre-loader" style="position: fixed;height: 100%;width: 100%;top:0;left:0;bottom: 0;right: 0;z-index: 999;text-align: center;background: #000 no-repeat center url('/assets/images/main/logo-main-hl.png');">
+    <p style="font-size: 24px;color: #00ffff; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;position: absolute;top:50%;left: 0;right: 0;padding-top: 90px;">{h.loading}</p>
+</div>
+
+</Base>

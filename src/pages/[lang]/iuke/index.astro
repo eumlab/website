@@ -1,0 +1,9 @@
+---
+import Iuke from '../../../components/pages/Iuke.astro';
+import { NON_DEFAULT_LOCALES } from '../../../i18n/config';
+export function getStaticPaths() {
+  return NON_DEFAULT_LOCALES.map((l) => ({ params: { lang: l.code } }));
+}
+const { lang } = Astro.params;
+---
+<Iuke lang={lang} />

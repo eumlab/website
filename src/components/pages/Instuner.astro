@@ -1,0 +1,166 @@
+---
+// insTuner landing page body — shared by the English route (/instuner/) and the
+// localized routes (/<lang>/instuner/). Markup is the verbatim port of
+// templates/instuner.html; all copy comes from the per-page i18n module so the
+// English render stays byte-identical.
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+import { applist, appsMenu } from '../../data/apps';
+import { localeUrls, DEFAULT_LOCALE } from '../../i18n';
+import { INSTUNER } from '../../i18n/pages/instuner';
+
+interface Props { lang?: string; }
+const { lang = DEFAULT_LOCALE } = Astro.props;
+const isEn = lang === DEFAULT_LOCALE;
+const t = INSTUNER[lang] ?? INSTUNER[DEFAULT_LOCALE];
+const me = applist.instuner;
+const urls = localeUrls('/instuner/');
+---
+<Base
+  title="insTuner"
+  me={me}
+  lang={lang}
+  alternates={urls}
+  wholetitle={t.meta.wholetitle}
+  description={isEn ? undefined : t.meta.description}
+  metaKeywords={isEn ? undefined : t.meta.keywords}
+  bodystyle="darktheme ">
+  <Fragment slot="style">
+    <link href="/assets/styles/instuner.css" rel="stylesheet" />
+  </Fragment>
+
+  <Fragment slot="script">
+    <script src="/assets/scripts/jquery.threesixty.js" is:inline></script>
+    <script src="/assets/scripts/instuner.js" is:inline></script>
+  </Fragment>
+
+<Nav products={appsMenu} lang={lang} langUrls={urls} />
+<div class="container pg-instuner">
+    <div class="header">
+        <div class="bg"></div>
+
+        <div class="app">
+            <div class="center">
+                <h2 class="app-title">insTuner</h2>
+                <a href="http://www.youtube.com/embed/C1_80SPx0jE?autoplay=1&showinfo=0&hd=1" class="btn-video" id="it-video" title={t.videoTitle}></a>
+                <a href="http://itunes.apple.com/app/id528923171?ls=1&mt=8" target="_blank" class="link-app-store" title={t.appStoreTitle}>{t.appStoreText}</a>
+                <div class="pic">
+                    <div><img id="app-animation" src="/assets/images/it/modes_top/fine/PM_00.png" width="500" height="500" /></div>
+                </div>
+                <div class="it-nav tab-nav">
+                    <a href="javascript:;" data-type="fine">{t.navFine}</a>
+                    <a href="javascript:;" data-type="instant">{t.navInstant}</a>
+                    <a href="javascript:;" data-type="strobe">{t.navStrobe}</a>
+                    <a href="javascript:;" data-type="fft">{t.navFft}</a>
+                    <a href="javascript:;" data-type="spectrograms">{t.navSpectrograms}</a>
+                </div>
+            </div>
+        </div>
+        <div class="guitar" id="guitar"></div>
+        <div class="violin" id="violin"></div>
+    </div>
+    <div class="section section-0">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.s0Title}</h3>
+                <p class="desc" set:html={t.s0Desc1Html}></p>
+                <p class="desc">{t.s0Desc2}</p>
+                <p class="desc" set:html={t.s0Desc3Html}></p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-1">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.s1Title}</h3>
+                <p class="desc">{t.s1Desc1}</p>
+                <p class="desc">{t.s1Desc2}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-2">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.s2Title}</h3>
+                <p class="desc" set:html={t.s2Desc1Html}></p>
+                <p class="desc">{t.s2Desc2}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-3">
+        <div class="center">
+            <div class="intro">
+                <h3 class="title">{t.s3Title}</h3>
+                <p class="desc">{t.s3Desc}</p>
+            </div>
+            <div class="slide">
+                <div class="gear">
+                    <div class="gear-img"></div>
+                </div>
+                <div class="iphone">
+                    <div class="animation">
+                        <img id="mode-animation" src="/assets/images/it/modes/fft/ReflectorRecording_00000.png" width="445" height="251" />
+                    </div>
+                    <div class="mask"></div>
+                </div>
+                <div class="modes">
+                    <a href="javascript:;" class="prev"></a>
+                    <a href="javascript:;" class="next"></a>
+                    <ul class="intro">
+                        <li data-type="instant">
+                            <h5 class="title">{t.modeInstantTitle}</h5>
+                            <p class="desc">{t.modeInstantDesc1}</p>
+                            <p class="desc">{t.modeInstantDesc2}</p>
+                            <p class="desc">{t.modeInstantDesc3}</p>
+                        </li>
+                        <li data-type="fine" class="fine">
+                            <h5 class="title">{t.modeFineTitle}</h5>
+                            <p class="desc">{t.modeFineDesc1}</p>
+                        </li>
+                        <li data-type="strobe">
+                            <h5 class="title">{t.modeStrobeTitle}</h5>
+                            <p class="desc">{t.modeStrobeDesc1}</p>
+                            <p class="desc">{t.modeStrobeDesc2}</p>
+                            <p class="desc">{t.modeStrobeDesc3}</p>
+                        </li>
+                        <li data-type="fft">
+                            <h5 class="title">{t.modeFftTitle}</h5>
+                            <p class="desc">{t.modeFftDesc1}</p>
+                            <p class="desc">{t.modeFftDesc2}</p>
+                        </li>
+                        <li data-type="spectrograms">
+                            <h5 class="title">{t.modeSpectrogramsTitle}</h5>
+                            <p class="desc">{t.modeSpectrogramsDesc1}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-4">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <h3 class="title">{t.s4Title}</h3>
+                <p class="desc">{t.s4Desc}</p>
+            </div>
+            <a href="http://itunes.apple.com/app/id528923171?ls=1&mt=8" target="_blank" class="link-app-store" title={t.s4AppStoreTitle}>{t.s4AppStoreText}</a>
+            <a href="javascript:;" class="show-lite">{t.s4GetFree}</a>
+        </div>
+    </div>
+    <div class="section section-5">
+        <div class="center">
+            <div class="pic"></div>
+            <div class="intro">
+                <p class="desc">{t.s5Desc}</p>
+            </div>
+            <a href="http://itunes.apple.com/app/id603425027?ls=1&mt=8" target="_blank" class="link-app-store" title={t.s5AppStoreTitle}>{t.s5AppStoreText}</a>
+        </div>
+    </div>
+    </div>
+    <Footer lang={lang} />
+</Base>
